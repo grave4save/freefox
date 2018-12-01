@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/thunderbird/
- * Last modified: December 1, 2018
+ * Last modified: December 2, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -238,6 +238,8 @@ user_pref("datareporting.policy.firstRunURL", "");
 /* Guessing the domain in the address bar
  * Угадывание домена в адресной строке */
 user_pref("browser.fixup.alternate.enabled", false);
+user_pref("browser.fixup.alternate.prefix", "");
+user_pref("browser.fixup.alternate.suffix", "");
 
 /* Remember your browsing and download history
  * Помните историю посещений и загрузок */
@@ -567,8 +569,8 @@ user_pref("general.autoScroll", false);
 
 /* Hardware acceleration
  * Аппаратное ускорение */
-user_pref("layers.acceleration.force-enabled", true);
-user_pref("layers.acceleration.disabled", false);
+// user_pref("layers.acceleration.force-enabled", false);
+// user_pref("layers.acceleration.disabled", true);
 // user_pref("gfx.direct2d.disabled", true); // [WINDOWS]
 
 /* Maximum number of backup bookmarks
@@ -614,11 +616,11 @@ user_pref("media.default_volume", "0.5");
 /* WEBM */
 user_pref("media.mediasource.webm.enabled", true);
 
-/* How often Firefox should ask for a master password
+/* How often Thunderbird should ask for a master password
  *		0 = The first time
  *		1 = Every time it's needed
  *		2 = Every "N" minutes
- * Как часто Firefox должен запрашивать мастер-пароль
+ * Как часто Thunderbird должен запрашивать мастер-пароль
  *		0 = Первый раз
  *		1 = Каждый раз, когда это необходимо
  *		2 = Каждые "N" минут */
@@ -755,15 +757,14 @@ user_pref("network.http.spdy.enabled.http2", true);
 
 /* WebGL (Web Graphics Library)
  * WebGL (Библиотека веб-графики) */
-user_pref("pdfjs.enableWebGL", false);
-user_pref("webgl.disable-extensions", false);
-user_pref("webgl.disable-fail-if-major-performance-caveat", false);
-user_pref("webgl.disabled", false);
-user_pref("webgl.dxgl.enabled", true); // [WINDOWS]
-user_pref("webgl.enable-webgl2", true);
-user_pref("webgl.force-enabled", true);
-user_pref("webgl.min_capability_mode", false);
-user_pref("webgl.msaa-force", true);
+// user_pref("webgl.disable-extensions", true);
+// user_pref("webgl.disable-fail-if-major-performance-caveat", true);
+// user_pref("webgl.disabled", true);
+// user_pref("webgl.dxgl.enabled", false); // [WINDOWS]
+// user_pref("webgl.enable-webgl2", false);
+// user_pref("webgl.force-enabled", false);
+// user_pref("webgl.min_capability_mode", true);
+// user_pref("webgl.msaa-force", false);
 
 /* Service Workers
  *		[NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
@@ -868,3 +869,14 @@ user_pref("network.cookie.lifetimePolicy", 0);
 /* Closing Thunderbird when closing the last tab
  * Закрытие Thunderbird при закрытии последней вкладки */
 user_pref("browser.tabs.closeWindowWithLastTab", false);
+
+/* Preferred language for displaying web pages
+ * Предпочитаемый язык для отображения веб-страниц */
+// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en"); // It is recommended to select only english locales ~ Рекомендуется выбрать только английские локали
+
+/* In "about:addons" remove the item "Get add-ons"
+ *		[WARNING] Uses Google Analytics.
+ * В "about:addons" убрать пункт "Получить дополнения"
+ *		[ВНИМАНИЕ] Использует Google Analytics. */
+user_pref("extensions.getAddons.showPane", false);
+user_pref("extensions.webservice.discoverURL", "");
