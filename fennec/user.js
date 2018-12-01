@@ -361,3 +361,54 @@ user_pref("breakpad.reportURL", "");
 /* Location accounting
  * Учет местоположения */
 user_pref("geo.enabled", false);
+
+/* GeoIP-based search results
+ * Результаты поиска на основе GeoIP */
+user_pref("browser.search.region", "US");
+user_pref("browser.search.geoip.url", "");
+user_pref("browser.search.geoip.timeout", 0);
+
+/* Application language
+ * Язык приложения */
+// user_pref("intl.locale.requested", "ru");
+
+/* Regional specificity for search results and search engines
+ * Региональная специфика для результатов поиска и поисковых систем */
+user_pref("browser.search.geoSpecificDefaults", false);
+user_pref("browser.search.geoSpecificDefaults.url", "");
+
+/* Use the application language over the language of your operating system in the regional settings
+ * Использовать язык приложения поверх языка вашей операционной системы в региональных настройках */
+user_pref("intl.regional_prefs.use_os_locales", false);
+
+/* First Party Isolation
+ * Изоляция первой стороны */
+user_pref("privacy.firstparty.isolate", true);
+
+/* First Party Isolation restriction
+ * Ограничение изоляции первой стороны */
+user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
+
+/* Firefox Fingerprints
+ * Отпечатки пальцев Firefox */
+user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
+
+/* Install only signed extensions
+ * Установка только подписанных расширений */
+user_pref("extensions.langpacks.signatures.required", true); // Require signing language pack ~ Требование подписи языкового пакета
+user_pref("xpinstall.signatures.required", true); // Require signing extensions ~ Требовать подписание расширений
+
+/* Add-on installation delay
+ * Задержка при установке дополнений */
+user_pref("security.dialog_enable_delay", 0);
+
+/* Default plugins state
+ *		0 = Disabled
+ *		1 = Request activation
+ *		2 = Active, individual plugins can be overridden
+ * Состояние плагинов по умолчанию
+ *		0 = Отключено
+ *		1 = Запрашивать активацию
+ *		2 = Активно, можно переопределить отдельные плагины */
+user_pref("plugin.default.state", 0);
