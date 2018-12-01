@@ -371,3 +371,141 @@ user_pref("network.warnOnAboutNetworking", false);
  *		1 = Отправлять, только если базовые домены совпадают
  *		2 = Отправить "Referer" только на тот же хост */
 user_pref("network.http.referer.XOriginPolicy", 1);
+
+/* Activate the plugin by clicking
+ * Активация плагина по клику */
+user_pref("plugins.click_to_play", true);
+
+/* Require a valid OCSP response for OCSP enabled certificates
+ *		[NOTE] When you turn on breaks some sites
+ * Требовать действительный ответ OCSP для сертификатов с поддержкой OCSP
+ *		[ЗАМЕТКА] При включении ломается некоторые сайты */
+// user_pref("security.OCSP.require", true);
+
+/* Enumerate multimedia devices
+ * Перечисление устройств мультимедиа */
+user_pref("media.navigator.enabled", false);
+
+/* WebRTC (Web Real-Time Communication)
+ * WebRTC (Веб Связь в Реальном Времени) */
+user_pref("media.gmp-manager.cert.checkAttributes", false);
+user_pref("media.gmp-manager.cert.requireBuiltIn", false);
+user_pref("media.navigator.video.enabled", false);
+user_pref("media.peerconnection.dtmf.enabled", false);
+user_pref("media.peerconnection.enabled", false);
+user_pref("media.peerconnection.ice.tcp", false);
+user_pref("media.peerconnection.identity.enabled", false);
+user_pref("media.peerconnection.identity.timeout", 1);
+user_pref("media.peerconnection.rtpsourcesapi.enabled", false);
+user_pref("media.peerconnection.simulcast", false);
+user_pref("media.peerconnection.turn.disable", true);
+user_pref("media.peerconnection.use_document_iceservers", false);
+user_pref("media.peerconnection.video.enabled", false);
+
+/* Web Audio API
+ *		[NOTE] Web Audio API is a technology that allows you to significantly enhance the ability to play audio in the browser. 
+ *		It is a powerful and versatile tool for manipulating the sound component on a Web page,
+ *		which allows developers to choose sources, add special sound effects to them, visualize them and much more.
+ *		[WARNING] Dangerously, because can withdraw the sound fingerprints browser.
+ * API Веб-аудио
+ *		[ЗАМЕТКА] Web Audio API - это технология, позволяющая существенно расширить возможности воспроизведения звука в браузере.
+ *		Это мощный и многогранный инструмент для манипуляции звуковой составляющей на веб-странице,
+ *		что дает возможность разработчикам выбрать источники, добавить к ним специальные звуковые эффекты,
+ *		визуализировать их и многое другое.
+ *		[ВНИМАНИЕ] Опасно, потому что можно снять звуковые отпечатки браузера. */
+user_pref("dom.webaudio.enabled", false);
+
+/* Sending video playback statistics
+ * Отправка статистики воспроизведения видео */
+user_pref("media.video_stats.enabled", false);
+
+/* Gamepad API
+ *		[NOTE] Disables gamepad support, which can be used to obtain manufacturer and model IDs
+ *		for gamepads connected to your computer.
+ * API Геймпада
+ *		[ЗАМЕТКА] Отключает поддержку геймпада, которое может быть использовано для получения
+ *		идентификаторов производителя и модели подключенных к компьютеру геймпадов. */
+user_pref("dom.gamepad.enabled", false);
+user_pref("dom.gamepad.extensions.enabled", false);
+user_pref("dom.gamepad.haptic_feedback.enabled", false);
+
+/* Location accounting
+ * Учет местоположения */
+user_pref("geo.enabled", false);
+user_pref("geo.wifi.xhr.timeout", 0);
+
+/* GeoIP-based search results
+ * Результаты поиска на основе GeoIP */
+user_pref("browser.search.geoip.url", "");
+user_pref("browser.search.geoip.timeout", 0);
+
+/* Regional specificity for search results and search engines
+ * Региональная специфика для результатов поиска и поисковых систем */
+user_pref("browser.search.geoSpecificDefaults", false);
+
+/* Browser sends information about the start and end time of page loading
+ * Передача браузером информации о времени начала и окончания загрузки страницы */
+user_pref("dom.enable_performance", false);
+user_pref("dom.enable_performance_navigation_timing", false);
+user_pref("dom.enable_performance_observer", false);
+
+/* Resource timing API
+ * API Ресурсов времени */
+user_pref("dom.enable_resource_timing", false);
+
+/* View clipboard content
+ * Просмотр содержимого буфера обмена */
+user_pref("dom.event.clipboardevents.enabled", false);
+
+/* Automatic preload pages when you hover over links
+ * Автоматическая предзагрузка страниц при наведении курсора на ссылки */
+user_pref("network.http.speculative-parallel-limit", 0);
+
+/* Additional analytics sent to the web server
+ * Дополнительная аналитика, отправленная на веб-сервер */
+user_pref("beacon.enabled", false);
+
+
+/* Block dangerous and deceptive content (malware, phishing, dangerous downloads)
+ * Блокировать опасное и обманывающее содержимое (вредоносные программы, фишинг, опасные загрузки) */
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
+user_pref("browser.safebrowsing.downloads.enabled", false);
+
+/* Warning about unwanted and rarely downloaded programs
+ * Предупреждение о нежелательных и редко загружаемых программах */
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false);
+user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
+
+/* Querying Google Application Reputation database for downloaded binary files
+ * Запрос базы данных репутации приложения Google для загруженных двоичных файлов */
+user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.url", "");
+
+/* URLs Reports
+ * Отчеты URLs */
+user_pref("browser.safebrowsing.provider.google4.reportMalwareMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportURL", "");
+user_pref("browser.safebrowsing.provider.google.reportMalwareMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google.reportPhishMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google.reportURL", "");
+user_pref("browser.safebrowsing.reportPhishURL", "");
+
+/* Data sharing
+ * Обмен данными */
+user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);
+user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
+
+/* Button "Ignore this warning" on the pages of safe browsing
+ *		[NOTE] Useless for regular users, it's meant for admins on bigger network as a way to secure their users.
+ * Кнопка "Игнорировать это предупреждение" на страницах безопасного просмотра
+ *		[ЗАМЕТКА] Бесполезный для обычных пользователей, он предназначен для администраторов в большей сети,
+ *		как способ защитить своих пользователей. */
+user_pref("browser.safebrowsing.allowOverride", false);
+
+/* Block known Flash trackers and fingerprints
+ * Блокировать известные Flash трекеры и отпечатки пальцев */
+user_pref("browser.safebrowsing.blockedURIs.enabled", false);
