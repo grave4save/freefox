@@ -141,16 +141,9 @@ user_pref("browser.snippets.updateUrl", "");
 // user_pref("font.default.zh-TW", "sans-serif");
 
 /* Default Fonts
- *		[NOTE] Instead of fonts DejaVu you can, for example, use Google fonts - Noto,
- *		but keep in mind that you must delete or comment out the DejaVu preferences.
+ *		[NOTE] The default is Droid, but you can change them for example on Google Noto <https://www.google.com/get/noto/>.
  * Шрифты по умолчанию
- *		[ЗАМЕТКА] Вместо шрифтов DejaVu вы можете, например, использовать шрифты Google - Noto,
- *		но имейте в виду, что вы должны удалить или закомментировать настройки DejaVu. */
-
-user_pref("font.name.monospace.x-western", "DejaVu Sans Mono");
-user_pref("font.name.monospace.x-cyrillic", "DejaVu Sans Mono");
-user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
-
+ *		[ЗАМЕТКА] По умолчанию используется Droid, однако вы можете изменить их например на Google Noto <https://www.google.com/get/noto/>. */
 // user_pref("font.name.serif.x-cyrillic", "Noto Serif");
 // user_pref("font.name.sans-serif.x-cyrillic", "Noto Sans");
 // user_pref("font.name.monospace.x-cyrillic", "Noto Mono");
@@ -243,3 +236,20 @@ user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
 /* Forced to use UTF-8 for text files
  * Принудительное использование UTF-8 для текстовых файлов */
 user_pref("intl.charset.fallback.utf8_for_file", true);
+
+/* Automatic check for updates for the Fennec browser
+ * Автоматическая проверка обновлений для браузера Fennec */
+user_pref("app.update.autodownload", "never");
+
+/* Automatic check for updates for extensions
+ * Автоматическая проверка обновлений для расширений */
+user_pref("extensions.autoupdate.enabled", false);
+user_pref("extensions.update.enabled", false);
+
+/* Update extension metadata
+ * Обновление метаданных расширения */
+user_pref("extensions.getAddons.cache.enabled", false);
+
+/* Automatic update of search engines
+ * Автоматическое обновление поисковых систем */
+user_pref("browser.search.update", false);
