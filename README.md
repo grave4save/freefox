@@ -24,7 +24,7 @@ Download the entire MozBackup project at https://github.com/bogachenko/mozbackup
 # MozBackup
 [![Build Status](https://travis-ci.org/bogachenko/mozbackup.svg?branch=master)](https://travis-ci.org/bogachenko/mozbackup)
 
-Template archive user.js and userChrome.css to ensure the security and privacy of browsers: Firefox, Pale Moon, Waterfox and email client Thunderbird
+Template archive user.js and userChrome.css to ensure the security and privacy of browsers: Firefox, Fennec (Firefox for mobile), Pale Moon, Waterfox and email client Thunderbird
 
 ## Third Party Content
 * <https://github.com/pyllyukko/user.js>
