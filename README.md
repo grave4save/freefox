@@ -13,7 +13,7 @@ For more information, see the MIT license.
 Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 Email: bogachenkove@gmail.com
 Github: https://github.com/bogachenko/mozbackup/
-Last modified: 26 November 2018
+Last modified: December 2, 2018
 License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
 Problem reports: https://github.com/bogachenko/mozbackup/issues
 Title: README.md
@@ -29,3 +29,4 @@ Template archive user.js and userChrome.css to ensure the security and privacy o
 ## Third Party Content
 * <https://github.com/pyllyukko/user.js>
 * <https://github.com/ghacksuserjs/ghacks-user.js>
+* <https://github.com/Atavic/legacy-user.js>
