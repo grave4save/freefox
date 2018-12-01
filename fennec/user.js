@@ -306,3 +306,58 @@ user_pref("media.getusermedia.agc_enabled", false);
 user_pref("media.getusermedia.audiocapture.enabled", false);
 user_pref("media.getusermedia.browser.enabled", false);
 user_pref("media.getusermedia.noise_enabled", false);
+
+/* Automatic HTML5 media playback
+ *		0 = Allow
+ *		1 = Block
+ *		2 = Ask
+ *		[WARNING] This may break video playback on various sites.
+ * Автоматическое воспроизведение мультимедиа в формате HTML5
+ *		0 = Разрешить
+ *		1 = Заблокировать
+ *		2 = Спросить
+ *		[ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
+// user_pref("media.autoplay.default", 1);
+
+/* Logic blocking autoplay version 2 and enable user interface
+ * Логика блокировки автовоспроизведения версии 2 и включить пользовательский интерфейс */
+// user_pref("media.autoplay.enabled.user-gestures-needed", true);
+
+/* Allow asking for permission to autoplay to appear in user interface
+ * Запрашивать разрешение на автовоспроизведение в пользовательском интерфейсе */
+// user_pref("media.autoplay.ask-permission", true);
+
+/* Automatically play sound in inactive tabs
+ *		TRUE = Do not play
+ *		FALSE = Play
+ * Автоматическое воспроизведение звука в неактивных вкладках
+ *		TRUE = Не воспроизводить
+ *		FALSE = Воспроизводить */
+user_pref("media.block-autoplay-until-in-foreground", true);
+
+/* Volume status
+ * Состояние громкости */       
+user_pref("media.default_volume", "0.5");
+
+/* WEBM */
+user_pref("media.mediasource.webm.enabled", true);
+
+/* Telemetry
+ * Телеметрия */
+user_pref("toolkit.telemetry.enabled", false);
+user_pref("toolkit.telemetry.server", "data:,");
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.debugSlowSql", false);
+user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
+
+/* Firefox health report
+ * Отчет о состоянии здоровья Firefox */
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
+
+/* Crash reports
+ * Отчеты о сбоях */
+user_pref("breakpad.reportURL", "");
+
+/* Location accounting
+ * Учет местоположения */
+user_pref("geo.enabled", false);
