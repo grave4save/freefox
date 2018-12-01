@@ -255,3 +255,55 @@ user_pref("toolkit.telemetry.previousBuildID", "");
 /* Crash Reporter related information
  * Crash Reporter связанная информация */
 user_pref("toolkit.crashreporter.infoURL", "");
+
+/* Remember the search history and form data
+ * Помнить историю поиска и данные формы */
+user_pref("browser.formfill.enable", false);
+user_pref("browser.formfill.expire_days", 0);
+
+/* Autocomplete
+ * Автозаполнение */
+user_pref("browser.urlbar.autocomplete.enabled", false);
+
+/* Opening tabs and external applications in the background
+ *		TRUE = Open such tabs in the background
+ *		FALSE = Switch to openable tabs
+ * Открытие вкладок и внешних приложений в фоновом режиме
+ *		TRUE = Открывать такие вкладки в фоне
+ *		FALSE = Переключаться на открываемые вкладки */
+user_pref("browser.tabs.loadDivertedInBackground", true);
+
+/* Search suggestions
+ * Поисковые предложения */
+user_pref("browser.search.suggest.enabled", false);
+
+/* Automatic installation of updates for Thunderbird
+ * Автоматическая установка обновлений для Thunderbird */
+user_pref("app.update.auto", false);
+
+/* Automatic check for updates for extensions
+ * Автоматическая проверка обновлений для расширений */
+user_pref("extensions.update.enabled", false);
+
+/* Automatic installation of updates for extensions
+ * Автоматическая установка обновлений для расширений */
+user_pref("extensions.update.autoUpdateDefault", false);
+
+/* Background update service
+ * Служба для фонового обновления */
+user_pref("app.update.service.enabled", false);
+user_pref("app.update.staging.enabled", false);
+
+/* Display information about the update
+ * Отображение информация об обновлении */
+user_pref("app.update.silent", false);
+
+/* Update extension metadata
+ * Обновление метаданных расширения */
+user_pref("extensions.getAddons.cache.enabled", false);
+
+/* Automatic update of search engines
+ * Автоматическое обновление поисковых систем */
+user_pref("browser.search.update", false);
+user_pref("browser.search.update.interval", 0);
+user_pref("browser.search.update.log", false);
