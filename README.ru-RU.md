@@ -18,14 +18,10 @@ License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
 Problem reports: https://github.com/bogachenko/mozbackup/issues
 Title: README.ru-RU.md
 URL: https://github.com/bogachenko/mozbackup/blob/master/README.ru-RU.md
-Wiki: https://github.com/bogachenko/mozbackup/wiki
 
 Download the entire MozBackup project at https://github.com/bogachenko/mozbackup/archive/master.zip -->
 
 # MozBackup
-[![site](https://img.shields.io/badge/site-up-%233fb912.svg)](https://bogachenko.github.io/mozbackup/)
-[![wiki](https://img.shields.io/badge/wiki-up-%233fb912.svg)](https://github.com/bogachenko/mozbackup/wiki)
-[![license](https://img.shields.io/badge/license-MIT-%233fb912.svg)](https://raw.githubusercontent.com/bogachenko/mozbackup/master/LICENSE.md)
 [![Build Status](https://travis-ci.org/bogachenko/mozbackup.svg?branch=master)](https://travis-ci.org/bogachenko/mozbackup)
 
 Архив шаблонов user.js и userChrome.css для обеспечения безопасности и конфиденциальности браузеров: Firefox, Pale Moon, Waterfox и почтового клиента Thunderbird
