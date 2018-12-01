@@ -509,3 +509,94 @@ user_pref("browser.safebrowsing.allowOverride", false);
 /* Block known Flash trackers and fingerprints
  * Блокировать известные Flash трекеры и отпечатки пальцев */
 user_pref("browser.safebrowsing.blockedURIs.enabled", false);
+
+/* Windows 8.1 Family Security
+ *		0 = Disable
+ *		1 = Only attempt to detect Family Safety mode (don't import the root)
+ *		2 = Detect Family Safety mode and import the root
+ * Семейная безопасность Windows 8.1
+ *		0 = Отключить
+ *		1 = Только попытка обнаружить режим безопасности семьи (не импортировать корень)
+ *		2 = Определить режим безопасности семьи и импортировать корень */
+user_pref("security.family_safety.mode", 0); // [WINDOWS]
+
+/* IDN Punycode */
+user_pref("network.IDN_show_punycode", true);
+
+/* Automatic update check for Thunderbird
+ * Автоматическая проверка обновлений для Thunderbird */
+user_pref("app.update.enabled", false);
+
+/* Battery Status API */
+user_pref("dom.battery.enabled", false);
+
+/* DNS browser preloading
+ * Предварительная загрузка браузером DNS */
+user_pref("network.dns.disablePrefetch", true);
+
+/* Preload browser links
+ * Предварительная загрузка браузером ссылок */
+user_pref("network.prefetch-next", false);
+
+/* UserAgent */
+user_pref("general.appname.override", "Netscape");
+user_pref("general.appversion.override", "5.0 (Windows)");
+user_pref("general.buildID.override", "20100101");
+user_pref("general.oscpu.override", "Windows NT 6.1");
+user_pref("general.platform.override", "Win32");
+// user_pref("general.useragent.locale", "en-US");
+user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
+
+/* Smooth scrolling
+ * Плавная прокрутка */
+user_pref("general.smoothScroll", false);
+
+/* Auto Scroll
+ * Автоматическая прокрутка */
+user_pref("general.autoScroll", false);
+
+/* Hardware acceleration
+ * Аппаратное ускорение */
+user_pref("layers.acceleration.force-enabled", true);
+user_pref("layers.acceleration.disabled", false);
+// user_pref("gfx.direct2d.disabled", true); // [WINDOWS]
+
+/* Maximum number of backup bookmarks
+ * Максимальное количество резервных закладок */
+user_pref("browser.bookmarks.max_backups", 3);
+
+/* Limit WebRTC IP address leaks when using WebRTC
+ * Ограничение утечек IP-адресов WebRTC при использовании WebRTC */
+user_pref("media.peerconnection.ice.default_address_only", true);
+user_pref("media.peerconnection.ice.no_host", true);
+
+/* Screensharing
+ * Общий доступ к экрану */
+user_pref("media.getusermedia.aec_enable", false);
+user_pref("media.getusermedia.agc_enabled", false);
+user_pref("media.getusermedia.audiocapture.enabled", false);
+user_pref("media.getusermedia.browser.enabled", false);
+user_pref("media.getusermedia.noise_enabled", false);
+user_pref("media.getusermedia.screensharing.enabled", false);
+
+/* Auto-play of HTML5 media
+ *		TRUE = Allow
+ *		FALSE = Block
+ *		[WARNING] This may break video playback on various sites.
+ * Автоматическое воспроизведение мультимедиа в формате HTML5
+ *		TRUE = Разрешить
+ *		FALSE = Заблокировать
+ *		[ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
+user_pref("media.autoplay.enabled", false);
+
+/* Automatically play sound in inactive tabs
+ *		TRUE = Do not play
+ *		FALSE = Play
+ * Автоматическое воспроизведение звука в неактивных вкладках
+ *		TRUE = Не воспроизводить
+ *		FALSE = Воспроизводить */
+user_pref("media.block-autoplay-until-in-foreground", true);
+
+/* Volume status
+ * Состояние громкости */       
+user_pref("media.default_volume", "0.5");
