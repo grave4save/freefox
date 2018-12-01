@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/thunderbird/
- * Last modified: 26 November 2018
+ * Last modified: December 1, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -333,9 +333,26 @@ user_pref("mail.shell.checkDefaultClient", false);
  *		[NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
  * Мастер очистки Thunderbird
  *		[ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
-user_pref("privacy.cpd.cache", true);
-user_pref("privacy.cpd.cookies", false);
-user_pref("privacy.cpd.history", true);
+user_pref("privacy.cpd.cache", true); // Cache ~ Кэш
+user_pref("privacy.cpd.cookies", false); // Cookies ~ Куки
+user_pref("privacy.cpd.history", true); // History ~ История
+
+/* Time range to clear
+ *		0 = Everything
+ *		1 = Last hour
+ *		2 = Last two hours
+ *		3 = Last four hours
+ *		4 = Today
+ *		5 = Last five minutes
+ *		6 = Last twenty-four hours
+ * Диапазон времени для очистки
+ *		0 = Все
+ *		1 = Последний час
+ *		2 = Последние два часа
+ *		3 = Последние четыре часа
+ *		4 = Сегодня
+ *		5 = Последние пять минут
+ *		6 = Последние сутки */
 user_pref("privacy.sanitize.timeSpan", 0);
 
 /* Whether to show the Thunderbird icon in the system tray
@@ -403,15 +420,8 @@ user_pref("media.peerconnection.use_document_iceservers", false);
 user_pref("media.peerconnection.video.enabled", false);
 
 /* Web Audio API
- *		[NOTE] Web Audio API is a technology that allows you to significantly enhance the ability to play audio in the browser. 
- *		It is a powerful and versatile tool for manipulating the sound component on a Web page,
- *		which allows developers to choose sources, add special sound effects to them, visualize them and much more.
  *		[WARNING] Dangerously, because can withdraw the sound fingerprints browser.
  * API Веб-аудио
- *		[ЗАМЕТКА] Web Audio API - это технология, позволяющая существенно расширить возможности воспроизведения звука в браузере.
- *		Это мощный и многогранный инструмент для манипуляции звуковой составляющей на веб-странице,
- *		что дает возможность разработчикам выбрать источники, добавить к ним специальные звуковые эффекты,
- *		визуализировать их и многое другое.
  *		[ВНИМАНИЕ] Опасно, потому что можно снять звуковые отпечатки браузера. */
 user_pref("dom.webaudio.enabled", false);
 
@@ -600,3 +610,261 @@ user_pref("media.block-autoplay-until-in-foreground", true);
 /* Volume status
  * Состояние громкости */       
 user_pref("media.default_volume", "0.5");
+
+/* WEBM */
+user_pref("media.mediasource.webm.enabled", true);
+
+/* How often Firefox should ask for a master password
+ *		0 = The first time
+ *		1 = Every time it's needed
+ *		2 = Every "N" minutes
+ * Как часто Firefox должен запрашивать мастер-пароль
+ *		0 = Первый раз
+ *		1 = Каждый раз, когда это необходимо
+ *		2 = Каждые "N" минут */
+user_pref("security.ask_for_password", 2);
+
+/* How often (within how many minutes) Thunderbird should ask for a master password
+ * Как часто (в течение скольки минут) Thunderbird должен запрашивать мастер-пароль */
+user_pref("security.password_lifetime", 5);
+
+/* Auto-complete user name and password
+ * Aвтоматическое заполнение имени пользователя и пароля */
+user_pref("signon.autofillForms", false);
+user_pref("signon.autofillForms.http", false);
+user_pref("security.insecure_field_warning.contextual.enabled", true);
+
+/* Automatic update themes
+ * Автоматическое обновление тем */
+user_pref("lightweightThemes.update.enabled", false);
+
+/* Experiments
+ * Эксперименты */
+user_pref("network.allow-experiments", false);
+
+/* Web Compatibility Reporter
+ * Отправка отчетов о совместимости с Интернетом */
+user_pref("extensions.webcompat-reporter.enabled", false);
+
+/* Favicons in web notifications
+ * Значки в веб-уведомлениях */
+user_pref("alerts.showFavicons", false);
+
+/* Path to save files
+ *		0 = Desktop
+ *		1 = Downloads
+ *		2 = Last used folder
+ * Путь для сохранения файлов
+ *		0 = Рабочий стол
+ *		1 = Загрузки
+ *		2 = Последняя используемая папка */
+user_pref("browser.download.folderList", 2);
+
+/* Request to save files
+ * Запрос на сохранение файлов */
+user_pref("browser.download.useDownloadDir", false);
+
+/* Adding downloads to the list of recent system documents
+ * Добавление загрузок в список последних документов системы */
+user_pref("browser.download.manager.addToRecentDocs", false);
+
+/* Hiding MIME types
+ * Скрытие типов MIME */
+user_pref("browser.download.hide_plugins_without_extensions", false);
+
+/* Show the "Open with" dialog box in the download window
+ * Показ диалогового окна "Открыть при помощи" в окне загрузки */
+user_pref("browser.download.forbid_open_with", true);
+
+/* Predictor (formerly Seer)
+ *		[NOTE] This is a mechanism that stores the links between the hosts from
+ *		which content is requested for a particular URL.
+ * Предсказатель (бывший Seer)
+ *		[ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
+ *		с которых запрашивается контент для того или иного URL. */
+user_pref("network.predictor.enabled", false);
+user_pref("network.predictor.enable-prefetch", false);
+
+/* Search from address panel
+ * Поиск из панели адреса */
+user_pref("keyword.enabled", true);
+
+/* Adding sites from Alexa Top 500 to the address bar auto-complete list
+ * Добавление сайтов из Alexa Top 500 в список автозаполнения адресной строки */
+user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
+
+/* Windows jumplist */
+user_pref("mail.taskbar.lists.enabled", false); // [WINDOWS]
+user_pref("mail.taskbar.lists.tasks.enabled", false); // [WINDOWS]
+
+/* IPv6 */
+user_pref("network.dns.disableIPv6", true);
+
+/* Block allowed extension directories
+ *		[WARNING] This will break extensions that do not use the default XPI directories.
+ * Заблокировать разрешенные каталоги расширений
+ *		[ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
+user_pref("extensions.autoDisableScopes", 15);
+
+/* WebExtension Restrictions for Specific Mozilla Domains
+ * Ограничения WebExtension для определенных доменов Mozilla */
+user_pref("extensions.webextensions.restrictedDomains", "");
+
+/* Warning when websites try to install add-ons
+ * Предупреждение при попытке веб-сайтов установить дополнения */
+user_pref("xpinstall.whitelist.required", true);
+
+/* Fullscreen API
+ * API Полного экрана */
+user_pref("full-screen-api.enabled", true);
+user_pref("full-screen-api.warning.delay", 0);
+user_pref("full-screen-api.warning.timeout", 0);
+
+/* Animated gradient that runs through the tab after the page is fully loaded
+ * Анимированный градиент, который пробегает по вкладке после полной загрузки страницы */
+user_pref("toolkit.cosmeticAnimations.enabled", false);
+
+/* Search for text on the page as it is typed
+ * Искать текст на странице по мере его набора */
+user_pref("accessibility.typeaheadfind", false);
+
+/* Automatic copying
+ * Автоматическое копирование */
+user_pref("clipboard.autocopy", false); // [LINUX]
+
+/* Reader View */
+user_pref("reader.parse-on-load.enabled", false);
+
+/* WebGL debug info being available to websites
+ * Информация об отладке WebGL доступна для веб-сайтов */
+user_pref("webgl.enable-debug-renderer-info", false);
+
+/* Mixed content
+ * Смешанное содержание */
+user_pref("security.mixed_content.block_active_content", true); 
+user_pref("security.mixed_content.block_display_content", true);
+
+
+/* SPDY protocol
+ *		[WARNING] This protocol has a privacy problem protocol, use at your own risk.
+ * Протокол SPDY
+ *		[ВНИМАНИЕ] Данный протокол имеет протокол проблемы с приватностью, используйте на свой страх и риск. */
+user_pref("network.http.spdy.enabled", true);
+user_pref("network.http.spdy.enabled.deps", true);
+user_pref("network.http.spdy.enabled.http2", true);
+
+/* WebGL (Web Graphics Library)
+ * WebGL (Библиотека веб-графики) */
+user_pref("pdfjs.enableWebGL", false);
+user_pref("webgl.disable-extensions", false);
+user_pref("webgl.disable-fail-if-major-performance-caveat", false);
+user_pref("webgl.disabled", false);
+user_pref("webgl.dxgl.enabled", true); // [WINDOWS]
+user_pref("webgl.enable-webgl2", true);
+user_pref("webgl.force-enabled", true);
+user_pref("webgl.min_capability_mode", false);
+user_pref("webgl.msaa-force", true);
+
+/* Service Workers
+ *		[NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
+ *		are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
+ *		and resource requests, and caching resources.
+ *		[ЗАМЕТКА] "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
+ *		браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
+ *		перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы. */
+user_pref("dom.serviceWorkers.enabled", false);
+
+/* Cookies for HTTP sites are set with the "secure" directive
+ * Файлы куки для сайтов HTTP устанавливаются с "защищенной" директивой */
+user_pref("network.cookie.leave-secure-alone", true);
+
+/* SameSite сookies
+ * Куки SameSite */
+user_pref("network.cookie.same-site.enabled", true);
+
+/* DOM (Document Object Model) Storage
+ *		[WARNING] This will break a LOT of sites' functionality AND extensions.
+ *		You are better off using an extension for more granular control.
+ * Хранилище DOM (Объектная Модель Документа)
+ *		[ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
+ *		Вам лучше использовать расширение для более гранулированного контроля. */
+user_pref("dom.storage.enabled", true);
+
+/* Warn showing red lock for "broken security"
+ * Предупреждать, показывая красный замок для "сломанной безопасности" */
+user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
+
+/* Additional information about the pages warning about unsafe connections
+ * Дополнительная информация о страницах, предупреждающая о небезопасном подключении */
+user_pref("browser.xul.error_pages.expert_bad_cert", true);
+
+/* MediaDevices */
+user_pref("media.ondevicechange.enabled", false);
+
+/* OCSP Stapling
+ * Сшивание OCSP */
+user_pref("security.ssl.enable_ocsp_stapling", true);
+
+/* Sensor API
+ *		[NOTE] Disables events from the accelerometer and other sensors.
+ * API Сенсора
+ *		[ЗАМЕТКА] Отключает события от акселерометра и других сенсоров. */
+user_pref("device.sensors.enabled", false);
+
+/* CSP (Content Security Policy)
+ * Политика безопасности контента */
+user_pref("security.csp.enable", true);
+user_pref("security.csp.enableStrictDynamic", false);
+user_pref("security.csp.enable_violation_events", false);
+
+/* Online Certificate Status Protocol
+ *		0 = Disabled
+ *		1 = Enabled
+ *		2 = Enabled for EV certificates only
+ * Протокол статуса сертификата онлайн
+ *		0 = Отключено
+ *		1 = Включен
+ *		2 = Включено только для сертификатов EV */
+user_pref("security.OCSP.enabled", 1);
+
+/* Virtual Reality API
+ *		[NOTE] Disables support for virtual reality devices.
+ * API Виртуальной реальности
+ *		[ЗАМЕТКА] Отключает поддержку устройств виртуальной реальности. */
+user_pref("dom.vr.enabled", false);
+
+/* Pointer Events
+ * События указателя */
+user_pref("dom.w3c_pointer_events.enabled", false);
+
+/* CSS :visited selectors
+ *		[ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
+ *		which prevents the user from finding out what URLs the user has in the browser history.
+ * CSS :visited селекторы
+ *		[ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
+ *		что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
+user_pref("layout.css.visited_links_enabled", false);
+
+/* Cookie
+ *		0 = Always accept cookies from third-party sites
+ *		1 = Never accept cookies from third-party sites
+ *		2 = Do not accept cookies at all
+ *		3 = Accept cookies from third-party sites, only from previously visited sites
+ * Куки
+ *		0 = Всегда принимать файлы куки с сторонних сайтов
+ *		1 = Никогда не принимать файлы куки с сторонних сайтов
+ *		2 = Не принимать куки вообще
+ *		3 = Принимать файлы куки с сторонних сайтов, только у ранее посещенных сайтов */
+user_pref("network.cookie.cookieBehavior", 1);
+
+/* Сookie lifetime policy
+ *		0 = Save them before expiration
+ *		2 = Save them until close Thunderbird
+ * Политика жизни куки
+ *		0 = Сохранять их до истечения срока действия
+ *		2 = Сохранять их до закрытия Thunderbird */
+user_pref("network.cookie.lifetimePolicy", 0);
+
+/* Closing Thunderbird when closing the last tab
+ * Закрытие Thunderbird при закрытии последней вкладки */
+user_pref("browser.tabs.closeWindowWithLastTab", false);
