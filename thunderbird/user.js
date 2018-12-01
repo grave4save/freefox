@@ -222,3 +222,36 @@ user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
 // user_pref("font.name.monospace.x-cans", "monospace");
 // user_pref("font.language.group", "x-western");
 
+/* Warning in "about:config"
+ * Предупреждение в "about:config" */
+user_pref("general.warnOnAboutConfig", false);
+
+/* Crash reports
+ * Отчеты о сбоях */
+user_pref("breakpad.reportURL", "");
+
+/* Thunderbird health report
+ * Отчет о состоянии здоровья Thunderbird */
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
+user_pref("datareporting.policy.firstRunURL", "");
+
+/* Guessing the domain in the address bar
+ * Угадывание домена в адресной строке */
+user_pref("browser.fixup.alternate.enabled", false);
+
+/* Remember your browsing and download history
+ * Помните историю посещений и загрузок */
+user_pref("places.history.enabled", true);
+
+/* Telemetry
+ * Телеметрия */
+user_pref("toolkit.telemetry.enabled", false);
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.server", "");
+user_pref("security.ssl.errorReporting.url", "");
+user_pref("toolkit.telemetry.infoURL", "");
+user_pref("toolkit.telemetry.previousBuildID", "");
+
+/* Crash Reporter related information
+ * Crash Reporter связанная информация */
+user_pref("toolkit.crashreporter.infoURL", "");
