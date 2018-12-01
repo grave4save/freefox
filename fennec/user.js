@@ -253,3 +253,56 @@ user_pref("extensions.getAddons.cache.enabled", false);
 /* Automatic update of search engines
  * Автоматическое обновление поисковых систем */
 user_pref("browser.search.update", false);
+
+/* Search suggestions
+ * Поисковые предложения */
+user_pref("browser.search.suggest.enabled", false);
+
+/* Guessing the domain in the address bar
+ * Угадывание домена в адресной строке */
+user_pref("browser.fixup.alternate.enabled", false);
+user_pref("browser.fixup.alternate.prefix", "");
+user_pref("browser.fixup.alternate.suffix", "");
+
+/* Number of steps  "To previous page" and  "To next page"
+ * Количество шагов "На предыдущую страницу" и "На следующую страницу" */
+user_pref("browser.sessionhistory.max_entries", 10);
+
+/* Autocomplete
+ * Автозаполнение */
+user_pref("browser.urlbar.autocomplete.enabled", false);
+
+/* Remember the search history and form data
+ * Помнить историю поиска и данные формы */
+user_pref("browser.formfill.enable", false);
+user_pref("browser.formfill.expire_days", 0);
+
+/* Maximum number of backup bookmarks
+ * Максимальное количество резервных закладок */
+user_pref("browser.bookmarks.max_backups", 3);
+
+/* WebRTC (Web Real-Time Communication)
+ * WebRTC (Веб Связь в Реальном Времени) */
+user_pref("media.navigator.video.enabled", false);
+user_pref("media.peerconnection.dtmf.enabled", false);
+user_pref("media.peerconnection.enabled", false);
+user_pref("media.peerconnection.ice.tcp", false);
+user_pref("media.peerconnection.identity.enabled", false);
+user_pref("media.peerconnection.identity.timeout", 1);
+user_pref("media.peerconnection.rtpsourcesapi.enabled", false);
+user_pref("media.peerconnection.simulcast", false);
+user_pref("media.peerconnection.turn.disable", true);
+user_pref("media.peerconnection.use_document_iceservers", false);
+user_pref("media.peerconnection.video.enabled", false);
+
+/* Limit WebRTC IP address leaks when using WebRTC
+ * Ограничение утечек IP-адресов WebRTC при использовании WebRTC */
+user_pref("media.peerconnection.ice.default_address_only", true);
+user_pref("media.peerconnection.ice.no_host", true);
+
+/* Screensharing
+ * Общий доступ к экрану */
+user_pref("media.getusermedia.agc_enabled", false);
+user_pref("media.getusermedia.audiocapture.enabled", false);
+user_pref("media.getusermedia.browser.enabled", false);
+user_pref("media.getusermedia.noise_enabled", false);
