@@ -307,3 +307,67 @@ user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("browser.search.update", false);
 user_pref("browser.search.update.interval", 0);
 user_pref("browser.search.update.log", false);
+
+/* Change the default encoding for text files
+ * Изменение кодировки по умолчанию для текстовых файлов */
+user_pref("intl.charset.fallback.utf8_for_file", true);
+
+/* Send Flash crash reports
+ * Отправка отчетов о сбоях Flash */
+user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
+
+/* Submitting the URL of the website where the plug-in crashed
+ * Отправка URL-адреса веб-сайта, где произошел сбой плагина */
+user_pref("dom.ipc.plugins.reportCrashURL", false);
+user_pref("plugins.crash.supportUrl", "");
+
+/* Spell check before departure
+ * Проверка орфографии перед отправлением */
+user_pref("mail.SpellCheckBeforeSend", false);
+
+/* Check if Thunderbird is your default email client
+ * Проверять, является ли Thunderbird вашим почтовым клиентом по умолчанию */
+user_pref("mail.shell.checkDefaultClient", false);
+
+/* Master cleaner Thunderbird
+ *		[NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
+ * Мастер очистки Thunderbird
+ *		[ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
+user_pref("privacy.cpd.cache", true);
+user_pref("privacy.cpd.cookies", false);
+user_pref("privacy.cpd.history", true);
+user_pref("privacy.sanitize.timeSpan", 0);
+
+/* Whether to show the Thunderbird icon in the system tray
+ * Отображать ли значок Thunderbird в системном трее */
+user_pref("mail.biff.show_tray_icon", false);
+
+/* Show start page in the message viewing area
+ * Показ стартовой страницы в области просмотра сообщений */
+user_pref("mailnews.start_page.url", "");
+user_pref("mailnews.start_page.enabled", false);
+
+/* Closing Thunderbird when closing the last tab
+ * Закрытие Thunderbird при закрытии последней вкладки */
+user_pref("mail.tabs.closeWindowWithLastTab", false);
+
+/* Push notifications
+ * Push-уведомления */
+user_pref("dom.push.enabled", false);
+user_pref("dom.push.connection.enabled", false);
+user_pref("dom.push.serverURL", "");
+user_pref("dom.push.userAgentID", "");
+
+/* Warning in "about:networking"
+ * Предупреждение в "about:networking" */
+user_pref("network.warnOnAboutNetworking", false);
+
+/* Control the selection of sent "Referrer" through sources
+ *		0 = Send "Referrer" in all cases
+ *		1 = Send only if the base domains match
+ *		2 = Send "Referer" only to the same host
+ * Контроль выбора отправляемых "Referrer" через источники
+ *		0 = Отправлять "Referrer" во всех случаях
+ *		1 = Отправлять, только если базовые домены совпадают
+ *		2 = Отправить "Referer" только на тот же хост */
+user_pref("network.http.referer.XOriginPolicy", 1);
