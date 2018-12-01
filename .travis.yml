@@ -4,5 +4,6 @@ node_js:
 before_script:
   - npm install -g acorn
 script:
-- acorn thunderbird/user.js
-- acorn waterfox/user.js
+- acorn --silent thunderbird/user.js
+- acorn --silent waterfox/user.js
+- acorn --silent palemoon/user.js
