@@ -412,3 +412,48 @@ user_pref("security.dialog_enable_delay", 0);
  *		1 = Запрашивать активацию
  *		2 = Активно, можно переопределить отдельные плагины */
 user_pref("plugin.default.state", 0);
+
+/* Activate the plugin by clicking
+ * Активация плагина по клику */
+user_pref("plugins.click_to_play", true);
+
+/* Time to run plugins
+ * Время для запуска плагинов */
+user_pref("plugin.sessionPermissionNow.intervalInMinutes", 0);
+
+/* GMP (Gecko Media Plugins)
+ * GMP (Gecko Медиа Плагины) */
+user_pref("media.gmp-provider.enabled", false);
+user_pref("media.gmp.trial-create.enabled", false);
+user_pref("media.gmp-manager.url", "data:text/plain,");
+user_pref("media.gmp-manager.cert.checkAttributes", false);
+user_pref("media.gmp-manager.buildID", "");
+user_pref("media.gmp-manager.lastCheck", "");
+user_pref("media.gmp-manager.certs.1.commonName", "");
+user_pref("media.gmp-manager.certs.1.issuerName", "");
+user_pref("media.gmp-manager.certs.2.commonName", "");
+user_pref("media.gmp-manager.certs.2.issuerName", "");
+user_pref("media.gmp-manager.cert.requireBuiltIn", false);
+
+/* Digital Rights Management (DRM)
+ * Управление цифровыми правами */
+user_pref("media.eme.enabled", false);
+
+/* Preload browser links
+ * Предварительная загрузка браузером ссылок */
+user_pref("network.prefetch-next", false);
+
+/* DNS browser preloading
+ * Предварительная загрузка браузером DNS */
+user_pref("network.dns.disablePrefetch", true);
+user_pref("network.dns.disablePrefetchFromHTTPS", true);
+
+/* Sending ping
+ * Отправка пинга */
+user_pref("browser.send_pings", false);
+user_pref("browser.send_pings.max_per_link", 0);
+user_pref("browser.send_pings.require_same_host", true);
+
+/* Send DNS requests through a proxy using SOCKS 5
+ * Отправлять DNS-запросы через прокси при использовании SOCKS 5 */
+user_pref("network.proxy.socks_remote_dns", true);
