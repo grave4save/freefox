@@ -514,3 +514,303 @@ user_pref("plugin.default.state", 0);
 /* Activate the plugin by clicking
  * Активация плагина по клику */
 user_pref("plugins.click_to_play", true);
+
+
+/* Time to run plugins
+ * Время для запуска плагинов */
+user_pref("plugin.sessionPermissionNow.intervalInMinutes", 0);
+
+/* Scanning the system for plug-ins
+ * Сканирование системы на наличие плагинов */
+user_pref("plugin.scan.plid.all", false);  // [WINDOWS]
+
+/* GMP (Gecko Media Plugins)
+ * GMP (Gecko Медиа Плагины) */
+user_pref("media.gmp-manager.cert.checkAttributes", false);
+user_pref("media.gmp-manager.cert.requireBuiltIn", false);
+user_pref("media.gmp-manager.url", "data:text/plain,");
+user_pref("media.gmp.decoder.enabled", false);
+user_pref("media.gmp-manager.certs.1.commonName", "");
+user_pref("media.gmp-manager.certs.1.issuerName", "");
+user_pref("media.gmp-manager.certs.2.commonName", "");
+user_pref("media.gmp-manager.certs.2.issuerName", "");
+
+/* Preload browser links
+ * Предварительная загрузка браузером ссылок */
+user_pref("network.prefetch-next", false);
+
+/* DNS browser preloading
+ * Предварительная загрузка браузером DNS */
+user_pref("network.dns.disablePrefetch", true);
+user_pref("network.dns.disablePrefetchFromHTTPS", true);
+
+/* Sending ping
+ * Отправка пинга */
+user_pref("browser.send_pings", false);
+user_pref("browser.send_pings.max_per_link", 0);
+user_pref("browser.send_pings.require_same_host", true);
+
+/* Send DNS requests through a proxy using SOCKS 5
+ * Отправлять DNS-запросы через прокси при использовании SOCKS 5 */
+user_pref("network.proxy.socks_remote_dns", true);
+
+/* Redirecting to the provider's page
+ * Перенаправление на страницу провайдера */
+user_pref("captivedetect.canonicalURL", "");
+user_pref("captivedetect.maxRetryCount", 0);
+user_pref("network.captive-portal-service.enabled", false);
+
+/* HTTP Header "Do Not Track"
+ * Заголовок HTTP "Не Отслеживать" */
+// user_pref("privacy.donottrackheader.enabled", true);
+
+/* Synchronization of preferences
+ * Синхронизация предпочтений */
+user_pref("services.sync.engine.history", false);
+user_pref("services.sync.engine.prefs", false);
+user_pref("services.sync.engine.tabs", false);
+user_pref("services.sync.engine.addresses", false);
+
+/* Cache API (Cache storage)
+ *		[NOTE] It is a repository on the user's computer where scripts can store information.
+ *		It is part of the "Service Workers" specification, but can be used without them.
+ * API Кэша (Хранилище кэша)
+ *		[ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
+ *		Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
+user_pref("dom.caches.enabled", false);
+
+/* Web notifications
+ * Веб-уведомления */
+user_pref("dom.webnotifications.enabled", false);
+user_pref("dom.webnotifications.serviceworker.enabled", false);
+
+/* Push notifications
+ * Push-уведомления */
+user_pref("dom.push.enabled", false);
+user_pref("dom.push.connection.enabled", false);
+user_pref("dom.push.serverURL", "");
+user_pref("dom.push.userAgentID", "");
+
+/* Disk cache
+ * Кэш-диска */
+user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.disk.capacity", 0);
+user_pref("browser.cache.disk.smart_size.enabled", false);
+user_pref("browser.cache.disk.smart_size.first_run", false);
+
+/* Disk cache for SSL pages
+ * Кэш-диск для SSL-страниц */
+user_pref("browser.cache.disk_cache_ssl", false);
+
+/* Fastback cache
+ *		0 = Disable
+ *		-1 = Auto
+ * Кэш Fastback
+ *		0 = Отключить
+ *		-1 = Автоматически */
+user_pref("browser.sessionhistory.max_total_viewers", 0);
+
+/* Session Recovery Service for windows and tabs
+ * Служба восстановления сеанса для окон и вкладок */
+user_pref("browser.sessionstore.max_tabs_undo", 10);
+user_pref("browser.sessionstore.max_windows_undo", 10);
+
+/* Offline cache
+ * Автономный кэш */
+user_pref("browser.cache.offline.enable", false);
+
+/* Request to use the offline cache
+ * Запрос на использование автономного кэша */
+user_pref("offline-apps.allow_by_default", false);
+
+/* Storing extra session data
+ *		0 = Everywhere
+ *		1 = Unencrypted sites
+ *		2 = Nowhere
+ * Сохранение дополнительных данных сеанса
+ *		0 = Везде
+ *		1 = Незашифрованные сайты
+ *		2 = Нигде */
+user_pref("browser.sessionstore.privacy_level", 2);
+user_pref("browser.sessionstore.privacy_level_deferred", 2);
+
+/* Resume session after crash
+ * Возобновление сеанса после сбоя */
+user_pref("browser.sessionstore.resume_from_crash", false);
+
+/* Interval between saving sessions
+ * Интервал между сохранением сеансов */
+user_pref("browser.sessionstore.interval", 60000);
+
+/* Cookie
+ *		0 = Always accept cookies from third-party sites
+ *		1 = Never accept cookies from third-party sites
+ *		2 = Do not accept cookies at all
+ *		3 = Accept cookies from third-party sites, only from previously visited sites
+ * Куки
+ *		0 = Всегда принимать файлы куки с сторонних сайтов
+ *		1 = Никогда не принимать файлы куки с сторонних сайтов
+ *		2 = Не принимать куки вообще
+ *		3 = Принимать файлы куки с сторонних сайтов, только у ранее посещенных сайтов */
+user_pref("network.cookie.cookieBehavior", 1);
+
+/* Third-party cookies are set for the session only
+ * Сторонние файлы куки устанавливаются только для сеанса */
+user_pref("network.cookie.thirdparty.sessionOnly", true);
+
+/* Сookie lifetime policy
+ *		0 = Save them before expiration
+ *		2 = Save them until close Pale Moon
+ * Политика жизни куки
+ *		0 = Сохранять их до истечения срока действия
+ *		2 = Сохранять их до закрытия Pale Moon */
+user_pref("network.cookie.lifetimePolicy", 0);
+
+/* Indexed database API
+ * API Индексированных баз данных */
+user_pref("dom.indexedDB.experimental", false);
+user_pref("dom.indexedDB.logging.details", false);
+user_pref("dom.indexedDB.logging.enabled", false);
+user_pref("dom.indexedDB.logging.profiler-marks", false);
+
+/* Storage API
+ *		[NOTE] Disables another way for sites to store their data on the user's personal computer.
+ * API Хранилища
+ *		[ЗАМЕТКА]Отключает еще один способ для сайтов хранить свои данные на персональном компьютере пользователя. */
+user_pref("dom.storageManager.enabled", false);
+
+/* Limit events that can trigger a pop-up
+ * Ограничения событий, которые могут вызвать всплывающее окно */
+user_pref("dom.popup_allowed_events", "click dblclick");
+
+/* Special services (accessibility support services)
+ * Специальные услуги (службы поддержки доступности) */
+user_pref("accessibility.force_disabled", 1);
+
+/* Additional analytics sent to the web server
+ * Дополнительная аналитика, отправленная на веб-сервер */
+user_pref("beacon.enabled", false);
+
+/* Deleting temporary files opened by an external application
+ * Удаление временных файлов, открытые внешним приложением */
+user_pref("browser.helperApps.deleteTempFileOnExit", true);
+
+/* Web Speech
+ * Веб-речь */
+user_pref("media.webspeech.synth.enabled", false);
+user_pref("media.webspeech.recognition.enable", false);
+
+/* Sending video playback statistics
+ * Отправка статистики воспроизведения видео */
+user_pref("media.video_stats.enabled", false);
+
+/* Tracking protection in all windows
+ *		[NOTE] When enabled, the processor load increases, and the same uBlock Origin does well with this
+ * Защита слежения во всех окнах
+ *		[ЗАМЕТКА] При включении возрастает нагрузка на процессор, к тому же с этим хорошо справляется тот же uBlock Origin */
+// user_pref("privacy.trackingprotection.enabled", true);
+// user_pref("privacy.trackingprotection.pbmode.enabled", true);
+
+/* DOM forms
+ * DOM формы */
+user_pref("dom.forms.datetime", false);
+user_pref("dom.forms.datetime.others", false);
+user_pref("dom.forms.datetime.timepicker", false);
+
+/* Types of content
+ * Типы содержимого */
+user_pref("browser.contentHandlers.types.0.title", "");
+user_pref("browser.contentHandlers.types.0.uri", "");
+user_pref("goanna.handlerService.schemes.webcal.0.name", "");
+user_pref("goanna.handlerService.schemes.webcal.0.uriTemplate", "");
+user_pref("goanna.handlerService.schemes.mailto.0.name", "");
+user_pref("goanna.handlerService.schemes.mailto.0.uriTemplate", "");
+user_pref("goanna.handlerService.schemes.mailto.1.name", "");
+user_pref("goanna.handlerService.schemes.mailto.1.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.0.name", "");
+user_pref("gecko.handlerService.schemes.webcal.0.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.1.name", "");
+user_pref("gecko.handlerService.schemes.webcal.1.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.2.name", "");
+user_pref("gecko.handlerService.schemes.webcal.2.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.3.name", "");
+user_pref("gecko.handlerService.schemes.webcal.3.uriTemplate", "");
+
+/* Send Flash crash reports
+ * Отправка отчетов о сбоях Flash */
+user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
+
+/* Submitting the URL of the website where the plug-in crashed
+ * Отправка URL-адреса веб-сайта, где произошел сбой плагина */
+user_pref("dom.ipc.plugins.reportCrashURL", false);
+
+/* How often Palemoon should ask for a master password
+ *		0 = The first time
+ *		1 = Every time it's needed
+ *		2 = Every "N" minutes
+ * Как часто Palemoon должен запрашивать мастер-пароль
+ *		0 = Первый раз
+ *		1 = Каждый раз, когда это необходимо
+ *		2 = Каждые "N" минут */
+user_pref("security.ask_for_password", 2);
+
+/* How often (within how many minutes) Pale Moon should ask for a master password
+ * Как часто (в течение скольки минут) Pale Moon должен запрашивать мастер-пароль */
+user_pref("security.password_lifetime", 5);
+
+/* Auto-complete user name and password
+ * Aвтоматическое заполнение имени пользователя и пароля */
+user_pref("signon.autofillForms", false);
+user_pref("signon.autofillForms.http", false);
+user_pref("security.insecure_field_warning.contextual.enabled", true);
+
+/* Smooth scrolling
+ * Плавная прокрутка */
+user_pref("general.smoothScroll", false);
+
+/* Automatic update themes
+ * Автоматическое обновление тем */
+user_pref("lightweightThemes.update.enabled", false);
+
+/* Experiments
+ * Эксперименты */
+user_pref("network.allow-experiments", false);
+
+/* Favicons in shortcuts
+ *		[NOTE] URL shortcuts use a cached randomly named .ico file which is stored in your shortcutCache directory.
+ *		The .ico remains after the shortcut is deleted. If set to "false" then the shortcuts use a generic Pale Moon icon.
+ * Значки на ярлыках
+ *		[ЗАМЕТКА] В ярлыках URL используется кешированный файл с произвольным именем .ico,
+ *		который хранится в вашем каталоге shortcutCache. Файл .ico остается после удаления ярлыка.
+ *		Если установлено значение "false", в ярлыках используется общий значок Pale Moon. */
+user_pref("browser.shell.shortcutFavicons", false);
+
+/* Favicons in web notifications
+ * Значки в веб-уведомлениях */
+user_pref("alerts.showFavicons", false);
+
+/* Path to save files
+ *		0 = Desktop
+ *		1 = Downloads
+ *		2 = Last used folder
+ * Путь для сохранения файлов
+ *		0 = Рабочий стол
+ *		1 = Загрузки
+ *		2 = Последняя используемая папка */
+user_pref("browser.download.folderList", 2);
+
+/* Request to save files
+ * Запрос на сохранение файлов */
+user_pref("browser.download.useDownloadDir", false);
+
+/* Adding downloads to the list of recent system documents
+ * Добавление загрузок в список последних документов системы */
+user_pref("browser.download.manager.addToRecentDocs", false);
+
+/* Hiding MIME types
+ * Скрытие типов MIME */
+user_pref("browser.download.hide_plugins_without_extensions", false);
+
+/* Show the "Open with" dialog box in the download window
+ * Показ диалогового окна "Открыть при помощи" в окне загрузки */
+user_pref("browser.download.forbid_open_with", true);
