@@ -457,3 +457,100 @@ user_pref("browser.send_pings.require_same_host", true);
 /* Send DNS requests through a proxy using SOCKS 5
  * Отправлять DNS-запросы через прокси при использовании SOCKS 5 */
 user_pref("network.proxy.socks_remote_dns", true);
+
+/* Redirecting to the provider's page
+ * Перенаправление на страницу провайдера */
+user_pref("captivedetect.canonicalURL", "");
+user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.captive-portal-service.minInterval", 0);
+
+/* HTTP Header "Do Not Track"
+ * Заголовок HTTP "Не Отслеживать" */
+// user_pref("privacy.donottrackheader.enabled", true);
+
+/* TOR: hide referrer when leaving a .onion domain
+ * TOR: скрыть referrer при выходе с домена .onion */
+user_pref("network.http.referer.hideOnionSource", true);
+
+/* Cache API (Cache storage)
+ *		[NOTE] It is a repository on the user's computer where scripts can store information.
+ *		It is part of the "Service Workers" specification, but can be used without them.
+ * API Кэша (Хранилище кэша)
+ *		[ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
+ *		Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
+user_pref("dom.caches.enabled", false);
+
+/* Web notifications
+ * Веб-уведомления */
+user_pref("dom.webnotifications.enabled", false);
+user_pref("dom.webnotifications.serviceworker.enabled", false);
+
+/* Push notifications
+ * Push-уведомления */
+user_pref("dom.push.enabled", false);
+user_pref("dom.push.connection.enabled", false);
+user_pref("dom.push.serverURL", "");
+user_pref("dom.push.userAgentID", "");
+
+/* Disk cache
+ * Кэш-диска */
+user_pref("browser.cache.disk.capacity", 0);
+user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.disk.smart_size.enabled", false);
+user_pref("browser.cache.disk.smart_size.first_run", false);
+
+/* Disk cache for SSL pages
+ * Кэш-диск для SSL-страниц */
+user_pref("browser.cache.disk_cache_ssl", false);
+
+/* Fastback cache
+ *		0 = Disable
+ *		-1 = Auto
+ * Кэш Fastback
+ *		0 = Отключить
+ *		-1 = Автоматически */
+user_pref("browser.sessionhistory.max_total_viewers", 0);
+
+/* Session Recovery Service for tabs
+ * Служба восстановления сеанса для вкладок */
+user_pref("browser.sessionstore.max_tabs_undo", 10);
+
+/* Offline cache
+ * Автономный кэш */
+user_pref("browser.cache.offline.enable", false);
+
+/* Offline cache on insecure sites
+ * Автономный кэш на небезопасных сайтах */
+user_pref("browser.cache.offline.insecure.enable", false);
+
+/* Request to use the offline cache
+ * Запрос на использование автономного кеша */
+user_pref("offline-apps.allow_by_default", false);
+
+/* Storing extra session data
+ *		0 = Everywhere
+ *		1 = Unencrypted sites
+ *		2 = Nowhere
+ * Сохранение дополнительных данных сеанса
+ *		0 = Везде
+ *		1 = Незашифрованные сайты
+ *		2 = Нигде */
+user_pref("browser.sessionstore.privacy_level", 2);
+
+/* Resume session after crash
+ * Возобновление сеанса после сбоя */
+user_pref("browser.sessionstore.resume_from_crash", false);
+
+/* Interval between saving sessions
+ * Интервал между сохранением сеансов */
+user_pref("browser.sessionstore.interval", 60000);
+
+/* Cookies
+ *		0 = Accept cookies and site data
+ *		1 = Block third-party cookies
+ *		2 = Block all cookies
+ * Куки
+ *		0 = Принимать куки и данные сайтов
+ *		1 = Блокировать стороннии куки
+ *		2 = Блокировать все куки */
+user_pref("network.cookie.cookieBehavior", 1);
