@@ -815,3 +815,34 @@ user_pref("network.cookie.leave-secure-alone", true);
 /* SameSite сookies
  * Куки SameSite */
 user_pref("network.cookie.same-site.enabled", true);
+
+/* DOM (Document Object Model) Storage
+ *		[WARNING] This will break a LOT of sites' functionality AND extensions.
+ *		You are better off using an extension for more granular control.
+ * Хранилище DOM (Объектная Модель Документа)
+ *		[ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
+ *		Вам лучше использовать расширение для более гранулированного контроля. */
+user_pref("dom.storage.enabled", true);
+
+/* Warn showing red lock for "broken security"
+ * Предупреждать, показывая красный замок для "сломанной безопасности" */
+user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
+
+/* In the "Add Security Exception" dialog box on SSL warnings
+ *		0 = Do not fill out the current URL as an exception and do not select an SSL certificate
+ *		1 = Pre-populate the current URL, but do not pre-select the certificate
+ *		2 = Pre-populate the current URL and select a certificate
+ * В диалоговом окне "Добавить исключение безопасности" на предупреждениях SSL
+ *		0 = Не заполнять текущий URL-адрес в качестве исключения и
+ *			не выполнять выбор SSL-сертификата
+ *		1 = Предварительно заполнять текущий URL-адрес,
+ *			но не выполнять предварительный выбор сертификата
+ *		2 = Предварительно заполнить текущий URL-адрес и выбрать сертификат */
+user_pref("browser.ssl_override_behavior", 0);
+
+/* Additional information about the pages warning about unsafe connections
+ * Дополнительная информация о страницах, предупреждающая о небезопасном подключении */
+user_pref("browser.xul.error_pages.expert_bad_cert", true);
+
+/* MediaDevices */
+user_pref("media.ondevicechange.enabled", false);
