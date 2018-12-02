@@ -1460,3 +1460,528 @@ user_pref("media.navigator.enabled", false);
 // user_pref("layers.acceleration.force-enabled", false);
 // user_pref("layers.acceleration.disabled", true);
 // user_pref("gfx.direct2d.disabled", true); // [WINDOWS]
+
+/* Web Audio API
+ *		[WARNING] Dangerously, because can withdraw the sound fingerprints browser.
+ * API Веб-аудио
+ *		[ВНИМАНИЕ] Опасно, потому что можно снять звуковые отпечатки браузера. */
+user_pref("dom.webaudio.enabled", false);
+
+/* Pointer Events
+ * События указателя */
+user_pref("dom.w3c_pointer_events.enabled", false);
+
+/* Saving zoom for sites
+ *		[WARNING] Dangerously due to browser fingerprints.
+ * Сохранение масштаба для сайтов
+ *		[ВНИМАНИЕ] Опасно, из-за отпечатков браузера. */
+user_pref("browser.zoom.siteSpecific", false);
+
+/* Gamepad API
+ * API Геймпада */
+user_pref("dom.gamepad.enabled", false);
+user_pref("dom.gamepad.test.enabled", false);
+user_pref("dom.gamepad.extensions.enabled", false);
+user_pref("dom.gamepad.haptic_feedback.enabled", false);
+
+/* Providing network information
+ * Предоставление информации о сети */
+user_pref("dom.netinfo.enabled", false);
+
+/* Touch-events
+ *		0 = Disabled
+ *		1 = Enabled
+ *		2 = Automatic detection
+ * Тач-события
+ *		0 = Отключить
+ *		1 = Включить
+ *		2 = Автоматическое обнаружение */
+user_pref("dom.w3c_touch_events.enabled", 0);
+
+/* SHA-1 Algorithm
+ *		0 = All SHA1 certs are allowed
+ *		1 = All SHA1 certs are blocked (including perfectly valid ones from 2015 and earlier)
+ *		2 = Deprecated option that now maps to 1
+ *		3 = Only allowed for locally-added roots (e.g. anti-virus)
+ *		4 = Only allowed for locally-added roots or for certs in 2015 and earlier
+ * Алгоритм SHA-1
+ *		0 = Все сертификаты SHA1 разрешены
+ *		1 = Все сертификаты SHA1 заблокированы (в том числе вполне допустимые с 2015 года и ранее)
+ *		2 = Deprecated option that now maps to 1
+ *		3 = Разрешено только для локально добавляемых корней (например, Антивирус)
+ *		4 = Разрешено только для локально добавленных корней или сертификатов в 2015 году и ранее */
+user_pref("security.pki.sha1_enforcement_level", 1);
+
+/* Capture Stream API
+ * API Потокового захвата */
+user_pref("canvas.capturestream.enabled", false);
+
+/* Image Capture API
+ * API Захвата изображений */
+user_pref("dom.imagecapture.enabled", false);
+
+/* OffscreenCanvas */
+user_pref("gfx.offscreencanvas.enabled", false);
+
+/* Block known Flash trackers and fingerprints
+ * Блокировать известные Flash трекеры и отпечатки пальцев */
+user_pref("browser.safebrowsing.blockedURIs.enabled", false);
+user_pref("urlclassifier.blockedTable", "");
+
+/* HTTP Alternative Services
+ * Альтернативные услуги HTTP */
+user_pref("network.http.altsvc.enabled", false);
+user_pref("network.http.altsvc.oe", false);
+
+/* Access the URL of the PAC scripts
+ *		[NOTE] The path and URL request components "https://" are deleted.
+ * Доступ к URL-адресу у PAC скриптов
+ *		[ЗАМЕТКА] Компоненты пути и запроса URL-адресов "https://" удаляются. */
+user_pref("network.proxy.autoconfig_url.include_path", false);
+
+/* DNS-over-HTTPS (DoH)
+ *		0 = Disable
+ *		1 = DNS or TRR is used, whichever is faster
+ *		2 = TRR is used by default, and DNS as a fallback
+ *		3 = Only TRR is used
+ *		4 = Race for statistics, mirroring mode in which TRR and DNS are enabled in parallel
+ *		[WARNING] DoH bypasses hosts and gives info to yet another party (e.g. Cloudflare).
+ * DNS-над-HTTPS
+ *		0 = Отключить
+ *		1 = Используется DNS или TRR, в зависимости от того, что быстрее
+ *		2 = Используется TRR по умолчанию, а DNS как запасной вариант
+ *		3 = Используется только TRR
+ *		4 = Гонка за статистикой, режим зеркалирования при котором TRR и DNS задействованы параллельно
+ *		[ВНИМАНИЕ] DoH обходит хосты и предоставляет информацию еще одной стороне (например, Cloudflare). */
+// user_pref("network.trr.mode", 0);
+// user_pref("network.trr.bootstrapAddress", "");
+// user_pref("network.trr.uri", "");
+
+/* UNC (Uniform Naming Convention) paths
+ * UNC (Универсальное Соглашение об Именовании) путей */
+user_pref("network.file.disable_unc_paths", true);
+
+/* GIO, as a potential proxy bypass vector
+ * GIO, как потенциальный вектор обхода прокси */
+user_pref("network.gio.supported-protocols", "");
+
+/* Sites with autocomplete="off" attribute
+ *		[NOTE] This function allows you to save the entered passwords in the password manager,
+ *		even if the site owner has set the autocomplete attribute to "off".
+ * Сайты с атрибутом автозаполнение "Отключено"
+ *		[ЗАМЕТКА] Данная функция позволяет сохранять введенные пароли в менеджере паролей,
+ *		даже если владелец сайта установил атрибуту автозаполнение значение "Отключено". */
+user_pref("signon.storeWhenAutocompleteOff", true);
+
+/* Display a warning when you log on to unprotected pages (not HTTPS)
+ * При входе на незащищенные страницы (не HTTPS) отображать предупреждение */
+user_pref("security.insecure_password.ui.enabled", true);
+
+/* Show (do not show) password when using alternative URL
+ * Показывать (не показывать) пароль при использовании альтернативного URL */
+user_pref("browser.fixup.hide_user_pass", true);
+
+/* Formless login capture
+ * Бесформенный захват входа */
+user_pref("signon.formlessCapture.enabled", false);
+
+/* HTTP Authentication on 3rd party images
+ * Аутентификация HTTP на сторонних изображениях */
+user_pref("network.auth.subresource-img-cross-origin-http-auth-allow", false);
+
+/* Control TLS versions
+ * Контроль TLS версий */
+user_pref("security.tls.version.min", 3);
+user_pref("security.tls.version.max", 4);
+
+/* SSL session tracking
+ * Отслеживание сеансов SSL */
+user_pref("security.ssl.disable_session_identifiers", true);
+
+/* SSL Error Reporting
+ * Отчеты об ошибках SSL */
+user_pref("security.ssl.errorReporting.automatic", false);
+user_pref("security.ssl.errorReporting.enabled", false);
+user_pref("security.ssl.errorReporting.url", "");
+
+/* TLS1.3 Zero Round Trip Time */
+user_pref("security.tls.enable_0rtt_data", false);
+
+/* Windows 8.1 Family Security
+ *		0 = Disable
+ *		1 = Only attempt to detect Family Safety mode (don't import the root)
+ *		2 = Detect Family Safety mode and import the root
+ * Семейная безопасность Windows 8.1
+ *		0 = Отключить
+ *		1 = Только попытка обнаружить режим безопасности семьи (не импортировать корень)
+ *		2 = Определить режим безопасности семьи и импортировать корень */
+user_pref("security.family_safety.mode", 0); // [WINDOWS]
+
+/* Enfore Public Key Pinning
+ *		0 = Disable
+ *		1 = Allow user MiTM (such as your antivirus)
+ *		2 = Strict
+ * Привязка к открытому ключу
+ *		0 = Отключить
+ *		1 = Разрешить пользователю MiTM (например, вашему антивирусу)
+ *		2 = Строго */
+user_pref("security.cert_pinning.enforcement_level", 2);
+
+/* Page thumbnails
+ * Эскизы страниц */
+user_pref("browser.pagethumbnails.capturing_disabled", true);
+
+/* Web content in file processes
+ * Веб-контент в файловых процессах */
+user_pref("browser.tabs.remote.allowLinkedWebInFileUriProcess", false);
+
+/* User Interface Tour (UITour)
+ * Тур по интерфейсу пользователя */
+user_pref("browser.uitour.enabled", false);
+user_pref("browser.uitour.url", "");
+
+/* Various developer tools in the context of the browser
+ * Различные инструменты разработчика в контексте браузера */
+user_pref("devtools.chrome.enabled", false);
+
+/* WEB Integrated development environment (WebIDE)
+ * ВЕБ Интегрированная среда разработки */
+user_pref("devtools.debugger.force-local", true);
+user_pref("devtools.debugger.prompt-connection", true);
+user_pref("devtools.debugger.remote-enabled", false);
+user_pref("devtools.webide.adbAddonURL", "");
+user_pref("devtools.webide.autoConnectRuntime", false);
+user_pref("devtools.webide.autoinstallADBHelper", false);
+user_pref("devtools.webide.enableLocalRuntime", false);
+user_pref("devtools.webide.enabled", false);
+user_pref("devtools.webide.templatesURL", "");
+
+/* WebChannel whitelist */
+user_pref("webchannel.allowObject.urlWhitelist", "");
+
+/* View clipboard content
+ * Просмотр содержимого буфера обмена */
+user_pref("dom.event.clipboardevents.enabled", true);
+
+/* Clipboard commands (cut/copy) from "non-privileged" content
+ * Команды буфера обмена (вырезать/копировать) от "непривилегированного" контента */
+user_pref("dom.allow_cut_copy", false);
+
+/* Dialog box "Confirm you want to leave" when closing page
+ * Диалоговое окно "Подтвердить, что вы хотите уйти" при закрытии страницы */
+user_pref("dom.disable_beforeunload", false);
+
+/* Shaking and vibrating the screen
+ * Встряхивание и вибрирование экрана */
+user_pref("dom.vibrator.enabled", false);
+
+/* Shared Memory API */
+user_pref("javascript.options.shared_memory", false);
+
+/* Permissions to scripts
+ * Разрешения скриптам */
+user_pref("dom.disable_window_move_resize", true);
+user_pref("dom.disable_window_open_feature.close", true);
+user_pref("dom.disable_window_open_feature.location", true);
+user_pref("dom.disable_window_open_feature.menubar", true);
+user_pref("dom.disable_window_open_feature.minimizable", true);
+user_pref("dom.disable_window_open_feature.personalbar", true);
+user_pref("dom.disable_window_open_feature.resizable", true);
+user_pref("dom.disable_window_open_feature.status", true);
+user_pref("dom.disable_window_open_feature.titlebar", true);
+user_pref("dom.disable_window_open_feature.toolbar", true);
+
+/* How to open links that indicate opening new Windows
+ *		1 = Open in current tab
+ *		2 = Open in new window
+ *		3 = Open in new tab
+ * Как открывать ссылки, в которых указано открытие новых окон
+ *		1 = Открыть в текущей вкладке
+ *		2 = Открывать в новом окне
+ *		3 = Открывать в новой вкладке */
+user_pref("browser.link.open_newwindow", 3);
+
+/* Allows you to open tabs instead of new Windows
+ *		0 = Open all links in tabs
+ *		1 = Open links in windows
+ *		2 = Open links in tabs with the exception of cases
+ *      	when non-standard window parameters are specified
+ * Позволяет открывать вкладки вместо новых окон
+ *		0 = Открывать все ссылки во вкладках
+ *		1 = Открывать ссылки в окнах
+ *		2 = Открывать ссылки во вкладках за исключением случаев,
+ *      	когда заданы нестандартные параметры окна */
+user_pref("browser.link.open_newwindow.restriction", 0);
+
+/* Block pop-ups
+ * Блокировать всплывающие окна */
+user_pref("dom.disable_open_during_load", true);
+
+/* Maximum number of pop-ups
+ * Максимальное количество всплывающих окон */
+user_pref("dom.popup_maximum", 3);
+
+/* Control of sent information regardless of the source
+ *		0 = Never send "Referrer" header
+ *		1 = Send "Referrer" header only when clicking on links and similar elements
+ *		2 = Send to all requests (e.g. images, links, etc.)
+ *		[WARNING] When you disable the transfer of this header, many sites will stop working.
+ * Контроль отправляемой информации независимо от источника
+ *		0 = Никогда не отправлять заголовок "Referrer"
+ *		1 = Отправлять заголовок "Referrer" только при клике по ссылкам и подобным элементам
+ *		2 = Отправить на все запросы (например, изображения, ссылки и т.д.)
+ *		[ВНИМАНИЕ] При отключении отправки этого заголовка, многие сайты перестанут работать. */
+user_pref("network.http.sendRefererHeader", 2);
+
+/* Control the number of "Referrer" sent regardless of the source
+ *		0 = Send the full URL
+ *		1 = Send URL without query string (scheme + host + port + path)
+ *		2 = Send only origin (scheme + host + port)
+ * Контроль количества "Referrer" отправляемых независимо от источника
+ *		0 = Отправлять полный URL
+ *		1 = Отправлять URL-адрес без строки запроса (схема + хост + порт + путь)
+ *		2 = Отправлять только начало (схема + хост + порт) */
+user_pref("network.http.referer.trimmingPolicy", 0);
+
+/* Control the selection of sent "Referrer" through sources
+ *		0 = Send "Referrer" in all cases
+ *		1 = Send only if the base domains match
+ *		2 = Send "Referer" only to the same host
+ * Контроль выбора отправляемых "Referrer" через источники
+ *		0 = Отправлять "Referrer" во всех случаях
+ *		1 = Отправлять, только если базовые домены совпадают
+ *		2 = Отправить "Referer" только на тот же хост */
+user_pref("network.http.referer.XOriginPolicy", 1);
+
+/* Control the number of "Referrer" sent by origin
+ *		0 = Send the full URL
+ *		1 = Send URL without query string (scheme + host + port + path)
+ *		2 = Send only origin (scheme + host + port)
+ * Контроль количества "Referrer" отправляемых по происхождению
+ *		0 = Отправлять полный URL
+ *		1 = Отправлять URL-адрес без строки запроса (схема + хост + порт + путь)
+ *		2 = Отправлять только начало (схема + хост + порт) */
+user_pref("network.http.referer.XOriginTrimmingPolicy", 0);
+
+/* Spoofing a referer
+ *		TRUE = Spoof referer
+ *		FALSE = Real referer
+ * Фальсифицировать Referrer
+ *		TRUE = Подделывать Referrer
+ *		FALSE = Настоящий Referrer */
+user_pref("network.http.referer.spoofSource", true);
+
+/* Referrer Policy
+ *		0 = No referer
+ *		1 = Same origin
+ *		2 = Strict origin when crossing origin
+ *		3 = No referrer when downgrade
+ * Политика Referrer
+ *		0 = Нет реферера
+ *		1 = То же происхождение
+ *		2 = Строгое происхождение при пересечении происхождения
+ *		3 = Отсутствие реферера при понижении */
+user_pref("network.http.referer.defaultPolicy", 3);
+user_pref("network.http.referer.defaultPolicy.pbmode", 2);
+
+/* Open links from the clipboard with the middle mouse button
+ * Открывать ссылки из буфера обмена средней кнопкой мышки */
+user_pref("middlemouse.contentLoadURL", false);
+
+/* Restrict HTTP Redirection
+ * Ограничить переадресацию HTTP */
+user_pref("network.http.redirection-limit", 10);
+
+/* Setting default permissions (resource://app/defaults/permissions) in the Permission Manager
+ * Установка по умолчанию разрешений (resource://app/defaults/permissions) в Менеджере Разрешений */
+user_pref("permissions.manager.defaultsUrl", "");
+
+/* The impact of the system colors to CSS or canvas
+ * Воздействие системных цветов на CSS или canvas */
+user_pref("ui.use_standins_for_native_colors", true);
+
+/* IDN Punycode */
+user_pref("network.IDN_show_punycode", true);
+
+/* Old SSL/TLS "insecure" renegotiation (vulnerable to a MiTM attack)
+ * Старое "небезопасное" повторное согласование SSL/TLS (уязвимое к атаке MiTM) */
+user_pref("security.ssl.require_safe_negotiation", true);
+
+/* The "screenshot --imgur" command, with the help of which it was possible to publish screenshots on Imgur.com
+ * Команда "screenshot --imgur", с помощью которой можно было публиковать скриншоты на Imgur.com */
+user_pref("devtools.gcli.imgurClientID", "");
+user_pref("devtools.gcli.imgurUploadURL", "");
+
+/* Prevent connection to the device on Firefox OS for debugging over Wi-Fi Internet
+ * Запрет соединения с устройством на Firefox ОС для отладки по сети Wi-Fi Интернет */
+user_pref("devtools.remote.wifi.scan", false);
+user_pref("network.tickle-wifi.enabled", false);
+user_pref("geo.wifi.uri", "");
+user_pref("geo.wifi.logging.enabled", false);
+
+/* File Handle API
+ *		[NOTE] Responsible for accessing lower-level file operations.
+ *		[ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям. */
+user_pref("dom.fileHandle.enabled", false);
+
+/* Device Storage API
+ *		[NOTE] Responsible for access to the file system, this API allows the browser to
+ *		read and/or write to the user's files.
+ *		[ЗАМЕТКА] Отвечает за доступ к файловой системе, данный API позволяет браузеру самостоятельно
+ *		читать и/или писать в файлах пользователя. */
+user_pref("device.storage.enabled", false);
+
+/* Windows Store launch links on Windows 8/8.1/10
+ * Ссылки запуска Windows Store на Windows 8/8.1/10 ***/
+user_pref("network.protocol-handler.external.ms-windows-store", false); // [WINDOWS]
+
+/* Browser function that allows you to save objects by keyboard shortcut, left mouse button and ALT key
+ *		TRUE = When you click on an object with Alt plus LMB, it is saved
+ *		FALSE = Disable this feature
+ * Функция браузера, которая позволяет сохранять объекты с помощью сочетания клавиш, левой кнопки мыши и клавиши ALT
+ *		TRUE = При клике на объект клавишами Alt плюс ЛКМ происходит его сохранение
+ *		FALSE = Отключить эту функцию */
+user_pref("browser.altClickSave", true);
+
+/* Bookmark save format
+ *		TRUE = Save to HTML
+ *		FALSE = Save to SQLITE
+ * Формат сохранения закладок
+ *		TRUE = Сохранение в HTML
+ *		FALSE = Сохранение в SQLITE */
+user_pref("browser.bookmarks.autoExportHTML", true);
+
+/* Showing search results
+ *		TRUE = Open search result in current page
+ *		FALSE = Open search result in new page
+ * Показ результатов поиска
+ *		TRUE = Открывать результат поиска в текущей странице
+ *		FALSE = Открывать результат поиска на новой странице */
+user_pref("browser.search.openintab", true);
+
+/* Automatic selection of the entire line in the address bar
+ * Автоматическое выделение всей строки в поле адресной строки */
+user_pref("browser.urlbar.clickSelectsAll", false);
+
+/* Showing search results
+ *		TRUE = To wrap lines
+ *		FALSE = Do not wrap lines
+ * Показ результатов поиска
+ *		TRUE = Переносить строки
+ *		FALSE = Не переносить строки */
+user_pref("view_source.wrap_long_lines", true);
+
+/* Media Capabilities API
+ *		[WARNING] This may affect media performance if disabled, no one is sure.
+ *		[ВНИМАНИЕ] Это может повлиять на работу медиа, если отключен, никто не уверен. */
+// user_pref("media.media-capabilities.enabled", false);
+
+/* Block unencrypted requests from Flash on encrypted pages to mitigate MitM attacks
+ * Блокировка незашифрованных запросов от Flash на зашифрованных страницах для смягчения MitM-атак */
+user_pref("security.mixed_content.block_object_subrequest", true);
+
+/* Content Blocking (required to block cookies)
+ * Блокировка содержимого (требуется для блокировки файлов cookie) */
+user_pref("browser.contentblocking.enabled", true);
+
+/* Feedback URL
+ * URL обратной связи */
+user_pref("app.feedback.baseURL", "");
+
+/* Help URL
+ * URL справки */
+user_pref("app.support.baseURL", "");
+
+/* Manual URL
+ *		[NOTE] This preference determines the address that the user can view to update the browser manually
+ *		if an application update has failed.
+ * URL мануала
+ *		[ЗАМЕТКА] Это предпочтение определяет адрес, который пользователь может просмотреть для обновления браузера вручную,
+ *		если обновление приложения потерпело неудачу. */
+user_pref("app.update.url.details", "");
+
+/* CSS :visited selectors
+ *		[ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
+ *		which prevents the user from finding out what URLs the user has in the browser history.
+ * CSS :visited селекторы
+ *		[ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
+ *		что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
+user_pref("layout.css.visited_links_enabled", false);
+
+/* Closing Firefox when closing the last tab
+ * Закрытие Firefox при закрытии последней вкладки */
+user_pref("browser.tabs.closeWindowWithLastTab", false);
+
+/* Private browsing mode
+ * Режим приватного просмотра */
+// user_pref("browser.privatebrowsing.autostart", true);
+
+/* Limit the availability of fonts in the system to white lists
+ * Ограничить доступность шрифтов в системе к белым спискам */
+// user_pref("font.system.whitelist", "Arial, Batang, 바탕, Cambria Math, Courier New, Euphemia, Gautami, Georgia, Gulim, 굴림, GulimChe, 굴림체, Iskoola Pota, Kalinga, Kartika, Latha, Lucida Console, MS Gothic, ＭＳ ゴシック, MS Mincho, ＭＳ 明朝, MS PGothic, ＭＳ Ｐゴシック, MS PMincho, ＭＳ Ｐ明朝, MV Boli, Malgun Gothic, Mangal, Meiryo, Meiryo UI, Microsoft Himalaya, Microsoft JhengHei, Microsoft JengHei UI, Microsoft YaHei, 微软雅黑, Microsoft YaHei UI, MingLiU, 細明體, Noto Sans Buginese, Noto Sans Khmer, Noto Sans Lao, Noto Sans Myanmar, Noto Sans Yi, Nyala, PMingLiU, 新細明體, Plantagenet Cherokee, Raavi, Segoe UI, Shruti, SimSun, 宋体, Sylfaen, Tahoma, Times New Roman, Tunga, Verdana, Vrinda, Yu Gothic UI, Segoe UI Emoji");
+
+/* asm.js */
+user_pref("javascript.options.asmjs", false);
+
+/* WebAssembly */
+user_pref("javascript.options.wasm", false);
+
+/* The time of inactivity of the user through which the browser will begin to save the session
+ * Время отсутствия активности пользователя, через который браузер начнет сохранять сессию */
+user_pref("browser.sessionstore.idleDelay", 720000);
+
+/* Preloading documents or resources specified via <link rel = "preload">
+ * Предзагрузка документов или ресурсов, указанных через <link rel="preload"> */
+user_pref("network.preload", false);
+
+/* Semi Transparent tab previews
+ * Полупрозрачная превью вкладок */
+user_pref("nglayout.enable_drag_images", false);
+
+/* Disable preconnects and preresolves
+ * Отключить предварительные соединения и пререзоливы */
+user_pref("network.predictor.prefetch-min-confidence", 101);
+user_pref("network.predictor.preconnect-min-confidence", 101);
+user_pref("network.predictor.preresolve-min-confidence", 101);
+
+/* Module LaterRun
+ *		[NOTE] Displaying new users with various help information when N starts up the browser.
+ * Модуль LaterRun
+ *		[ЗАМЕТКА] Показ новых пользователей различной справочной информация при "N" запуске браузера. */
+user_pref("browser.laterrun.enabled", false);
+
+/* Disable the display of the text of the password by clicking on the corresponding input field
+ * Отключить показ текста пароля по клику на соответствующее поле ввода */
+user_pref("signon.rememberSignons.visibilityToggle", false);
+
+/* Disables the registration of the Safebrowsing and Tracking Protection tables in the URL Classifier
+ * Отключает регистрацию таблиц Safebrowsing и Tracking Protection в URL Classifier */
+user_pref("urlclassifier.malwareTable", "");
+user_pref("urlclassifier.phishTable", "");
+user_pref("urlclassifier.downloadBlockTable", "");
+user_pref("urlclassifier.downloadAllowTable", "");
+user_pref("urlclassifier.trackingTable", "");
+user_pref("urlclassifier.trackingWhitelistTable", "");
+user_pref("urlclassifier.disallow_completions", "");
+user_pref("urlclassifier.passwordAllowTable", "");
+
+/* Disable the whitelist domain list for Flash
+ * Отключить белый список доменов для Flash */
+user_pref("plugins.flashBlock.enabled", false);
+user_pref("urlclassifier.flashAllowTable", "");
+user_pref("urlclassifier.flashAllowExceptTable", "");
+user_pref("urlclassifier.flashTable", "");
+user_pref("urlclassifier.flashExceptTable", "");
+user_pref("urlclassifier.flashSubDocTable", "");
+user_pref("urlclassifier.flashSubDocExceptTable", "");
+user_pref("urlclassifier.flashInfobarTable", "");
+
+/* Disable the import window when you first start Firefox
+ * Отключить окно импорта при первом запуске Firefox */
+user_pref("browser.migrate.automigrate.enabled", false);
+user_pref("browser.migrate.automigrate.ui.enabled", false);
+user_pref("browser.migrate.automigrate.inpage.ui.enabled", false);
+
+/* Do not track network topology
+ * Не отслеживать топологию сети */
+user_pref("network.notify.changed", false);

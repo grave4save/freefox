@@ -771,3 +771,47 @@ user_pref("clipboard.autocopy", false);
 /* Text reader function in Reader View
  * Функция зачитывания текста в Reader View */
 // user_pref("narrate.enabled", false);
+
+/* WebGL debug info being available to websites
+ * Информация об отладке WebGL доступна для веб-сайтов */
+user_pref("webgl.enable-debug-renderer-info", false);
+
+/* Mixed content
+ * Смешанное содержание */
+user_pref("security.mixed_content.block_active_content", true); 
+user_pref("security.mixed_content.block_display_content", true);
+
+/* SPDY protocol
+ *		[WARNING] This protocol has a privacy problem protocol, use at your own risk.
+ * Протокол SPDY
+ *		[ВНИМАНИЕ] Данный протокол имеет протокол проблемы с приватностью, используйте на свой страх и риск. */
+user_pref("network.http.spdy.enabled", true);
+user_pref("network.http.spdy.enabled.deps", true);
+user_pref("network.http.spdy.enabled.http2", true);
+
+/* WebGL (Web Graphics Library)
+ * WebGL (Библиотека веб-графики) */
+// user_pref("webgl.disable-extensions", true);
+// user_pref("webgl.disable-fail-if-major-performance-caveat", true);
+// user_pref("webgl.disabled", true);
+// user_pref("webgl.enable-webgl2", false);
+// user_pref("webgl.force-enabled", false);
+// user_pref("webgl.min_capability_mode", true);
+// user_pref("webgl.msaa-force", false);
+
+/* Service Workers
+ *		[NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
+ *		are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
+ *		and resource requests, and caching resources.
+ *		[ЗАМЕТКА] "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
+ *		браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
+ *		перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы. */
+user_pref("dom.serviceWorkers.enabled", false);
+
+/* Cookies for HTTP sites are set with the "secure" directive
+ * Файлы куки для сайтов HTTP устанавливаются с "защищенной" директивой */
+user_pref("network.cookie.leave-secure-alone", true);
+
+/* SameSite сookies
+ * Куки SameSite */
+user_pref("network.cookie.same-site.enabled", true);
