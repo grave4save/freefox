@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/palemoon/
- * Last modified: December 2, 2018
+ * Last modified: December 3, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -301,3 +301,216 @@ user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
 /* Preferred language for displaying web pages
  * Предпочитаемый язык для отображения веб-страниц */
 // user_pref("intl.accept_languages", "ru-RU, ru, en-US, en"); // It is recommended to select only english locales ~ Рекомендуется выбрать только английские локали
+
+/* Automatic check for updates for extensions
+ * Автоматическая проверка обновлений для расширений */
+user_pref("extensions.update.enabled", false);
+
+/* Automatic installation of updates for Pale Moon
+ * Автоматическая установка обновлений для Pale Moon */
+user_pref("app.update.auto", false);
+
+/* Automatic update check for Pale Moon
+ * Автоматическая проверка обновлений для Pale Moon */
+user_pref("app.update.enabled", false);
+
+/* Automatic installation of updates for extensions
+ * Автоматическая установка обновлений для расширений */
+user_pref("extensions.update.autoUpdateDefault", false);
+
+/* Background update service
+ * Служба для фонового обновления */
+user_pref("app.update.staging.enabled", false);
+
+/* Display information about the update
+ * Отображение информация об обновлении */
+user_pref("app.update.silent", false);
+
+/* Update extension metadata
+ * Обновление метаданных расширения */
+user_pref("extensions.getAddons.cache.enabled", false);
+
+/* Search engine updates
+ * Обновления поисковых систем */
+user_pref("browser.search.update", false);
+
+/* Search suggestions
+ * Поисковые предложения */
+user_pref("browser.search.suggest.enabled", false);
+
+/* In "about:addons" remove the item "Get add-ons"
+ *		[WARNING] Uses Google Analytics.
+ * В "about:addons" убрать пункт "Получить дополнения"
+ *		[ВНИМАНИЕ] Использует Google Analytics. */
+user_pref("extensions.getAddons.showPane", false);
+user_pref("extensions.webservice.discoverURL", "");
+
+/* Guessing the domain in the address bar
+ * Угадывание домена в адресной строке */
+user_pref("browser.fixup.alternate.enabled", false);
+
+/* Number of steps  "To previous page" and  "To next page"
+ * Количество шагов "На предыдущую страницу" и "На следующую страницу" */
+user_pref("browser.sessionhistory.max_entries", 10);
+
+/* Autocomplete and suggestion types
+ * Автозаполнение и типы предложений */
+user_pref("browser.urlbar.autocomplete.enabled", false); // Autocomplete ~ Автозаполнение
+user_pref("browser.urlbar.suggest.history", false); // History ~ История
+user_pref("browser.urlbar.suggest.bookmark", false); // Bookmarks ~ Закладки
+user_pref("browser.urlbar.suggest.openpage", false); // Open tabs ~ Открытые вкладки
+
+/* Number of results displayed in the drop - down list in the address bar
+ * Количество результатов, отображаемых в раскрывающемся списке в адресной строке */
+user_pref("browser.urlbar.maxRichResults", 0);
+
+/* Inline autocomplete
+ *		TRUE = Supplement the text typed in the address bar
+ *		FALSE = Show below
+ * Встроенное автозаполнение
+ *		TRUE = Дополнять текст, набранный в адресной строке
+ *		FALSE = Показывать ниже */
+user_pref("browser.urlbar.autoFill", false);
+user_pref("browser.urlbar.autoFill.typed", false);
+
+/* Remember the search history and form data
+ * Помнить историю поиска и данные формы */
+user_pref("browser.formfill.enable", false);
+user_pref("browser.formfill.expire_days", 0);
+user_pref("browser.formfill.saveHttpsForms", false);
+
+/* Remember your browsing and download history
+ * Помните историю посещений и загрузок */
+user_pref("places.history.enabled", true);
+
+/* Automatically delete history when closing Pale Moon
+ * Автоматическое удаление истории при закрытии Pale Moon */
+user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+
+/* What elements of the story should be automatically deleted when you close Pale Moon
+ * Какие элементы истории должны быть автоматически удалены при закрытии Pale Moon */
+user_pref("privacy.clearOnShutdown.cache", true); // Cache ~ Кэш
+user_pref("privacy.clearOnShutdown.cookies", false);// Cookies ~ Куки
+user_pref("privacy.clearOnShutdown.downloads", true); // Downloads ~ Загрузки
+user_pref("privacy.clearOnShutdown.formdata", true); // Form data ~ Данные форм
+user_pref("privacy.clearOnShutdown.history", true); // History ~ История
+user_pref("privacy.clearOnShutdown.offlineApps", false); // Offline website data ~ Данные автономных веб-сайтов
+user_pref("privacy.clearOnShutdown.sessions", true); // Active sessions ~ Активные сеансы
+user_pref("privacy.clearOnShutdown.siteSettings", false); // Site settings ~ Настройки сайтов
+
+/* Master cleaner Pale Moon
+ *		[NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
+ * Мастер очистки Pale Moon
+ *		[ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
+user_pref("privacy.cpd.cache", true); // Cache ~ Кэш
+user_pref("privacy.cpd.cookies", false); // Cookies ~ Куки
+user_pref("privacy.cpd.downloads", true); // Downloads ~ Загрузки
+user_pref("privacy.cpd.formdata", true); // Form data ~ Данные форм
+user_pref("privacy.cpd.history", true); // History ~ История
+user_pref("privacy.cpd.offlineApps", false); // Offline website data ~ Данные автономных веб-сайтов
+user_pref("privacy.cpd.passwords", false); // Passwords ~ Пароли
+user_pref("privacy.cpd.sessions", true); // Active sessions ~ Активные сеансы
+user_pref("privacy.cpd.siteSettings", false); // Site settings ~ Настройки сайтов
+
+/* Time range to clear
+ *		0 = Everything
+ *		1 = Last hour
+ *		2 = Last two hours
+ *		3 = Last four hours
+ *		4 = Today
+ *		5 = Last five minutes
+ *		6 = Last twenty-four hours
+ * Диапазон времени для очистки
+ *		0 = Все
+ *		1 = Последний час
+ *		2 = Последние два часа
+ *		3 = Последние четыре часа
+ *		4 = Сегодня
+ *		5 = Последние пять минут
+ *		6 = Последние сутки */
+user_pref("privacy.sanitize.timeSpan", 0);
+
+/* Opening bookmarks in background tabs
+ * Открытие закладок в фоновых вкладках */
+user_pref("browser.tabs.loadBookmarksInBackground", true);
+
+/* Maximum number of backup bookmarks
+ * Максимальное количество резервных закладок */
+user_pref("browser.bookmarks.max_backups", 3);
+
+/* "Backspace" button value
+ *    0 = Previous page
+ *    1 = Scroll page up
+ *    2 = Do nothing
+ * Значение кнопки "Backspace"
+ *    0 = Предыдущая страница
+ *    1 = Прокрутить страницу вверх
+ *    2 = Ничего не делать */
+user_pref("browser.backspace_action", 2);
+
+/* Screensharing
+ * Общий доступ к экрану */
+user_pref("media.getusermedia.screensharing.enabled", false);
+user_pref("media.getusermedia.audiocapture.enabled", false);
+
+/* Auto-play of HTML5 media
+ *		TRUE = Allow
+ *		FALSE = Block
+ *		[WARNING] This may break video playback on various sites.
+ * Автоматическое воспроизведение мультимедиа в формате HTML5
+ *		TRUE = Разрешить
+ *		FALSE = Заблокировать
+ *		[ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
+user_pref("media.autoplay.default", true);
+
+/* Automatically play sound in inactive tabs
+ *		TRUE = Do not play
+ *		FALSE = Play
+ * Автоматическое воспроизведение звука в неактивных вкладках
+ *		TRUE = Не воспроизводить
+ *		FALSE = Воспроизводить */
+user_pref("media.block-autoplay-until-in-foreground", true);
+
+/* Volume status
+ * Состояние громкости */       
+user_pref("media.default_volume", "0.5");
+
+/* WEBM */
+user_pref("media.mediasource.webm.enabled", true);
+
+/* Location accounting
+ * Учет местоположения */
+user_pref("geo.enabled", false);
+user_pref("browser.geolocation.warning.infoURL", ""); // WIKI
+
+/* GeoIP-based search results
+ * Результаты поиска на основе GeoIP */
+user_pref("browser.search.region", "US");
+user_pref("browser.search.geoip.url", "");
+user_pref("browser.search.geoip.timeout", 0);
+
+/* Regional specificity for search results and search engines
+ * Региональная специфика для результатов поиска и поисковых систем */
+user_pref("browser.search.geoSpecificDefaults", false);
+
+/* Install only signed extensions
+ * Установка только подписанных расширений */
+user_pref("xpinstall.signatures.required", true); // Require signing extensions ~ Требовать подписание расширений
+
+/* Add-on installation delay
+ * Задержка при установке дополнений */
+user_pref("security.dialog_enable_delay", 0);
+
+/* Default plugins state
+ *		0 = Disabled
+ *		1 = Request activation
+ *		2 = Active, individual plugins can be overridden
+ * Состояние плагинов по умолчанию
+ *		0 = Отключено
+ *		1 = Запрашивать активацию
+ *		2 = Активно, можно переопределить отдельные плагины */
+user_pref("plugin.default.state", 0);
+
+/* Activate the plugin by clicking
+ * Активация плагина по клику */
+user_pref("plugins.click_to_play", true);
