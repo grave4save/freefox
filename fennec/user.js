@@ -945,3 +945,114 @@ user_pref("dom.webaudio.enabled", false);
 /* Pointer Events
  * События указателя */
 user_pref("dom.w3c_pointer_events.enabled", false);
+
+/* Gamepad API
+ * API Геймпада */
+user_pref("dom.gamepad.enabled", false);
+user_pref("dom.gamepad.test.enabled", false);
+user_pref("dom.gamepad.extensions.enabled", false);
+user_pref("dom.gamepad.haptic_feedback.enabled", false);
+
+/* Providing network information
+ * Предоставление информации о сети */
+user_pref("dom.netinfo.enabled", false);
+
+/* Touch-events
+ *		0 = Disabled
+ *		1 = Enabled
+ *		2 = Automatic detection
+ * Тач-события
+ *		0 = Отключить
+ *		1 = Включить
+ *		2 = Автоматическое обнаружение */
+user_pref("dom.w3c_touch_events.enabled", 0);
+
+/* SHA-1 Algorithm
+ *		0 = All SHA1 certs are allowed
+ *		1 = All SHA1 certs are blocked (including perfectly valid ones from 2015 and earlier)
+ *		2 = Deprecated option that now maps to 1
+ *		3 = Only allowed for locally-added roots (e.g. anti-virus)
+ *		4 = Only allowed for locally-added roots or for certs in 2015 and earlier
+ * Алгоритм SHA-1
+ *		0 = Все сертификаты SHA1 разрешены
+ *		1 = Все сертификаты SHA1 заблокированы (в том числе вполне допустимые с 2015 года и ранее)
+ *		2 = Deprecated option that now maps to 1
+ *		3 = Разрешено только для локально добавляемых корней (например, Антивирус)
+ *		4 = Разрешено только для локально добавленных корней или сертификатов в 2015 году и ранее */
+user_pref("security.pki.sha1_enforcement_level", 1);
+
+/* Capture Stream API
+ * API Потокового захвата */
+user_pref("canvas.capturestream.enabled", false);
+
+/* Image Capture API
+ * API Захвата изображений */
+user_pref("dom.imagecapture.enabled", false);
+
+/* OffscreenCanvas */
+user_pref("gfx.offscreencanvas.enabled", false);
+
+/* Block known Flash trackers and fingerprints
+ * Блокировать известные Flash трекеры и отпечатки пальцев */
+user_pref("browser.safebrowsing.blockedURIs.enabled", false);
+user_pref("urlclassifier.blockedTable", "");
+
+/* HTTP Alternative Services
+ * Альтернативные услуги HTTP */
+user_pref("network.http.altsvc.enabled", false);
+user_pref("network.http.altsvc.oe", false);
+
+/* Access the URL of the PAC scripts
+ *		[NOTE] The path and URL request components "https://" are deleted.
+ * Доступ к URL-адресу у PAC скриптов
+ *		[ЗАМЕТКА] Компоненты пути и запроса URL-адресов "https://" удаляются. */
+user_pref("network.proxy.autoconfig_url.include_path", false);
+
+/* DNS-over-HTTPS (DoH)
+ *		0 = Disable
+ *		1 = DNS or TRR is used, whichever is faster
+ *		2 = TRR is used by default, and DNS as a fallback
+ *		3 = Only TRR is used
+ *		4 = Race for statistics, mirroring mode in which TRR and DNS are enabled in parallel
+ *		[WARNING] DoH bypasses hosts and gives info to yet another party (e.g. Cloudflare).
+ * DNS-над-HTTPS
+ *		0 = Отключить
+ *		1 = Используется DNS или TRR, в зависимости от того, что быстрее
+ *		2 = Используется TRR по умолчанию, а DNS как запасной вариант
+ *		3 = Используется только TRR
+ *		4 = Гонка за статистикой, режим зеркалирования при котором TRR и DNS задействованы параллельно
+ *		[ВНИМАНИЕ] DoH обходит хосты и предоставляет информацию еще одной стороне (например, Cloudflare). */
+// user_pref("network.trr.mode", 0);
+// user_pref("network.trr.bootstrapAddress", "");
+// user_pref("network.trr.uri", "");
+
+/* Sites with autocomplete="off" attribute
+ *		[NOTE] This function allows you to save the entered passwords in the password manager,
+ *		even if the site owner has set the autocomplete attribute to "off".
+ * Сайты с атрибутом автозаполнение "Отключено"
+ *		[ЗАМЕТКА] Данная функция позволяет сохранять введенные пароли в менеджере паролей,
+ *		даже если владелец сайта установил атрибуту автозаполнение значение "Отключено". */
+user_pref("signon.storeWhenAutocompleteOff", true);
+
+/* Show (do not show) password when using alternative URL
+ * Показывать (не показывать) пароль при использовании альтернативного URL */
+user_pref("browser.fixup.hide_user_pass", true);
+
+/* Formless login capture
+ * Бесформенный захват входа */
+user_pref("signon.formlessCapture.enabled", false);
+
+/* HTTP Authentication on 3rd party images
+ * Аутентификация HTTP на сторонних изображениях */
+user_pref("network.auth.subresource-img-cross-origin-http-auth-allow", false);
+
+/* Control TLS versions
+ * Контроль TLS версий */
+user_pref("security.tls.version.min", 3);
+user_pref("security.tls.version.max", 4);
+
+/* SSL Error Reporting
+ * Отчеты об ошибках SSL */
+user_pref("security.ssl.errorReporting.automatic", false);
+user_pref("security.ssl.errorReporting.enabled", false);
+user_pref("security.ssl.errorReporting.url", "");
