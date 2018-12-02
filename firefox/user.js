@@ -349,3 +349,142 @@ user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
 // user_pref("font.name.sans-serif.x-cans", "sans-serif");
 // user_pref("font.name.monospace.x-cans", "monospace");
 // user_pref("font.language.group", "x-western");
+
+/* Preferred language for displaying web pages
+ * Предпочитаемый язык для отображения веб-страниц */
+// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en"); // It is recommended to select only english locales ~ Рекомендуется выбрать только английские локали
+
+/* Forced to use UTF-8 for text files
+ * Принудительное использование UTF-8 для текстовых файлов */
+user_pref("intl.charset.fallback.utf8_for_file", true);
+
+/* Automatic check for updates for extensions
+ * Автоматическая проверка обновлений для расширений */
+user_pref("extensions.update.enabled", false);
+
+/* Automatic installation of updates for Firefox
+ * Автоматическая установка обновлений для Firefox */
+user_pref("app.update.auto", false);
+
+/* Automatic installation of updates for extensions
+ * Автоматическая установка обновлений для расширений */
+user_pref("extensions.update.autoUpdateDefault", false);
+
+/* Background update service
+ * Служба для фонового обновления */
+user_pref("app.update.service.enabled", false);
+user_pref("app.update.staging.enabled", false);
+
+/* Display information about the update
+ * Отображение информация об обновлении */
+user_pref("app.update.silent", false);
+
+/* Update extension metadata
+ * Обновление метаданных расширения */
+user_pref("extensions.getAddons.cache.enabled", false);
+
+/* Automatic update of search engines
+ * Автоматическое обновление поисковых систем */
+user_pref("browser.search.update", false);
+
+/* Search suggestions
+ * Поисковые предложения */
+user_pref("browser.search.suggest.enabled", false);
+
+/* In "about:addons" remove the item "Get add-ons"
+ *		[WARNING] Uses Google Analytics.
+ * В "about:addons" убрать пункт "Получить дополнения"
+ *		[ВНИМАНИЕ] Использует Google Analytics. */
+user_pref("extensions.getAddons.showPane", false);
+user_pref("extensions.webservice.discoverURL", "");
+
+/* Guessing the domain in the address bar
+ * Угадывание домена в адресной строке */
+user_pref("browser.fixup.alternate.enabled", false);
+
+/* Number of steps  "To previous page" and  "To next page"
+ * Количество шагов "На предыдущую страницу" и "На следующую страницу" */
+user_pref("browser.sessionhistory.max_entries", 10);
+
+/* Preloading autocomplete URLs (when you enter in the address bar)
+ * Предварительная загрузка URL-адресов автозаполнения (при вводе в адресную строку) */
+user_pref("browser.urlbar.speculativeConnect.enabled", false);
+
+/* Autocomplete and suggestion types
+ * Автозаполнение и типы предложений */
+user_pref("browser.urlbar.autocomplete.enabled", false); // Autocomplete ~ Автозаполнение
+user_pref("browser.urlbar.suggest.history", false); // History ~ История
+user_pref("browser.urlbar.suggest.bookmark", false); // Bookmarks ~ Закладки
+user_pref("browser.urlbar.suggest.openpage", false); // Open tabs ~ Открытые вкладки
+
+/* The number of results displayed in the drop-down list in the address bar
+ * Количество результатов, отображаемых в раскрывающемся списке в адресной строке */
+user_pref("browser.urlbar.maxRichResults", 0);
+
+/* Alternative search engines in the address bar
+ * Альтернативные поисковые системы в адресной строке */
+user_pref("browser.urlbar.oneOffSearches", false);
+
+/* Inline autocomplete
+ *		TRUE = Supplement the text typed in the address bar
+ *		FALSE = Show below
+ * Встроенное автозаполнение
+ *		TRUE = Дополнять текст, набранный в адресной строке
+ *		FALSE = Показывать ниже */
+user_pref("browser.urlbar.autoFill", false);
+
+/* Remember the search history and form data
+ * Помнить историю поиска и данные формы */
+user_pref("browser.formfill.enable", false);
+user_pref("browser.formfill.expire_days", 0);
+
+/* Remember your browsing and download history
+ * Помните историю посещений и загрузок */
+user_pref("places.history.enabled", true);
+
+/* Automatic deletion of history when closing the browser
+ * Автоматическое удаление истории при закрытии браузера */
+user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+
+/* What elements of the story should be automatically deleted when you close Firefox
+ * Какие элементы истории должны быть автоматически удалены при закрытии Firefox */
+user_pref("privacy.clearOnShutdown.cache", true); // Cache ~ Кэш
+user_pref("privacy.clearOnShutdown.cookies", false);// Cookies ~ Куки
+user_pref("privacy.clearOnShutdown.downloads", true); // Downloads ~ Загрузки
+user_pref("privacy.clearOnShutdown.formdata", true); // Form data ~ Данные форм
+user_pref("privacy.clearOnShutdown.history", true); // History ~ История
+user_pref("privacy.clearOnShutdown.offlineApps", false); // Offline website data ~ Данные автономных веб-сайтов
+user_pref("privacy.clearOnShutdown.sessions", true); // Active sessions ~ Активные сеансы
+user_pref("privacy.clearOnShutdown.siteSettings", false); // Site settings ~ Настройки сайтов
+
+/* Master cleaner Firefox
+ *		[NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
+ * Мастер очистки Firefox
+ *		[ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
+user_pref("privacy.cpd.cache", true); // Cache ~ Кэш
+user_pref("privacy.cpd.cookies", false); // Cookies ~ Куки
+user_pref("privacy.cpd.downloads", true); // Downloads ~ Загрузки
+user_pref("privacy.cpd.formdata", true); // Form data ~ Данные форм
+user_pref("privacy.cpd.history", true); // History ~ История
+user_pref("privacy.cpd.offlineApps", false); // Offline website data ~ Данные автономных веб-сайтов
+user_pref("privacy.cpd.passwords", false); // Passwords ~ Пароли
+user_pref("privacy.cpd.sessions", true); // Active sessions ~ Активные сеансы
+user_pref("privacy.cpd.siteSettings", false); // Site settings ~ Настройки сайтов
+
+/* Time range to clear
+ *		0 = Everything
+ *		1 = Last hour
+ *		2 = Last two hours
+ *		3 = Last four hours
+ *		4 = Today
+ *		5 = Last five minutes
+ *		6 = Last twenty-four hours
+ * Диапазон времени для очистки
+ *		0 = Все
+ *		1 = Последний час
+ *		2 = Последние два часа
+ *		3 = Последние четыре часа
+ *		4 = Сегодня
+ *		5 = Последние пять минут
+ *		6 = Последние сутки */
+user_pref("privacy.sanitize.timeSpan", 0);
