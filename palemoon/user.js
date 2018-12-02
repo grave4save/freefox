@@ -1116,3 +1116,392 @@ user_pref("signon.storeWhenAutocompleteOff", true);
 /* Show (do not show) password when using alternative URL
  * Показывать (не показывать) пароль при использовании альтернативного URL */
 user_pref("browser.fixup.hide_user_pass", true);
+
+/* Formless login capture
+ * Бесформенный захват входа */
+user_pref("signon.formlessCapture.enabled", false);
+
+/* Control TLS versions
+ * Контроль TLS версий */
+user_pref("security.tls.version.min", 3);
+user_pref("security.tls.version.max", 4);
+
+/* Open links from the clipboard with the middle mouse button
+ * Открывать ссылки из буфера обмена средней кнопкой мышки */
+user_pref("middlemouse.contentLoadURL", false);
+
+/* SSL Error Reporting
+ * Отчеты об ошибках SSL */
+user_pref("security.ssl.errorReporting.automatic", false);
+user_pref("security.ssl.errorReporting.enabled", false);
+user_pref("security.ssl.errorReporting.url", "");
+
+/* Various developer tools in the context of the browser
+ * Различные инструменты разработчика в контексте браузера */
+user_pref("devtools.chrome.enabled", false);
+
+/* TLS1.3 Zero Round Trip Time */
+user_pref("security.tls.enable_0rtt_data", false);
+
+/* Windows 8.1 Family Security
+ *		0 = Disable
+ *		1 = Only attempt to detect Family Safety mode (don't import the root)
+ *		2 = Detect Family Safety mode and import the root
+ * Семейная безопасность Windows 8.1
+ *		0 = Отключить
+ *		1 = Только попытка обнаружить режим безопасности семьи (не импортировать корень)
+ *		2 = Определить режим безопасности семьи и импортировать корень */
+user_pref("security.family_safety.mode", 0); // [WINDOWS]
+
+/* Enfore Public Key Pinning
+ *		0 = Disable
+ *		1 = Allow user MiTM (such as your antivirus)
+ *		2 = Strict
+ * Привязка к открытому ключу
+ *		0 = Отключить
+ *		1 = Разрешить пользователю MiTM (например, вашему антивирусу)
+ *		2 = Строго */
+user_pref("security.cert_pinning.enforcement_level", 2);
+
+/* View clipboard content
+ * Просмотр содержимого буфера обмена */
+user_pref("dom.event.clipboardevents.enabled", true);
+
+/* Dialog box "Confirm you want to leave" when closing page
+ * Диалоговое окно "Подтвердить, что вы хотите уйти" при закрытии страницы */
+user_pref("dom.disable_beforeunload", false);
+
+/* Shaking and vibrating the screen
+ * Встряхивание и вибрирование экрана */
+user_pref("dom.vibrator.enabled", false);
+
+/* WebAssembly */
+user_pref("javascript.options.wasm", false);
+
+/* asm.js */
+user_pref("javascript.options.asmjs", false);
+
+/* Intersection Observer API */
+user_pref("dom.IntersectionObserver.enabled", true);
+
+/* Shared Memory API */
+user_pref("javascript.options.shared_memory", false);
+
+/* Permissions to scripts
+ * Разрешения скриптам */
+user_pref("dom.disable_window_move_resize", true);
+user_pref("dom.disable_window_open_feature.close", true);
+user_pref("dom.disable_window_open_feature.location", true);
+user_pref("dom.disable_window_open_feature.menubar", true);
+user_pref("dom.disable_window_open_feature.minimizable", true);
+user_pref("dom.disable_window_open_feature.personalbar", true);
+user_pref("dom.disable_window_open_feature.resizable", true);
+user_pref("dom.disable_window_open_feature.status", true);
+user_pref("dom.disable_window_open_feature.titlebar", true);
+user_pref("dom.disable_window_open_feature.toolbar", true);
+
+/* How to open links that indicate opening new Windows
+ *		1 = Open in current tab
+ *		2 = Open in new window
+ *		3 = Open in new tab
+ * Как открывать ссылки, в которых указано открытие новых окон
+ *		1 = Открыть в текущей вкладке
+ *		2 = Открывать в новом окне
+ *		3 = Открывать в новой вкладке */
+user_pref("browser.link.open_newwindow", 3);
+
+/* Allows you to open tabs instead of new Windows
+ *		0 = Open all links in tabs
+ *		1 = Open links in windows
+ *		2 = Open links in tabs with the exception of cases when non-standard window parameters are specified
+ * Позволяет открывать вкладки вместо новых окон
+ *		0 = Открывать все ссылки во вкладках
+ *		1 = Открывать ссылки в окнах
+ *		2 = Открывать ссылки во вкладках за исключением случаев, когда заданы нестандартные параметры окна */
+user_pref("browser.link.open_newwindow.restriction", 0);
+
+/* Block pop-ups
+ * Блокировать всплывающие окна */
+user_pref("dom.disable_open_during_load", true);
+
+/* Maximum number of pop-ups
+ * Максимальное количество всплывающих окон */
+user_pref("dom.popup_maximum", 3);
+
+/* Control of sent information regardless of the source
+ *		0 = Never send "Referrer" header
+ *		1 = Send "Referrer" header only when clicking on links and similar elements
+ *		2 = Send to all requests (e.g. images, links, etc.)
+ *		[WARNING] When you disable the transfer of this header, many sites will stop working.
+ * Контроль отправляемой информации независимо от источника
+ *		0 = Никогда не отправлять заголовок "Referrer"
+ *		1 = Отправлять заголовок "Referrer" только при клике по ссылкам и подобным элементам
+ *		2 = Отправить на все запросы (например, изображения, ссылки и т.д.)
+ *		[ВНИМАНИЕ] При отключении отправки этого заголовка, многие сайты перестанут работать. */
+user_pref("network.http.sendRefererHeader", 2);
+
+/* Control the number of "Referrer" sent regardless of the source
+ *		0 = Send the full URL
+ *		1 = Send URL without query string (scheme + host + port + path)
+ *		2 = Send only origin (scheme + host + port)
+ * Контроль количества "Referrer" отправляемых независимо от источника
+ *		0 = Отправлять полный URL
+ *		1 = Отправлять URL-адрес без строки запроса (схема + хост + порт + путь)
+ *		2 = Отправлять только начало (схема + хост + порт) */
+user_pref("network.http.referer.trimmingPolicy", 0);
+
+/* Control the selection of sent "Referrer" through sources
+ *		0 = Send "Referrer" in all cases
+ *		1 = Send only if the base domains match
+ *		2 = Send "Referer" only to the same host
+ * Контроль выбора отправляемых "Referrer" через источники
+ *		0 = Отправлять "Referrer" во всех случаях
+ *		1 = Отправлять, только если базовые домены совпадают
+ *		2 = Отправить "Referer" только на тот же хост */
+user_pref("network.http.referer.XOriginPolicy", 1);
+
+/* Control the number of "Referrer" sent by origin
+ *		0 = Send the full URL
+ *		1 = Send URL without query string (scheme + host + port + path)
+ *		2 = Send only origin (scheme + host + port)
+ * Контроль количества "Referrer" отправляемых по происхождению
+ *		0 = Отправлять полный URL
+ *		1 = Отправлять URL-адрес без строки запроса (схема + хост + порт + путь)
+ *		2 = Отправлять только начало (схема + хост + порт) */
+user_pref("network.http.referer.XOriginTrimmingPolicy", 0);
+
+/* Spoofing a referer
+ *		TRUE = Spoof referer
+ *		FALSE = Real referer
+ * Фальсифицировать Referrer
+ *		TRUE = Подделывать Referrer
+ *		FALSE = Настоящий Referrer */
+user_pref("network.http.referer.spoofSource", true);
+
+/* Restrict HTTP Redirection
+ * Ограничить переадресацию HTTP */
+user_pref("network.http.redirection-limit", 10);
+
+/* IDN Punycode */
+user_pref("network.IDN_show_punycode", true);
+
+/* Old SSL/TLS "insecure" renegotiation (vulnerable to a MiTM attack)
+ * Старое "небезопасное" повторное согласование SSL/TLS (уязвимое к атаке MiTM) */
+user_pref("security.ssl.require_safe_negotiation", true);
+
+/* The "screenshot --imgur" command, with the help of which it was possible to publish screenshots on Imgur.com
+ * Команда "screenshot --imgur", с помощью которой можно было публиковать скриншоты на Imgur.com */
+user_pref("devtools.gcli.imgurClientID", "");
+user_pref("devtools.gcli.imgurUploadURL", "");
+
+/* Tabs on top
+ * Вкладки сверху */
+user_pref("browser.tabs.onTop", true);
+
+/* Prevent connection to the device on Firefox OS for debugging over Wi-Fi Internet
+ * Запрет соединения с устройством на Firefox ОС для отладки по сети Wi-Fi Интернет */
+user_pref("devtools.remote.wifi.scan", false);
+user_pref("devtools.remote.wifi.visible", false);
+user_pref("geo.wifi.uri", "");
+
+/* WEB Integrated development environment (WebIDE)
+ * ВЕБ Интегрированная среда разработки */
+user_pref("devtools.debugger.force-local", true);
+user_pref("devtools.debugger.prompt-connection", true);
+user_pref("devtools.debugger.remote-enabled", false);
+user_pref("devtools.webide.adaptersAddonURL", "");
+user_pref("devtools.webide.adbAddonURL", "");
+user_pref("devtools.webide.addonsURL", "");
+user_pref("devtools.webide.autoConnectRuntime", false);
+user_pref("devtools.webide.autoinstallADBHelper", false);
+user_pref("devtools.webide.autoinstallFxdtAdapters", false);
+user_pref("devtools.webide.enableLocalRuntime", false);
+user_pref("devtools.webide.enabled", false);
+user_pref("devtools.webide.simulatorAddonsURL", "");
+user_pref("devtools.webide.templatesURL", "");
+user_pref("devtools.webide.widget.autoinstall", false);
+user_pref("devtools.webide.widget.enabled", false);
+user_pref("devtools.webide.widget.inNavbarByDefault", false);
+
+/* User Timing API
+ *		[NOTE] Responsible for access to the high-frequency timer, which can be used to listen to the processor cache
+ *		from unprivileged JS-code.
+ *		[ЗАМЕТКА] Отвечает за доступ к высокочастотному таймеру, который можно использовать для прослушивания кэша
+ *		процессора из непривилегированного JS-кода. */
+user_pref("dom.enable_user_timing", false);
+user_pref("dom.performance.enable_user_timing_logging", false);
+
+/* File Handle API
+ *		[NOTE] Responsible for accessing lower-level file operations.
+ *		[ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям. */
+user_pref("dom.fileHandle.enabled", false);
+
+/* FlyWeb API
+ *		[NOTE] Responsible for discovering and connecting directly to various electronic devices that provide Web APIs such as TVs,
+ *		projectors, smart home elements and game consoles, without accessing intermediate cloud services.
+ *		[ЗАМЕТКА] Отвечает за обнаружение и прямое соединение с различными электронными устройствами,
+ *		предоставляющими Web API, такими как телевизоры, проекторы, элементы умного дома и игровые консоли,
+ *		без обращения к промежуточным облачным сервисам. */
+user_pref("dom.flyweb.enabled", false);
+
+/* Device Storage API
+ *		[NOTE] Responsible for access to the file system, this API allows the browser to
+ *		read and/or write to the user's files.
+ *		[ЗАМЕТКА] Отвечает за доступ к файловой системе, данный API позволяет браузеру самостоятельно
+ *		читать и/или писать в файлах пользователя. */
+user_pref("device.storage.enabled", false);
+
+/* Windows Store launch links on Windows 8/8.1/10
+ * Ссылки запуска Windows Store на Windows 8/8.1/10 ***/
+user_pref("network.protocol-handler.external.ms-windows-store", false); // [WINDOWS]
+
+/* Browser function that allows you to save objects by keyboard shortcut, left mouse button and ALT key
+ *		TRUE = When you click on an object with Alt plus LMB, it is saved
+ *		FALSE = Disable this feature
+ * Функция браузера, которая позволяет сохранять объекты с помощью сочетания клавиш, левой кнопки мыши и клавиши ALT
+ *		TRUE = При клике на объект клавишами Alt плюс ЛКМ происходит его сохранение
+ *		FALSE = Отключить эту функцию */
+user_pref("browser.altClickSave", true);
+
+/* Bookmark save format
+ *		TRUE = Save to HTML
+ *		FALSE = Save to SQLITE
+ * Формат сохранения закладок
+ *		TRUE = Сохранение в HTML
+ *		FALSE = Сохранение в SQLITE */
+user_pref("browser.bookmarks.autoExportHTML", true);
+
+/* Showing search results
+ *		TRUE = Open search result in current page
+ *		FALSE = Open search result in new page
+ * Показ результатов поиска
+ *		TRUE = Открывать результат поиска в текущей странице
+ *		FALSE = Открывать результат поиска на новой странице */
+user_pref("browser.search.openintab", true);
+
+/* Automatic selection of the entire line in the address bar
+ * Автоматическое выделение всей строки в поле адресной строки */
+user_pref("browser.urlbar.clickSelectsAll", false);
+
+/* Showing search results
+ *		TRUE = To wrap lines
+ *		FALSE = Do not wrap lines
+ * Показ результатов поиска
+ *		TRUE = Переносить строки
+ *		FALSE = Не переносить строки */
+user_pref("view_source.wrap_long_lines", true);
+
+/* Address new tab
+ * Адрес новой вкладке */
+user_pref("browser.newtab.url", "about:blank");
+
+/* Number of rows and columns of thumbnails displayed on the new page
+ * Количество строк и колонок миниатюр, отображаемых на новой странице */
+user_pref("browser.newtabpage.rows", 3);
+user_pref("browser.newtabpage.columns", 3);
+
+/* Pale Moon settings window height
+ *		TRUE = Dynamic
+ *		FALSE = Static
+ * Высота окна настроек Pale Moon
+ *		TRUE = Динамическая
+ *		FALSE = Cтатическая */
+user_pref("browser.preferences.animateFadeIn", true);
+
+/* Do you need to press the confirmation button to change the settings
+ *		TRUE = The settings are activated immediately (the window has only a "close" button).
+ *		FALSE = To activate the settings, you must click the confirmation button.
+ * Требуется ли нажимать кнопку подтверждения для изменения настроек
+ *		TRUE = Настройки активируются незамедлительно (в окне есть только кнопка "закрыть").
+ *		FALSE = Для активации настроек необходимо нажать кнопку подтверждения. */
+user_pref("browser.preferences.instantApply", true);
+
+/* Feedback URL
+ * URL обратной связи */
+user_pref("app.feedback.baseURL", "");
+
+/* Help URL
+ * URL справки */
+user_pref("app.support.baseURL", "");
+
+/* Manual URL
+ *		[NOTE] This preference determines the address that the user can view to update the browser manually
+ *		if an application update has failed.
+ * URL мануала
+ *		[ЗАМЕТКА] Это предпочтение определяет адрес, который пользователь может просмотреть для обновления браузера вручную,
+ *		если обновление приложения потерпело неудачу. */
+user_pref("app.update.url.details", "");
+
+/* CSS :visited selectors
+ *		[ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
+ *		which prevents the user from finding out what URLs the user has in the browser history.
+ * CSS :visited селекторы
+ *		[ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
+ *		что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
+user_pref("layout.css.visited_links_enabled", false);
+
+/* Exceptions for add-ons that slow down your browser
+ * Исключения для дополнений, которые замедляют работу вашего браузера */
+user_pref("browser.addon-watch.ignore", "");
+
+/* Prevent sites from using offline appcache without user permission
+ * Запретить сайтам использовать Offline Appcache без разрешения пользователя */
+user_pref("browser.offline-apps.notify", true);
+
+/* Button "Know Your Rights"
+ *		[NOTE] Displayed on first run.
+ * Кнопка "Знай свои права"
+ *		[ЗАМЕТКА] Отображается при первом запуске */
+user_pref("browser.rights.3.shown", true);
+
+/* Show notifications about check default browser when you first open
+ * Показ уведомлений об проверки браузера по умолчанию при первом открытии */
+user_pref("browser.shell.skipDefaultBrowserCheckOnFirstRun", true);
+
+/* URL the help in slow startup
+ * URL справочного материала при медленном запуске */
+ user_pref("browser.slowstartup.help.url", "");
+ 
+/* Closing Palemoon when closing the last tab
+ * Закрытие Palemoon при закрытии последней вкладки */
+user_pref("browser.tabs.closeWindowWithLastTab", false);
+
+/* Private browsing mode
+ * Режим приватного просмотра */
+// user_pref("browser.privatebrowsing.autostart", true);
+
+/* Disable remote JAR files being opened, regardless of content type
+ * Отключить удаленные JAR-файлы, независимо от типа содержимого */
+user_pref("network.jar.block-remote-files", true);
+
+/* Disable JAR and mark as unsafe file types
+ * Отключить JAR и пометить, как небезопасный типов файлов */
+user_pref("network.jar.open-unsafe-types", false);
+
+/* Semi Transparent tab previews
+ * Полупрозрачная превью вкладок */
+user_pref("nglayout.enable_drag_images", false);
+
+/* Disable preconnects and preresolves
+ * Отключить предварительные соединения и пререзоливы */
+user_pref("network.predictor.prefetch-min-confidence", 101);
+user_pref("network.predictor.preconnect-min-confidence", 101);
+user_pref("network.predictor.preresolve-min-confidence", 101);
+
+/* Disable the display of the text of the password by clicking on the corresponding input field
+ * Отключить показ текста пароля по клику на соответствующее поле ввода */
+user_pref("signon.rememberSignons.visibilityToggle", false);
+
+/* Do not track network topology
+ * Не отслеживать топологию сети */
+user_pref("network.notify.changed", false);
+
+/* Telemetry
+ * Телеметрия */
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.server_owner", "");
+user_pref("toolkit.telemetry.server", "");
+user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
+user_pref("toolkit.telemetry.infoURL", "");
+user_pref("toolkit.telemetry.enabled", false);
+user_pref("toolkit.telemetry.debugSlowSql", false);
