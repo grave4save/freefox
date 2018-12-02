@@ -846,3 +846,102 @@ user_pref("browser.xul.error_pages.expert_bad_cert", true);
 
 /* MediaDevices */
 user_pref("media.ondevicechange.enabled", false);
+
+/* Querying Google Application Reputation database for downloaded binary files
+ * Запрос базы данных репутации приложения Google для загруженных двоичных файлов */
+user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.url", "");
+
+/* Safebrowsing reports
+ * Отчеты Safebrowsing */
+user_pref("browser.safebrowsing.provider.google4.reportMalwareMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportURL", "");
+user_pref("browser.safebrowsing.provider.google.reportMalwareMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google.reportPhishMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google.reportURL", "");
+user_pref("browser.safebrowsing.reportPhishURL", "");
+user_pref("browser.safebrowsing.provider.mozilla.lists", "");
+user_pref("browser.safebrowsing.provider.mozilla.updateURL", "");
+user_pref("browser.safebrowsing.provider.mozilla.gethashURL", "");
+user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);
+user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
+
+/* Button "Ignore this warning" on the pages of safe browsing
+ *		[NOTE] Useless for regular users, it's meant for admins on bigger network as a way to secure their users.
+ * Кнопка "Игнорировать это предупреждение" на страницах безопасного просмотра
+ *		[ЗАМЕТКА] Бесполезный для обычных пользователей, он предназначен для администраторов в большей сети,
+ *		как способ защитить своих пользователей. */
+user_pref("browser.safebrowsing.allowOverride", false);
+
+/* OCSP Stapling
+ * Сшивание OCSP */
+user_pref("security.ssl.enable_ocsp_stapling", true);
+user_pref("security.ssl.enable_ocsp_must_staple", true);
+
+/* Resource timing API
+ * API Ресурсов времени */
+user_pref("dom.enable_resource_timing", false);
+
+/* Browser sends information about the start and end time of page loading
+ * Передача браузером информации о времени начала и окончания загрузки страницы */
+user_pref("dom.enable_performance", false);
+user_pref("dom.enable_performance_navigation_timing", false);
+user_pref("dom.enable_performance_observer", false);
+
+/* Sensor API
+ *		[NOTE] Disables events from the accelerometer and other sensors.
+ * API Сенсора
+ *		[ЗАМЕТКА] Отключает события от акселерометра и других сенсоров. */
+user_pref("device.sensors.enabled", false);
+
+/* CSP (Content Security Policy)
+ * Политика безопасности контента */
+user_pref("security.csp.enable", true);
+user_pref("security.csp.enable_violation_events", false);
+user_pref("security.csp.experimentalEnabled", false);
+user_pref("security.data_uri.block_toplevel_data_uri_navigations", true);
+
+/* Online Certificate Status Protocol
+ *		0 = Disabled
+ *		1 = Enabled
+ *		2 = Enabled for EV certificates only
+ * Протокол статуса сертификата онлайн
+ *		0 = Отключено
+ *		1 = Включен
+ *		2 = Включено только для сертификатов EV */
+user_pref("security.OCSP.enabled", 1);
+
+/* Require a valid OCSP response for OCSP enabled certificates
+ *		[WARNING] When you turn on breaks some sites.
+ * Требовать действительный ответ OCSP для сертификатов с поддержкой OCSP
+ *		[ВНИМАНИЕ] При включении ломается некоторые сайты. */
+// user_pref("security.OCSP.require", true);
+
+/* Battery Status API */
+user_pref("dom.battery.enabled", false);
+
+/* Virtual Reality API
+ *		[NOTE] Disables support for virtual reality devices.
+ * API Виртуальной реальности
+ *		[ЗАМЕТКА] Отключает поддержку устройств виртуальной реальности. */
+user_pref("dom.vr.enabled", false);
+
+/* Enumerate multimedia devices
+ * Перечисление устройств мультимедиа */
+user_pref("media.navigator.enabled", false);
+
+/* Hardware acceleration
+ * Аппаратное ускорение */
+// user_pref("layers.acceleration.force-enabled", false);
+// user_pref("layers.acceleration.disabled", true);
+
+/* Web Audio API
+ *		[WARNING] Dangerously, because can withdraw the sound fingerprints browser.
+ * API Веб-аудио
+ *		[ВНИМАНИЕ] Опасно, потому что можно снять звуковые отпечатки браузера. */
+user_pref("dom.webaudio.enabled", false);
+
+/* Pointer Events
+ * События указателя */
+user_pref("dom.w3c_pointer_events.enabled", false);

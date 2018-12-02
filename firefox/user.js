@@ -1402,6 +1402,7 @@ user_pref("browser.safebrowsing.allowOverride", false);
 /* OCSP Stapling
  * Сшивание OCSP */
 user_pref("security.ssl.enable_ocsp_stapling", true);
+user_pref("security.ssl.enable_ocsp_must_staple", true);
 
 /* Resource timing API
  * API Ресурсов времени */
