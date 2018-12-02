@@ -1258,3 +1258,94 @@ user_pref("dom.fileHandle.enabled", false);
  *		[ЗАМЕТКА] Отвечает за доступ к файловой системе, данный API позволяет браузеру самостоятельно
  *		читать и/или писать в файлах пользователя. */
 user_pref("device.storage.enabled", false);
+
+/* Automatic selection of the entire line in the address bar
+ * Автоматическое выделение всей строки в поле адресной строки */
+user_pref("browser.urlbar.clickSelectsAll", false);
+
+/* Showing search results
+ *		TRUE = To wrap lines
+ *		FALSE = Do not wrap lines
+ * Показ результатов поиска
+ *		TRUE = Переносить строки
+ *		FALSE = Не переносить строки */
+user_pref("view_source.wrap_long_lines", true);
+
+/* Media Capabilities API
+ *		[WARNING] This may affect media performance if disabled, no one is sure.
+ *		[ВНИМАНИЕ] Это может повлиять на работу медиа, если отключен, никто не уверен. */
+// user_pref("media.media-capabilities.enabled", false);
+
+/* Block unencrypted requests from Flash on encrypted pages to mitigate MitM attacks
+ * Блокировка незашифрованных запросов от Flash на зашифрованных страницах для смягчения MitM-атак */
+user_pref("security.mixed_content.block_object_subrequest", true);
+
+/* Content Blocking (required to block cookies)
+ * Блокировка содержимого (требуется для блокировки файлов cookie) */
+user_pref("browser.contentblocking.enabled", true);
+
+/* Feedback URL
+ * URL обратной связи */
+user_pref("app.feedback.baseURL", "");
+
+/* Help URL
+ * URL справки */
+user_pref("app.support.baseURL", "");
+
+/* CSS :visited selectors
+ *		[ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
+ *		which prevents the user from finding out what URLs the user has in the browser history.
+ * CSS :visited селекторы
+ *		[ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
+ *		что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
+user_pref("layout.css.visited_links_enabled", false);
+
+/* asm.js */
+user_pref("javascript.options.asmjs", false);
+
+/* WebAssembly */
+user_pref("javascript.options.wasm", false);
+
+/* Preloading documents or resources specified via <link rel = "preload">
+ * Предзагрузка документов или ресурсов, указанных через <link rel="preload"> */
+user_pref("network.preload", false);
+
+/* Semi Transparent tab previews
+ * Полупрозрачная превью вкладок */
+user_pref("nglayout.enable_drag_images", false);
+
+/* Disable preconnects and preresolves
+ * Отключить предварительные соединения и пререзоливы */
+user_pref("network.predictor.prefetch-min-confidence", 101);
+user_pref("network.predictor.preconnect-min-confidence", 101);
+user_pref("network.predictor.preresolve-min-confidence", 101);
+
+/* Disable the display of the text of the password by clicking on the corresponding input field
+ * Отключить показ текста пароля по клику на соответствующее поле ввода */
+user_pref("signon.rememberSignons.visibilityToggle", false);
+
+/* Disables the registration of the Safebrowsing and Tracking Protection tables in the URL Classifier
+ * Отключает регистрацию таблиц Safebrowsing и Tracking Protection в URL Classifier */
+user_pref("urlclassifier.malwareTable", "");
+user_pref("urlclassifier.phishTable", "");
+user_pref("urlclassifier.downloadBlockTable", "");
+user_pref("urlclassifier.downloadAllowTable", "");
+user_pref("urlclassifier.trackingTable", "");
+user_pref("urlclassifier.trackingWhitelistTable", "");
+user_pref("urlclassifier.disallow_completions", "");
+user_pref("urlclassifier.passwordAllowTable", "");
+
+/* Disable the whitelist domain list for Flash
+ * Отключить белый список доменов для Flash */
+user_pref("plugins.flashBlock.enabled", false);
+user_pref("urlclassifier.flashAllowTable", "");
+user_pref("urlclassifier.flashAllowExceptTable", "");
+user_pref("urlclassifier.flashTable", "");
+user_pref("urlclassifier.flashExceptTable", "");
+user_pref("urlclassifier.flashSubDocTable", "");
+user_pref("urlclassifier.flashSubDocExceptTable", "");
+user_pref("urlclassifier.flashInfobarTable", "");
+
+/* Do not track network topology
+ * Не отслеживать топологию сети */
+user_pref("network.notify.changed", false);
