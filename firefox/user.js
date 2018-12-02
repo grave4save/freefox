@@ -775,3 +775,415 @@ user_pref("network.prefetch-next", false);
  * Предварительная загрузка браузером DNS */
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.dns.disablePrefetchFromHTTPS", true);
+
+/* Sending ping
+ * Отправка пинга */
+user_pref("browser.send_pings", false);
+user_pref("browser.send_pings.max_per_link", 0);
+user_pref("browser.send_pings.require_same_host", true);
+
+/* Send DNS requests through a proxy using SOCKS 5
+ * Отправлять DNS-запросы через прокси при использовании SOCKS 5 */
+user_pref("network.proxy.socks_remote_dns", true);
+
+/* Redirecting to the provider's page
+ * Перенаправление на страницу провайдера */
+user_pref("captivedetect.canonicalURL", "");
+user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.captive-portal-service.minInterval", 0);
+
+/* HTTP Header "Do Not Track"
+ * Заголовок HTTP "Не Отслеживать" */
+// user_pref("privacy.donottrackheader.enabled", true);
+// user_pref("privacy.donottrackheader.value", 1);
+
+/* TOR: hide referrer when leaving a .onion domain
+ * TOR: скрыть referrer при выходе с домена .onion */
+user_pref("network.http.referer.hideOnionSource", true);
+
+/* Synchronization integration
+ * Интеграция синхронизации */
+user_pref("identity.fxaccounts.enabled", true);
+
+/* Synchronization of preferences
+ * Синхронизация предпочтений */
+user_pref("services.sync.engine.addresses", false);
+user_pref("services.sync.engine.addresses.available", false);
+user_pref("services.sync.engine.creditcards", false);
+user_pref("services.sync.engine.creditcards.available", false);
+user_pref("services.sync.engine.history", false);
+user_pref("services.sync.engine.prefs", false);
+user_pref("services.sync.engine.prefs.modified", false);
+user_pref("services.sync.engine.tabs", false);
+
+/* Cache API (Cache storage)
+ *		[NOTE] It is a repository on the user's computer where scripts can store information.
+ *		It is part of the "Service Workers" specification, but can be used without them.
+ * API Кэша (Хранилище кэша)
+ *		[ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
+ *		Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
+user_pref("dom.caches.enabled", false);
+
+/* Web notifications
+ * Веб-уведомления */
+user_pref("dom.webnotifications.enabled", false);
+user_pref("dom.webnotifications.serviceworker.enabled", false);
+
+/* Push notifications
+ * Push-уведомления */
+user_pref("dom.push.enabled", false);
+user_pref("dom.push.connection.enabled", false);
+user_pref("dom.push.serverURL", "");
+user_pref("dom.push.userAgentID", "");
+
+/* Disk cache
+ * Кэш-диска */
+user_pref("browser.cache.disk.capacity", 0);
+user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.disk.smart_size.enabled", false);
+user_pref("browser.cache.disk.smart_size.first_run", false);
+user_pref("browser.cache.frecency_experiment", -1);
+
+/* Disk cache for SSL pages
+ * Кэш-диск для SSL-страниц */
+user_pref("browser.cache.disk_cache_ssl", false);
+
+/* Fastback cache
+ *		0 = Disable
+ *		-1 = Auto
+ * Кэш Fastback
+ *		0 = Отключить
+ *		-1 = Автоматически */
+user_pref("browser.sessionhistory.max_total_viewers", 0);
+
+/* Forbids saving permissions manager settings
+ * Запрет сохранения настроек диспетчера разрешений */
+user_pref("permissions.memory_only", false);
+
+/* Session Recovery Service for windows and tabs
+ * Служба восстановления сеанса для окон и вкладок */
+user_pref("browser.sessionstore.max_tabs_undo", 10);
+user_pref("browser.sessionstore.max_windows_undo", 10);
+
+/* Offline cache
+ * Автономный кэш */
+user_pref("browser.cache.offline.enable", false);
+
+/* Offline cache on insecure sites
+ * Автономный кэш на небезопасных сайтах */
+user_pref("browser.cache.offline.insecure.enable", false);
+
+/* Request to use the offline cache
+ * Запрос на использование автономного кеша */
+user_pref("offline-apps.allow_by_default", false);
+
+/* Storing extra session data
+ *		0 = Everywhere
+ *		1 = Unencrypted sites
+ *		2 = Nowhere
+ * Сохранение дополнительных данных сеанса
+ *		0 = Везде
+ *		1 = Незашифрованные сайты
+ *		2 = Нигде */
+user_pref("browser.sessionstore.privacy_level", 2);
+
+/* Resume session after crash
+ * Возобновление сеанса после сбоя */
+user_pref("browser.sessionstore.resume_from_crash", false);
+
+/* Interval between saving sessions
+ * Интервал между сохранением сеансов */
+user_pref("browser.sessionstore.interval", 60000);
+
+/* Firefox recovery after Windows restart
+ * Восстановление Firefox после перезагрузки Windows */
+user_pref("toolkit.winRegisterApplicationRestart", false);
+
+/* Cookies
+ *		0 = Accept cookies and site data
+ *		1 = Block third-party cookies
+ *		2 = Block all cookies
+ *		3 = Block cookies from sites not visited
+ *		4 = Block third-party trackers
+ * Куки
+ *		0 = Принимать куки и данные сайтов
+ *		1 = Блокировать стороннии куки
+ *		2 = Блокировать все куки
+ *		3 = Блокировать куки с не посещенных сайтов
+ *		4 = Блокировать стороннии трекеры */
+user_pref("network.cookie.cookieBehavior", 1);
+
+/* Third-party cookies are set for the session only
+ * Сторонние файлы куки устанавливаются только для сеанса */
+user_pref("network.cookie.thirdparty.sessionOnly", true);
+user_pref("network.cookie.thirdparty.nonsecureSessionOnly", true);
+
+/* Сookie lifetime policy
+ *		0 = Save them before expiration
+ *		2 = Save them until close Firefox
+ * Политика жизни куки
+ *		0 = Сохранять их до истечения срока действия
+ *		2 = Сохранять их до закрытия Firefox */
+user_pref("network.cookie.lifetimePolicy", 0);
+
+/* Indexed database API
+ * API Индексированных баз данных */
+user_pref("dom.indexedDB.enabled", true);
+user_pref("dom.indexedDB.experimental", false);
+user_pref("dom.indexedDB.logging.details", false);
+user_pref("dom.indexedDB.logging.enabled", false);
+
+/* Storage API
+ *		[NOTE] Disables another way for sites to store their data on the user's personal computer.
+ * API Хранилища
+ *		[ЗАМЕТКА] Отключает еще один способ для сайтов хранить свои данные на персональном компьютере пользователя. */
+user_pref("dom.storageManager.enabled", false);
+
+/* Limit events that can trigger a pop-up
+ * Ограничения событий, которые могут вызвать всплывающее окно */
+user_pref("dom.popup_allowed_events", "click dblclick");
+
+/* Special services (accessibility support services)
+ * Специальные услуги (службы поддержки доступности) */
+user_pref("accessibility.force_disabled", 1);
+
+/* Additional analytics sent to the web server
+ * Дополнительная аналитика, отправленная на веб-сервер */
+user_pref("beacon.enabled", false);
+
+/* Deleting temporary files opened by an external application
+ * Удаление временных файлов, открытые внешним приложением */
+user_pref("browser.helperApps.deleteTempFileOnExit", true);
+
+/* Web Speech
+ * Веб-речь */
+user_pref("media.webspeech.synth.enabled", false);
+user_pref("media.webspeech.recognition.enable", false);
+
+/* Sending video playback statistics
+ * Отправка статистики воспроизведения видео */
+user_pref("media.video_stats.enabled", false);
+
+/* AV1 video codec
+ * Видеокодек AV1 */
+user_pref("media.av1.enabled", true);
+
+/* Show system extensions
+ * Показ системных расширений */
+user_pref("devtools.aboutdebugging.showSystemAddons", true);
+
+/* Activity Stream */
+user_pref("browser.library.activity-stream.enabled", false);
+user_pref("browser.newtabpage.activity-stream.asrouter.devtoolsEnabled", false);
+user_pref("browser.newtabpage.activity-stream.asrouter.messageProviders", "");
+user_pref("browser.newtabpage.activity-stream.default.sites", "");
+user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
+user_pref("browser.newtabpage.activity-stream.feeds.aboutpreferences", false);
+user_pref("browser.newtabpage.activity-stream.feeds.asrouterfeed", false);
+user_pref("browser.newtabpage.activity-stream.feeds.favicon", false);
+user_pref("browser.newtabpage.activity-stream.feeds.migration", false);
+user_pref("browser.newtabpage.activity-stream.feeds.newtabinit", false);
+user_pref("browser.newtabpage.activity-stream.feeds.places", false);
+user_pref("browser.newtabpage.activity-stream.feeds.prefs", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", "");
+user_pref("browser.newtabpage.activity-stream.feeds.sections", false);
+user_pref("browser.newtabpage.activity-stream.feeds.snippets", false);
+user_pref("browser.newtabpage.activity-stream.feeds.systemtick", false);
+user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+user_pref("browser.newtabpage.activity-stream.filterAdult", false);
+user_pref("browser.newtabpage.activity-stream.improvesearch.noDefaultSearchTile", false);
+user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.searchEngines", "");
+user_pref("browser.newtabpage.activity-stream.migrationExpired", true);
+user_pref("browser.newtabpage.activity-stream.pocketCta", "");
+user_pref("browser.newtabpage.activity-stream.prerender", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
+user_pref("browser.newtabpage.activity-stream.sectionOrder", "");
+user_pref("browser.newtabpage.activity-stream.showSearch", false);
+user_pref("browser.newtabpage.activity-stream.showSponsored", false);
+user_pref("browser.newtabpage.activity-stream.telemetry", false);
+user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
+
+/* Block dangerous and deceptive content (malware, phishing, dangerous downloads)
+ * Блокировать опасное и обманывающее содержимое (вредоносные программы, фишинг, опасные загрузки) */
+user_pref("browser.safebrowsing.downloads.enabled", false);
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
+
+/* Warning about unwanted and rarely downloaded programs
+ * Предупреждение о нежелательных и редко загружаемых программах */
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false);
+user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
+
+/* Tracking protection in all windows
+ *		[NOTE] When enabled, the processor load increases, and the same uBlock Origin does well with this
+ * Защита слежения во всех окнах
+ *		[ЗАМЕТКА] При включении возрастает нагрузка на процессор, к тому же с этим хорошо справляется тот же uBlock Origin */
+user_pref("privacy.trackingprotection.enabled", false);
+user_pref("privacy.trackingprotection.pbmode.enabled", false);
+user_pref("privacy.trackingprotection.introURL", "");
+user_pref("privacy.trackingprotection.annotate_channels", false);
+user_pref("privacy.trackingprotection.lower_network_priority", false);
+
+/* DOM forms
+ * DOM формы */
+user_pref("dom.forms.datetime", false);
+user_pref("dom.forms.datetime.others", false);
+user_pref("dom.forms.datetime.timepicker", false);
+
+/* Types of content
+ * Типы содержимого */
+user_pref("gecko.handlerService.schemes.mailto.0.name", "");
+user_pref("gecko.handlerService.schemes.mailto.0.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.mailto.1.name", "");
+user_pref("gecko.handlerService.schemes.mailto.1.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.mailto.2.name", "");
+user_pref("gecko.handlerService.schemes.mailto.2.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.mailto.3.name", "");
+user_pref("gecko.handlerService.schemes.mailto.3.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.0.name", "");
+user_pref("gecko.handlerService.schemes.webcal.0.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.1.name", "");
+user_pref("gecko.handlerService.schemes.webcal.1.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.2.name", "");
+user_pref("gecko.handlerService.schemes.webcal.2.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.3.name", "");
+user_pref("gecko.handlerService.schemes.webcal.3.uriTemplate", "");
+
+/* Crash Reporter related information
+ * Crash Reporter связанная информация */
+user_pref("toolkit.crashreporter.infoURL", "");
+
+/* Send Flash crash reports
+ * Отправка отчетов о сбоях Flash */
+user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
+
+/* Submitting the URL of the website where the plug-in crashed
+ * Отправка URL-адреса веб-сайта, где произошел сбой плагина */
+user_pref("dom.ipc.plugins.reportCrashURL", false);
+
+/* Onboarding
+ *		[WARNING] Onboarding uses Google Analytics and leaks resource://URIs.
+ * Введение
+ *		[ВНИМАНИЕ] Введение использует Google Analytics содержит утечки resource://URIs. */
+user_pref("browser.onboarding.enabled", false);
+
+/* Forms autofill
+ *		[NOTE] Stored data is NOT secure (uses a JSON file).
+ *		Heuristics controls Form Autofill on forms without @autocomplete attributes.
+ * Формы автозаполнения
+ *		[ЗАМЕТКА] Хранимые данные не защищены (использует файл JSON).
+ *		Эвристика контролирует заполнение форм в формах без @autocomplete атрибутов. */
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.available", "off");
+user_pref("extensions.formautofill.creditCards.enabled", false);
+user_pref("extensions.formautofill.heuristics.enabled", false);
+
+/* How often Firefox should ask for a master password
+ *		0 = The first time
+ *		1 = Every time it's needed
+ *		2 = Every "N" minutes
+ * Как часто Firefox должен запрашивать мастер-пароль
+ *		0 = Первый раз
+ *		1 = Каждый раз, когда это необходимо
+ *		2 = Каждые "N" минут */
+user_pref("security.ask_for_password", 2);
+
+/* How often (within how many minutes) Firefox should ask for a master password
+ * Как часто (в течение скольки минут) Firefox должен запрашивать мастер-пароль */
+user_pref("security.password_lifetime", 5);
+
+/* Auto-complete user name and password
+ * Aвтоматическое заполнение имени пользователя и пароля */
+user_pref("signon.autofillForms", false);
+user_pref("security.insecure_field_warning.contextual.enabled", true);
+
+/* Smooth scrolling
+ * Плавная прокрутка */
+user_pref("general.smoothScroll", false);
+
+/* Automatic update themes
+ * Автоматическое обновление тем */
+user_pref("lightweightThemes.update.enabled", false);
+
+/* Pocket extension
+ *		[NOTE] Pocket is a third-party (now owned by Mozilla) cloud service,
+ *		which operates on the principle of "Save for later use".
+ * Расширение Pocket
+ *		[ЗАМЕТКА] Pocket является сторонним (теперь принадлежит Mozilla) облачным сервисом,
+ *		который работает по принципу "Сохранить для последующего использования". */
+user_pref("extensions.pocket.enabled", false);
+
+/* Screenshots
+ * Скриншоты */
+user_pref("extensions.screenshots.disabled", true);
+user_pref("extensions.screenshots.upload-disabled", true);
+
+/* Experiments
+ * Эксперименты */
+user_pref("network.allow-experiments", false);
+
+/* Web Compatibility Reporter
+ * Отправка отчетов о совместимости с Интернетом */
+user_pref("extensions.webcompat-reporter.enabled", false);
+user_pref("extensions.webcompat-reporter.newIssueEndpoint", "");
+
+/* Favicons in shortcuts
+ *		[NOTE] URL shortcuts use a cached randomly named .ico file which is stored in your shortcutCache directory.
+ *		The .ico remains after the shortcut is deleted. If set to "false" then the shortcuts use a generic Firefox icon.
+ * Значки на ярлыках
+ *		[ЗАМЕТКА] В ярлыках URL используется кешированный файл с произвольным именем .ico,
+ *		который хранится в вашем каталоге shortcutCache. Файл .ico остается после удаления ярлыка.
+ *		Если установлено значение "false", в ярлыках используется общий значок Firefox. */
+user_pref("browser.shell.shortcutFavicons", false);
+
+/* Favicons in web notifications
+ * Значки в веб-уведомлениях */
+user_pref("alerts.showFavicons", false);
+
+/* Path to save files
+ *		0 = Desktop
+ *		1 = Downloads
+ *		2 = Last used folder
+ * Путь для сохранения файлов
+ *		0 = Рабочий стол
+ *		1 = Загрузки
+ *		2 = Последняя используемая папка */
+user_pref("browser.download.folderList", 2);
+
+/* Request to save files
+ * Запрос на сохранение файлов */
+user_pref("browser.download.useDownloadDir", false);
+
+/* Adding downloads to the list of recent system documents
+ * Добавление загрузок в список последних документов системы */
+user_pref("browser.download.manager.addToRecentDocs", false);
+
+/* Hiding MIME types
+ * Скрытие типов MIME */
+user_pref("browser.download.hide_plugins_without_extensions", false);
+
+/* Show the "Open with" dialog box in the download window
+ * Показ диалогового окна "Открыть при помощи" в окне загрузки */
+user_pref("browser.download.forbid_open_with", true);
+
+/* Predictor (formerly Seer)
+ *		[NOTE] This is a mechanism that stores the links between the hosts from
+ *		which content is requested for a particular URL.
+ * Предсказатель (бывший Seer)
+ *		[ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
+ *		с которых запрашивается контент для того или иного URL. */
+user_pref("network.predictor.enabled", false);
+user_pref("network.predictor.enable-hover-on-ssl", false);
+user_pref("network.predictor.enable-prefetch", false);
+user_pref("network.predictor.prefetch-rolling-load-count", 0);
+
+/* Automatic preload pages when you hover over links
+ * Автоматическая предзагрузка страниц при наведении курсора на ссылки */
+user_pref("network.http.speculative-parallel-limit", 0);

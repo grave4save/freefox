@@ -670,3 +670,61 @@ user_pref("security.insecure_field_warning.contextual.enabled", true);
 /* Experiments
  * Эксперименты */
 user_pref("network.allow-experiments", false);
+
+/* Web Compatibility Reporter
+ * Отправка отчетов о совместимости с Интернетом */
+user_pref("extensions.webcompat-reporter.enabled", false);
+user_pref("extensions.webcompat-reporter.newIssueEndpoint", "");
+
+/* Favicons in web notifications
+ * Значки в веб-уведомлениях */
+user_pref("alerts.showFavicons", false);
+
+/* Request to save files
+ * Запрос на сохранение файлов */
+user_pref("browser.download.useDownloadDir", false);
+
+/* Adding downloads to the list of recent system documents
+ * Добавление загрузок в список последних документов системы */
+user_pref("browser.download.manager.addToRecentDocs", false);
+
+/* Show the "Open with" dialog box in the download window
+ * Показ диалогового окна "Открыть при помощи" в окне загрузки */
+user_pref("browser.download.forbid_open_with", true);
+
+/* Predictor (formerly Seer)
+ *		[NOTE] This is a mechanism that stores the links between the hosts from
+ *		which content is requested for a particular URL.
+ * Предсказатель (бывший Seer)
+ *		[ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
+ *		с которых запрашивается контент для того или иного URL. */
+user_pref("network.predictor.enabled", false);
+user_pref("network.predictor.enable-hover-on-ssl", false);
+user_pref("network.predictor.enable-prefetch", false);
+user_pref("network.predictor.prefetch-rolling-load-count", 0);
+
+/* Automatic preload pages when you hover over links
+ * Автоматическая предзагрузка страниц при наведении курсора на ссылки */
+user_pref("network.http.speculative-parallel-limit", 0);
+
+/* Search from address panel
+ * Поиск из панели адреса */
+// user_pref("keyword.enabled", false);
+
+/* Displays all parts of the URL in the address bar
+ * Отображения всех части URL-адреса в строке адреса */
+user_pref("browser.urlbar.trimURLs", false);
+
+/* Adding sites from Alexa Top 500 to the address bar auto-complete list
+ * Добавление сайтов из Alexa Top 500 в список автозаполнения адресной строки */
+user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
+
+/* IPv6 */
+user_pref("network.dns.disableIPv6", true);
+
+/* Block allowed extension directories
+ *		[WARNING] This will break extensions that do not use the default XPI directories.
+ * Заблокировать разрешенные каталоги расширений
+ *		[ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
+user_pref("extensions.enabledScopes", 1);
+user_pref("extensions.autoDisableScopes", 15);
