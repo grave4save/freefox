@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/fennec/
- * Last modified: December 2, 2018
+ * Last modified: December 3, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -580,3 +580,45 @@ user_pref("dom.indexedDB.logging.enabled", false);
  * API Хранилища
  *		[ЗАМЕТКА] Отключает еще один способ для сайтов хранить свои данные на персональном компьютере пользователя. */
 user_pref("dom.storageManager.enabled", false);
+
+/* Limit events that can trigger a pop-up
+ * Ограничения событий, которые могут вызвать всплывающее окно */
+user_pref("dom.popup_allowed_events", "click dblclick");
+
+/* Special services (accessibility support services)
+ * Специальные услуги (службы поддержки доступности) */
+user_pref("accessibility.force_disabled", 1);
+
+/* Additional analytics sent to the web server
+ * Дополнительная аналитика, отправленная на веб-сервер */
+user_pref("beacon.enabled", false);
+
+/* Deleting temporary files opened by an external application
+ * Удаление временных файлов, открытые внешним приложением */
+user_pref("browser.helperApps.deleteTempFileOnExit", true);
+
+/* Web Speech
+ * Веб-речь */
+user_pref("media.webspeech.synth.enabled", false);
+user_pref("media.webspeech.recognition.enable", false);
+
+/* Sending video playback statistics
+ * Отправка статистики воспроизведения видео */
+user_pref("media.video_stats.enabled", false);
+
+/* AV1 video codec
+ * Видеокодек AV1 */
+user_pref("media.av1.enabled", true);
+
+/* Block dangerous and deceptive content (malware, phishing, dangerous downloads)
+ * Блокировать опасное и обманывающее содержимое (вредоносные программы, фишинг, опасные загрузки) */
+user_pref("browser.safebrowsing.downloads.enabled", false);
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
+
+/* Warning about unwanted and rarely downloaded programs
+ * Предупреждение о нежелательных и редко загружаемых программах */
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false);
+user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
