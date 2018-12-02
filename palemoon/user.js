@@ -1165,7 +1165,7 @@ user_pref("security.cert_pinning.enforcement_level", 2);
 
 /* View clipboard content
  * Просмотр содержимого буфера обмена */
-user_pref("dom.event.clipboardevents.enabled", true);
+// user_pref("dom.event.clipboardevents.enabled", false);
 
 /* Dialog box "Confirm you want to leave" when closing page
  * Диалоговое окно "Подтвердить, что вы хотите уйти" при закрытии страницы */

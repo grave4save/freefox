@@ -1056,3 +1056,58 @@ user_pref("security.tls.version.max", 4);
 user_pref("security.ssl.errorReporting.automatic", false);
 user_pref("security.ssl.errorReporting.enabled", false);
 user_pref("security.ssl.errorReporting.url", "");
+
+/* TLS1.3 Zero Round Trip Time */
+user_pref("security.tls.enable_0rtt_data", false);
+
+/* Windows 8.1 Family Security
+ *		0 = Disable
+ *		1 = Only attempt to detect Family Safety mode (don't import the root)
+ *		2 = Detect Family Safety mode and import the root
+ * Семейная безопасность Windows 8.1
+ *		0 = Отключить
+ *		1 = Только попытка обнаружить режим безопасности семьи (не импортировать корень)
+ *		2 = Определить режим безопасности семьи и импортировать корень */
+user_pref("security.family_safety.mode", 0); // [WINDOWS]
+
+/* Enfore Public Key Pinning
+ *		0 = Disable
+ *		1 = Allow user MiTM (such as your antivirus)
+ *		2 = Strict
+ * Привязка к открытому ключу
+ *		0 = Отключить
+ *		1 = Разрешить пользователю MiTM (например, вашему антивирусу)
+ *		2 = Строго */
+user_pref("security.cert_pinning.enforcement_level", 2);
+
+/* Web content in file processes
+ * Веб-контент в файловых процессах */
+user_pref("browser.tabs.remote.allowLinkedWebInFileUriProcess", false);
+
+/* Various developer tools in the context of the browser
+ * Различные инструменты разработчика в контексте браузера */
+user_pref("devtools.chrome.enabled", false);
+
+/* WEB Integrated development environment (WebIDE)
+ * ВЕБ Интегрированная среда разработки */
+user_pref("devtools.debugger.force-local", true);
+user_pref("devtools.debugger.prompt-connection", true);
+user_pref("devtools.debugger.remote-enabled", false);
+
+/* WebChannel whitelist */
+user_pref("webchannel.allowObject.urlWhitelist", "");
+
+/* View clipboard content
+ * Просмотр содержимого буфера обмена */
+// user_pref("dom.event.clipboardevents.enabled", false);
+
+/* Dialog box "Confirm you want to leave" when closing page
+ * Диалоговое окно "Подтвердить, что вы хотите уйти" при закрытии страницы */
+user_pref("dom.disable_beforeunload", false);
+
+/* Shaking and vibrating the screen
+ * Встряхивание и вибрирование экрана */
+user_pref("dom.vibrator.enabled", false);
+
+/* Shared Memory API */
+user_pref("javascript.options.shared_memory", false);

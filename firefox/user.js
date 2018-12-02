@@ -1662,7 +1662,7 @@ user_pref("webchannel.allowObject.urlWhitelist", "");
 
 /* View clipboard content
  * Просмотр содержимого буфера обмена */
-user_pref("dom.event.clipboardevents.enabled", true);
+// user_pref("dom.event.clipboardevents.enabled", false);
 
 /* Clipboard commands (cut/copy) from "non-privileged" content
  * Команды буфера обмена (вырезать/копировать) от "непривилегированного" контента */

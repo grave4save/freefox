@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/thunderbird/
- * Last modified: December 2, 2018
+ * Last modified: December 3, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -467,7 +467,7 @@ user_pref("dom.enable_resource_timing", false);
 
 /* View clipboard content
  * Просмотр содержимого буфера обмена */
-user_pref("dom.event.clipboardevents.enabled", false);
+// user_pref("dom.event.clipboardevents.enabled", false);
 
 /* Automatic preload pages when you hover over links
  * Автоматическая предзагрузка страниц при наведении курсора на ссылки */
