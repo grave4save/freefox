@@ -90,6 +90,415 @@ user_pref("browser.newtabpage.enabled", false);
  * Предварительная загрузка новой вкладки */
 user_pref("browser.newtab.preload", false);
 
+/* Mouse wheel button action when clicked
+ *		TRUE = Open in new tab
+ *		FALSE = Open in new window
+ * Действие кнопки колесика мыши при нажатии по ссылке
+ *		TRUE = Открывать в новой вкладке
+ *		FALSE = Открывать в новом окне */
+user_pref("browser.tabs.opentabfor.middleclick", false);
+
+/* Opening tabs and external applications in the background
+ *		TRUE = Open such tabs in the background
+ *		FALSE = Switch to openable tabs
+ * Открытие вкладок и внешних приложений в фоновом режиме
+ *		TRUE = Открывать такие вкладки в фоне
+ *		FALSE = Переключаться на открываемые вкладки */
+user_pref("browser.tabs.loadDivertedInBackground", true);
+
+/* Configuring container tabs in settings
+ *		TRUE = Enable "Tabs in Container"
+ *		FALSE = Disable "Tabs in Container"
+ * Настройка вкладок контейнера в настройках
+ *		TRUE = Включить "Вкладки в контейнере"
+ *		FALSE = Отключить "Вкладки в контейнере" */
+user_pref("privacy.userContext.ui.enabled", true);
+
+/* Container tab item in context menu
+ *		TRUE = Display
+ *		FALSE = Do not display
+ * Пункт вкладок контейнеров в контекстном меню
+ *		TRUE = Отображать
+ *		FALSE = Не отображать */
+user_pref("privacy.userContext.enabled", true);
+
+/* Private container for sketch loads
+ * Частный контейнер для эскизных нагрузок */
+user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
+
+/* Conditions for long pressing the "+" button in the tabs
+ *		0 = Disable long press
+ *		1 = Display menu
+ *		2 = Menu is displayed after "N" milliseconds
+ * Условия после длительного нажатия кнопки "+" на вкладках
+ *		0 = Отключить длительное нажатие
+ *		1 = Отображается меню
+ *		2 = Меню отображается через "N" миллисекунд */
+user_pref("privacy.userContext.longPressBehavior", 0);
+
+/* Font size
+ *		[NOTE] The fonts below have a standard size, so they are commented out.
+ *		Don't change the size if you don't know what you're doing.
+ * Размер шрифта
+ *		[ЗАМЕТКА] Шрифты ниже имеют стандартный размер, поэтому они закомментированы.
+ *		Не меняйте размер, если не знаете, что делаете. */
+// user_pref("font.size.fixed.x-cyrillic", 13);
+// user_pref("font.size.fixed.x-unicode", 13);
+// user_pref("font.size.fixed.x-western", 13);
+// user_pref("font.size.fixed.ar", 13);
+// user_pref("font.size.fixed.el", 13);
+// user_pref("font.size.fixed.he", 13);
+// user_pref("font.size.fixed.ja", 16);
+// user_pref("font.size.fixed.ko", 16);
+// user_pref("font.size.fixed.th", 13);
+// user_pref("font.size.fixed.x-armn", 13);
+// user_pref("font.size.fixed.x-beng", 13);
+// user_pref("font.size.fixed.x-cans", 13);
+// user_pref("font.size.fixed.x-devanagari", 13);
+// user_pref("font.size.fixed.x-ethi", 13);
+// user_pref("font.size.fixed.x-geor", 13);
+// user_pref("font.size.fixed.x-gujr", 13);
+// user_pref("font.size.fixed.x-guru", 13);
+// user_pref("font.size.fixed.x-khmr", 13);
+// user_pref("font.size.fixed.x-knda", 13);
+// user_pref("font.size.fixed.x-math", 13);
+// user_pref("font.size.fixed.x-mlym", 13);
+// user_pref("font.size.fixed.x-orya", 13);
+// user_pref("font.size.fixed.x-sinh", 13);
+// user_pref("font.size.fixed.x-tamil", 13);
+// user_pref("font.size.fixed.x-telu", 13);
+// user_pref("font.size.fixed.x-tibt", 13);
+// user_pref("font.size.fixed.zh-CN", 16);
+// user_pref("font.size.fixed.zh-HK", 16);
+// user_pref("font.size.fixed.zh-TW", 16);
+// user_pref("font.size.variable.ar", 16);
+// user_pref("font.size.variable.el", 16);
+// user_pref("font.size.variable.he", 16);
+// user_pref("font.size.variable.ja", 16);
+// user_pref("font.size.variable.ko", 16);
+// user_pref("font.size.variable.th", 16);
+// user_pref("font.size.variable.x-armn", 16);
+// user_pref("font.size.variable.x-beng", 16);
+// user_pref("font.size.variable.x-cans", 16);
+// user_pref("font.size.variable.x-cyrillic", 16);
+// user_pref("font.size.variable.x-devanagari", 16);
+// user_pref("font.size.variable.x-ethi", 16);
+// user_pref("font.size.variable.x-geor", 16);
+// user_pref("font.size.variable.x-gujr", 16);
+// user_pref("font.size.variable.x-guru", 16);
+// user_pref("font.size.variable.x-khmr", 16);
+// user_pref("font.size.variable.x-knda", 16);
+// user_pref("font.size.variable.x-math", 16);
+// user_pref("font.size.variable.x-mlym", 16);
+// user_pref("font.size.variable.x-orya", 16);
+// user_pref("font.size.variable.x-sinh", 16);
+// user_pref("font.size.variable.x-tamil", 16);
+// user_pref("font.size.variable.x-telu", 16);
+// user_pref("font.size.variable.x-tibt", 16);
+// user_pref("font.size.variable.x-unicode", 16);
+// user_pref("font.size.variable.x-western", 16);
+// user_pref("font.size.variable.zh-CN", 16);
+// user_pref("font.size.variable.zh-HK", 16);
+// user_pref("font.size.variable.zh-TW", 16);
+
+/* Proportions (fonts)
+ *		[NOTE] The proportions given below are standard, so they are commented out.
+ *		Don't change the proportions if you don't know what you're doing.
+ * Пропорции (шрифты)
+ *		[ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
+ *		Не изменяйте пропорции, если вы не знаете, что делаете. */
+// user_pref("font.default.ar", "sans-serif");
+// user_pref("font.default.el", "serif");
+// user_pref("font.default.he", "sans-serif");
+// user_pref("font.default.ja", "sans-serif");
+// user_pref("font.default.ko", "sans-serif");
+// user_pref("font.default.th", "sans-serif");
+// user_pref("font.default.x-armn", "serif");
+// user_pref("font.default.x-beng", "serif");
+// user_pref("font.default.x-cans", "serif");
+// user_pref("font.default.x-cyrillic", "serif");
+// user_pref("font.default.x-devanagari", "serif");
+// user_pref("font.default.x-ethi", "serif");
+// user_pref("font.default.x-geor", "serif");
+// user_pref("font.default.x-gujr", "serif");
+// user_pref("font.default.x-guru", "serif");
+// user_pref("font.default.x-khmr", "serif");
+// user_pref("font.default.x-knda", "serif");
+// user_pref("font.default.x-math", "serif");
+// user_pref("font.default.x-mlym", "serif");
+// user_pref("font.default.x-orya", "serif");
+// user_pref("font.default.x-sinh", "serif");
+// user_pref("font.default.x-tamil", "serif");
+// user_pref("font.default.x-telu", "serif");
+// user_pref("font.default.x-tibt", "serif");
+// user_pref("font.default.x-unicode", "serif");
+// user_pref("font.default.x-western", "serif");
+// user_pref("font.default.zh-CN", "sans-serif");
+// user_pref("font.default.zh-HK", "sans-serif");
+// user_pref("font.default.zh-TW", "sans-serif");
+
+/* Default Fonts
+ *		[NOTE] Instead of fonts DejaVu you can, for example, use Google fonts - Noto,
+ *		but keep in mind that you must delete or comment out the DejaVu preferences.
+ * Шрифты по умолчанию
+ *		[ЗАМЕТКА] Вместо шрифтов DejaVu вы можете, например, использовать шрифты Google - Noto,
+ *		но имейте в виду, что вы должны удалить или закомментировать настройки DejaVu. */
+
+user_pref("font.name.monospace.x-western", "DejaVu Sans Mono");
+user_pref("font.name.monospace.x-cyrillic", "DejaVu Sans Mono");
+user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
+
+// user_pref("font.name.serif.x-cyrillic", "Noto Serif");
+// user_pref("font.name.sans-serif.x-cyrillic", "Noto Sans");
+// user_pref("font.name.monospace.x-cyrillic", "Noto Mono");
+// user_pref("font.name.serif.x-western", "Noto Serif");
+// user_pref("font.name.sans-serif.x-western", "Noto Sans");
+// user_pref("font.name.monospace.x-western", "Noto Mono");
+// user_pref("font.name.serif.ar", "Noto Naskh Arabic");
+// user_pref("font.name.sans-serif.ar", "Noto Naskh Arabic");
+// user_pref("font.name.monospace.ar", "Noto Naskh Arabic");
+// user_pref("font.name.serif.x-armn", "Noto Serif Armenian");
+// user_pref("font.name.sans-serif.x-armn", "Noto Sans Armenian");
+// user_pref("font.name.monospace.x-armn", "Noto Sans Armenian");
+// user_pref("font.name.serif.x-beng", "Noto Serif Bengali");
+// user_pref("font.name.sans-serif.x-beng", "Noto Sans Bengali");
+// user_pref("font.name.monospace.x-beng", "Noto Sans Bengali");
+// user_pref("font.name.serif.zh-CN", "Noto Serif CJK SC");
+// user_pref("font.name.sans-serif.zh-CN", "Noto Sans CJK SC");
+// user_pref("font.name.monospace.zh-CN", "Noto Sans CJK SC");
+// user_pref("font.name.serif.zh-TW", "Noto Serif CJK TC");
+// user_pref("font.name.sans-serif.zh-TW", "Noto Sans CJK TC");
+// user_pref("font.name.monospace.zh-TW", "Noto Sans CJK TC");
+// user_pref("font.name.serif.zh-HK", "Noto Serif CJK TC");
+// user_pref("font.name.sans-serif.zh-HK", "Noto Sans CJK TC");
+// user_pref("font.name.monospace.zh-HK", "Noto Sans CJK TC");
+// user_pref("font.name.serif.x-devanagari", "Noto Serif Devanagari");
+// user_pref("font.name.sans-serif.x-devanagari", "Noto Sans Devanagari");
+// user_pref("font.name.monospace.x-devanagari", "Noto Sans Devanagari");
+// user_pref("font.name.serif.x-ethi", "Noto Serif Ethiopic");
+// user_pref("font.name.sans-serif.x-ethi", "Noto Sans Ethiopic");
+// user_pref("font.name.monospace.x-ethi", "Noto Sans Ethiopic");
+// user_pref("font.name.serif.x-geor", "Noto Serif Georgian");
+// user_pref("font.name.sans-serif.x-geor", "Noto Sans Georgian");
+// user_pref("font.name.monospace.x-geor", "Noto Sans Georgian");
+// user_pref("font.name.serif.x-gujr", "Noto Serif Gujarati");
+// user_pref("font.name.sans-serif.x-gujr", "Noto Sans Gujarati");
+// user_pref("font.name.monospace.x-gujr", "Noto Sans Gujarati");
+// user_pref("font.name.serif.x-guru", "Noto Serif Gurmukhi");
+// user_pref("font.name.sans-serif.x-guru", "Noto Sans Gurmukhi");
+// user_pref("font.name.monospace.x-guru", "Noto Sans Gurmukhi");
+// user_pref("font.name.serif.he", "Noto Serif Hebrew");
+// user_pref("font.name.sans-serif.he", "Noto Sans Hebrew");
+// user_pref("font.name.monospace.he", "Noto Sans Hebrew");
+// user_pref("font.name.serif.ja", "Noto Serif CJK JP");
+// user_pref("font.name.sans-serif.ja", "Noto Sans CJK JP");
+// user_pref("font.name.monospace.ja", "Noto Sans CJK JP");
+// user_pref("font.name.serif.el", "Noto Serif");
+// user_pref("font.name.sans-serif.el", "Noto Sans");
+// user_pref("font.name.monospace.el", "Noto Sans Mono");
+// user_pref("font.name.serif.x-knda", "Noto Serif Kannada");
+// user_pref("font.name.sans-serif.x-knda", "Noto Sans Kannada");
+// user_pref("font.name.monospace.x-knda", "Noto Sans Kannada");
+// user_pref("font.name.serif.x-khmr", "Noto Serif Khmer");
+// user_pref("font.name.sans-serif.x-khmr", "Noto Sans Khmer");
+// user_pref("font.name.monospace.x-khmr", "Noto Sans Khmer");
+// user_pref("font.name.serif.ko", "Noto Serif CJK KR");
+// user_pref("font.name.sans-serif.ko", "Noto Sans CJK KR");
+// user_pref("font.name.monospace.ko", "Noto Sans CJK KR");
+// user_pref("font.name.serif.x-mlym", "Noto Serif Malayalam");
+// user_pref("font.name.sans-serif.x-mlym", "Noto Sans Malayalam");
+// user_pref("font.name.monospace.x-mlym", "Noto Sans Malayalam");
+// user_pref("font.name.serif.x-orya", "Noto Sans Oriya");
+// user_pref("font.name.sans-serif.x-orya", "Noto Sans Oriya");
+// user_pref("font.name.monospace.x-orya", "Noto Sans Oriya");
+// user_pref("font.name.serif.x-math", "Latin Modern Math");
+// user_pref("font.name.sans-serif.x-math", "Latin Modern Math");
+// user_pref("font.name.monospace.x-math", "Latin Modern Math");
+// user_pref("font.name.serif.x-sinh", "Noto Serif Sinhala");
+// user_pref("font.name.sans-serif.x-sinh", "Noto Sans Sinhala");
+// user_pref("font.name.monospace.x-sinh", "Noto Sans Sinhala");
+// user_pref("font.name.serif.x-tamil", "Noto Serif Tamil");
+// user_pref("font.name.sans-serif.x-tamil", "Noto Sans Tamil");
+// user_pref("font.name.monospace.x-tamil", "Noto Sans Tamil");
+// user_pref("font.name.serif.x-telu", "Noto Serif Telugu");
+// user_pref("font.name.sans-serif.x-telu", "Noto Sans Telugu");
+// user_pref("font.name.monospace.x-telu", "Noto Sans Telugu");
+// user_pref("font.name.serif.x-tibt", "Noto Sans Tibetan");
+// user_pref("font.name.sans-serif.x-tibt", "Noto Sans Tibetan");
+// user_pref("font.name.monospace.x-tibt", "Noto Sans Tibetan");
+// user_pref("font.name.serif.x-unicode", "Noto Serif");
+// user_pref("font.name.sans-serif.x-unicode", "Noto Sans");
+// user_pref("font.name.monospace.x-unicode", "Noto Mono");
+// user_pref("font.name.serif.th", "Noto Serif Thai");
+// user_pref("font.name.sans-serif.th", "Noto Sans Thai");
+// user_pref("font.name.monospace.th", "Noto Sans Thai");
+// user_pref("font.name.serif.x-cans", "serif");
+// user_pref("font.name.sans-serif.x-cans", "sans-serif");
+// user_pref("font.name.monospace.x-cans", "monospace");
+// user_pref("font.language.group", "x-western");
+
+/* Preferred language for displaying web pages
+ * Предпочитаемый язык для отображения веб-страниц */
+// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en"); // It is recommended to select only english locales ~ Рекомендуется выбрать только английские локали
+
+/* Automatic check for updates for extensions
+ * Автоматическая проверка обновлений для расширений */
+user_pref("extensions.update.enabled", false);
+
+/* Automatic installation of updates for Firefox
+ * Автоматическая установка обновлений для Firefox */
+user_pref("app.update.auto", false);
+
+/* Automatic installation of updates for extensions
+ * Автоматическая установка обновлений для расширений */
+user_pref("extensions.update.autoUpdateDefault", false);
+
+/* Background update service
+ * Служба для фонового обновления */
+user_pref("app.update.staging.enabled", false);
+
+/* Display information about the update
+ * Отображение информация об обновлении */
+user_pref("app.update.silent", false);
+
+/* Update extension metadata
+ * Обновление метаданных расширения */
+user_pref("extensions.getAddons.cache.enabled", false);
+
+/* Automatic update of search engines
+ * Автоматическое обновление поисковых систем */
+user_pref("browser.search.update", false);
+
+/* Search suggestions
+ * Поисковые предложения */
+user_pref("browser.search.suggest.enabled", false);
+
+/* In "about:addons" remove the item "Get add-ons"
+ *		[WARNING] Uses Google Analytics.
+ * В "about:addons" убрать пункт "Получить дополнения"
+ *		[ВНИМАНИЕ] Использует Google Analytics. */
+user_pref("extensions.getAddons.showPane", false);
+user_pref("extensions.webservice.discoverURL", "");
+
+/* Guessing the domain in the address bar
+ * Угадывание домена в адресной строке */
+user_pref("browser.fixup.alternate.enabled", false);
+
+/* Number of steps  "To previous page" and  "To next page"
+ * Количество шагов "На предыдущую страницу" и "На следующую страницу" */
+user_pref("browser.sessionhistory.max_entries", 10);
+
+/* Preloading autocomplete URLs (when you enter in the address bar)
+ * Предварительная загрузка URL-адресов автозаполнения (при вводе в адресную строку) */
+user_pref("browser.urlbar.speculativeConnect.enabled", false);
+
+/* Autocomplete and suggestion types
+ * Автозаполнение и типы предложений */
+user_pref("browser.urlbar.autocomplete.enabled", false); // Autocomplete ~ Автозаполнение
+user_pref("browser.urlbar.suggest.history", false); // History ~ История
+user_pref("browser.urlbar.suggest.bookmark", false); // Bookmarks ~ Закладки
+user_pref("browser.urlbar.suggest.openpage", false); // Open tabs ~ Открытые вкладки
+
+/* The number of results displayed in the drop-down list in the address bar
+ * Количество результатов, отображаемых в раскрывающемся списке в адресной строке */
+user_pref("browser.urlbar.maxRichResults", 0);
+
+/* Alternative search engines in the address bar
+ * Альтернативные поисковые системы в адресной строке */
+user_pref("browser.urlbar.oneOffSearches", false);
+
+/* Inline autocomplete
+ *		TRUE = Supplement the text typed in the address bar
+ *		FALSE = Show below
+ * Встроенное автозаполнение
+ *		TRUE = Дополнять текст, набранный в адресной строке
+ *		FALSE = Показывать ниже */
+user_pref("browser.urlbar.autoFill", false);
+user_pref("browser.urlbar.autoFill.typed", false);
+
+/* Remember the search history and form data
+ * Помнить историю поиска и данные формы */
+user_pref("browser.formfill.enable", false);
+user_pref("browser.formfill.expire_days", 0);
+
+/* Automatic deletion of history when closing the browser
+ * Автоматическое удаление истории при закрытии браузера */
+user_pref("privacy.sanitize.sanitizeOnShutdown", true);
+
+/* What elements of the story should be automatically deleted when you close Firefox
+ * Какие элементы истории должны быть автоматически удалены при закрытии Firefox */
+user_pref("privacy.clearOnShutdown.cache", true); // Cache ~ Кэш
+user_pref("privacy.clearOnShutdown.cookies", false);// Cookies ~ Куки
+user_pref("privacy.clearOnShutdown.downloads", true); // Downloads ~ Загрузки
+user_pref("privacy.clearOnShutdown.formdata", true); // Form data ~ Данные форм
+user_pref("privacy.clearOnShutdown.history", true); // History ~ История
+user_pref("privacy.clearOnShutdown.offlineApps", false); // Offline website data ~ Данные автономных веб-сайтов
+user_pref("privacy.clearOnShutdown.sessions", true); // Active sessions ~ Активные сеансы
+user_pref("privacy.clearOnShutdown.siteSettings", false); // Site settings ~ Настройки сайтов
+
+/* Master cleaner Firefox
+ *		[NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
+ * Мастер очистки Firefox
+ *		[ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
+user_pref("privacy.cpd.cache", true); // Cache ~ Кэш
+user_pref("privacy.cpd.cookies", false); // Cookies ~ Куки
+user_pref("privacy.cpd.downloads", true); // Downloads ~ Загрузки
+user_pref("privacy.cpd.formdata", true); // Form data ~ Данные форм
+user_pref("privacy.cpd.history", true); // History ~ История
+user_pref("privacy.cpd.offlineApps", false); // Offline website data ~ Данные автономных веб-сайтов
+user_pref("privacy.cpd.passwords", false); // Passwords ~ Пароли
+user_pref("privacy.cpd.sessions", true); // Active sessions ~ Активные сеансы
+user_pref("privacy.cpd.siteSettings", false); // Site settings ~ Настройки сайтов
+
+/* Time range to clear
+ *		0 = Everything
+ *		1 = Last hour
+ *		2 = Last two hours
+ *		3 = Last four hours
+ *		4 = Today
+ *		5 = Last five minutes
+ *		6 = Last twenty-four hours
+ * Диапазон времени для очистки
+ *		0 = Все
+ *		1 = Последний час
+ *		2 = Последние два часа
+ *		3 = Последние четыре часа
+ *		4 = Сегодня
+ *		5 = Последние пять минут
+ *		6 = Последние сутки */
+user_pref("privacy.sanitize.timeSpan", 0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -137,8 +546,6 @@ user_pref("intl.locale.requested", "en-US"); // (hidden pref)
  * i.e. ignore all of Mozilla's various search engines in multiple locales ***/
 user_pref("browser.search.geoSpecificDefaults", false);
 user_pref("browser.search.geoSpecificDefaults.url", "");
-/* 0207: set language to match ***/
-user_pref("intl.accept_languages", "en-US, en");
 /* 0208: enforce US English locale regardless of the system locale
  * [1] https://bugzilla.mozilla.org/867501 ***/
 user_pref("javascript.use_us_english_locale", true); // (hidden pref)
@@ -150,44 +557,12 @@ user_pref("intl.regional_prefs.use_os_locales", false);
 user_pref("geo.wifi.uri", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
    // user_pref("geo.wifi.logging.enabled", true); // (hidden pref)
 
-/*** 0300: QUIET FOX
-     We choose to not disable auto-CHECKs (0301's) but to disable auto-INSTALLs (0302's).
-     There are many legitimate reasons to turn off auto-INSTALLS, including hijacked or
-     monetized extensions, time constraints, legacy issues, and fear of breakage/bugs.
-     It is still important to do updates for security reasons, please do so manually. ***/
-user_pref("_user.js.parrot", "0300 syntax error: the parrot's not pinin' for the fjords!");
-/* 0301b: disable auto-update checks for extensions
- * [SETTING] about:addons>Extensions>[cog-wheel-icon]>Update Add-ons Automatically (toggle) ***/
-   // user_pref("extensions.update.enabled", false);
-/* 0302a: disable auto update installing for Firefox
- * [SETTING] General>Firefox Updates>Check for updates but let you choose... ***/
-user_pref("app.update.auto", false);
-/* 0302b: disable auto update installing for extensions (after the check in 0301b)
- * [SETTING] about:addons>Extensions>[cog-wheel-icon]>Update Add-ons Automatically (toggle) ***/
-user_pref("extensions.update.autoUpdateDefault", false);
-/* 0303: disable background update service [WINDOWS]
- * [SETTING] General>Firefox Updates>Use a background service to install updates ***/
-user_pref("app.update.service.enabled", false);
-/* 0304: disable background update staging ***/
-user_pref("app.update.staging.enabled", false);
-/* 0305: enforce update information is displayed
- * This is the update available, downloaded, error and success information ***/
-user_pref("app.update.silent", false);
-/* 0306: disable extension metadata updating
- * sends daily pings to Mozilla about extensions and recent startups ***/
-user_pref("extensions.getAddons.cache.enabled", false);
 /* 0307: disable auto updating of personas (themes) ***/
 user_pref("lightweightThemes.update.enabled", false);
-/* 0308: disable search update
- * [SETTING] General>Firefox Updates>Automatically update search engines ***/
-user_pref("browser.search.update", false);
 /* 0309: disable sending Flash crash reports ***/
 user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
 /* 0310: disable sending the URL of the website where a plugin crashed ***/
 user_pref("dom.ipc.plugins.reportCrashURL", false);
-/* 0320: disable about:addons' Get Add-ons panel (uses Google-Analytics) ***/
-user_pref("extensions.getAddons.showPane", false); // hidden pref
-user_pref("extensions.webservice.discoverURL", "");
 /* 0330: disable telemetry
  * the pref (.unified) affects the behaviour of the pref (.enabled)
  * IF unified=false then .enabled controls the telemetry module
@@ -226,18 +601,6 @@ user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false); // (FF58+
  * [2] https://firefox-source-docs.mozilla.org/browser/browser/BrowserErrorReporter.html ***/
 user_pref("browser.chrome.errorReporter.enabled", false);
 user_pref("browser.chrome.errorReporter.submitUrl", "");
-
-/*** 0400: BLOCKLISTS / SAFE BROWSING / TRACKING PROTECTION
-     This section has security & tracking protection implications vs privacy concerns vs effectiveness
-     vs 3rd party 'censorship'. We DO NOT advocate no protection. If you disable Tracking Protection (TP)
-     and/or Safe Browsing (SB), then SECTION 0400 REQUIRES YOU HAVE uBLOCK ORIGIN INSTALLED.
-
-     Safe Browsing is designed to protect users from malicious sites. Tracking Protection is designed
-     to lessen the impact of third parties on websites to reduce tracking and to speed up your browsing.
-     These do rely on 3rd parties (Google for SB and Disconnect for TP), but many steps, which are
-     continually being improved, have been taken to preserve privacy. Disable at your own risk.
-***/
-user_pref("_user.js.parrot", "0400 syntax error: the parrot's passed on!");
 /** BLOCKLISTS ***/
 /* 0401: enable Firefox blocklist, but sanitize blocklist url
  * [NOTE] It includes updates for "revoked certificates"
@@ -253,17 +616,6 @@ user_pref("extensions.blocklist.url", "https://blocklists.settings.services.mozi
    // user_pref("services.blocklist.addons.collection", "");
    // user_pref("services.blocklist.plugins.collection", "");
    // user_pref("services.blocklist.gfx.collection", "");
-
-/** SAFE BROWSING (SB)
-    This sub-section has been redesigned to differentiate between "real-time"/"user initiated" data
-    being sent to Google from all other settings such as using local blocklists/whitelists and updating
-    those lists. There are NO privacy issues here. *IF* required, a full url is never sent to Google,
-    only a PART-hash of the prefix, and this is hidden with noise of other real PART-hashes. Google also
-    swear it is anonymized and only used to flag malicious sites/activity. Firefox also takes measures
-    such as striping out identifying parameters and storing safe browsing cookies in a separate jar.
-    SB v4 (FF57+) doesn't even use cookies. (#Turn on browser.safebrowsing.debug to monitor this activity)
-    #Required reading [#] https://feeding.cloud.geek.nz/posts/how-safe-browsing-works-in-firefox/
-    [1] https://wiki.mozilla.org/Security/Safe_Browsing ***/
 /* 0410: disable "Block dangerous and deceptive content" (under Options>Privacy & Security)
  * This covers deceptive sites such as phishing and social engineering ***/
    // user_pref("browser.safebrowsing.malware.enabled", false);
@@ -330,24 +682,6 @@ user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
    // user_pref("privacy.trackingprotection.lower_network_priority", false);
 /* 0426: enforce Content Blocking (required to block cookies) (FF63+) ***/
 user_pref("browser.contentblocking.enabled", true); // default: true
-
-/*** 0500: SYSTEM ADD-ONS / EXPERIMENTS
-     System Add-ons are a method for shipping extensions, considered to be
-     built-in features to Firefox, that are hidden from the about:addons UI.
-     To view your System Add-ons go to about:support, they are listed under "Firefox Features"
-
-     Some System Add-ons have no on-off prefs. Instead you can manually remove them. Note that app
-     updates will restore them. They may also be updated and possibly restored automatically (see 0505)
-     * Portable: "...\App\Firefox64\browser\features\" (or "App\Firefox\etc" for 32bit)
-     * Windows: "...\Program Files\Mozilla\browser\features" (or "Program Files (X86)\etc" for 32bit)
-     * Mac: "...\Applications\Firefox\Contents\Resources\browser\features\"
-            [NOTE] On Mac you can right-click on the application and select "Show Package Contents"
-     * Linux: "/usr/lib/firefox/browser/features" (or similar)
-
-     [1] https://firefox-source-docs.mozilla.org/toolkit/mozapps/extensions/addon-manager/SystemAddons.html
-     [2] https://dxr.mozilla.org/mozilla-central/source/browser/extensions
-***/
-user_pref("_user.js.parrot", "0500 syntax error: the parrot's cashed in 'is chips!");
 /* 0502: disable Mozilla permission to silently opt you into tests ***/
 user_pref("network.allow-experiments", false);
 /* 0503: disable Normandy/Shield (FF60+)
@@ -503,21 +837,8 @@ user_pref("_user.js.parrot", "0800 syntax error: the parrot's ceased to be!");
 /* 0801: disable location bar using search - PRIVACY
  * don't leak typos to a search engine, give an error message instead ***/
 user_pref("keyword.enabled", false);
-/* 0802: disable location bar domain guessing - PRIVACY/SECURITY
- * domain guessing intercepts DNS "hostname not found errors" and resends a
- * request (e.g. by adding www or .com). This is inconsistent use (e.g. FQDNs), does not work
- * via Proxy Servers (different error), is a flawed use of DNS (TLDs: why treat .com
- * as the 411 for DNS errors?), privacy issues (why connect to sites you didn't
- * intend to), can leak sensitive data (e.g. query strings: e.g. Princeton attack),
- * and is a security risk (e.g. common typos & malicious sites set up to exploit this) ***/
-user_pref("browser.fixup.alternate.enabled", false);
 /* 0803: display all parts of the url in the location bar - helps SECURITY ***/
 user_pref("browser.urlbar.trimURLs", false);
-/* 0804: limit history leaks via enumeration (PER TAB: back/forward) - PRIVACY
- * This is a PER TAB session history. You still have a full history stored under all history
- * default=50, minimum=1=currentpage, 2 is the recommended minimum as some pages
- * use it as a means of referral (e.g. hotlinking), 4 or 6 or 10 may be more practical ***/
-user_pref("browser.sessionhistory.max_entries", 10);
 /* 0805: disable CSS querying page history - CSS history leak - PRIVACY
  * [NOTE] This has NEVER been fully "resolved": in Mozilla/docs it is stated it's
  * only in 'certain circumstances', also see latest comments in [2]
@@ -528,9 +849,6 @@ user_pref("browser.sessionhistory.max_entries", 10);
 user_pref("layout.css.visited_links_enabled", false);
 /* 0806: disable displaying javascript in history URLs - SECURITY ***/
 user_pref("browser.urlbar.filter.javascript", true);
-/* 0807: disable search bar LIVE search suggestions - PRIVACY
- * [SETTING] Search>Provide search suggestions ***/
-user_pref("browser.search.suggest.enabled", false);
 /* 0808: disable location bar LIVE search suggestions (requires 0807 = true) - PRIVACY
  * Also disable the location bar prompt to enable/disable or learn more about it.
  * [SETTING] Search>Show search suggestions in address bar results ***/
@@ -539,44 +857,9 @@ user_pref("browser.urlbar.userMadeSearchSuggestionsChoice", true); // (FF41+)
 /* 0809: disable location bar suggesting "preloaded" top websites (FF54+)
  * [1] https://bugzilla.mozilla.org/1211726 ***/
 user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
-/* 0810: disable location bar making speculative connections (FF56+)
- * [1] https://bugzilla.mozilla.org/1348275 ***/
-user_pref("browser.urlbar.speculativeConnect.enabled", false);
-/* 0850a: disable location bar autocomplete and suggestion types
- * If you enforce any of the suggestion types, you MUST enforce 'autocomplete'
- *   - If *ALL* of the suggestion types are false, 'autocomplete' must also be false
- *   - If *ANY* of the suggestion types are true, 'autocomplete' must also be true
- * [SETTING] Privacy & Security>Address Bar>When using the address bar, suggest
- * [WARNING] If all three suggestion types are false, search engine keywords are disabled ***/
-user_pref("browser.urlbar.autocomplete.enabled", false);
-user_pref("browser.urlbar.suggest.history", false);
-user_pref("browser.urlbar.suggest.bookmark", false);
-user_pref("browser.urlbar.suggest.openpage", false);
-/* 0850c: disable location bar dropdown
- * This value controls the total number of entries to appear in the location bar dropdown
- * [NOTE] Items (bookmarks/history/openpages) with a high "frecency"/"bonus" will always
- * be displayed (no we do not know how these are calculated or what the threshold is),
- * and this does not affect the search by search engine suggestion (see 0808)
- * [USAGE] This setting is only useful if you want to enable search engine keywords
- * (i.e. at least one of 0850a suggestion types must be true) but you want to *limit* suggestions shown ***/
-   // user_pref("browser.urlbar.maxRichResults", 0);
-/* 0850d: disable location bar autofill
- * [1] http://kb.mozillazine.org/Inline_autocomplete ***/
-user_pref("browser.urlbar.autoFill", false);
-/* 0850e: disable location bar one-off searches (FF51+)
- * [1] https://www.ghacks.net/2016/08/09/firefox-one-off-searches-address-bar/ ***/
-user_pref("browser.urlbar.oneOffSearches", false);
 /* 0850f: disable location bar suggesting local search history (FF57+)
  * [1] https://bugzilla.mozilla.org/1181644 ***/
-user_pref("browser.urlbar.maxHistoricalSearchSuggestions", 0); // max. number of search suggestions
-/* 0860: disable search and form history
- * [SETTING] Privacy & Security>History>Custom Settings>Remember search and form history
- * [NOTE] You can clear formdata on exiting Firefox (see 2803) ***/
-user_pref("browser.formfill.enable", false);
-/* 0862: disable browsing and download history
- * [SETTING] Privacy & Security>History>Custom Settings>Remember browsing and download history
- * [NOTE] You can clear history and downloads on exiting Firefox (see 2803) ***/
-   // user_pref("places.history.enabled", false);
+user_pref("browser.urlbar.maxHistoricalSearchSuggestions", 0);
 /* 0864: disable date/time picker (FF57+ default true)
  * This can leak your locale if not en-US
  * [1] https://trac.torproject.org/projects/tor/ticket/21787 ***/
@@ -864,15 +1147,6 @@ user_pref("_user.js.parrot", "1400 syntax error: the parrot's bereft of life!");
  * [SETTING] General>Language and Appearance>Fonts & Colors>Advanced>Allow pages to choose...
  * [SETUP] Disabling fonts can uglify the web a fair bit. ***/
 user_pref("browser.display.use_document_fonts", 0);
-/* 1402: set more legible default fonts [SETUP]
- * [SETTING] General>Language and Appearance>Fonts & Colors>Advanced>Serif|Sans-serif|Monospace
- * [NOTE] Example below for Windows/Western only ***/
-   // user_pref("font.name.serif.x-unicode", "Georgia");
-   // user_pref("font.name.serif.x-western", "Georgia"); // default: Times New Roman
-   // user_pref("font.name.sans-serif.x-unicode", "Arial");
-   // user_pref("font.name.sans-serif.x-western", "Arial"); // default: Arial
-   // user_pref("font.name.monospace.x-unicode", "Lucida Console");
-   // user_pref("font.name.monospace.x-western", "Lucida Console"); // default: Courier New
 /* 1403: disable icon fonts (glyphs) (FF41) and local fallback rendering
  * [1] https://bugzilla.mozilla.org/789788
  * [2] https://trac.torproject.org/projects/tor/ticket/8455 ***/
@@ -950,27 +1224,6 @@ user_pref("network.http.referer.hideOnionSource", true);
  * [SETTING] Privacy & Security>Content Blocking>Send websites a "Do Not Track"...
  * [NOTE] DNT is enforced with TP (see 0420) regardless of this pref ***/
 user_pref("privacy.donottrackheader.enabled", true);
-
-/*** 1700: CONTAINERS [SETUP]
-     [1] https://support.mozilla.org/kb/containers-experiment
-     [2] https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers
-     [3] https://github.com/mozilla/testpilot-containers
-***/
-user_pref("_user.js.parrot", "1700 syntax error: the parrot's bit the dust!");
-/* 1701: enable Container Tabs setting in preferences (see 1702) (FF50+)
- * [1] https://bugzilla.mozilla.org/1279029 ***/
-user_pref("privacy.userContext.ui.enabled", true);
-/* 1702: enable Container Tabs (FF50+)
- * [SETTING] General>Tabs>Enable Container Tabs ***/
-user_pref("privacy.userContext.enabled", true);
-/* 1703: enable a private container for thumbnail loads (FF51+) ***/
-user_pref("privacy.usercontext.about_newtab_segregation.enabled", true); // default: true in FF61+
-/* 1704: set long press behaviour on "+ Tab" button to display container menu (FF53+)
- * 0=disables long press, 1=when clicked, the menu is shown
- * 2=the menu is shown after X milliseconds
- * [NOTE] The menu does not contain a non-container tab option
- * [1] https://bugzilla.mozilla.org/1328756 ***/
-user_pref("privacy.userContext.longPressBehavior", 2);
 
 /*** 1800: PLUGINS ***/
 user_pref("_user.js.parrot", "1800 syntax error: the parrot's pushing up daisies!");
@@ -1440,81 +1693,11 @@ user_pref("dom.caches.enabled", false);
  * [2] https://developer.mozilla.org/docs/Web/API/Storage_API
  * [3] https://blog.mozilla.org/l10n/2017/03/07/firefox-l10n-report-aurora-54/ ***/
    // user_pref("dom.storageManager.enabled", false);
-
-/*** 2800: SHUTDOWN [SETUP]
-     You should set the values to what suits you best.
-     - "Offline Website Data" includes appCache (2730), localStorage (2710),
-       Service Worker cache (2740), and QuotaManager (IndexedDB (2720), asm-cache)
-     - In both 2803 + 2804, the 'download' and 'history' prefs are combined in the
-       Firefox interface as "Browsing & Download History" and their values will be synced
-***/
-user_pref("_user.js.parrot", "2800 syntax error: the parrot's bleedin' demised!");
-/* 2802: enable Firefox to clear history items on shutdown
- * [SETTING] Privacy & Security>History>Custom Settings>Clear history when Firefox closes ***/
-user_pref("privacy.sanitize.sanitizeOnShutdown", true);
-/* 2803: set what history items to clear on shutdown
- * [SETTING] Privacy & Security>History>Custom Settings>Clear history when Firefox closes>Settings
- * [NOTE] If 'history' is true, downloads will also be cleared regardless of the value
- * but if 'history' is false, downloads can still be cleared independently
- * However, this may not always be the case. The interface combines and syncs these
- * prefs when set from there, and the sanitize code may change at any time ***/
-user_pref("privacy.clearOnShutdown.cache", true);
-user_pref("privacy.clearOnShutdown.cookies", true);
-user_pref("privacy.clearOnShutdown.downloads", true); // see note above
-user_pref("privacy.clearOnShutdown.formdata", true); // Form & Search History
-user_pref("privacy.clearOnShutdown.history", true); // Browsing & Download History
-user_pref("privacy.clearOnShutdown.offlineApps", true); // Offline Website Data
-user_pref("privacy.clearOnShutdown.sessions", true); // Active Logins
-user_pref("privacy.clearOnShutdown.siteSettings", false); // Site Preferences
-/* 2804: reset default history items to clear with Ctrl-Shift-Del (to match above)
- * This dialog can also be accessed from the menu History>Clear Recent History
- * Firefox remembers your last choices. This will reset them when you start Firefox.
- * [NOTE] Regardless of what you set privacy.cpd.downloads to, as soon as the dialog
- * for "Clear Recent History" is opened, it is synced to the same as 'history' ***/
-user_pref("privacy.cpd.cache", true);
-user_pref("privacy.cpd.cookies", true);
-   // user_pref("privacy.cpd.downloads", true); // not used, see note above
-user_pref("privacy.cpd.formdata", true); // Form & Search History
-user_pref("privacy.cpd.history", true); // Browsing & Download History
-user_pref("privacy.cpd.offlineApps", true); // Offline Website Data
-user_pref("privacy.cpd.passwords", false); // this is not listed
-user_pref("privacy.cpd.sessions", true); // Active Logins
-user_pref("privacy.cpd.siteSettings", false); // Site Preferences
 /* 2805: privacy.*.openWindows (clear session restore data) (FF34+)
  * [NOTE] There is a years-old bug that these cause two windows when Firefox restarts.
  * You do not need these anyway if session restore is disabled (see 1020) ***/
    // user_pref("privacy.clearOnShutdown.openWindows", true);
    // user_pref("privacy.cpd.openWindows", true);
-/* 2806: reset default 'Time range to clear' for 'Clear Recent History' (see 2804)
- * Firefox remembers your last choice. This will reset the value when you start Firefox.
- * 0=everything, 1=last hour, 2=last two hours, 3=last four hours,
- * 4=today, 5=last five minutes, 6=last twenty-four hours
- * [NOTE] The values 5 + 6 are not listed in the dropdown, which will display a
- * blank value if they are used, but they do work as advertised ***/
-user_pref("privacy.sanitize.timeSpan", 0);
-
-/*** 4000: FIRST PARTY ISOLATION (FPI)
- ** 1278037 - isolate indexedDB (FF51+)
- ** 1277803 - isolate favicons (FF52+)
- ** 1264562 - isolate OCSP cache (FF52+)
- ** 1268726 - isolate Shared Workers (FF52+)
- ** 1316283 - isolate SSL session cache (FF52+)
- ** 1317927 - isolate media cache (FF53+)
- ** 1323644 - isolate HSTS and HPKP (FF54+)
- ** 1334690 - isolate HTTP Alternative Services (FF54+)
- ** 1334693 - isolate SPDY/HTTP2 (FF55+)
- ** 1337893 - isolate DNS cache (FF55+)
- ** 1344170 - isolate blob: URI (FF55+)
- ** 1300671 - isolate data:, about: URLs (FF55+)
- ** 1473247 - isolate IP addresses (FF63+)
- ** 1492607 - isolate postMessage with targetOrigin "*" (requires 4002) (FF65+)
-
- NOTE: FPI has some issues depending on your Firefox release
- ** 1418931 - [fixed in FF58+] IndexedDB (Offline Website Data) with FPI Origin Attributes
-      are not removed with "Clear All/Recent History" or "On Close"
- ** 1381197 - [fixed in FF59+] extensions cannot control cookies with FPI Origin Attributes
-***/
-user_pref("_user.js.parrot", "4000 syntax error: the parrot's pegged out");
 /* 4001: enable First Party Isolation (FF51+)
  * [WARNING] May break cross-domain logins and site functionality until perfected
  * [1] https://bugzilla.mozilla.org/1260931 ***/
