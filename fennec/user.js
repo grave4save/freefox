@@ -638,3 +638,35 @@ user_pref("privacy.trackingprotection.lower_network_priority", false);
 user_pref("dom.forms.datetime", false);
 user_pref("dom.forms.datetime.others", false);
 user_pref("dom.forms.datetime.timepicker", false);
+
+/* Send Flash crash reports
+ * Отправка отчетов о сбоях Flash */
+user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
+
+/* Submitting the URL of the website where the plug-in crashed
+ * Отправка URL-адреса веб-сайта, где произошел сбой плагина */
+user_pref("dom.ipc.plugins.reportCrashURL", false);
+
+/* How often Firefox should ask for a master password
+ *		0 = The first time
+ *		1 = Every time it's needed
+ *		2 = Every "N" minutes
+ * Как часто Firefox должен запрашивать мастер-пароль
+ *		0 = Первый раз
+ *		1 = Каждый раз, когда это необходимо
+ *		2 = Каждые "N" минут */
+user_pref("security.ask_for_password", 2);
+
+/* How often (within how many minutes) Firefox should ask for a master password
+ * Как часто (в течение скольки минут) Firefox должен запрашивать мастер-пароль */
+user_pref("security.password_lifetime", 5);
+
+/* Auto-complete user name and password
+ * Aвтоматическое заполнение имени пользователя и пароля */
+user_pref("signon.autofillForms", false);
+user_pref("signon.autofillForms.http", false);
+user_pref("security.insecure_field_warning.contextual.enabled", true);
+
+/* Experiments
+ * Эксперименты */
+user_pref("network.allow-experiments", false);

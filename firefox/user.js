@@ -488,3 +488,290 @@ user_pref("privacy.cpd.siteSettings", false); // Site settings ~ Настрой�
  *		5 = Последние пять минут
  *		6 = Последние сутки */
 user_pref("privacy.sanitize.timeSpan", 0);
+
+/* Open bookmarks in a new tab
+ * Открытие закладок в новой вкладке */
+user_pref("browser.tabs.loadBookmarksInTabs", true);
+
+/* Opening bookmarks in background tabs
+ * Открытие закладок в фоновых вкладках */
+user_pref("browser.tabs.loadBookmarksInBackground", true);
+
+/* Maximum number of backup bookmarks
+ * Максимальное количество резервных закладок */
+user_pref("browser.bookmarks.max_backups", 3);
+
+/* "Backspace" button value
+ *  0 = Previous page
+ *		1 = Scroll page up
+ *		2 = Do nothing
+ * Значение кнопки "Backspace"
+ *		0 = Предыдущая страница
+ *		1 = Прокрутить страницу вверх
+ *		2 = Ничего не делать */
+user_pref("browser.backspace_action", 2);
+
+/* WebRTC (Web Real-Time Communication)
+ * WebRTC (Веб Связь в Реальном Времени) */
+user_pref("media.navigator.video.enabled", false);
+user_pref("media.peerconnection.dtmf.enabled", false);
+user_pref("media.peerconnection.enabled", false);
+user_pref("media.peerconnection.ice.tcp", false);
+user_pref("media.peerconnection.identity.enabled", false);
+user_pref("media.peerconnection.identity.timeout", 1);
+user_pref("media.peerconnection.rtpsourcesapi.enabled", false);
+user_pref("media.peerconnection.simulcast", false);
+user_pref("media.peerconnection.turn.disable", true);
+user_pref("media.peerconnection.use_document_iceservers", false);
+user_pref("media.peerconnection.video.enabled", false);
+
+/* Camera autofocus callback
+ * Обратный вызов автофокусировки камеры */
+user_pref("camera.control.autofocus_moving_callback.enabled", false);
+
+/* Limit WebRTC IP address leaks when using WebRTC
+ * Ограничение утечек IP-адресов WebRTC при использовании WebRTC */
+user_pref("media.peerconnection.ice.default_address_only", true);
+user_pref("media.peerconnection.ice.no_host", true);
+
+/* Screensharing
+ * Общий доступ к экрану */
+user_pref("media.getusermedia.agc_enabled", false);
+user_pref("media.getusermedia.audiocapture.enabled", false);
+user_pref("media.getusermedia.browser.enabled", false);
+user_pref("media.getusermedia.noise_enabled", false);
+user_pref("media.getusermedia.screensharing.enabled", false);
+
+/* Status of permissions for camera, microphone, location, notifications
+ *		0 = Ask
+ *		1 = Enable
+ *		2 = Block
+ * Состояние разрешений для камеры, микрофона, местоположения, уведомлений 
+ *		0 = Всегда спрашивать
+ *		1 = Разрешить
+ *		2 = Блокировать */
+user_pref("permissions.default.camera", 2);
+user_pref("permissions.default.desktop-notification", 2);
+user_pref("permissions.default.geo", 2);
+user_pref("permissions.default.microphone", 2);
+
+/* Automatic HTML5 media playback
+ *		0 = Allow
+ *		1 = Block
+ *		2 = Ask
+ *		[WARNING] This may break video playback on various sites.
+ * Автоматическое воспроизведение мультимедиа в формате HTML5
+ *		0 = Разрешить
+ *		1 = Заблокировать
+ *		2 = Спросить
+ *		[ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
+// user_pref("media.autoplay.default", 1);
+
+/* Logic blocking autoplay version 2 and enable user interface
+ * Логика блокировки автовоспроизведения версии 2 и включить пользовательский интерфейс */
+// user_pref("media.autoplay.enabled.user-gestures-needed", true);
+
+/* Allow asking for permission to autoplay to appear in user interface
+ * Запрашивать разрешение на автовоспроизведение в пользовательском интерфейсе */
+// user_pref("media.autoplay.ask-permission", true);
+
+/* Automatically play sound in inactive tabs
+ *		TRUE = Do not play
+ *		FALSE = Play
+ * Автоматическое воспроизведение звука в неактивных вкладках
+ *		TRUE = Не воспроизводить
+ *		FALSE = Воспроизводить */
+user_pref("media.block-autoplay-until-in-foreground", true);
+
+/* Volume status
+ * Состояние громкости */       
+user_pref("media.default_volume", "0.5");
+
+/* WEBM */
+user_pref("media.mediasource.webm.enabled", true);
+
+/* Telemetry
+ * Телеметрия */
+user_pref("toolkit.telemetry.archive.enabled", false);
+user_pref("toolkit.telemetry.bhrPing.enabled", false);
+user_pref("toolkit.telemetry.cachedClientID", "");
+user_pref("toolkit.telemetry.enabled", false);
+user_pref("toolkit.telemetry.firstShutdownPing.enabled", false);
+user_pref("toolkit.telemetry.hybridContent.enabled", false);
+user_pref("toolkit.telemetry.newProfilePing.enabled", false);
+user_pref("toolkit.telemetry.server", "data:,");
+user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
+user_pref("toolkit.telemetry.unified", false);
+user_pref("toolkit.telemetry.unifiedIsOptIn", true);
+user_pref("toolkit.telemetry.updatePing.enabled", false);
+
+/* Firefox health report
+ * Отчет о состоянии здоровья Firefox */
+user_pref("datareporting.healthreport.infoURL", "");
+user_pref("datareporting.healthreport.uploadEnabled", false);
+user_pref("datareporting.policy.dataSubmissionEnabled", false);
+
+/* Crash reports
+ * Отчеты о сбоях */
+user_pref("breakpad.reportURL", "");
+user_pref("browser.chrome.errorReporter.enabled", false);
+user_pref("browser.chrome.errorReporter.submitUrl", "");
+user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false);
+user_pref("browser.crashReports.unsubmittedCheck.autoSubmit", false);
+user_pref("browser.crashReports.unsubmittedCheck.enabled", false);
+user_pref("browser.tabs.crashReporting.email", "");
+user_pref("browser.tabs.crashReporting.emailMe", false);
+user_pref("browser.tabs.crashReporting.includeURL", false);
+user_pref("browser.tabs.crashReporting.sendReport", false);
+
+/* Promo for mobile phones
+ * Акция для мобильных телефонов */
+user_pref("identity.mobilepromo.android", "");
+user_pref("identity.mobilepromo.ios", "");
+
+/* Shield
+ * Щит */
+user_pref("app.normandy.enabled", false);
+user_pref("app.normandy.api_url", "");
+user_pref("app.normandy.shieldLearnMoreUrl", ""); // WIKI
+user_pref("app.shield.optoutstudies.enabled", false);
+
+/* PingCentre telemetry
+ * Телеметрия ПингЦентра */
+user_pref("browser.ping-centre.telemetry", false);
+user_pref("browser.ping-centre.log", false);
+user_pref("browser.ping-centre.staging.endpoint", "");
+user_pref("browser.ping-centre.production.endpoint", "");
+
+/* Location accounting
+ * Учет местоположения */
+user_pref("geo.enabled", false);
+user_pref("browser.geolocation.warning.infoURL", ""); // WIKI
+
+/* GeoIP-based search results
+ * Результаты поиска на основе GeoIP */
+user_pref("browser.search.region", "US");
+user_pref("browser.search.geoip.url", "");
+user_pref("browser.search.geoip.timeout", 0);
+
+/* Application language
+ * Язык приложения */
+// user_pref("intl.locale.requested", "ru");
+
+/* Regional specificity for search results and search engines
+ * Региональная специфика для результатов поиска и поисковых систем */
+user_pref("browser.search.geoSpecificDefaults", false);
+user_pref("browser.search.geoSpecificDefaults.url", "");
+
+/* Request a web page in English to improve privacy
+ * Запрашивать веб-страницы на английском языке для повышения приватности */
+user_pref("javascript.use_us_english_locale", true);
+
+/* Use the application language over the language of your operating system in the regional settings
+ * Использовать язык приложения поверх языка вашей операционной системы в региональных настройках */
+user_pref("intl.regional_prefs.use_os_locales", false);
+
+/* First Party Isolation
+ * Изоляция первой стороны */
+user_pref("privacy.firstparty.isolate", true);
+
+/* First Party Isolation restriction
+ * Ограничение изоляции первой стороны */
+user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
+user_pref("privacy.firstparty.isolate.block_post_message", true);
+
+/* Firefox Fingerprints
+ * Отпечатки пальцев Firefox */
+user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
+
+/* mozAddonManager Web API */
+user_pref("privacy.resistFingerprinting.block_mozAddonManager", true);
+
+/* Recommended themes
+ * Рекомендованные темы */
+user_pref("lightweightThemes.recommendedThemes", "");
+
+/* Install only signed extensions
+ * Установка только подписанных расширений */
+user_pref("extensions.langpacks.signatures.required", true); // Require signing language pack ~ Требование подписи языкового пакета
+user_pref("xpinstall.signatures.required", true); // Require signing extensions ~ Требовать подписание расширений
+user_pref("xpinstall.signatures.devInfoURL", ""); // WIKI
+
+/* Add-on installation delay
+ * Задержка при установке дополнений */
+user_pref("security.dialog_enable_delay", 0);
+
+/* Default plugins state
+ *		0 = Disabled
+ *		1 = Request activation
+ *		2 = Active, individual plugins can be overridden
+ * Состояние плагинов по умолчанию
+ *		0 = Отключено
+ *		1 = Запрашивать активацию
+ *		2 = Активно, можно переопределить отдельные плагины */
+user_pref("plugin.default.state", 0);
+user_pref("plugin.defaultXpi.state", 0);
+
+/* Activate the plugin by clicking
+ * Активация плагина по клику */
+user_pref("plugins.click_to_play", true);
+
+/* Time to run plugins
+ * Время для запуска плагинов */
+user_pref("plugin.sessionPermissionNow.intervalInMinutes", 0);
+
+/* Flash plugin
+ *		0 = Off
+ *		1 = Ask
+ *		2 = On
+ * Flash плагин
+ *		0 = Выключить
+ *		1 = Спросить
+ *		2 = Включить */
+user_pref("plugin.state.flash", 0);
+
+/* Scanning the system for plug-ins
+ * Сканирование системы на наличие плагинов */
+user_pref("plugin.scan.plid.all", false); // [WINDOWS]
+
+/* GMP (Gecko Media Plugins)
+ * GMP (Gecko Медиа Плагины) */
+user_pref("media.gmp-provider.enabled", false);
+user_pref("media.gmp.trial-create.enabled", false);
+user_pref("media.gmp-manager.url", "data:text/plain,");
+user_pref("media.gmp-manager.url.override", "data:text/plain,");
+user_pref("media.gmp-manager.updateEnabled", false);
+user_pref("media.gmp-manager.cert.checkAttributes", false);
+user_pref("media.gmp-manager.buildID", "");
+user_pref("media.gmp-manager.lastCheck", "");
+user_pref("media.gmp-manager.certs.1.commonName", "");
+user_pref("media.gmp-manager.certs.1.issuerName", "");
+user_pref("media.gmp-manager.certs.2.commonName", "");
+user_pref("media.gmp-manager.certs.2.issuerName", "");
+user_pref("media.gmp-manager.cert.requireBuiltIn", false);
+
+/* Widevine CDM (Content Decryption Module)
+ * Widevine CDM (Модуль Расшифровки Контента) */
+user_pref("media.gmp-widevinecdm.visible", false);
+user_pref("media.gmp-widevinecdm.enabled", false);
+user_pref("media.gmp-widevinecdm.autoupdate", false);
+
+/* Digital Rights Management (DRM)
+ * Управление цифровыми правами */
+user_pref("media.eme.enabled", false);
+user_pref("browser.eme.ui.enabled", false);
+
+/* OpenH264 codec
+ * Кодек OpenH264 */
+user_pref("media.gmp-gmpopenh264.enabled", false);
+user_pref("media.gmp-gmpopenh264.autoupdate", false);
+
+/* Preload browser links
+ * Предварительная загрузка браузером ссылок */
+user_pref("network.prefetch-next", false);
+
+/* DNS browser preloading
+ * Предварительная загрузка браузером DNS */
+user_pref("network.dns.disablePrefetch", true);
+user_pref("network.dns.disablePrefetchFromHTTPS", true);
