@@ -1,0 +1,134 @@
+/*
+ * This file is part of the MozBackup project,
+ * Copyright (c) 2018 Bogachenko Vyacheslav
+ *
+ * MozBackup is a free project: you can distribute it and/or modify
+ * it in accordance with the MIT license published by the Massachusetts Institute of Technology.
+ *
+ * The MozBackup project is distributed in the hope that it will be useful,
+ * and is provided "AS IS", WITHOUT ANY WARRANTY, EXPRESSLY EXPRESSED OR IMPLIED.
+ * WE ARE NOT RESPONSIBLE FOR ANY DAMAGES DUE TO THE USE OF THIS PROJECT OR ITS PARTS.
+ * For more information, see the MIT license.
+ *
+ * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
+ * Email: bogachenkove@gmail.com
+ * Github: https://github.com/bogachenko/mozbackup/tree/master/firefox/
+ * Last modified: 23 November 2018
+ * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
+ * Problem reports: https://github.com/bogachenko/mozbackup/issues
+ * Title: userChrome.css
+ * URL: https://github.com/bogachenko/mozbackup/blob/master/firefox/userChrome.css
+ * Wiki: https://github.com/bogachenko/mozbackup/wiki
+ *
+ * Download the entire MozBackup project at https://github.com/bogachenko/mozbackup/archive/master.zip
+ *
+ */
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Removed space before the first tab
+ * Удалено пространство перед первой вкладкой  */
+
+.titlebar-placeholder[type="pre-tabs"],
+.titlebar-placeholder[type="post-tabs"] {
+    display: none!important
+}
+
+/* Unnecessary items in the menu
+ * Ненужные элементы в меню */
+
+#appMenuRestoreLastSession, /* Button «Restore last session» in Firefox menu ~ Кнопка «Восстановить последнюю сессию» в меню Firefox */
+#appMenu-zoom-controls, /* Button «Zoom» in Firefox menu ~ Кнопка «Масштаб» в меню Firefox */
+#appMenu-edit-controls, /* «Edit» buttons in the Firefox menu ~ Кнопки «Редактирования» в меню Firefox */
+#appMenu-library-button, /* Button «Library» in the Firefox menu ~ Кнопка «Библиотека» в меню Firefox */
+#appMenu-customize-button, /* Button «Personalization editor» in the Firefox menu ~ Кнопка «Редактор персонализации» в меню Firefox */
+#appMenu-open-file-button, /* Button «Open file» menu in Firefox ~ Кнопка «Открыть файл» меню в Firefox */
+#appMenu-save-file-button, /* Button «Save File» menu in Firefox ~ Кнопка «Сохранить файл» меню в Firefox */
+#appMenu-print-button, /* «Print» button in the Firefox menu ~ Кнопка «Печать» в меню Firefox */
+#appMenu-quit-button, /* «Exit» button in the Firefox menu ~ Кнопка «Выход» в меню Firefox */
+#appMenu-find-button, /* «Find on this page» button in the Firefox menu ~ Кнопка «Найти на этой странице» в меню Firefox */
+#PanelUI-helpItems [oncommand="openHelpLink('firefox-help')"], /* «Help» button in the Waterfox menu ~ Кнопка «Справки» в меню Waterfox */
+#PanelUI-helpItems [oncommand="openTourPage();"], 
+#PanelUI-helpItems [oncommand="openHelpLink('keyboard-shortcuts')"], /* «Keyboard shortcut» button in the Waterfox menu ~ Кнопка «Сочетание клавиш» в меню Waterfox */
+#PanelUI-helpItems [oncommand="openFeedbackPage()"],
+#PanelUI-helpItems [oncommand="openUILink(gSafeBrowsing.getReportURL('Phish'), event, {triggeringPrincipal: Services.scriptSecurityManager.createNullPrincipal({})});"],
+#menu_openHelp,
+#menu_openTour,
+#menu_keyboardShortcuts,
+#healthReport,
+#feedbackPage,
+#menu_HelpPopup_reportPhishingtoolmenu,
+#menu_HelpPopup_reportPhishingErrortoolmenu,
+#context-sendpagetodevice,
+#context-sendlinktodevice,
+#context_sendTabToDevice,
+#context-pocket,
+#context-viewbgimage,
+#context-sendpagetodevice-popup > .sync-menuitem:nth-child(1),
+#context-sendpagetodevice-popup > .sync-menuitem:nth-child(2),
+#context-sendpagetodevice-popup > .sync-menuitem:nth-child(3),
+#context-sendpagetodevice-popup > .sync-menuitem:nth-child(4),
+#context-sendimage,
+#context-setDesktopBackground,
+#context-sendvideo,
+#context-sendaudio,
+#context_reloadAllTabs,
+#context_bookmarkAllTabs,
+#context_closeTabsToTheEnd,
+#context_closeOtherTabs,
+#context-printframe,
+#context-navigation,
+#appMenuRestoreLastSession + toolbarseparator,
+#appMenu-zoom-controls + toolbarseparator,
+#appMenu-edit-controls + toolbarseparator,
+#appMenu-customize-button + toolbarseparator,
+#appMenu-help-button + toolbarseparator,
+menuseparator /* «Separators» on the menu bar Firefox ~ «Разделители» на панели меню Firefox */
+{
+display: none!important
+}
+
+/* Rectangular UrlBar and SearchBar
+ * Прямоугольный UrlBar и SearchBar */
+
+#urlbar,#searchbar .searchbar-textbox
+{
+border-radius: var(--main-border-radius)!important
+}
+
+/* Font size
+ * Размер шрифта */
+
+textbox
+{
+font-size: 9pt!important
+}
+
+/* URLBar Dropmarker removed
+ * URLBar Dropmarker удален */
+
+.urlbar-history-dropmarker,#urlbar:hover > .urlbar-textbox-container > .urlbar-history-dropmarker
+{
+display: none!important
+}
+
+/* URLBar ActionButton removed
+ * URLBar ActionButton удален */
+
+#pageActionButton
+{
+display: none!important
+}
+
+/* New extension icons
+ * Новые иконки расширений */
+
+#umatrix_raymondhill_net-browser-action
+{
+list-style-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0id2luZG93cy0xMjUyIj8+PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cmVjdCB4PSIxMC44OTQiIHk9IjI1NiIgc3R5bGU9ImZpbGw6I0RCNTQ0NjsiIHdpZHRoPSIxNjMuNDA0IiBoZWlnaHQ9IjEwMC43NjYiLz48cmVjdCB4PSIxNzQuMjk4IiB5PSIyNTYiIHN0eWxlPSJmaWxsOiNCMDQ4M0U7IiB3aWR0aD0iMTYzLjQwNCIgaGVpZ2h0PSIxMDAuNzY2Ii8+PGc+PHJlY3QgeD0iMzM3LjcwMiIgeT0iMjU2IiBzdHlsZT0iZmlsbDojREI1NDQ2OyIgd2lkdGg9IjE2My40MDQiIGhlaWdodD0iMTAwLjc2NiIvPjxyZWN0IHg9Ijk1Ljg2NCIgeT0iMzU2Ljc2NiIgc3R5bGU9ImZpbGw6I0RCNTQ0NjsiIHdpZHRoPSIxNTYuODY4IiBoZWlnaHQ9IjEwMC43NjYiLz48L2c+PHJlY3QgeD0iMjUyLjczMiIgeT0iMzU2Ljc2NiIgc3R5bGU9ImZpbGw6I0IwNDgzRTsiIHdpZHRoPSIxNjMuNDA0IiBoZWlnaHQ9IjEwMC43NjYiLz48cmVjdCB4PSI0MTYuMTM2IiB5PSIzNTYuNzY2IiBzdHlsZT0iZmlsbDojREI1NDQ2OyIgd2lkdGg9Ijg0Ljk3IiBoZWlnaHQ9IjEwMC43NjYiLz48Zz48cmVjdCB4PSIxMC44OTQiIHk9IjM1Ni43NjYiIHN0eWxlPSJmaWxsOiNCMDQ4M0U7IiB3aWR0aD0iODQuOTciIGhlaWdodD0iMTAwLjc2NiIvPjxwYXRoIHN0eWxlPSJmaWxsOiNCMDQ4M0U7IiBkPSJNMTAuODk0LDE1NS4yMzRWNTQuNDY4aDE2My40MDR2MTAwLjc2NkgxMC44OTR6Ii8+PC9nPjxyZWN0IHg9IjE3NC4yOTgiIHk9IjU0LjQ2OCIgc3R5bGU9ImZpbGw6I0RCNTQ0NjsiIHdpZHRoPSIxNjMuNDA0IiBoZWlnaHQ9IjEwMC43NjYiLz48Zz48cmVjdCB4PSIzMzcuNzAyIiB5PSI1NC40NjgiIHN0eWxlPSJmaWxsOiNCMDQ4M0U7IiB3aWR0aD0iMTYzLjQwNCIgaGVpZ2h0PSIxMDAuNzY2Ii8+PHJlY3QgeD0iOTUuODY0IiB5PSIxNTUuMjM0IiBzdHlsZT0iZmlsbDojQjA0ODNFOyIgd2lkdGg9IjE1Ni44NjgiIGhlaWdodD0iMTAwLjc2NiIvPjwvZz48cmVjdCB4PSIyNTIuNzMyIiB5PSIxNTUuMjM0IiBzdHlsZT0iZmlsbDojREI1NDQ2OyIgd2lkdGg9IjE2My40MDQiIGhlaWdodD0iMTAwLjc2NiIvPjxyZWN0IHg9IjQxNi4xMzYiIHk9IjE1NS4yMzQiIHN0eWxlPSJmaWxsOiNCMDQ4M0U7IiB3aWR0aD0iODQuOTciIGhlaWdodD0iMTAwLjc2NiIvPjxyZWN0IHg9IjEwLjg5NCIgeT0iMTU1LjIzNCIgc3R5bGU9ImZpbGw6I0RCNTQ0NjsiIHdpZHRoPSI4NC45NyIgaGVpZ2h0PSIxMDAuNzY2Ii8+PGc+PHBhdGggc3R5bGU9ImZpbGw6IzIzMUYyMDsiIGQ9Ik01MDEuMTA2LDQzLjU3NEgxMC44OTRDNC44NzcsNDMuNTc0LDAsNDguNDUzLDAsNTQuNDY4djQwMy4wNjRjMCw2LjAxNSw0Ljg3NywxMC44OTQsMTAuODk0LDEwLjg5NCAgIGg0OTAuMjEzYzYuMDE1LDAsMTAuODk0LTQuODc4LDEwLjg5NC0xMC44OTRWNTQuNDY4QzUxMiw0OC40NTMsNTA3LjEyMiw0My41NzQsNTAxLjEwNiw0My41NzR6IE00OTAuMjEzLDM0NS44NzJoLTc0LjA3N2gtNjcuNTQgICB2LTc4Ljk3OWg2Ny41NGg3NC4wNzdWMzQ1Ljg3MnogTTIxLjc4NywxNjYuMTI4SDg0Ljk3djc4Ljk3OUgyMS43ODdWMTY2LjEyOHogTTQwNS4yNDMsMjQ1LjEwNmgtNjcuNTRoLTc0LjA3N3YtNzguOTc5aDc0LjA3NyAgIGg2Ny41NFYyNDUuMTA2eiBNMzI2LjgwOSwzNDUuODcyaC03NC4wNzdoLTY3LjU0di03OC45NzloNjcuNTRoNzQuMDc3VjM0NS44NzJ6IE0zMjYuODA5LDE0NC4zNGgtNzQuMDc3aC02Ny41NFY2NS4zNjJoMTQxLjYxNyAgIFYxNDQuMzR6IE0xNzQuMjk4LDE2Ni4xMjhoNjcuNTR2NzguOTc5aC02Ny41NGgtNjcuNTR2LTc4Ljk3OUgxNzQuMjk4eiBNMjEuNzg3LDI2Ni44OTRoNzQuMDc3aDY3LjU0djc4Ljk3OWgtNjcuNTRIMjEuNzg3ICAgVjI2Ni44OTR6IE0yMS43ODcsMzY3LjY2SDg0Ljk3djc4Ljk3OUgyMS43ODdWMzY3LjY2eiBNMTA2Ljc1NywzNjcuNjZoNjcuNTRoNjcuNTR2NzguOTc5SDEwNi43NTdWMzY3LjY2eiBNMjYzLjYyNiwzNjcuNjZoNzQuMDc3ICAgaDY3LjU0djc4Ljk3OUgyNjMuNjI2VjM2Ny42NnogTTQ5MC4yMTMsMjQ1LjEwNkg0MjcuMDN2LTc4Ljk3OWg2My4xODNWMjQ1LjEwNnogTTQ5MC4yMTMsMTQ0LjM0aC03NC4wNzdoLTY3LjU0VjY1LjM2MmgxNDEuNjE3ICAgVjE0NC4zNHogTTIxLjc4Nyw2NS4zNjJoMTQxLjYxN3Y3OC45NzloLTY3LjU0SDIxLjc4N1Y2NS4zNjJ6IE00OTAuMjEzLDQ0Ni42MzhINDI3LjAzVjM2Ny42Nmg2My4xODNWNDQ2LjYzOHoiLz48cGF0aCBzdHlsZT0iZmlsbDojMjMxRjIwOyIgZD0iTTgwLjk0LDc3LjEzN0g0MC4xMTZjLTYuMDE3LDAtMTAuODk0LDQuODc4LTEwLjg5NCwxMC44OTRjMCw2LjAxNSw0Ljg3NywxMC44OTQsMTAuODk0LDEwLjg5NCAgIEg4MC45NGM2LjAxNywwLDEwLjg5NC00Ljg3OCwxMC44OTQtMTAuODk0QzkxLjgzMyw4Mi4wMTUsODYuOTU2LDc3LjEzNyw4MC45NCw3Ny4xMzd6Ii8+PHBhdGggc3R5bGU9ImZpbGw6IzIzMUYyMDsiIGQ9Ik0xMTEuNjE5LDk4LjkyNGgxOC4xNTZjNi4wMTcsMCwxMC44OTQtNC44NzgsMTAuODk0LTEwLjg5NGMwLTYuMDE1LTQuODc3LTEwLjg5NC0xMC44OTQtMTAuODk0ICAgaC0xOC4xNTZjLTYuMDE3LDAtMTAuODk0LDQuODc4LTEwLjg5NCwxMC44OTRDMTAwLjcyNiw5NC4wNDYsMTA1LjYwMyw5OC45MjQsMTExLjYxOSw5OC45MjR6Ii8+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==') !important;
+}
+
+#ublock0_raymondhill_net-browser-action
+{
+list-style-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0id2luZG93cy0xMjUyIj8+PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNTEyLjAwNSA1MTIuMDA1IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDA1IDUxMi4wMDU7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48cGF0aCBzdHlsZT0iZmlsbDojMzAzQzQyOyIgZD0iTTQ0MC44ODgsNjQuNjA5bC0xODEuMzMzLTY0Yy0yLjI5Mi0wLjgxMi00LjgxMy0wLjgxMi03LjEwNCwwbC0xODEuMzMzLDY0ICBjLTQuMjYsMS41MS03LjExNSw1LjU0Mi03LjExNSwxMC4wNjN2MTI4YzAsMTY1LjY0NiwyNC41NjMsMjI2LjE4OCwxODcuMTk4LDMwOC4xODhjMS41MSwwLjc2LDMuMTU2LDEuMTQ2LDQuODAyLDEuMTQ2ICBjMS42NDYsMCwzLjI5Mi0wLjM4NSw0LjgwMi0xLjE0NmMxNjIuNjM1LTgyLDE4Ny4xOTgtMTQyLjU0MiwxODcuMTk4LTMwOC4xODh2LTEyOEM0NDguMDAzLDcwLjE1MSw0NDUuMTQ4LDY2LjEyLDQ0MC44ODgsNjQuNjA5eiIvPjxwYXRoIHN0eWxlPSJmaWxsOiMxRTg4RTU7IiBkPSJNMjU2LjAwMywyMS45ODRMODUuMzM2LDgyLjIyNHYxMjAuNDQ4YzAsMTkuMzAzLDAuMzE4LDM2Ljk2MiwxLjExNSw1My4zMjhoMTY5LjU1MlYyMS45ODR6Ii8+PHBhdGggc3R5bGU9ImZpbGw6IzAxNTc5QjsiIGQ9Ik00MjUuNTU1LDI1NmMwLjc5Ny0xNi4zNjYsMS4xMTUtMzQuMDI1LDEuMTE1LTUzLjMyOFY4Mi4yMjRsLTE3MC42NjctNjAuMjRWMjU2SDQyNS41NTV6Ii8+PHBhdGggc3R5bGU9ImZpbGw6IzFFODhFNTsiIGQ9Ik0yNTYuMDAzLDI1NnYyMzMuMzhDMzg4LjEzNyw0MjIuMDE0LDQxOS44MDEsMzc0LjE0NSw0MjUuNTU1LDI1NkgyNTYuMDAzeiIvPjxwYXRoIHN0eWxlPSJmaWxsOiMwMTU3OUI7IiBkPSJNODYuNDUxLDI1NmM1Ljc1NCwxMTguMTQ1LDM3LjQxOCwxNjYuMDE0LDE2OS41NTIsMjMzLjM4VjI1Nkg4Ni40NTF6Ii8+PHBhdGggc3R5bGU9Im9wYWNpdHk6MC4xO2VuYWJsZS1iYWNrZ3JvdW5kOm5ldyAgICA7IiBkPSJNMjU2LjAwMyw0NDguMDA1QzEwNS41NjUsMzcxLjMwNyw4NS4zMzYsMzQxLjI4Niw4NS4zMzYsMTgyLjYzdjIwLjA0MiAgYzAsMTU4LjY1NiwyMC4yMjksMjEwLjAxLDE3MC42NjcsMjg2LjcwOGMxNTAuNDM4LTc2LjY5OCwxNzAuNjY3LTEyOC4wNTIsMTcwLjY2Ny0yODYuNzA4VjE4Mi42MyAgQzQyNi42NjksMzQxLjI4Niw0MDYuNDQsMzcxLjMwNywyNTYuMDAzLDQ0OC4wMDV6Ii8+PGxpbmVhckdyYWRpZW50IGlkPSJTVkdJRF8xXyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSItNDUuMjA2NiIgeTE9IjYzOS44Njc4IiB4Mj0iLTI1Ljk3ODEiIHkyPSI2MzAuOTAxNiIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgyMS4zMzMzIDAgMCAtMjEuMzMzMyA5OTYuMjgwNCAxMzc5MS43MjU2KSI+PHN0b3Agb2Zmc2V0PSIwIiBzdHlsZT0ic3RvcC1jb2xvcjojRkZGRkZGO3N0b3Atb3BhY2l0eTowLjIiLz48c3RvcCBvZmZzZXQ9IjEiIHN0eWxlPSJzdG9wLWNvbG9yOiNGRkZGRkY7c3RvcC1vcGFjaXR5OjAiLz48L2xpbmVhckdyYWRpZW50PjxwYXRoIHN0eWxlPSJmaWxsOnVybCgjU1ZHSURfMV8pOyIgZD0iTTQ0MC44ODgsNjQuNjA5bC0xODEuMzMzLTY0Yy0yLjI5Mi0wLjgxMi00LjgxMy0wLjgxMi03LjEwNCwwbC0xODEuMzMzLDY0ICBjLTQuMjYsMS41MS03LjExNSw1LjU0Mi03LjExNSwxMC4wNjN2MTI4YzAsMTY1LjY0NiwyNC41NjMsMjI2LjE4OCwxODcuMTk4LDMwOC4xODhjMS41MSwwLjc2LDMuMTU2LDEuMTQ2LDQuODAyLDEuMTQ2ICBjMS42NDYsMCwzLjI5Mi0wLjM4NSw0LjgwMi0xLjE0NmMxNjIuNjM1LTgyLDE4Ny4xOTgtMTQyLjU0MiwxODcuMTk4LTMwOC4xODh2LTEyOEM0NDguMDAzLDcwLjE1MSw0NDUuMTQ4LDY2LjEyLDQ0MC44ODgsNjQuNjA5eiIvPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjxnPjwvZz48Zz48L2c+PGc+PC9nPjwvc3ZnPg==') !important;
+}
