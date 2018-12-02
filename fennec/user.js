@@ -1111,3 +1111,150 @@ user_pref("dom.vibrator.enabled", false);
 
 /* Shared Memory API */
 user_pref("javascript.options.shared_memory", false);
+
+/* Permissions to scripts
+ * Разрешения скриптам */
+user_pref("dom.disable_window_move_resize", true);
+user_pref("dom.disable_window_open_feature.close", true);
+user_pref("dom.disable_window_open_feature.location", true);
+user_pref("dom.disable_window_open_feature.menubar", true);
+user_pref("dom.disable_window_open_feature.minimizable", true);
+user_pref("dom.disable_window_open_feature.personalbar", true);
+user_pref("dom.disable_window_open_feature.resizable", true);
+user_pref("dom.disable_window_open_feature.status", true);
+user_pref("dom.disable_window_open_feature.titlebar", true);
+user_pref("dom.disable_window_open_feature.toolbar", true);
+
+/* How to open links that indicate opening new Windows
+ *		1 = Open in current tab
+ *		2 = Open in new window
+ *		3 = Open in new tab
+ * Как открывать ссылки, в которых указано открытие новых окон
+ *		1 = Открыть в текущей вкладке
+ *		2 = Открывать в новом окне
+ *		3 = Открывать в новой вкладке */
+user_pref("browser.link.open_newwindow", 3);
+
+/* Allows you to open tabs instead of new Windows
+ *		0 = Open all links in tabs
+ *		1 = Open links in windows
+ *		2 = Open links in tabs with the exception of cases
+ *      	when non-standard window parameters are specified
+ * Позволяет открывать вкладки вместо новых окон
+ *		0 = Открывать все ссылки во вкладках
+ *		1 = Открывать ссылки в окнах
+ *		2 = Открывать ссылки во вкладках за исключением случаев,
+ *      	когда заданы нестандартные параметры окна */
+user_pref("browser.link.open_newwindow.restriction", 0);
+
+/* Block pop-ups
+ * Блокировать всплывающие окна */
+user_pref("dom.disable_open_during_load", true);
+
+/* Maximum number of pop-ups
+ * Максимальное количество всплывающих окон */
+user_pref("dom.popup_maximum", 3);
+
+/* Control of sent information regardless of the source
+ *		0 = Never send "Referrer" header
+ *		1 = Send "Referrer" header only when clicking on links and similar elements
+ *		2 = Send to all requests (e.g. images, links, etc.)
+ *		[WARNING] When you disable the transfer of this header, many sites will stop working.
+ * Контроль отправляемой информации независимо от источника
+ *		0 = Никогда не отправлять заголовок "Referrer"
+ *		1 = Отправлять заголовок "Referrer" только при клике по ссылкам и подобным элементам
+ *		2 = Отправить на все запросы (например, изображения, ссылки и т.д.)
+ *		[ВНИМАНИЕ] При отключении отправки этого заголовка, многие сайты перестанут работать. */
+user_pref("network.http.sendRefererHeader", 2);
+
+/* Control the number of "Referrer" sent regardless of the source
+ *		0 = Send the full URL
+ *		1 = Send URL without query string (scheme + host + port + path)
+ *		2 = Send only origin (scheme + host + port)
+ * Контроль количества "Referrer" отправляемых независимо от источника
+ *		0 = Отправлять полный URL
+ *		1 = Отправлять URL-адрес без строки запроса (схема + хост + порт + путь)
+ *		2 = Отправлять только начало (схема + хост + порт) */
+user_pref("network.http.referer.trimmingPolicy", 0);
+
+/* Control the selection of sent "Referrer" through sources
+ *		0 = Send "Referrer" in all cases
+ *		1 = Send only if the base domains match
+ *		2 = Send "Referer" only to the same host
+ * Контроль выбора отправляемых "Referrer" через источники
+ *		0 = Отправлять "Referrer" во всех случаях
+ *		1 = Отправлять, только если базовые домены совпадают
+ *		2 = Отправить "Referer" только на тот же хост */
+user_pref("network.http.referer.XOriginPolicy", 1);
+
+/* Control the number of "Referrer" sent by origin
+ *		0 = Send the full URL
+ *		1 = Send URL without query string (scheme + host + port + path)
+ *		2 = Send only origin (scheme + host + port)
+ * Контроль количества "Referrer" отправляемых по происхождению
+ *		0 = Отправлять полный URL
+ *		1 = Отправлять URL-адрес без строки запроса (схема + хост + порт + путь)
+ *		2 = Отправлять только начало (схема + хост + порт) */
+user_pref("network.http.referer.XOriginTrimmingPolicy", 0);
+
+/* Spoofing a referer
+ *		TRUE = Spoof referer
+ *		FALSE = Real referer
+ * Фальсифицировать Referrer
+ *		TRUE = Подделывать Referrer
+ *		FALSE = Настоящий Referrer */
+user_pref("network.http.referer.spoofSource", true);
+
+/* Referrer Policy
+ *		0 = No referer
+ *		1 = Same origin
+ *		2 = Strict origin when crossing origin
+ *		3 = No referrer when downgrade
+ * Политика Referrer
+ *		0 = Нет реферера
+ *		1 = То же происхождение
+ *		2 = Строгое происхождение при пересечении происхождения
+ *		3 = Отсутствие реферера при понижении */
+user_pref("network.http.referer.defaultPolicy", 3);
+user_pref("network.http.referer.defaultPolicy.pbmode", 2);
+
+/* Open links from the clipboard with the middle mouse button
+ * Открывать ссылки из буфера обмена средней кнопкой мышки */
+user_pref("middlemouse.contentLoadURL", false);
+
+/* Restrict HTTP Redirection
+ * Ограничить переадресацию HTTP */
+user_pref("network.http.redirection-limit", 10);
+
+/* The impact of the system colors to CSS or canvas
+ * Воздействие системных цветов на CSS или canvas */
+user_pref("ui.use_standins_for_native_colors", true);
+
+/* IDN Punycode */
+user_pref("network.IDN_show_punycode", true);
+
+/* Old SSL/TLS "insecure" renegotiation (vulnerable to a MiTM attack)
+ * Старое "небезопасное" повторное согласование SSL/TLS (уязвимое к атаке MiTM) */
+user_pref("security.ssl.require_safe_negotiation", true);
+
+/* The "screenshot --imgur" command, with the help of which it was possible to publish screenshots on Imgur.com
+ * Команда "screenshot --imgur", с помощью которой можно было публиковать скриншоты на Imgur.com */
+user_pref("devtools.gcli.imgurClientID", "");
+user_pref("devtools.gcli.imgurUploadURL", "");
+
+/* Prevent connection to the device on Firefox OS for debugging over Wi-Fi Internet
+ * Запрет соединения с устройством на Firefox ОС для отладки по сети Wi-Fi Интернет */
+user_pref("devtools.remote.wifi.scan", false);
+user_pref("network.tickle-wifi.enabled", false);
+
+/* File Handle API
+ *		[NOTE] Responsible for accessing lower-level file operations.
+ *		[ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям. */
+user_pref("dom.fileHandle.enabled", false);
+
+/* Device Storage API
+ *		[NOTE] Responsible for access to the file system, this API allows the browser to
+ *		read and/or write to the user's files.
+ *		[ЗАМЕТКА] Отвечает за доступ к файловой системе, данный API позволяет браузеру самостоятельно
+ *		читать и/или писать в файлах пользователя. */
+user_pref("device.storage.enabled", false);
