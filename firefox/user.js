@@ -1187,3 +1187,276 @@ user_pref("network.predictor.prefetch-rolling-load-count", 0);
 /* Automatic preload pages when you hover over links
  * Автоматическая предзагрузка страниц при наведении курсора на ссылки */
 user_pref("network.http.speculative-parallel-limit", 0);
+
+/* Search from address panel
+ * Поиск из панели адреса */
+// user_pref("keyword.enabled", false);
+
+/* Displays all parts of the URL in the address bar
+ * Отображения всех части URL-адреса в строке адреса */
+user_pref("browser.urlbar.trimURLs", false);
+
+/* Display JavaScript in history URLs
+ * Отображение JavaScript в URLs истории */
+user_pref("browser.urlbar.filter.javascript", true);
+
+/* Display search suggestions when using the address bar
+ * Отображать поисковые предложения при использовании панели адреса */
+user_pref("browser.urlbar.suggest.searches", false);
+user_pref("browser.urlbar.userMadeSearchSuggestionsChoice", true);
+
+/* Adding sites from Alexa Top 500 to the address bar auto-complete list
+ * Добавление сайтов из Alexa Top 500 в список автозаполнения адресной строки */
+user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
+
+/* Maximum number of history results in the address bar
+ * Максимальное количество результатов истории в панеле адреса */
+user_pref("browser.urlbar.maxHistoricalSearchSuggestions", 0);
+
+/* Windows jumplist */
+user_pref("browser.taskbar.lists.enabled", false); // [WINDOWS]
+user_pref("browser.taskbar.lists.frequent.enabled", false); // [WINDOWS]
+user_pref("browser.taskbar.lists.recent.enabled", false); // [WINDOWS]
+user_pref("browser.taskbar.lists.tasks.enabled", false); // [WINDOWS]
+
+/* Display thumbnails of tabs on the taskbar
+ * Отображать эскизы вкладок на панели задач */
+user_pref("browser.taskbar.previews.enable", false); // [WINDOWS]
+
+/* IPv6 */
+user_pref("network.dns.disableIPv6", true);
+
+/* Block allowed extension directories
+ *		[WARNING] This will break extensions that do not use the default XPI directories.
+ * Заблокировать разрешенные каталоги расширений
+ *		[ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
+user_pref("extensions.enabledScopes", 1);
+user_pref("extensions.autoDisableScopes", 15);
+
+/* WebExtension Restrictions for Specific Mozilla Domains
+ * Ограничения WebExtension для определенных доменов Mozilla */
+user_pref("extensions.webextensions.restrictedDomains", "");
+
+/* Warning when websites try to install add-ons
+ * Предупреждение при попытке веб-сайтов установить дополнения */
+user_pref("xpinstall.whitelist.required", true);
+
+/* Fullscreen API
+ * API Полного экрана */
+user_pref("full-screen-api.enabled", true);
+user_pref("full-screen-api.warning.delay", 0);
+user_pref("full-screen-api.warning.timeout", 0);
+
+/* Auto-hide the "Downloads" button
+ * Автоскрытие кнопки "Загрузок" */
+user_pref("browser.download.autohideButton", false);
+
+/* Animated gradient that runs through the tab after the page is fully loaded
+ * Анимированный градиент, который пробегает по вкладке после полной загрузки страницы */
+user_pref("toolkit.cosmeticAnimations.enabled", false);
+
+/* Search for text on the page as it is typed
+ * Искать текст на странице по мере его набора */
+user_pref("accessibility.typeaheadfind", false);
+
+/* Spellchecking
+ *		0 = Do not check
+ *		1 = Check in multiline fields
+ *		2 = Check in all text fields
+ * Проверка орфографии
+ *		0 = Не проверять
+ *		1 = Проверка в многострочных полях
+ *		2 = Проверка во всех текстовых полях */
+user_pref("layout.spellcheckDefault", 2);
+
+/* Auto Scroll
+ * Автоматическая прокрутка */
+user_pref("general.autoScroll", false);
+
+/* Automatic copying
+ * Автоматическое копирование */
+user_pref("clipboard.autocopy", false);
+
+/* Reader View */
+user_pref("reader.parse-on-load.enabled", false);
+
+/* Text reader function in Reader View
+ * Функция зачитывания текста в Reader View */
+user_pref("narrate.enabled", false);
+
+/* Displaying an empty window as early as possible with the subsequent filling
+ * Отображение пустого окна, как можно раньше с последующим заполнением */
+user_pref("browser.startup.blankWindow", false);
+
+/* WebGL debug info being available to websites
+ * Информация об отладке WebGL доступна для веб-сайтов */
+user_pref("webgl.enable-debug-renderer-info", false);
+
+/* Mixed content
+ * Смешанное содержание */
+user_pref("security.mixed_content.block_active_content", true); 
+user_pref("security.mixed_content.block_display_content", true);
+
+/* SPDY protocol
+ *		[WARNING] This protocol has a privacy problem protocol, use at your own risk.
+ * Протокол SPDY
+ *		[ВНИМАНИЕ] Данный протокол имеет протокол проблемы с приватностью, используйте на свой страх и риск. */
+user_pref("network.http.spdy.enabled", true);
+user_pref("network.http.spdy.enabled.deps", true);
+user_pref("network.http.spdy.enabled.http2", true);
+
+/* WebGL (Web Graphics Library)
+ * WebGL (Библиотека веб-графики) */
+user_pref("pdfjs.enableWebGL", false);
+// user_pref("webgl.disable-extensions", true);
+// user_pref("webgl.disable-fail-if-major-performance-caveat", true);
+// user_pref("webgl.disabled", true);
+// user_pref("webgl.dxgl.enabled", false); // [WINDOWS]
+// user_pref("webgl.enable-webgl2", false);
+// user_pref("webgl.force-enabled", false);
+// user_pref("webgl.min_capability_mode", true);
+// user_pref("webgl.msaa-force", false);
+
+/* Service Workers
+ *		[NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
+ *		are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
+ *		and resource requests, and caching resources.
+ *		[ЗАМЕТКА] "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
+ *		браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
+ *		перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы. */
+user_pref("dom.serviceWorkers.enabled", false);
+
+/* Cookies for HTTP sites are set with the "secure" directive
+ * Файлы куки для сайтов HTTP устанавливаются с "защищенной" директивой */
+user_pref("network.cookie.leave-secure-alone", true);
+
+/* SameSite сookies
+ * Куки SameSite */
+user_pref("network.cookie.same-site.enabled", true);
+
+/* DOM (Document Object Model) Storage
+ *		[WARNING] This will break a LOT of sites' functionality AND extensions.
+ *		You are better off using an extension for more granular control.
+ * Хранилище DOM (Объектная Модель Документа)
+ *		[ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
+ *		Вам лучше использовать расширение для более гранулированного контроля. */
+user_pref("dom.storage.enabled", true);
+
+/* Warn showing red lock for "broken security"
+ * Предупреждать, показывая красный замок для "сломанной безопасности" */
+user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
+
+/* In the "Add Security Exception" dialog box on SSL warnings
+ *		0 = Do not fill out the current URL as an exception and do not select an SSL certificate
+ *		1 = Pre-populate the current URL, but do not pre-select the certificate
+ *		2 = Pre-populate the current URL and select a certificate
+ * В диалоговом окне "Добавить исключение безопасности" на предупреждениях SSL
+ *		0 = Не заполнять текущий URL-адрес в качестве исключения и
+ *			не выполнять выбор SSL-сертификата
+ *		1 = Предварительно заполнять текущий URL-адрес,
+ *			но не выполнять предварительный выбор сертификата
+ *		2 = Предварительно заполнить текущий URL-адрес и выбрать сертификат */
+user_pref("browser.ssl_override_behavior", 0);
+
+/* Additional information about the pages warning about unsafe connections
+ * Дополнительная информация о страницах, предупреждающая о небезопасном подключении */
+user_pref("browser.xul.error_pages.expert_bad_cert", true);
+
+/* For HTTP sites, display the icon and the text "insecure" and "unprotected"
+ * Для сайтов HTTP отображать значок и текст "небезопасный" и "незащищенный" */
+user_pref("security.insecure_connection_icon.enabled", true);
+user_pref("security.insecure_connection_text.enabled", true);
+user_pref("security.insecure_connection_icon.pbmode.enabled", true);
+user_pref("security.insecure_connection_text.pbmode.enabled", true);
+
+/* MediaDevices */
+user_pref("media.ondevicechange.enabled", false);
+
+/* Querying Google Application Reputation database for downloaded binary files
+ * Запрос базы данных репутации приложения Google для загруженных двоичных файлов */
+user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.url", "");
+
+/* Safebrowsing reports
+ * Отчеты Safebrowsing */
+user_pref("browser.safebrowsing.provider.google4.reportMalwareMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportURL", "");
+user_pref("browser.safebrowsing.provider.google.reportMalwareMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google.reportPhishMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google.reportURL", "");
+user_pref("browser.safebrowsing.reportPhishURL", "");
+user_pref("browser.safebrowsing.provider.mozilla.lists", "");
+user_pref("browser.safebrowsing.provider.mozilla.updateURL", "");
+user_pref("browser.safebrowsing.provider.mozilla.gethashURL", "");
+user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);
+user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
+
+/* Button "Ignore this warning" on the pages of safe browsing
+ *		[NOTE] Useless for regular users, it's meant for admins on bigger network as a way to secure their users.
+ * Кнопка "Игнорировать это предупреждение" на страницах безопасного просмотра
+ *		[ЗАМЕТКА] Бесполезный для обычных пользователей, он предназначен для администраторов в большей сети,
+ *		как способ защитить своих пользователей. */
+user_pref("browser.safebrowsing.allowOverride", false);
+
+/* OCSP Stapling
+ * Сшивание OCSP */
+user_pref("security.ssl.enable_ocsp_stapling", true);
+
+/* Resource timing API
+ * API Ресурсов времени */
+user_pref("dom.enable_resource_timing", false);
+
+/* Browser sends information about the start and end time of page loading
+ * Передача браузером информации о времени начала и окончания загрузки страницы */
+user_pref("dom.enable_performance", false);
+user_pref("dom.enable_performance_navigation_timing", false);
+user_pref("dom.enable_performance_observer", false);
+
+/* Sensor API
+ *		[NOTE] Disables events from the accelerometer and other sensors.
+ * API Сенсора
+ *		[ЗАМЕТКА] Отключает события от акселерометра и других сенсоров. */
+user_pref("device.sensors.enabled", false);
+ 
+/* CSP (Content Security Policy)
+ * Политика безопасности контента */
+user_pref("security.csp.enable", true);
+user_pref("security.csp.enable_violation_events", false);
+user_pref("security.csp.experimentalEnabled", false);
+user_pref("security.data_uri.block_toplevel_data_uri_navigations", true);
+
+/* Online Certificate Status Protocol
+ *		0 = Disabled
+ *		1 = Enabled
+ *		2 = Enabled for EV certificates only
+ * Протокол статуса сертификата онлайн
+ *		0 = Отключено
+ *		1 = Включен
+ *		2 = Включено только для сертификатов EV */
+user_pref("security.OCSP.enabled", 1);
+ 
+/* Require a valid OCSP response for OCSP enabled certificates
+ *		[WARNING] When you turn on breaks some sites.
+ * Требовать действительный ответ OCSP для сертификатов с поддержкой OCSP
+ *		[ВНИМАНИЕ] При включении ломается некоторые сайты. */
+// user_pref("security.OCSP.require", true);
+
+/* Battery Status API */
+user_pref("dom.battery.enabled", false);
+
+/* Virtual Reality API
+ *		[NOTE] Disables support for virtual reality devices.
+ * API Виртуальной реальности
+ *		[ЗАМЕТКА] Отключает поддержку устройств виртуальной реальности. */
+user_pref("dom.vr.enabled", false);
+
+/* Enumerate multimedia devices
+ * Перечисление устройств мультимедиа */
+user_pref("media.navigator.enabled", false);
+
+/* Hardware acceleration
+ * Аппаратное ускорение */
+// user_pref("layers.acceleration.force-enabled", false);
+// user_pref("layers.acceleration.disabled", true);
+// user_pref("gfx.direct2d.disabled", true); // [WINDOWS]

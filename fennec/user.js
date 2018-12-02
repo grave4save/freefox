@@ -728,3 +728,46 @@ user_pref("network.dns.disableIPv6", true);
  *		[ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
 user_pref("extensions.enabledScopes", 1);
 user_pref("extensions.autoDisableScopes", 15);
+
+/* WebExtension Restrictions for Specific Mozilla Domains
+ * Ограничения WebExtension для определенных доменов Mozilla */
+user_pref("extensions.webextensions.restrictedDomains", "");
+
+/* Warning when websites try to install add-ons
+ * Предупреждение при попытке веб-сайтов установить дополнения */
+user_pref("xpinstall.whitelist.required", true);
+
+/* Fullscreen API
+ * API Полного экрана */
+user_pref("full-screen-api.enabled", true);
+user_pref("full-screen-api.warning.delay", 0);
+user_pref("full-screen-api.warning.timeout", 0);
+
+/* Animated gradient that runs through the tab after the page is fully loaded
+ * Анимированный градиент, который пробегает по вкладке после полной загрузки страницы */
+user_pref("toolkit.cosmeticAnimations.enabled", false);
+
+/* Search for text on the page as it is typed
+ * Искать текст на странице по мере его набора */
+user_pref("accessibility.typeaheadfind", false);
+
+/* Spellchecking
+ *		0 = Do not check
+ *		1 = Check in multiline fields
+ *		2 = Check in all text fields
+ * Проверка орфографии
+ *		0 = Не проверять
+ *		1 = Проверка в многострочных полях
+ *		2 = Проверка во всех текстовых полях */
+user_pref("layout.spellcheckDefault", 2);
+
+/* Automatic copying
+ * Автоматическое копирование */
+user_pref("clipboard.autocopy", false);
+
+/* Reader View */
+// user_pref("reader.parse-on-load.enabled", false);
+
+/* Text reader function in Reader View
+ * Функция зачитывания текста в Reader View */
+// user_pref("narrate.enabled", false);
