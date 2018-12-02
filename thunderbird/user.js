@@ -21,6 +21,10 @@
  *
  * Download the entire MozBackup project at https://github.com/bogachenko/mozbackup/archive/master.zip */
 
+/* Warning in "about:config"
+ * Предупреждение в "about:config" */
+user_pref("general.warnOnAboutConfig", false);
+ 
 /* Font size
  *		[NOTE] The fonts below have a standard size, so they are commented out.
  *		Don't change the size if you don't know what you're doing.
@@ -221,10 +225,6 @@ user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
 // user_pref("font.name.sans-serif.x-cans", "sans-serif");
 // user_pref("font.name.monospace.x-cans", "monospace");
 // user_pref("font.language.group", "x-western");
-
-/* Warning in "about:config"
- * Предупреждение в "about:config" */
-user_pref("general.warnOnAboutConfig", false);
 
 /* Crash reports
  * Отчеты о сбоях */

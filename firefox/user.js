@@ -18,11 +18,8 @@
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
  * URL: https://github.com/bogachenko/mozbackup/blob/master/firefox/user.js
- * Wiki: https://github.com/bogachenko/mozbackup/wiki
  *
- * Download the entire MozBackup project at https://github.com/bogachenko/mozbackup/archive/master.zip
- *
- */
+ * Download the entire MozBackup project at https://github.com/bogachenko/mozbackup/archive/master.zip */
  
 /* Warning in "about:config"
  * Предупреждение в "about:config" */

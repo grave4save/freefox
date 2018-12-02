@@ -1,83 +1,101 @@
-/******
-* name: ghacks user.js
-* date: 13 November 2018
-* version 63-beta: Pants Romance
-*   "Rah rah ah-ah-ah! Ro mah ro-mah-mah. Gaga oh-la-la! Want your pants romance"
-* authors: v52+ github | v51- www.ghacks.net
-* url: https://github.com/ghacksuserjs/ghacks-user.js
-* license: MIT: https://github.com/ghacksuserjs/ghacks-user.js/blob/master/LICENSE.txt
+/*
+ * This file is part of the MozBackup project,
+ * Copyright (c) 2018 Bogachenko Vyacheslav
+ *
+ * MozBackup is a free project: you can distribute it and/or modify
+ * it in accordance with the MIT license published by the Massachusetts Institute of Technology.
+ *
+ * The MozBackup project is distributed in the hope that it will be useful,
+ * and is provided "AS IS", WITHOUT ANY WARRANTY, EXPRESSLY EXPRESSED OR IMPLIED.
+ * WE ARE NOT RESPONSIBLE FOR ANY DAMAGES DUE TO THE USE OF THIS PROJECT OR ITS PARTS.
+ * For more information, see the MIT license.
+ *
+ * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
+ * Email: bogachenkove@gmail.com
+ * Github: https://github.com/bogachenko/mozbackup/tree/master/waterfox/
+ * Last modified: December 3, 2018
+ * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
+ * Problem reports: https://github.com/bogachenko/mozbackup/issues
+ * Title: user.js
+ * URL: https://github.com/bogachenko/mozbackup/blob/master/waterfox/user.js
+ *
+ * Download the entire MozBackup project at https://github.com/bogachenko/mozbackup/archive/master.zip */
 
-* releases: These are end-of-stable-life-cycle legacy archives.
-            *Always* use the master branch user.js for a current up-to-date version.
-       url: https://github.com/ghacksuserjs/ghacks-user.js/releases
-
-* README:
-
-  0. Consider using Tor Browser if it meets your needs or fits your threat model better
-     * https://www.torproject.org/about/torusers.html.en
-  1. READ the full README
-     * https://github.com/ghacksuserjs/ghacks-user.js/blob/master/README.md
-  2. READ this
-     * https://github.com/ghacksuserjs/ghacks-user.js/wiki/1.3-Implementation
-  3. If you skipped steps 1 and 2 above (shame on you), then here is the absolute minimum
-     * Auto-installing updates for Firefox and extensions are disabled (section 0302's)
-     * Some user data is erased on close (section 2800). Change this to suit your needs
-     * EACH RELEASE check:
-         - 4600s: reset prefs made redundant due to privacy.resistFingerprinting (RPF)
-                  or enable them as an alternative to RFP or for ESR users
-         - 9999s: reset deprecated prefs in about:config or enable relevant section(s) for ESR
-     * Site breakage WILL happen
-         - There are often trade-offs and conflicts between Security vs Privacy vs Anti-Fingerprinting
-           and these need to be balanced against Functionality & Convenience & Breakage
-     * You will need to make a few changes to suit your own needs
-         - Search this file for the "[SETUP]" tag to find SOME common items you could check
-           before using to avoid unexpected surprises
-         - Search this file for the "[WARNING]" tag to troubleshoot or prevent SOME common issues
-  4. BACKUP your profile folder before implementing (and/or test in a new/cloned profile)
-  5. KEEP UP TO DATE: https://github.com/ghacksuserjs/ghacks-user.js/wiki#small_orange_diamond-maintenance
-
-******/
-
-/* START: internal custom pref to test for syntax errors
- * [NOTE] In FF60+, not all syntax errors cause parsing to abort i.e. reaching the last debug
- * pref no longer necessarily means that all prefs have been applied. Check the console right
- * after startup for any warnings/error messages related to non-applied prefs
- * [1] https://blog.mozilla.org/nnethercote/2018/03/09/a-new-preferences-parser-for-firefox/ ***/
-user_pref("_user.js.parrot", "START: Oh yes, the Norwegian Blue... what's wrong with it?");
-
-/* 0000: disable about:config warning ***/
+/* Warning in "about:config"
+ * Предупреждение в "about:config" */
 user_pref("general.warnOnAboutConfig", false);
 
-/* 0001: start Firefox in PB (Private Browsing) mode
- * [SETTING] Privacy & Security>History>Custom Settings>Always use private browsing mode
- * [NOTE] In this mode *all* windows are "private windows" and the PB mode icon is not displayed
- * [NOTE] The P in PB mode is misleading: it means no "persistent" local storage of history,
- * caches, searches or cookies (which you can achieve in normal mode). In fact, it limits or
- * removes the ability to control these, and you need to quit Firefox to clear them. PB is best
- * used as a one off window (File>New Private Window) to provide a temporary self-contained
- * new instance. Closing all Private Windows clears all traces. Repeat as required.
- * [WARNING] PB does not allow indexedDB which breaks many Extensions that use it
- * including uBlock Origin, uMatrix, Violentmonkey and Stylus
- * [1] https://wiki.mozilla.org/Private_Browsing ***/
-   // user_pref("browser.privatebrowsing.autostart", true);
+/* Warning in "about:networking"
+ * Предупреждение в "about:networking" */
+user_pref("network.warnOnAboutNetworking", false);
 
-/*** 0100: STARTUP ***/
-user_pref("_user.js.parrot", "0100 syntax error: the parrot's dead!");
-/* 0101: disable default browser check
- * [SETTING] General>Startup>Always check if Firefox is your default browser ***/
+/* Warning about closing multiple tabs
+ * Предупреждение о закрытии нескольких вкладок */
+user_pref("browser.tabs.warnOnClose", true);
+user_pref("browser.tabs.warnOnCloseOtherTabs", true);
+
+/* Warning about opening a large number of tabs
+ * Предупреждение о открытии большого количества вкладок */
+user_pref("browser.tabs.warnOnOpen", true);
+
+/* UserAgent */
+user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
+user_pref("general.buildID.override", "20100101");
+user_pref("general.appname.override", "Netscape");
+user_pref("general.appversion.override", "5.0 (Windows)");
+user_pref("general.platform.override", "Win32");
+user_pref("general.oscpu.override", "Windows NT 6.1");
+// user_pref("general.useragent.locale", "en-US");
+
+/* Check if Firefox is your default browser
+ * Проверять, является ли Firefox вашим браузером по умолчанию */
 user_pref("browser.shell.checkDefaultBrowser", false);
-/* 0102: set START page (0=blank, 1=home, 2=last visited page, 3=resume previous session)
- * [SETTING] General>Startup>Restore previous session ***/
+
+/* Opening pages "Welcome and what's new?"
+ * Открытие страниц "Добро пожаловать и что нового?" */
+user_pref("browser.startup.homepage_override.mstone", "ignore");
+user_pref("startup.homepage_welcome_url", "");
+user_pref("startup.homepage_welcome_url.additional", "");
+user_pref("startup.homepage_override_url", "");
+
+/* Start page
+ *		0 = Blank page
+ *		1 = Home page
+ *		2 = Last page visited
+ *		3 = Resume previous session
+ * Стартовая страница
+ *		0 = Пустая страница
+ *		1 = Домашняя страница
+ *		2 = Последняя посещенная страница
+ *		3 = Возобновить предыдущую сессию */
 user_pref("browser.startup.page", 0);
-/* 0103: set HOME+NEWWINDOW page
- * about:home=Activity Stream (default, see 0105), custom URL, about:blank
- * [SETTING] Home>New Windows and Tabs>Homepage and new windows ***/
+
+/* Homepage
+ * Домашняя страница */
 user_pref("browser.startup.homepage", "about:blank");
-/* 0104: set NEWTAB page
- * true=Activity Stream (default, see 0105), false=blank page
- * [SETTING] Home>New Windows and Tabs>New tabs ***/
+
+/* Snippets
+ * Сниппеты */
+user_pref("browser.aboutHomeSnippets.updateUrl", "data:,");
+
+/* New inset
+ *		TRUE = New page
+ *		FALSE = Blank page
+ * Новая вкладкa
+ *		TRUE = Новая страница
+ *		FALSE = Пустая страница */
 user_pref("browser.newtabpage.enabled", false);
+
+/* Preloading a new tab
+ * Предварительная загрузка новой вкладки */
 user_pref("browser.newtab.preload", false);
+
+
+
+
+
+
+
 /* 0105: disable Activity Stream stuff (AS)
  * AS is the default homepage/newtab in FF57+, based on metadata and browsing behavior.
  *    **NOT LISTING ALL OF THESE: USE THE PREFERENCES UI**
@@ -203,9 +221,6 @@ user_pref("breakpad.reportURL", "");
 user_pref("browser.tabs.crashReporting.sendReport", false);
 user_pref("browser.crashReports.unsubmittedCheck.enabled", false); // (FF51+)
 user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false); // (FF58+)
-/* 0370: disable "Snippets" (Mozilla content shown on about:home screen)
- * [1] https://wiki.mozilla.org/Firefox/Projects/Firefox_Start/Snippet_Service ***/
-user_pref("browser.aboutHomeSnippets.updateUrl", "data:,");
 /* 0380: disable Browser Error Reporter (FF60+)
  * [1] https://support.mozilla.org/en-US/kb/firefox-nightly-error-collection
  * [2] https://firefox-source-docs.mozilla.org/browser/browser/BrowserErrorReporter.html ***/
@@ -1669,45 +1684,8 @@ user_pref("webgl.enable-debug-renderer-info", false);
 // * * * /
 // ***/
 
-/*** 4700: RFP (4500) ALTERNATIVES - NAVIGATOR / USER AGENT (UA) SPOOFING
-     This is FYI ONLY. These prefs are INSUFFICIENT(a) on their own, you need
-     to use RFP (4500) or an extension, in which case they become POINTLESS.
-     (a) Many of the components that make up your UA can be derived by other means.
-         And when those values differ, you provide more bits and raise entropy.
-         Examples of leaks include navigator objects, date locale/formats, iframes,
-         headers, tcp/ip attributes, feature detection, and **many** more.
-     ALL values below intentionally left blank - use RFP, or get a vetted, tested
-         extension and mimic RFP values to *lower* entropy, or randomize to *raise* it
-***/
-user_pref("_user.js.parrot", "4700 syntax error: the parrot's taken 'is last bow");
-/* 4701: navigator.userAgent ***/
-   // user_pref("general.useragent.override", ""); // (hidden pref)
-/* 4702: navigator.buildID
- * Revealed build time down to the second. In FF64+ it now returns a fixed timestamp
- * [1] https://bugzilla.mozilla.org/583181
- * [2] https://www.fxsitecompat.com/en-CA/docs/2018/navigator-buildid-now-returns-a-fixed-timestamp/ ***/
-   // user_pref("general.buildID.override", ""); // (hidden pref)
-/* 4703: navigator.appName ***/
-   // user_pref("general.appname.override", ""); // (hidden pref)
-/* 4704: navigator.appVersion ***/
-   // user_pref("general.appversion.override", ""); // (hidden pref)
-/* 4705: navigator.platform ***/
-   // user_pref("general.platform.override", ""); // (hidden pref)
-/* 4706: navigator.oscpu ***/
-   // user_pref("general.oscpu.override", ""); // (hidden pref)
 
-/*** 5000: PERSONAL [SETUP]
-     Non-project related but useful. If any of these interest you, add them to your overrides ***/
-user_pref("_user.js.parrot", "5000 syntax error: this is an ex-parrot!");
-/* WELCOME & WHAT's NEW NOTICES ***/
-   // user_pref("browser.startup.homepage_override.mstone", "ignore"); // master switch
-   // user_pref("startup.homepage_welcome_url", "");
-   // user_pref("startup.homepage_welcome_url.additional", "");
-   // user_pref("startup.homepage_override_url", ""); // What's New page after updates
 /* WARNINGS ***/
-   // user_pref("browser.tabs.warnOnClose", false);
-   // user_pref("browser.tabs.warnOnCloseOtherTabs", false);
-   // user_pref("browser.tabs.warnOnOpen", false);
    // user_pref("full-screen-api.warning.delay", 0);
    // user_pref("full-screen-api.warning.timeout", 0);
 /* APPEARANCE ***/
@@ -2045,9 +2023,6 @@ user_pref("browser.crashReports.unsubmittedCheck.autoSubmit", false); // (FF51-5
 // 0203: disable using OS locale, force APP locale - replaced by intl.locale.requested
    // [-] https://bugzilla.mozilla.org/1414390
 user_pref("intl.locale.matchOS", false);
-// 0204: set APP locale - replaced by intl.locale.requested
-   // [-] https://bugzilla.mozilla.org/1414390
-user_pref("general.useragent.locale", "en-US");
 // 0333b: disable about:healthreport page (which connects to Mozilla for locale/css+js+json)
    // If you have disabled health reports, then this about page is useless - disable it
    // If you want to see what health data is present, then this must be set at default
