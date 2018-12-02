@@ -13,14 +13,339 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/firefox/
- * Last modified: December 2, 2018
+ * Last modified: December 3, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
  * URL: https://github.com/bogachenko/mozbackup/blob/master/firefox/user.js
+ * Wiki: https://github.com/bogachenko/mozbackup/wiki
  *
  * Download the entire MozBackup project at https://github.com/bogachenko/mozbackup/archive/master.zip
  *
  */
+ 
+/* Warning in "about:config"
+ * Предупреждение в "about:config" */
+user_pref("general.warnOnAboutConfig", false);
 
- soon
+/* Warning in "about:networking"
+ * Предупреждение в "about:networking" */
+user_pref("network.warnOnAboutNetworking", false);
+
+/* Warning about closing multiple tabs
+ * Предупреждение о закрытии нескольких вкладок */
+user_pref("browser.tabs.warnOnClose", true);
+user_pref("browser.tabs.warnOnCloseOtherTabs", true);
+
+/* Warning about opening a large number of tabs
+ * Предупреждение о открытии большого количества вкладок */
+user_pref("browser.tabs.warnOnOpen", true);
+
+/* UserAgent */
+user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
+user_pref("general.buildID.override", "20100101");
+user_pref("general.appname.override", "Netscape");
+user_pref("general.appversion.override", "5.0 (Windows)");
+user_pref("general.platform.override", "Win32");
+user_pref("general.oscpu.override", "Windows NT 6.1");
+// user_pref("general.useragent.locale", "en-US");
+
+/* Check if Firefox is your default browser
+ * Проверять, является ли Firefox вашим браузером по умолчанию */
+user_pref("browser.shell.checkDefaultBrowser", false);
+
+/* Measuring browser startup time (and displaying a profile deletion notification if the launch time is long)
+ * Замер времени запуска браузера (и показ уведомления об удалении профиля, если время запуска долгое) */
+user_pref("browser.slowStartup.notificationDisabled", true);
+
+/* Opening pages "Welcome and what's new?"
+ * Открытие страниц "Добро пожаловать и что нового?" */
+user_pref("browser.startup.homepage_override.mstone", "ignore");
+user_pref("startup.homepage_welcome_url", "");
+user_pref("startup.homepage_welcome_url.additional", "");
+user_pref("startup.homepage_override_url", "");
+
+/* Start page
+ *		0 = Blank page
+ *		1 = Home page
+ *		2 = Last page visited
+ *		3 = Resume previous session
+ * Стартовая страница
+ *		0 = Пустая страница
+ *		1 = Домашняя страница
+ *		2 = Последняя посещенная страница
+ *		3 = Возобновить предыдущую сессию */
+user_pref("browser.startup.page", 0);
+
+/* Homepage
+ * Домашняя страница */
+user_pref("browser.startup.homepage", "about:blank");
+
+/* Snippets
+ * Сниппеты */
+user_pref("browser.aboutHomeSnippets.updateUrl", "data:,");
+
+/* New inset
+ *		TRUE = Activity Stream
+ *		FALSE = Blank page
+ * Новая вкладкa
+ *		TRUE = Activity Stream
+ *		FALSE = Пустая страница */
+user_pref("browser.newtabpage.enabled", false);
+
+/* Pinned sites in a new tab
+ *		[NOTE] Depends on the expansion of the Activity Stream.
+ * Закрепленные сайты на новой вкладке
+ *		[ЗАМЕТКА] Зависит от расширения Activity Stream. */
+user_pref("browser.newtabpage.pinned", "");
+
+/* Preloading a new tab
+ * Предварительная загрузка новой вкладки */
+user_pref("browser.newtab.preload", false);
+
+/* Mouse wheel button action when clicked
+ *		TRUE = Open in new tab
+ *		FALSE = Open in new window
+ * Действие кнопки колесика мыши при нажатии по ссылке
+ *		TRUE = Открывать в новой вкладке
+ *		FALSE = Открывать в новом окне */
+user_pref("browser.tabs.opentabfor.middleclick", false);
+
+/* Opening tabs and external applications in the background
+ *		TRUE = Open such tabs in the background
+ *		FALSE = Switch to openable tabs
+ * Открытие вкладок и внешних приложений в фоновом режиме
+ *		TRUE = Открывать такие вкладки в фоне
+ *		FALSE = Переключаться на открываемые вкладки */
+user_pref("browser.tabs.loadDivertedInBackground", true);
+
+/* Configuring container tabs in settings
+ *		TRUE = Enable "Tabs in Container"
+ *		FALSE = Disable "Tabs in Container"
+ * Настройка вкладок контейнера в настройках
+ *		TRUE = Включить "Вкладки в контейнере"
+ *		FALSE = Отключить "Вкладки в контейнере" */
+user_pref("privacy.userContext.ui.enabled", true);
+
+/* Container tab item in context menu
+ *		TRUE = Display
+ *		FALSE = Do not display
+ * Пункт вкладок контейнеров в контекстном меню
+ *		TRUE = Отображать
+ *		FALSE = Не отображать */
+user_pref("privacy.userContext.enabled", true);
+
+/* Private container for sketch loads
+ * Частный контейнер для эскизных нагрузок */
+user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
+
+/* Conditions for long pressing the "+" button in the tabs
+ *		0 = Disable long press
+ *		1 = Display menu
+ *		2 = Menu is displayed after "N" milliseconds
+ * Условия после длительного нажатия кнопки "+" на вкладках
+ *		0 = Отключить длительное нажатие
+ *		1 = Отображается меню
+ *		2 = Меню отображается через "N" миллисекунд */
+user_pref("privacy.userContext.longPressBehavior", 0);
+
+/* Font size
+ *		[NOTE] The fonts below have a standard size, so they are commented out.
+ *		Don't change the size if you don't know what you're doing.
+ * Размер шрифта
+ *		[ЗАМЕТКА] Шрифты ниже имеют стандартный размер, поэтому они закомментированы.
+ *		Не меняйте размер, если не знаете, что делаете. */
+// user_pref("font.size.fixed.x-cyrillic", 13);
+// user_pref("font.size.fixed.x-unicode", 13);
+// user_pref("font.size.fixed.x-western", 13);
+// user_pref("font.size.fixed.ar", 13);
+// user_pref("font.size.fixed.el", 13);
+// user_pref("font.size.fixed.he", 13);
+// user_pref("font.size.fixed.ja", 16);
+// user_pref("font.size.fixed.ko", 16);
+// user_pref("font.size.fixed.th", 13);
+// user_pref("font.size.fixed.x-armn", 13);
+// user_pref("font.size.fixed.x-beng", 13);
+// user_pref("font.size.fixed.x-cans", 13);
+// user_pref("font.size.fixed.x-devanagari", 13);
+// user_pref("font.size.fixed.x-ethi", 13);
+// user_pref("font.size.fixed.x-geor", 13);
+// user_pref("font.size.fixed.x-gujr", 13);
+// user_pref("font.size.fixed.x-guru", 13);
+// user_pref("font.size.fixed.x-khmr", 13);
+// user_pref("font.size.fixed.x-knda", 13);
+// user_pref("font.size.fixed.x-math", 13);
+// user_pref("font.size.fixed.x-mlym", 13);
+// user_pref("font.size.fixed.x-orya", 13);
+// user_pref("font.size.fixed.x-sinh", 13);
+// user_pref("font.size.fixed.x-tamil", 13);
+// user_pref("font.size.fixed.x-telu", 13);
+// user_pref("font.size.fixed.x-tibt", 13);
+// user_pref("font.size.fixed.zh-CN", 16);
+// user_pref("font.size.fixed.zh-HK", 16);
+// user_pref("font.size.fixed.zh-TW", 16);
+// user_pref("font.size.variable.ar", 16);
+// user_pref("font.size.variable.el", 16);
+// user_pref("font.size.variable.he", 16);
+// user_pref("font.size.variable.ja", 16);
+// user_pref("font.size.variable.ko", 16);
+// user_pref("font.size.variable.th", 16);
+// user_pref("font.size.variable.x-armn", 16);
+// user_pref("font.size.variable.x-beng", 16);
+// user_pref("font.size.variable.x-cans", 16);
+// user_pref("font.size.variable.x-cyrillic", 16);
+// user_pref("font.size.variable.x-devanagari", 16);
+// user_pref("font.size.variable.x-ethi", 16);
+// user_pref("font.size.variable.x-geor", 16);
+// user_pref("font.size.variable.x-gujr", 16);
+// user_pref("font.size.variable.x-guru", 16);
+// user_pref("font.size.variable.x-khmr", 16);
+// user_pref("font.size.variable.x-knda", 16);
+// user_pref("font.size.variable.x-math", 16);
+// user_pref("font.size.variable.x-mlym", 16);
+// user_pref("font.size.variable.x-orya", 16);
+// user_pref("font.size.variable.x-sinh", 16);
+// user_pref("font.size.variable.x-tamil", 16);
+// user_pref("font.size.variable.x-telu", 16);
+// user_pref("font.size.variable.x-tibt", 16);
+// user_pref("font.size.variable.x-unicode", 16);
+// user_pref("font.size.variable.x-western", 16);
+// user_pref("font.size.variable.zh-CN", 16);
+// user_pref("font.size.variable.zh-HK", 16);
+// user_pref("font.size.variable.zh-TW", 16);
+
+/* Proportions (fonts)
+ *		[NOTE] The proportions given below are standard, so they are commented out.
+ *		Don't change the proportions if you don't know what you're doing.
+ * Пропорции (шрифты)
+ *		[ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
+ *		Не изменяйте пропорции, если вы не знаете, что делаете. */
+// user_pref("font.default.ar", "sans-serif");
+// user_pref("font.default.el", "serif");
+// user_pref("font.default.he", "sans-serif");
+// user_pref("font.default.ja", "sans-serif");
+// user_pref("font.default.ko", "sans-serif");
+// user_pref("font.default.th", "sans-serif");
+// user_pref("font.default.x-armn", "serif");
+// user_pref("font.default.x-beng", "serif");
+// user_pref("font.default.x-cans", "serif");
+// user_pref("font.default.x-cyrillic", "serif");
+// user_pref("font.default.x-devanagari", "serif");
+// user_pref("font.default.x-ethi", "serif");
+// user_pref("font.default.x-geor", "serif");
+// user_pref("font.default.x-gujr", "serif");
+// user_pref("font.default.x-guru", "serif");
+// user_pref("font.default.x-khmr", "serif");
+// user_pref("font.default.x-knda", "serif");
+// user_pref("font.default.x-math", "serif");
+// user_pref("font.default.x-mlym", "serif");
+// user_pref("font.default.x-orya", "serif");
+// user_pref("font.default.x-sinh", "serif");
+// user_pref("font.default.x-tamil", "serif");
+// user_pref("font.default.x-telu", "serif");
+// user_pref("font.default.x-tibt", "serif");
+// user_pref("font.default.x-unicode", "serif");
+// user_pref("font.default.x-western", "serif");
+// user_pref("font.default.zh-CN", "sans-serif");
+// user_pref("font.default.zh-HK", "sans-serif");
+// user_pref("font.default.zh-TW", "sans-serif");
+
+/* Default Fonts
+ *		[NOTE] Instead of fonts DejaVu you can, for example, use Google fonts - Noto,
+ *		but keep in mind that you must delete or comment out the DejaVu preferences.
+ * Шрифты по умолчанию
+ *		[ЗАМЕТКА] Вместо шрифтов DejaVu вы можете, например, использовать шрифты Google - Noto,
+ *		но имейте в виду, что вы должны удалить или закомментировать настройки DejaVu. */
+
+user_pref("font.name.monospace.x-western", "DejaVu Sans Mono");
+user_pref("font.name.monospace.x-cyrillic", "DejaVu Sans Mono");
+user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
+
+// user_pref("font.name.serif.x-cyrillic", "Noto Serif");
+// user_pref("font.name.sans-serif.x-cyrillic", "Noto Sans");
+// user_pref("font.name.monospace.x-cyrillic", "Noto Mono");
+// user_pref("font.name.serif.x-western", "Noto Serif");
+// user_pref("font.name.sans-serif.x-western", "Noto Sans");
+// user_pref("font.name.monospace.x-western", "Noto Mono");
+// user_pref("font.name.serif.ar", "Noto Naskh Arabic");
+// user_pref("font.name.sans-serif.ar", "Noto Naskh Arabic");
+// user_pref("font.name.monospace.ar", "Noto Naskh Arabic");
+// user_pref("font.name.serif.x-armn", "Noto Serif Armenian");
+// user_pref("font.name.sans-serif.x-armn", "Noto Sans Armenian");
+// user_pref("font.name.monospace.x-armn", "Noto Sans Armenian");
+// user_pref("font.name.serif.x-beng", "Noto Serif Bengali");
+// user_pref("font.name.sans-serif.x-beng", "Noto Sans Bengali");
+// user_pref("font.name.monospace.x-beng", "Noto Sans Bengali");
+// user_pref("font.name.serif.zh-CN", "Noto Serif CJK SC");
+// user_pref("font.name.sans-serif.zh-CN", "Noto Sans CJK SC");
+// user_pref("font.name.monospace.zh-CN", "Noto Sans CJK SC");
+// user_pref("font.name.serif.zh-TW", "Noto Serif CJK TC");
+// user_pref("font.name.sans-serif.zh-TW", "Noto Sans CJK TC");
+// user_pref("font.name.monospace.zh-TW", "Noto Sans CJK TC");
+// user_pref("font.name.serif.zh-HK", "Noto Serif CJK TC");
+// user_pref("font.name.sans-serif.zh-HK", "Noto Sans CJK TC");
+// user_pref("font.name.monospace.zh-HK", "Noto Sans CJK TC");
+// user_pref("font.name.serif.x-devanagari", "Noto Serif Devanagari");
+// user_pref("font.name.sans-serif.x-devanagari", "Noto Sans Devanagari");
+// user_pref("font.name.monospace.x-devanagari", "Noto Sans Devanagari");
+// user_pref("font.name.serif.x-ethi", "Noto Serif Ethiopic");
+// user_pref("font.name.sans-serif.x-ethi", "Noto Sans Ethiopic");
+// user_pref("font.name.monospace.x-ethi", "Noto Sans Ethiopic");
+// user_pref("font.name.serif.x-geor", "Noto Serif Georgian");
+// user_pref("font.name.sans-serif.x-geor", "Noto Sans Georgian");
+// user_pref("font.name.monospace.x-geor", "Noto Sans Georgian");
+// user_pref("font.name.serif.x-gujr", "Noto Serif Gujarati");
+// user_pref("font.name.sans-serif.x-gujr", "Noto Sans Gujarati");
+// user_pref("font.name.monospace.x-gujr", "Noto Sans Gujarati");
+// user_pref("font.name.serif.x-guru", "Noto Serif Gurmukhi");
+// user_pref("font.name.sans-serif.x-guru", "Noto Sans Gurmukhi");
+// user_pref("font.name.monospace.x-guru", "Noto Sans Gurmukhi");
+// user_pref("font.name.serif.he", "Noto Serif Hebrew");
+// user_pref("font.name.sans-serif.he", "Noto Sans Hebrew");
+// user_pref("font.name.monospace.he", "Noto Sans Hebrew");
+// user_pref("font.name.serif.ja", "Noto Serif CJK JP");
+// user_pref("font.name.sans-serif.ja", "Noto Sans CJK JP");
+// user_pref("font.name.monospace.ja", "Noto Sans CJK JP");
+// user_pref("font.name.serif.el", "Noto Serif");
+// user_pref("font.name.sans-serif.el", "Noto Sans");
+// user_pref("font.name.monospace.el", "Noto Sans Mono");
+// user_pref("font.name.serif.x-knda", "Noto Serif Kannada");
+// user_pref("font.name.sans-serif.x-knda", "Noto Sans Kannada");
+// user_pref("font.name.monospace.x-knda", "Noto Sans Kannada");
+// user_pref("font.name.serif.x-khmr", "Noto Serif Khmer");
+// user_pref("font.name.sans-serif.x-khmr", "Noto Sans Khmer");
+// user_pref("font.name.monospace.x-khmr", "Noto Sans Khmer");
+// user_pref("font.name.serif.ko", "Noto Serif CJK KR");
+// user_pref("font.name.sans-serif.ko", "Noto Sans CJK KR");
+// user_pref("font.name.monospace.ko", "Noto Sans CJK KR");
+// user_pref("font.name.serif.x-mlym", "Noto Serif Malayalam");
+// user_pref("font.name.sans-serif.x-mlym", "Noto Sans Malayalam");
+// user_pref("font.name.monospace.x-mlym", "Noto Sans Malayalam");
+// user_pref("font.name.serif.x-orya", "Noto Sans Oriya");
+// user_pref("font.name.sans-serif.x-orya", "Noto Sans Oriya");
+// user_pref("font.name.monospace.x-orya", "Noto Sans Oriya");
+// user_pref("font.name.serif.x-math", "Latin Modern Math");
+// user_pref("font.name.sans-serif.x-math", "Latin Modern Math");
+// user_pref("font.name.monospace.x-math", "Latin Modern Math");
+// user_pref("font.name.serif.x-sinh", "Noto Serif Sinhala");
+// user_pref("font.name.sans-serif.x-sinh", "Noto Sans Sinhala");
+// user_pref("font.name.monospace.x-sinh", "Noto Sans Sinhala");
+// user_pref("font.name.serif.x-tamil", "Noto Serif Tamil");
+// user_pref("font.name.sans-serif.x-tamil", "Noto Sans Tamil");
+// user_pref("font.name.monospace.x-tamil", "Noto Sans Tamil");
+// user_pref("font.name.serif.x-telu", "Noto Serif Telugu");
+// user_pref("font.name.sans-serif.x-telu", "Noto Sans Telugu");
+// user_pref("font.name.monospace.x-telu", "Noto Sans Telugu");
+// user_pref("font.name.serif.x-tibt", "Noto Sans Tibetan");
+// user_pref("font.name.sans-serif.x-tibt", "Noto Sans Tibetan");
+// user_pref("font.name.monospace.x-tibt", "Noto Sans Tibetan");
+// user_pref("font.name.serif.x-unicode", "Noto Serif");
+// user_pref("font.name.sans-serif.x-unicode", "Noto Sans");
+// user_pref("font.name.monospace.x-unicode", "Noto Mono");
+// user_pref("font.name.serif.th", "Noto Serif Thai");
+// user_pref("font.name.sans-serif.th", "Noto Sans Thai");
+// user_pref("font.name.monospace.th", "Noto Sans Thai");
+// user_pref("font.name.serif.x-cans", "serif");
+// user_pref("font.name.sans-serif.x-cans", "sans-serif");
+// user_pref("font.name.monospace.x-cans", "monospace");
+// user_pref("font.language.group", "x-western");

@@ -622,3 +622,19 @@ user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false);
 user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false);
 user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
 user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
+
+/* Tracking protection in all windows
+ *		[NOTE] When enabled, the processor load increases, and the same uBlock Origin does well with this
+ * Защита слежения во всех окнах
+ *		[ЗАМЕТКА] При включении возрастает нагрузка на процессор, к тому же с этим хорошо справляется тот же uBlock Origin */
+user_pref("privacy.trackingprotection.enabled", false);
+user_pref("privacy.trackingprotection.pbmode.enabled", false);
+user_pref("privacy.trackingprotection.introURL", "");
+user_pref("privacy.trackingprotection.annotate_channels", false);
+user_pref("privacy.trackingprotection.lower_network_priority", false);
+
+/* DOM forms
+ * DOM формы */
+user_pref("dom.forms.datetime", false);
+user_pref("dom.forms.datetime.others", false);
+user_pref("dom.forms.datetime.timepicker", false);
