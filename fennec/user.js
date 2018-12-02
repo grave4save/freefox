@@ -554,3 +554,29 @@ user_pref("browser.sessionstore.interval", 60000);
  *		1 = Блокировать стороннии куки
  *		2 = Блокировать все куки */
 user_pref("network.cookie.cookieBehavior", 1);
+
+/* Third-party cookies are set for the session only
+ * Сторонние файлы куки устанавливаются только для сеанса */
+user_pref("network.cookie.thirdparty.sessionOnly", true);
+user_pref("network.cookie.thirdparty.nonsecureSessionOnly", true);
+
+/* Сookie lifetime policy
+ *		0 = Save them before expiration
+ *		2 = Save them until close Firefox
+ * Политика жизни куки
+ *		0 = Сохранять их до истечения срока действия
+ *		2 = Сохранять их до закрытия Firefox */
+user_pref("network.cookie.lifetimePolicy", 0);
+
+/* Indexed database API
+ * API Индексированных баз данных */
+user_pref("dom.indexedDB.enabled", true);
+user_pref("dom.indexedDB.experimental", false);
+user_pref("dom.indexedDB.logging.details", false);
+user_pref("dom.indexedDB.logging.enabled", false);
+
+/* Storage API
+ *		[NOTE] Disables another way for sites to store their data on the user's personal computer.
+ * API Хранилища
+ *		[ЗАМЕТКА] Отключает еще один способ для сайтов хранить свои данные на персональном компьютере пользователя. */
+user_pref("dom.storageManager.enabled", false);
