@@ -597,6 +597,159 @@ user_pref("lightweightThemes.recommendedThemes", "");
 user_pref("xpinstall.signatures.required", true);
 user_pref("xpinstall.signatures.devInfoURL", "");
 
+/* Add-on installation delay
+ * Задержка при установке дополнений */
+user_pref("security.dialog_enable_delay", 0);
+
+/* Default plugins state
+ *		0 = Disabled
+ *		1 = Request activation
+ *		2 = Active, individual plugins can be overridden
+ * Состояние плагинов по умолчанию
+ *		0 = Отключено
+ *		1 = Запрашивать активацию
+ *		2 = Активно, можно переопределить отдельные плагины */
+user_pref("plugin.default.state", 0);
+user_pref("plugin.defaultXpi.state", 0);
+
+/* Activate the plugin by clicking
+ * Активация плагина по клику */
+user_pref("plugins.click_to_play", true);
+
+/* Time to run plugins
+ * Время для запуска плагинов */
+user_pref("plugin.sessionPermissionNow.intervalInMinutes", 0);
+
+/* Flash plugin
+ *		0 = Off
+ *		1 = Ask
+ *		2 = On
+ * Flash плагин
+ *		0 = Выключить
+ *		1 = Спросить
+ *		2 = Включить */
+user_pref("plugin.state.flash", 0);
+
+/* Scanning the system for plug-ins
+ * Сканирование системы на наличие плагинов */
+user_pref("plugin.scan.plid.all", false); // [WINDOWS]
+
+/* GMP (Gecko Media Plugins)
+ * GMP (Gecko Медиа Плагины) */
+user_pref("media.gmp-provider.enabled", false);
+user_pref("media.gmp.trial-create.enabled", false);
+user_pref("media.gmp-manager.url", "data:text/plain,");
+user_pref("media.gmp-manager.url.override", "data:text/plain,");
+user_pref("media.gmp-manager.updateEnabled", false);
+user_pref("media.gmp-manager.cert.checkAttributes", false);
+user_pref("media.gmp-manager.buildID", "");
+user_pref("media.gmp-manager.lastCheck", "");
+user_pref("media.gmp-manager.certs.1.commonName", "");
+user_pref("media.gmp-manager.certs.1.issuerName", "");
+user_pref("media.gmp-manager.certs.2.commonName", "");
+user_pref("media.gmp-manager.certs.2.issuerName", "");
+user_pref("media.gmp-manager.cert.requireBuiltIn", false);
+
+/* Widevine CDM (Content Decryption Module)
+ * Widevine CDM (Модуль Расшифровки Контента) */
+user_pref("media.gmp-widevinecdm.visible", false);
+user_pref("media.gmp-widevinecdm.enabled", false);
+
+/* Digital Rights Management (DRM)
+ * Управление цифровыми правами */
+user_pref("media.eme.enabled", false);
+user_pref("browser.eme.ui.enabled", false);
+
+/* Preload browser links
+ * Предварительная загрузка браузером ссылок */
+user_pref("network.prefetch-next", false);
+
+/* DNS browser preloading
+ * Предварительная загрузка браузером DNS */
+user_pref("network.dns.disablePrefetch", true);
+user_pref("network.dns.disablePrefetchFromHTTPS", true);
+
+/* Sending ping
+ * Отправка пинга */
+user_pref("browser.send_pings", false);
+user_pref("browser.send_pings.max_per_link", 0);
+user_pref("browser.send_pings.require_same_host", true);
+
+/* Send DNS requests through a proxy using SOCKS 5
+ * Отправлять DNS-запросы через прокси при использовании SOCKS 5 */
+user_pref("network.proxy.socks_remote_dns", true);
+
+/* Redirecting to the provider's page
+ * Перенаправление на страницу провайдера */
+user_pref("captivedetect.canonicalURL", "");
+user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.captive-portal-service.minInterval", 0);
+
+/* HTTP Header "Do Not Track"
+ * Заголовок HTTP "Не Отслеживать" */
+// user_pref("privacy.donottrackheader.enabled", true);
+
+/* TOR: hide referrer when leaving a .onion domain
+ * TOR: скрыть referrer при выходе с домена .onion */
+user_pref("network.http.referer.hideOnionSource", true);
+
+/* Synchronization integration
+ * Интеграция синхронизации */
+user_pref("identity.fxaccounts.enabled", true);
+
+/* Synchronization of preferences
+ * Синхронизация предпочтений */
+user_pref("services.sync.engine.addresses", false);
+user_pref("services.sync.engine.addresses.available", false);
+user_pref("services.sync.engine.creditcards", false);
+user_pref("services.sync.engine.creditcards.available", false);
+user_pref("services.sync.engine.history", false);
+user_pref("services.sync.engine.prefs", false);
+user_pref("services.sync.engine.prefs.modified", false);
+user_pref("services.sync.engine.tabs", false);
+
+/* Cache API (Cache storage)
+ *		[NOTE] It is a repository on the user's computer where scripts can store information.
+ *		It is part of the "Service Workers" specification, but can be used without them.
+ * API Кэша (Хранилище кэша)
+ *		[ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
+ *		Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
+user_pref("dom.caches.enabled", false);
+
+/* Web notifications
+ * Веб-уведомления */
+user_pref("dom.webnotifications.enabled", false);
+user_pref("dom.webnotifications.serviceworker.enabled", false);
+
+/* Push notifications
+ * Push-уведомления */
+user_pref("dom.push.enabled", false);
+user_pref("dom.push.connection.enabled", false);
+user_pref("dom.push.serverURL", "");
+user_pref("dom.push.userAgentID", "");
+
+/* Disk cache
+ * Кэш-диска */
+user_pref("browser.cache.disk.capacity", 0);
+user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.disk.smart_size.enabled", false);
+user_pref("browser.cache.disk.smart_size.first_run", false);
+user_pref("browser.cache.frecency_experiment", -1);
+
+/* Disk cache for SSL pages
+ * Кэш-диск для SSL-страниц */
+user_pref("browser.cache.disk_cache_ssl", false);
+
+/* Fastback cache
+ *		0 = Disable
+ *		-1 = Auto
+ * Кэш Fastback
+ *		0 = Отключить
+ *		-1 = Автоматически */
+user_pref("browser.sessionhistory.max_total_viewers", 0);
+
+
+
 
 
 
@@ -738,40 +891,18 @@ user_pref("extensions.formautofill.heuristics.enabled", false);
 /* 0518: disable Web Compatibility Reporter (FF56+)
  * Web Compatibility Reporter adds a "Report Site Issue" button to send data to Mozilla ***/
 user_pref("extensions.webcompat-reporter.enabled", false);
-/* 0601: disable link prefetching
- * [1] https://developer.mozilla.org/docs/Web/HTTP/Link_prefetching_FAQ ***/
-user_pref("network.prefetch-next", false);
-/* 0602: disable DNS prefetching
- * [1] https://www.ghacks.net/2013/04/27/firefox-prefetching-what-you-need-to-know/
- * [2] https://developer.mozilla.org/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control ***/
-user_pref("network.dns.disablePrefetch", true);
-user_pref("network.dns.disablePrefetchFromHTTPS", true); // (hidden pref)
 /* 0603a: disable Seer/Necko
  * [1] https://developer.mozilla.org/docs/Mozilla/Projects/Necko ***/
 user_pref("network.predictor.enabled", false);
-/* 0603b: disable more Necko/Captive Portal
- * [1] https://en.wikipedia.org/wiki/Captive_portal
- * [2] https://wiki.mozilla.org/Necko/CaptivePortal
- * [3] https://trac.torproject.org/projects/tor/ticket/21790 ***/
-user_pref("captivedetect.canonicalURL", "");
-user_pref("network.captive-portal-service.enabled", false); // (FF52+)
 /* 0605: disable link-mouseover opening connection to linked server
  * [1] https://news.slashdot.org/story/15/08/14/2321202/how-to-quash-firefoxs-silent-requests
  * [2] https://www.ghacks.net/2015/08/16/block-firefox-from-connecting-to-sites-when-you-hover-over-links/ ***/
 user_pref("network.http.speculative-parallel-limit", 0);
-/* 0606: disable pings (but enforce same host in case)
- * [1] http://kb.mozillazine.org/Browser.send_pings
- * [2] http://kb.mozillazine.org/Browser.send_pings.require_same_host ***/
-user_pref("browser.send_pings", false);
-user_pref("browser.send_pings.require_same_host", true);
 /* 0607: disable links launching Windows Store on Windows 8/8.1/10 [WINDOWS]
  * [1] https://www.ghacks.net/2016/03/25/block-firefox-chrome-windows-store/ ***/
 user_pref("network.protocol-handler.external.ms-windows-store", false);
 /* 0608: disable predictor / prefetching (FF48+) ***/
 user_pref("network.predictor.enable-prefetch", false);
-
-/*** 0700: HTTP* / TCP/IP / DNS / PROXY / SOCKS etc ***/
-user_pref("_user.js.parrot", "0700 syntax error: the parrot's given up the ghost!");
 /* 0701: disable IPv6
  * IPv6 can be abused, especially regarding MAC addresses. They also do not play nice
  * with VPNs. That's even assuming your ISP and/or router and/or website can handle it
@@ -796,12 +927,6 @@ user_pref("network.http.spdy.enabled.http2", false);
  * [2] https://www.mnot.net/blog/2016/03/09/alt-svc ***/
 user_pref("network.http.altsvc.enabled", false);
 user_pref("network.http.altsvc.oe", false);
-/* 0704: enforce the proxy server to do any DNS lookups when using SOCKS
- * e.g. in Tor, this stops your local DNS server from knowing your Tor destination
- * as a remote Tor node will handle the DNS request
- * [1] http://kb.mozillazine.org/Network.proxy.socks_remote_dns
- * [2] https://trac.torproject.org/projects/tor/wiki/doc/TorifyHOWTO/WebBrowsers ***/
-user_pref("network.proxy.socks_remote_dns", true);
 /* 0706: remove paths when sending URLs to PAC scripts (FF51+)
  * CVE-2017-5384: Information disclosure via Proxy Auto-Config (PAC)
  * [1] https://bugzilla.mozilla.org/1255474 ***/
@@ -909,25 +1034,6 @@ user_pref("security.insecure_field_warning.contextual.enabled", true);
 /* 0911: prevent cross-origin images from triggering an HTTP-Authentication prompt (FF55+)
  * [1] https://bugzilla.mozilla.org/1357835 ***/
 user_pref("network.auth.subresource-img-cross-origin-http-auth-allow", false);
-/* 1001: disable disk cache ***/
-user_pref("browser.cache.disk.enable", false);
-user_pref("browser.cache.disk.capacity", 0);
-user_pref("browser.cache.disk.smart_size.enabled", false);
-user_pref("browser.cache.disk.smart_size.first_run", false);
-/* 1002: disable disk cache for SSL pages
- * [1] http://kb.mozillazine.org/Browser.cache.disk_cache_ssl ***/
-user_pref("browser.cache.disk_cache_ssl", false);
-/* 1003: disable memory cache
- * [NOTE] Not recommended due to performance issues ***/
-   // user_pref("browser.cache.memory.enable", false);
-   // user_pref("browser.cache.memory.capacity", 0); // (hidden pref)
-/* 1005: disable fastback cache
- * To improve performance when pressing back/forward Firefox stores visited pages
- * so they don't have to be re-parsed. This is not the same as memory cache.
- * 0=none, -1=auto (that's minus 1), or for other values see [1]
- * [NOTE] Not recommended unless you know what you're doing
- * [1] http://kb.mozillazine.org/Browser.sessionhistory.max_total_viewers ***/
-   // user_pref("browser.sessionhistory.max_total_viewers", 0);
 /* 1006: disable permissions manager from writing to disk [RESTART]
  * [NOTE] This means any permission changes are session only
  * [1] https://bugzilla.mozilla.org/967812 ***/
@@ -1160,57 +1266,8 @@ user_pref("network.http.referer.spoofSource", false);
  * [1] https://www.w3.org/TR/referrer-policy/
  * [2] https://developer.mozilla.org/docs/Web/HTTP/Headers/Referrer-Policy
  * [3] https://blog.mozilla.org/security/2018/01/31/preventing-data-leaks-by-stripping-path-information-in-http-referrers/ ***/
-user_pref("network.http.referer.defaultPolicy", 3); // (FF59+) default: 3
-user_pref("network.http.referer.defaultPolicy.pbmode", 2); // (FF59+) default: 2
-/* 1607: TOR: hide (not spoof) referrer when leaving a .onion domain (FF54+)
- * [NOTE] Firefox cannot access .onion sites by default. We recommend you use
- * the Tor Browser which is specifically designed for hidden services
- * [1] https://bugzilla.mozilla.org/1305144 ***/
-user_pref("network.http.referer.hideOnionSource", true);
-/* 1610: ALL: enable the DNT (Do Not Track) HTTP header
- * [SETTING] Privacy & Security>Content Blocking>Send websites a "Do Not Track"...
- * [NOTE] DNT is enforced with TP (see 0420) regardless of this pref ***/
-user_pref("privacy.donottrackheader.enabled", true);
-
-/*** 1800: PLUGINS ***/
-user_pref("_user.js.parrot", "1800 syntax error: the parrot's pushing up daisies!");
-/* 1801: set default plugin state (i.e. new plugins on discovery) to never activate
- * 0=disabled, 1=ask to activate, 2=active - you can override individual plugins ***/
-user_pref("plugin.default.state", 0);
-user_pref("plugin.defaultXpi.state", 0);
-/* 1802: enable click to play and set to 0 minutes ***/
-user_pref("plugins.click_to_play", true);
-user_pref("plugin.sessionPermissionNow.intervalInMinutes", 0);
-/* 1803: disable Flash plugin (Add-ons>Plugins)
- * 0=deactivated, 1=ask, 2=enabled
- * ESR52.x is the last branch to *fully* support NPAPI, FF52+ stable only supports Flash
- * [NOTE] You can still override individual sites via site permissions
- * [1] https://www.ghacks.net/2013/07/09/how-to-make-sure-that-a-firefox-plugin-never-activates-again/ ***/
-user_pref("plugin.state.flash", 0);
-/* 1805: disable scanning for plugins [WINDOWS]
- * [1] http://kb.mozillazine.org/Plugin_scanning
- * plid.all = whether to scan the directories specified in the Windows registry for PLIDs.
- * Used to detect RealPlayer, Java, Antivirus etc, but since FF52 only covers Flash ***/
-user_pref("plugin.scan.plid.all", false);
-/* 1820: disable all GMP (Gecko Media Plugins) [SETUP]
- * [1] https://wiki.mozilla.org/GeckoMediaPlugins ***/
-user_pref("media.gmp-provider.enabled", false);
-user_pref("media.gmp.trial-create.enabled", false);
-user_pref("media.gmp-manager.url", "data:text/plain,");
-user_pref("media.gmp-manager.url.override", "data:text/plain,"); // (hidden pref)
-user_pref("media.gmp-manager.updateEnabled", false); // disable local fallback (hidden pref)
-/* 1825: disable widevine CDM (Content Decryption Module) [SETUP] ***/
-user_pref("media.gmp-widevinecdm.visible", false);
-user_pref("media.gmp-widevinecdm.enabled", false);
-user_pref("media.gmp-widevinecdm.autoupdate", false);
-/* 1830: disable all DRM content (EME: Encryption Media Extension) [SETUP]
- * [SETTING] General>DRM Content>Play DRM-controlled content
- * [1] https://www.eff.org/deeplinks/2017/10/drms-dead-canary-how-we-just-lost-web-what-we-learned-it-and-what-we-need-do-next ***/
-user_pref("media.eme.enabled", false);
-/* 1840: disable the OpenH264 Video Codec by Cisco to "Never Activate"
- * This is the bundled codec used for video chat in WebRTC ***/
-user_pref("media.gmp-gmpopenh264.enabled", false); // (hidden pref)
-user_pref("media.gmp-gmpopenh264.autoupdate", false);
+user_pref("network.http.referer.defaultPolicy", 3);
+user_pref("network.http.referer.defaultPolicy.pbmode", 2);
 /* 2010: disable WebGL (Web Graphics Library), force bare minimum feature set if used & disable WebGL extensions
  * [1] https://www.contextis.com/resources/blog/webgl-new-dimension-browser-exploitation/
  * [2] https://security.stackexchange.com/questions/13799/is-webgl-a-security-concern ***/
@@ -1273,18 +1330,6 @@ user_pref("dom.popup_allowed_events", "click dblclick");
  * [NOTE] Service worker APIs are hidden (in Firefox) and cannot be used when in PB mode.
  * [NOTE] Service workers only run over HTTPS. Service Workers have no DOM access. ***/
 user_pref("dom.serviceWorkers.enabled", false);
-/* 2304: disable web notifications
- * [1] https://developer.mozilla.org/docs/Web/API/Notifications_API ***/
-user_pref("dom.webnotifications.enabled", false); // (FF22+)
-user_pref("dom.webnotifications.serviceworker.enabled", false);
-/* 2306: disable push notifications (FF44+)
- * web apps can receive messages pushed to them from a server, whether or
- * not the web app is in the foreground, or even currently loaded
- * [1] https://developer.mozilla.org/docs/Web/API/Push_API ***/
-user_pref("dom.push.enabled", false);
-user_pref("dom.push.connection.enabled", false);
-user_pref("dom.push.serverURL", "");
-user_pref("dom.push.userAgentID", "");
 /* 2401: disable website control over browser right-click context menu
  * [NOTE] Shift-Right-Click will always bring up the browser right-click context menu ***/
    // user_pref("dom.event.contextmenu.enabled", false);
@@ -1498,12 +1543,7 @@ user_pref("security.csp.experimentalEnabled", true);
  * [1] https://bugzilla.mozilla.org/1331351
  * [2] https://www.wordfence.com/blog/2017/01/gmail-phishing-data-uri/
  * [3] https://www.fxsitecompat.com/en-CA/docs/2017/data-url-navigations-on-top-level-window-will-be-blocked/ ***/
-user_pref("security.data_uri.block_toplevel_data_uri_navigations", true); // default: true in FF59+
-/* 2684: enforce a security delay on some confirmation dialogs such as install, open/save
- * [1] http://kb.mozillazine.org/Disable_extension_install_delay_-_Firefox
- * [2] https://www.squarefree.com/2004/07/01/race-conditions-in-security-dialogs/ ***/
-user_pref("security.dialog_enable_delay", 700);
-user_pref("_user.js.parrot", "2700 syntax error: the parrot's joined the bleedin' choir invisible!");
+user_pref("security.data_uri.block_toplevel_data_uri_navigations", true);
 /* 2701: disable 3rd-party cookies and site-data [SETUP]
  * You can set exceptions under site permissions or use an extension
  * 0=Accept cookies and site data, 1=Block third-party cookies, 2=Block all cookies,
@@ -1556,9 +1596,6 @@ user_pref("browser.cache.offline.insecure.enable", false); // default: false in 
  * [1] https://support.mozilla.org/questions/1098540
  * [2] https://bugzilla.mozilla.org/959985 ***/
 user_pref("offline-apps.allow_by_default", false);
-/* 2740: disable service workers cache and cache storage
- * [1] https://w3c.github.io/ServiceWorker/#privacy ***/
-user_pref("dom.caches.enabled", false);
 /* 2750: disable Storage API (FF51+)
  * The API gives sites the ability to find out how much space they can use, how much
  * they are already using, and even control whether or not they need to be alerted
