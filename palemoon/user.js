@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/palemoon/
- * Last modified: December 3, 2018
+ * Last modified: December 4, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -481,7 +481,7 @@ user_pref("media.mediasource.webm.enabled", true);
 /* Location accounting
  * Учет местоположения */
 user_pref("geo.enabled", false);
-user_pref("browser.geolocation.warning.infoURL", ""); // WIKI
+user_pref("browser.geolocation.warning.infoURL", "");
 
 /* GeoIP-based search results
  * Результаты поиска на основе GeoIP */

@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/fennec/
- * Last modified: December 3, 2018
+ * Last modified: December 4, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -45,12 +45,12 @@ user_pref("browser.snippets.updateUrl", "");
  * Размер шрифта
  *		[ЗАМЕТКА] Шрифты ниже имеют стандартный размер, поэтому они закомментированы.
  *		Не меняйте размер, если не знаете, что делаете. */
-// user_pref("font.size.fixed.x-cyrillic", 13);
-// user_pref("font.size.fixed.x-unicode", 13);
-// user_pref("font.size.fixed.x-western", 13);
-// user_pref("font.size.fixed.ar", 13);
-// user_pref("font.size.fixed.el", 13);
-// user_pref("font.size.fixed.he", 13);
+// user_pref("font.size.fixed.x-cyrillic", 12);
+// user_pref("font.size.fixed.x-unicode", 12);
+// user_pref("font.size.fixed.x-western", 12);
+// user_pref("font.size.fixed.ar", 12);
+// user_pref("font.size.fixed.el", 12);
+// user_pref("font.size.fixed.he", 12);
 // user_pref("font.size.fixed.ja", 16);
 // user_pref("font.size.fixed.ko", 16);
 // user_pref("font.size.fixed.th", 13);
@@ -141,9 +141,7 @@ user_pref("browser.snippets.updateUrl", "");
 // user_pref("font.default.zh-TW", "sans-serif");
 
 /* Default Fonts
- *		[NOTE] The default is Droid, but you can change them for example on Google Noto <https://www.google.com/get/noto/>.
- * Шрифты по умолчанию
- *		[ЗАМЕТКА] По умолчанию используется Droid, однако вы можете изменить их например на Google Noto <https://www.google.com/get/noto/>. */
+ * Шрифты по умолчанию */
 // user_pref("font.name.serif.x-cyrillic", "Noto Serif");
 // user_pref("font.name.sans-serif.x-cyrillic", "Noto Sans");
 // user_pref("font.name.monospace.x-cyrillic", "Noto Mono");
