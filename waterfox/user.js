@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/waterfox/
- * Last modified: December 3, 2018
+ * Last modified: December 4, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -554,51 +554,63 @@ user_pref("browser.tabs.crashReporting.emailMe", false);
 user_pref("browser.tabs.crashReporting.includeURL", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
 
+/* Promo for mobile phones
+ * Акция для мобильных телефонов */
+user_pref("identity.mobilepromo.android", "");
+user_pref("identity.mobilepromo.ios", "");
 
+/* Location accounting
+ * Учет местоположения */
+user_pref("geo.enabled", false);
+user_pref("browser.geolocation.warning.infoURL", "");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 0202: disable GeoIP-based search results
- * [NOTE] May not be hidden if Firefox has changed your settings due to your locale
- * [1] https://trac.torproject.org/projects/tor/ticket/16254
- * [2] https://support.mozilla.org/en-US/kb/how-stop-firefox-making-automatic-connections#w_geolocation-for-default-search-engine ***/
-user_pref("browser.search.region", "US"); // (hidden pref)
+/* GeoIP-based search results
+ * Результаты поиска на основе GeoIP */
+user_pref("browser.search.region", "US");
 user_pref("browser.search.geoip.url", "");
-/* 0205: set OS & APP locale (FF59+)
- * If set to empty, the OS locales are used. If not set at all, default locale is used ***/
-user_pref("intl.locale.requested", "en-US"); // (hidden pref)
-/* 0206: disable geographically specific results/search engines e.g. "browser.search.*.US"
- * i.e. ignore all of Mozilla's various search engines in multiple locales ***/
+user_pref("browser.search.geoip.timeout", 0);
+
+/* Regional specificity for search results and search engines
+ * Региональная специфика для результатов поиска и поисковых систем */
 user_pref("browser.search.geoSpecificDefaults", false);
 user_pref("browser.search.geoSpecificDefaults.url", "");
-/* 0208: enforce US English locale regardless of the system locale
- * [1] https://bugzilla.mozilla.org/867501 ***/
-user_pref("javascript.use_us_english_locale", true); // (hidden pref)
-/* 0209: use APP locale over OS locale in regional preferences (FF56+)
- * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1379420,1364789 ***/
+
+/* Use the application language over the language of your operating system in the regional settings
+ * Использовать язык приложения поверх языка вашей операционной системы в региональных настройках */
 user_pref("intl.regional_prefs.use_os_locales", false);
+
+/* First Party Isolation
+ * Изоляция первой стороны */
+user_pref("privacy.firstparty.isolate", true);
+user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
+
+/* Firefox Fingerprints
+ * Отпечатки пальцев Firefox */
+user_pref("privacy.resistFingerprinting", true);
+
+/* Recommended themes
+ * Рекомендованные темы */
+user_pref("lightweightThemes.recommendedThemes", "");
+
+/* Install only signed extensions
+ * Установка только подписанных расширений */
+user_pref("xpinstall.signatures.required", true);
+user_pref("xpinstall.signatures.devInfoURL", "");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* 0210: use Mozilla geolocation service instead of Google when geolocation is enabled
  * Optionally enable logging to the console (defaults to false) ***/
 user_pref("geo.wifi.uri", "https://location.services.mozilla.com/v1/geolocate?key=%MOZILLA_API_KEY%");
@@ -694,20 +706,6 @@ user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
 user_pref("browser.contentblocking.enabled", true); // default: true
 /* 0502: disable Mozilla permission to silently opt you into tests ***/
 user_pref("network.allow-experiments", false);
-/* 0503: disable Normandy/Shield (FF60+)
- * Shield is an telemetry system (including Heartbeat) that can also push and test "recipes"
- * [1] https://wiki.mozilla.org/Firefox/Shield
- * [2] https://github.com/mozilla/normandy ***/
-user_pref("app.normandy.enabled", false);
-user_pref("app.normandy.api_url", "");
-user_pref("app.shield.optoutstudies.enabled", false);
-/* 0505: disable System Add-on updates
- * [NOTE] In FF61 and lower, you will not get any System Add-on updates except when you update Firefox ***/
-   // user_pref("extensions.systemAddon.update.enabled", false); // (FF62+)
-   // user_pref("extensions.systemAddon.update.url", "");
-/* 0506: disable PingCentre telemetry (used in several System Add-ons) (FF57+)
- * Currently blocked by 'datareporting.healthreport.uploadEnabled' (see 0333) ***/
-user_pref("browser.ping-centre.telemetry", false);
 /* 0510: disable Pocket (FF39+)
  * Pocket is a third party (now owned by Mozilla) "save for later" cloud service
  * [1] https://en.wikipedia.org/wiki/Pocket_(application)
@@ -1574,35 +1572,6 @@ user_pref("dom.caches.enabled", false);
  * You do not need these anyway if session restore is disabled (see 1020) ***/
    // user_pref("privacy.clearOnShutdown.openWindows", true);
    // user_pref("privacy.cpd.openWindows", true);
-/* 4001: enable First Party Isolation (FF51+)
- * [WARNING] May break cross-domain logins and site functionality until perfected
- * [1] https://bugzilla.mozilla.org/1260931 ***/
-user_pref("privacy.firstparty.isolate", true);
-/* 4002: enforce FPI restriction for window.opener (FF54+)
- * [NOTE] Setting this to false may reduce the breakage in 4001
- * [FF65+] blocks postMessage with targetOrigin "*" if originAttributes don't match. But
- * to reduce breakage it ignores the 1st-party domain (FPD) originAttribute. (see [2],[3])
- * The 2nd pref removes that limitation and will only allow communication if FPDs also match.
- * [1] https://bugzilla.mozilla.org/1319773#c22
- * [2] https://bugzilla.mozilla.org/1492607
- * [3] https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage ***/
-user_pref("privacy.firstparty.isolate.restrict_opener_access", true); // default: true
-   // user_pref("privacy.firstparty.isolate.block_post_message", true); // (hidden pref)
-/* 4501: enable privacy.resistFingerprinting (FF41+)
- * [1] https://bugzilla.mozilla.org/418986 ***/
-user_pref("privacy.resistFingerprinting", true); // (hidden pref) (not hidden FF55+)
-/* 4502: set new window sizes to round to hundreds (FF55+) [SETUP]
- * [NOTE] Width will round down to multiples of 200s and height to 100s, to fit your screen.
- * The override values are a starting point to round from if you want some control
- * [1] https://bugzilla.mozilla.org/1330882
- * [2] https://hardware.metrics.mozilla.com/ ***/
-   // user_pref("privacy.window.maxInnerWidth", 1600); // (hidden pref)
-   // user_pref("privacy.window.maxInnerHeight", 900); // (hidden pref)
-/* 4503: disable mozAddonManager Web API (FF57+)
- * [NOTE] As a side-effect in FF57-59 this allowed extensions to work on AMO. In FF60+ you also need
- * to sanitize or clear extensions.webextensions.restrictedDomains (see 2662) to keep that side-effect
- * [1] https://bugzilla.mozilla.org/buglist.cgi?bug_id=1384330,1406795,1415644,1453988 ***/
-user_pref("privacy.resistFingerprinting.block_mozAddonManager", true); // (hidden pref)
 /* 4504: disable showing about:blank as soon as possible during startup (FF60+)
  * When default true (FF62+) this no longer masks the RFP resizing activity
  * [1] https://bugzilla.mozilla.org/1448423 ***/

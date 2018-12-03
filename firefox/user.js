@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/firefox/
- * Last modified: December 3, 2018
+ * Last modified: December 4, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -630,7 +630,7 @@ user_pref("identity.mobilepromo.ios", "");
  * Щит */
 user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.api_url", "");
-user_pref("app.normandy.shieldLearnMoreUrl", ""); // WIKI
+user_pref("app.normandy.shieldLearnMoreUrl", "");
 user_pref("app.shield.optoutstudies.enabled", false);
 
 /* PingCentre telemetry
@@ -643,7 +643,7 @@ user_pref("browser.ping-centre.production.endpoint", "");
 /* Location accounting
  * Учет местоположения */
 user_pref("geo.enabled", false);
-user_pref("browser.geolocation.warning.infoURL", ""); // WIKI
+user_pref("browser.geolocation.warning.infoURL", "");
 
 /* GeoIP-based search results
  * Результаты поиска на основе GeoIP */
@@ -671,9 +671,6 @@ user_pref("intl.regional_prefs.use_os_locales", false);
 /* First Party Isolation
  * Изоляция первой стороны */
 user_pref("privacy.firstparty.isolate", true);
-
-/* First Party Isolation restriction
- * Ограничение изоляции первой стороны */
 user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
 user_pref("privacy.firstparty.isolate.block_post_message", true);
 
@@ -693,7 +690,7 @@ user_pref("lightweightThemes.recommendedThemes", "");
  * Установка только подписанных расширений */
 user_pref("extensions.langpacks.signatures.required", true); // Require signing language pack ~ Требование подписи языкового пакета
 user_pref("xpinstall.signatures.required", true); // Require signing extensions ~ Требовать подписание расширений
-user_pref("xpinstall.signatures.devInfoURL", ""); // WIKI
+user_pref("xpinstall.signatures.devInfoURL", "");
 
 /* Add-on installation delay
  * Задержка при установке дополнений */
