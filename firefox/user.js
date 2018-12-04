@@ -1945,10 +1945,6 @@ user_pref("network.predictor.preresolve-min-confidence", 101);
  *		[ЗАМЕТКА] Показ новых пользователей различной справочной информация при "N" запуске браузера. */
 user_pref("browser.laterrun.enabled", false);
 
-/* Disable the display of the text of the password by clicking on the corresponding input field
- * Отключить показ текста пароля по клику на соответствующее поле ввода */
-user_pref("signon.rememberSignons.visibilityToggle", false);
-
 /* Disables the registration of the Safebrowsing and Tracking Protection tables in the URL Classifier
  * Отключает регистрацию таблиц Safebrowsing и Tracking Protection в URL Classifier */
 user_pref("urlclassifier.malwareTable", "");

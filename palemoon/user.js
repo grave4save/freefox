@@ -1488,10 +1488,6 @@ user_pref("network.predictor.prefetch-min-confidence", 101);
 user_pref("network.predictor.preconnect-min-confidence", 101);
 user_pref("network.predictor.preresolve-min-confidence", 101);
 
-/* Disable the display of the text of the password by clicking on the corresponding input field
- * Отключить показ текста пароля по клику на соответствующее поле ввода */
-user_pref("signon.rememberSignons.visibilityToggle", false);
-
 /* Do not track network topology
  * Не отслеживать топологию сети */
 user_pref("network.notify.changed", false);
