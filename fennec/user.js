@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/fennec/
- * Last modified: December 4, 2018
+ * Last modified: December 5, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -40,11 +40,11 @@ user_pref("browser.snippets.updateInterval", 0);
 user_pref("browser.snippets.updateUrl", "");
 
 /* Font size
- *		[NOTE] The fonts below have a standard size, so they are commented out.
- *		Don't change the size if you don't know what you're doing.
+ * [NOTE] The fonts below have a standard size, so they are commented out.
+ * Don't change the size if you don't know what you're doing.
  * Размер шрифта
- *		[ЗАМЕТКА] Шрифты ниже имеют стандартный размер, поэтому они закомментированы.
- *		Не меняйте размер, если не знаете, что делаете. */
+ * [ЗАМЕТКА] Шрифты ниже имеют стандартный размер, поэтому они закомментированы.
+ * Не меняйте размер, если не знаете, что делаете. */
 // user_pref("font.size.fixed.x-cyrillic", 12);
 // user_pref("font.size.fixed.x-unicode", 12);
 // user_pref("font.size.fixed.x-western", 12);
@@ -105,11 +105,11 @@ user_pref("browser.snippets.updateUrl", "");
 // user_pref("font.size.variable.zh-TW", 16);
 
 /* Proportions (fonts)
- *		[NOTE] The proportions given below are standard, so they are commented out.
- *		Don't change the proportions if you don't know what you're doing.
+ * [NOTE] The proportions given below are standard, so they are commented out.
+ * Don't change the proportions if you don't know what you're doing.
  * Пропорции (шрифты)
- *		[ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
- *		Не изменяйте пропорции, если вы не знаете, что делаете. */
+ * [ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
+ * Не изменяйте пропорции, если вы не знаете, что делаете. */
 // user_pref("font.default.ar", "sans-serif");
 // user_pref("font.default.el", "serif");
 // user_pref("font.default.he", "sans-serif");
@@ -309,12 +309,12 @@ user_pref("media.getusermedia.noise_enabled", false);
  *		0 = Allow
  *		1 = Block
  *		2 = Ask
- *		[WARNING] This may break video playback on various sites.
+ * [WARNING] This may break video playback on various sites.
  * Автоматическое воспроизведение мультимедиа в формате HTML5
  *		0 = Разрешить
  *		1 = Заблокировать
  *		2 = Спросить
- *		[ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
+ * [ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
 // user_pref("media.autoplay.default", 1);
 
 /* Logic blocking autoplay version 2 and enable user interface
@@ -471,11 +471,11 @@ user_pref("network.captive-portal-service.minInterval", 0);
 user_pref("network.http.referer.hideOnionSource", true);
 
 /* Cache API (Cache storage)
- *		[NOTE] It is a repository on the user's computer where scripts can store information.
- *		It is part of the "Service Workers" specification, but can be used without them.
+ * [NOTE] It is a repository on the user's computer where scripts can store information.
+ * It is part of the "Service Workers" specification, but can be used without them.
  * API Кэша (Хранилище кэша)
- *		[ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
- *		Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
+ * [ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
+ * Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
 user_pref("dom.caches.enabled", false);
 
 /* Web notifications
@@ -574,9 +574,9 @@ user_pref("dom.indexedDB.logging.details", false);
 user_pref("dom.indexedDB.logging.enabled", false);
 
 /* Storage API
- *		[NOTE] Disables another way for sites to store their data on the user's personal computer.
+ * [NOTE] Disables another way for sites to store their data on the user's personal computer.
  * API Хранилища
- *		[ЗАМЕТКА] Отключает еще один способ для сайтов хранить свои данные на персональном компьютере пользователя. */
+ * [ЗАМЕТКА] Отключает еще один способ для сайтов хранить свои данные на персональном компьютере пользователя. */
 user_pref("dom.storageManager.enabled", false);
 
 /* Limit events that can trigger a pop-up
@@ -622,9 +622,10 @@ user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", fa
 user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 
 /* Tracking protection in all windows
- *		[NOTE] When enabled, the processor load increases, and the same uBlock Origin does well with this
- * Защита слежения во всех окнах
- *		[ЗАМЕТКА] При включении возрастает нагрузка на процессор, к тому же с этим хорошо справляется тот же uBlock Origin */
+ * [NOTE] When enabled, the load on the processor increases, plus any ad blocker can easily cope with
+ * the blocking of trackers when subscribing to the corresponding filter lists.
+ * [ЗАМЕТКА] При включении возрастает нагрузка на процессор, плюс ко всему с блокировкой трекеров
+ * легко справляется любой блокировщик рекламы при подписки на соответсвующими списки фильтров. */
 user_pref("privacy.trackingprotection.enabled", false);
 user_pref("privacy.trackingprotection.pbmode.enabled", false);
 user_pref("privacy.trackingprotection.introURL", "");
@@ -691,11 +692,11 @@ user_pref("browser.download.manager.addToRecentDocs", false);
 user_pref("browser.download.forbid_open_with", true);
 
 /* Predictor (formerly Seer)
- *		[NOTE] This is a mechanism that stores the links between the hosts from
- *		which content is requested for a particular URL.
+ * [NOTE] This is a mechanism that stores the links between the hosts from
+ * which content is requested for a particular URL.
  * Предсказатель (бывший Seer)
- *		[ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
- *		с которых запрашивается контент для того или иного URL. */
+ * [ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
+ * с которых запрашивается контент для того или иного URL. */
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-hover-on-ssl", false);
 user_pref("network.predictor.enable-prefetch", false);
@@ -721,9 +722,9 @@ user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
 user_pref("network.dns.disableIPv6", true);
 
 /* Block allowed extension directories
- *		[WARNING] This will break extensions that do not use the default XPI directories.
+ * [WARNING] This will break extensions that do not use the default XPI directories.
  * Заблокировать разрешенные каталоги расширений
- *		[ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
+ * [ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
 user_pref("extensions.enabledScopes", 1);
 user_pref("extensions.autoDisableScopes", 15);
 
@@ -780,9 +781,9 @@ user_pref("security.mixed_content.block_active_content", true);
 user_pref("security.mixed_content.block_display_content", true);
 
 /* SPDY protocol
- *		[WARNING] This protocol has a privacy problem protocol, use at your own risk.
+ * [WARNING] This protocol has a privacy problem protocol, use at your own risk.
  * Протокол SPDY
- *		[ВНИМАНИЕ] Данный протокол имеет протокол проблемы с приватностью, используйте на свой страх и риск. */
+ * [ВНИМАНИЕ] Данный протокол имеет протокол проблемы с приватностью, используйте на свой страх и риск. */
 user_pref("network.http.spdy.enabled", true);
 user_pref("network.http.spdy.enabled.deps", true);
 user_pref("network.http.spdy.enabled.http2", true);
@@ -798,12 +799,12 @@ user_pref("network.http.spdy.enabled.http2", true);
 // user_pref("webgl.msaa-force", false);
 
 /* Service Workers
- *		[NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
- *		are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
- *		and resource requests, and caching resources.
- *		[ЗАМЕТКА] "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
- *		браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
- *		перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы. */
+ * [NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
+ * are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
+ * and resource requests, and caching resources.
+ * [ЗАМЕТКА] "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
+ * браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
+ * перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы. */
 user_pref("dom.serviceWorkers.enabled", false);
 
 /* Cookies for HTTP sites are set with the "secure" directive
@@ -815,11 +816,11 @@ user_pref("network.cookie.leave-secure-alone", true);
 user_pref("network.cookie.same-site.enabled", true);
 
 /* DOM (Document Object Model) Storage
- *		[WARNING] This will break a LOT of sites' functionality AND extensions.
- *		You are better off using an extension for more granular control.
+ * [WARNING] This will break a LOT of sites' functionality AND extensions.
+ * You are better off using an extension for more granular control.
  * Хранилище DOM (Объектная Модель Документа)
- *		[ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
- *		Вам лучше использовать расширение для более гранулированного контроля. */
+ * [ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
+ * Вам лучше использовать расширение для более гранулированного контроля. */
 user_pref("dom.storage.enabled", true);
 
 /* Warn showing red lock for "broken security"
@@ -866,10 +867,10 @@ user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);
 user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
 
 /* Button "Ignore this warning" on the pages of safe browsing
- *		[NOTE] Useless for regular users, it's meant for admins on bigger network as a way to secure their users.
+ * [NOTE] Useless for regular users, it's meant for admins on bigger network as a way to secure their users.
  * Кнопка "Игнорировать это предупреждение" на страницах безопасного просмотра
- *		[ЗАМЕТКА] Бесполезный для обычных пользователей, он предназначен для администраторов в большей сети,
- *		как способ защитить своих пользователей. */
+ * [ЗАМЕТКА] Бесполезный для обычных пользователей, он предназначен для администраторов в большей сети,
+ * как способ защитить своих пользователей. */
 user_pref("browser.safebrowsing.allowOverride", false);
 
 /* OCSP Stapling
@@ -888,9 +889,9 @@ user_pref("dom.enable_performance_navigation_timing", false);
 user_pref("dom.enable_performance_observer", false);
 
 /* Sensor API
- *		[NOTE] Disables events from the accelerometer and other sensors.
+ * [NOTE] Disables events from the accelerometer and other sensors.
  * API Сенсора
- *		[ЗАМЕТКА] Отключает события от акселерометра и других сенсоров. */
+ * [ЗАМЕТКА] Отключает события от акселерометра и других сенсоров. */
 user_pref("device.sensors.enabled", false);
 
 /* CSP (Content Security Policy)
@@ -911,18 +912,18 @@ user_pref("security.data_uri.block_toplevel_data_uri_navigations", true);
 user_pref("security.OCSP.enabled", 1);
 
 /* Require a valid OCSP response for OCSP enabled certificates
- *		[WARNING] When you turn on breaks some sites.
+ * [WARNING] When you turn on breaks some sites.
  * Требовать действительный ответ OCSP для сертификатов с поддержкой OCSP
- *		[ВНИМАНИЕ] При включении ломается некоторые сайты. */
+ * [ВНИМАНИЕ] При включении ломается некоторые сайты. */
 // user_pref("security.OCSP.require", true);
 
 /* Battery Status API */
 user_pref("dom.battery.enabled", false);
 
 /* Virtual Reality API
- *		[NOTE] Disables support for virtual reality devices.
+ * [NOTE] Disables support for virtual reality devices.
  * API Виртуальной реальности
- *		[ЗАМЕТКА] Отключает поддержку устройств виртуальной реальности. */
+ * [ЗАМЕТКА] Отключает поддержку устройств виртуальной реальности. */
 user_pref("dom.vr.enabled", false);
 
 /* Enumerate multimedia devices
@@ -935,9 +936,9 @@ user_pref("media.navigator.enabled", false);
 // user_pref("layers.acceleration.disabled", true);
 
 /* Web Audio API
- *		[WARNING] Dangerously, because can withdraw the sound fingerprints browser.
+ * [WARNING] Dangerously, because can withdraw the sound fingerprints browser.
  * API Веб-аудио
- *		[ВНИМАНИЕ] Опасно, потому что можно снять звуковые отпечатки браузера. */
+ * [ВНИМАНИЕ] Опасно, потому что можно снять звуковые отпечатки браузера. */
 user_pref("dom.webaudio.enabled", false);
 
 /* Pointer Events
@@ -1001,9 +1002,9 @@ user_pref("network.http.altsvc.enabled", false);
 user_pref("network.http.altsvc.oe", false);
 
 /* Access the URL of the PAC scripts
- *		[NOTE] The path and URL request components "https://" are deleted.
+ * [NOTE] The path and URL request components "https://" are deleted.
  * Доступ к URL-адресу у PAC скриптов
- *		[ЗАМЕТКА] Компоненты пути и запроса URL-адресов "https://" удаляются. */
+ * [ЗАМЕТКА] Компоненты пути и запроса URL-адресов "https://" удаляются. */
 user_pref("network.proxy.autoconfig_url.include_path", false);
 
 /* DNS-over-HTTPS (DoH)
@@ -1012,24 +1013,24 @@ user_pref("network.proxy.autoconfig_url.include_path", false);
  *		2 = TRR is used by default, and DNS as a fallback
  *		3 = Only TRR is used
  *		4 = Race for statistics, mirroring mode in which TRR and DNS are enabled in parallel
- *		[WARNING] DoH bypasses hosts and gives info to yet another party (e.g. Cloudflare).
+ * [WARNING] DoH bypasses hosts and gives info to yet another party (e.g. Cloudflare).
  * DNS-над-HTTPS
  *		0 = Отключить
  *		1 = Используется DNS или TRR, в зависимости от того, что быстрее
  *		2 = Используется TRR по умолчанию, а DNS как запасной вариант
  *		3 = Используется только TRR
  *		4 = Гонка за статистикой, режим зеркалирования при котором TRR и DNS задействованы параллельно
- *		[ВНИМАНИЕ] DoH обходит хосты и предоставляет информацию еще одной стороне (например, Cloudflare). */
+ * [ВНИМАНИЕ] DoH обходит хосты и предоставляет информацию еще одной стороне (например, Cloudflare). */
 // user_pref("network.trr.mode", 0);
 // user_pref("network.trr.bootstrapAddress", "");
 // user_pref("network.trr.uri", "");
 
 /* Sites with autocomplete="off" attribute
- *		[NOTE] This function allows you to save the entered passwords in the password manager,
- *		even if the site owner has set the autocomplete attribute to "off".
+ * [NOTE] This function allows you to save the entered passwords in the password manager,
+ * even if the site owner has set the autocomplete attribute to "off".
  * Сайты с атрибутом автозаполнение "Отключено"
- *		[ЗАМЕТКА] Данная функция позволяет сохранять введенные пароли в менеджере паролей,
- *		даже если владелец сайта установил атрибуту автозаполнение значение "Отключено". */
+ * [ЗАМЕТКА] Данная функция позволяет сохранять введенные пароли в менеджере паролей,
+ * даже если владелец сайта установил атрибуту автозаполнение значение "Отключено". */
 user_pref("signon.storeWhenAutocompleteOff", true);
 
 /* Show (do not show) password when using alternative URL
@@ -1157,12 +1158,12 @@ user_pref("dom.popup_maximum", 3);
  *		0 = Never send "Referrer" header
  *		1 = Send "Referrer" header only when clicking on links and similar elements
  *		2 = Send to all requests (e.g. images, links, etc.)
- *		[WARNING] When you disable the transfer of this header, many sites will stop working.
+ * [WARNING] When you disable the transfer of this header, many sites will stop working.
  * Контроль отправляемой информации независимо от источника
  *		0 = Никогда не отправлять заголовок "Referrer"
  *		1 = Отправлять заголовок "Referrer" только при клике по ссылкам и подобным элементам
  *		2 = Отправить на все запросы (например, изображения, ссылки и т.д.)
- *		[ВНИМАНИЕ] При отключении отправки этого заголовка, многие сайты перестанут работать. */
+ * [ВНИМАНИЕ] При отключении отправки этого заголовка, многие сайты перестанут работать. */
 user_pref("network.http.sendRefererHeader", 2);
 
 /* Control the number of "Referrer" sent regardless of the source
@@ -1246,15 +1247,16 @@ user_pref("devtools.remote.wifi.scan", false);
 user_pref("network.tickle-wifi.enabled", false);
 
 /* File Handle API
- *		[NOTE] Responsible for accessing lower-level file operations.
- *		[ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям. */
+ * [NOTE] Responsible for accessing lower-level file operations.
+ * [ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям. */
 user_pref("dom.fileHandle.enabled", false);
 
 /* Device Storage API
- *		[NOTE] Responsible for access to the file system, this API allows the browser to
- *		read and/or write to the user's files.
- *		[ЗАМЕТКА] Отвечает за доступ к файловой системе, данный API позволяет браузеру самостоятельно
- *		читать и/или писать в файлах пользователя. */
+ * [NOTE] Responsible for access to the file system, this API allows the browser to
+ * read and/or write to the user's files.
+ * API хранилища устройств
+ * [ЗАМЕТКА] Отвечает за доступ к файловой системе, данный API позволяет браузеру самостоятельно
+ * читать и/или писать в файлах пользователя. */
 user_pref("device.storage.enabled", false);
 
 /* Automatic selection of the entire line in the address bar
@@ -1270,8 +1272,9 @@ user_pref("browser.urlbar.clickSelectsAll", false);
 user_pref("view_source.wrap_long_lines", true);
 
 /* Media Capabilities API
- *		[WARNING] This may affect media performance if disabled, no one is sure.
- *		[ВНИМАНИЕ] Это может повлиять на работу медиа, если отключен, никто не уверен. */
+ * [WARNING] This may affect media performance if disabled, no one is sure.
+ * API возможностей мультимедиа
+ * [ВНИМАНИЕ] Это может повлиять на работу медиа, если отключен, никто не уверен. */
 // user_pref("media.media-capabilities.enabled", false);
 
 /* Block unencrypted requests from Flash on encrypted pages to mitigate MitM attacks
@@ -1291,11 +1294,11 @@ user_pref("app.feedback.baseURL", "");
 user_pref("app.support.baseURL", "");
 
 /* CSS :visited selectors
- *		[ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
- *		which prevents the user from finding out what URLs the user has in the browser history.
+ * [ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
+ * which prevents the user from finding out what URLs the user has in the browser history.
  * CSS :visited селекторы
- *		[ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
- *		что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
+ * [ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
+ * что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
 user_pref("layout.css.visited_links_enabled", false);
 
 /* asm.js */
@@ -1343,3 +1346,8 @@ user_pref("urlclassifier.flashInfobarTable", "");
 /* Do not track network topology
  * Не отслеживать топологию сети */
 user_pref("network.notify.changed", false);
+
+/* DOMHighResTimeStamp API
+ * [WARNING] Required for normalization of timestamps and any timer resolution mitigations
+ * [ВНИМАНИЕ] Требуется для нормализации временных меток и любых смягчений разрешения таймера */
+user_pref("dom.event.highrestimestamp.enabled", true);
