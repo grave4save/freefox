@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/palemoon/
- * Last modified: December 4, 2018
+ * Last modified: December 5, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -397,6 +397,7 @@ user_pref("privacy.clearOnShutdown.history", true); // History ~ История
 user_pref("privacy.clearOnShutdown.offlineApps", false); // Offline website data ~ Данные автономных веб-сайтов
 user_pref("privacy.clearOnShutdown.sessions", true); // Active sessions ~ Активные сеансы
 user_pref("privacy.clearOnShutdown.siteSettings", false); // Site settings ~ Настройки сайтов
+user_pref("privacy.clearOnShutdown.connectivityData", true); // Данные о подключении к сайтам ~ Connection data to sites
 
 /* Master cleaner Pale Moon
  *		[NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
@@ -622,6 +623,7 @@ user_pref("browser.cache.offline.enable", false);
 /* Request to use the offline cache
  * Запрос на использование автономного кэша */
 user_pref("offline-apps.allow_by_default", false);
+user_pref("offline-apps.permissions", 1);
 
 /* Storing extra session data
  *		0 = Everywhere
@@ -1395,6 +1397,24 @@ user_pref("view_source.wrap_long_lines", true);
  * Адрес новой вкладке */
 user_pref("browser.newtab.url", "about:blank");
 
+/* When you open a new tab to show:
+ *		1 = Blank page (about:blank)
+ *		2 = Pale Moon start page (http://start.palemoon.org)
+ *		3 = Home page (about:home)
+ *		4 = Speed dial page (about:newtab)
+ * [NOTE] This preference is inherently useless, all this can be configured using the " browser.newtab.url."
+ * При открытии новой вкладки показывать:
+ *		1 = Пустую страницу (about:blank)
+ *		2 = Стартовую страницу Pale Moon (http://start.palemoon.org)
+ *		3 = Домашняя страница (about:home)
+ *		4 = Старница быстрого набора (about:newtab)
+ * [ЗАМЕТКА] Этот предпочтение по своей сути бесполезно, все это можно настроить при помощи "browser.newtab.url". */
+// user_pref("browser.newtab.choice", 3);
+
+/* Homepage address
+ * Адрес домашней страницы */
+user_pref("browser.newtab.myhome", "about:blank");
+
 /* Number of rows and columns of thumbnails displayed on the new page
  * Количество строк и колонок миниатюр, отображаемых на новой странице */
 user_pref("browser.newtabpage.rows", 3);
@@ -1462,8 +1482,8 @@ user_pref("browser.shell.skipDefaultBrowserCheckOnFirstRun", true);
  * URL справочного материала при медленном запуске */
  user_pref("browser.slowstartup.help.url", "");
  
-/* Closing Palemoon when closing the last tab
- * Закрытие Palemoon при закрытии последней вкладки */
+/* Close the Palemoon window when closing the last tab
+ * Закрывать окно Palemoon при закрытии последней вкладки */
 user_pref("browser.tabs.closeWindowWithLastTab", false);
 
 /* Private browsing mode
