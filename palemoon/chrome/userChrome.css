@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/palemoon/
- * Last modified: December 2, 2018
+ * Last modified: December 6, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: userChrome.css
@@ -54,8 +54,8 @@ height: 30px !important;
 font-size: 12px !important;
 }
 
-/* Removed blue and green on the address bar
- * Убран синий и зеленый на адресной строке */
+/* Removed blue and green edging in the address bar
+ * Убрана синяя и зеленая окантовка в адресной строке */
 #urlbar[https_color="all"][security_level="high"]:not(:-moz-lwtheme),
 #urlbar[https_color="secure-mixed"][security_level="high"]:not(:-moz-lwtheme),
 #urlbar[https_color="secure-only"][security_level="high"]:not(:-moz-lwtheme),
@@ -63,11 +63,12 @@ font-size: 12px !important;
 #urlbar[https_color="secure-mixed"][security_level="ev"]:not(:-moz-lwtheme),
 #urlbar[https_color="secure-only"][security_level="ev"]:not(:-moz-lwtheme)
 {
-box-shadow:  none!important;
+box-shadow: none!important;
 }
 
-/* Removed blue and green background on place of the certificate (in the address bar)
- * Убран синий и зеленый фон на месте сертификата (в адресной строке) */
+/* Removed the blue and green background on the right side of the address bar (on place of displaying
+ * information about the site and certificate)
+ * Убран синий и зеленый фон в правой части адресной строки (на месте отображения информации о сайте и сертификате) */
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity
 {
