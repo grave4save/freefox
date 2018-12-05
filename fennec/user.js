@@ -624,6 +624,7 @@ user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
 /* Tracking protection in all windows
  * [NOTE] When enabled, the load on the processor increases, plus any ad blocker can easily cope with
  * the blocking of trackers when subscribing to the corresponding filter lists.
+ * Защита слежения во всех окнах
  * [ЗАМЕТКА] При включении возрастает нагрузка на процессор, плюс ко всему с блокировкой трекеров
  * легко справляется любой блокировщик рекламы при подписки на соответсвующими списки фильтров. */
 user_pref("privacy.trackingprotection.enabled", false);
@@ -781,12 +782,12 @@ user_pref("security.mixed_content.block_active_content", true);
 user_pref("security.mixed_content.block_display_content", true);
 
 /* SPDY protocol
- * [WARNING] This protocol has a privacy problem protocol, use at your own risk.
+ * [WARNING] The protocol contains problems with privacy, it is best to disable.
  * Протокол SPDY
- * [ВНИМАНИЕ] Данный протокол имеет протокол проблемы с приватностью, используйте на свой страх и риск. */
-user_pref("network.http.spdy.enabled", true);
-user_pref("network.http.spdy.enabled.deps", true);
-user_pref("network.http.spdy.enabled.http2", true);
+ * [ВНИМАНИЕ] Протокол содержит проблемы с приватностью, лучше всего отключить. */
+// user_pref("network.http.spdy.enabled", false);
+// user_pref("network.http.spdy.enabled.deps", false);
+// user_pref("network.http.spdy.enabled.http2", false);
 
 /* WebGL (Web Graphics Library)
  * WebGL (Библиотека веб-графики) */
@@ -921,9 +922,7 @@ user_pref("security.OCSP.enabled", 1);
 user_pref("dom.battery.enabled", false);
 
 /* Virtual Reality API
- * [NOTE] Disables support for virtual reality devices.
- * API Виртуальной реальности
- * [ЗАМЕТКА] Отключает поддержку устройств виртуальной реальности. */
+ * API Виртуальной реальности*/
 user_pref("dom.vr.enabled", false);
 
 /* Enumerate multimedia devices
@@ -936,9 +935,9 @@ user_pref("media.navigator.enabled", false);
 // user_pref("layers.acceleration.disabled", true);
 
 /* Web Audio API
- * [WARNING] Dangerously, because can withdraw the sound fingerprints browser.
+ * [WARNING] Dangerously due to browser fingerprints.
  * API Веб-аудио
- * [ВНИМАНИЕ] Опасно, потому что можно снять звуковые отпечатки браузера. */
+ * [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера. */
 user_pref("dom.webaudio.enabled", false);
 
 /* Pointer Events
@@ -1248,6 +1247,7 @@ user_pref("network.tickle-wifi.enabled", false);
 
 /* File Handle API
  * [NOTE] Responsible for accessing lower-level file operations.
+ * API для обработки файлов
  * [ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям. */
 user_pref("dom.fileHandle.enabled", false);
 
@@ -1348,6 +1348,6 @@ user_pref("urlclassifier.flashInfobarTable", "");
 user_pref("network.notify.changed", false);
 
 /* DOMHighResTimeStamp API
- * [WARNING] Required for normalization of timestamps and any timer resolution mitigations
- * [ВНИМАНИЕ] Требуется для нормализации временных меток и любых смягчений разрешения таймера */
+ * [WARNING] Required for normalization of timestamps and any timer resolution mitigations.
+ * [ВНИМАНИЕ] Требуется для нормализации временных меток и любых смягчений разрешения таймера. */
 user_pref("dom.event.highrestimestamp.enabled", true);
