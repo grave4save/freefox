@@ -147,11 +147,7 @@ user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 user_pref("privacy.userContext.longPressBehavior", 0);
 
 /* Font size
- * [NOTE] The fonts below have a standard size, so they are commented out.
- * Don't change the size if you don't know what you're doing.
- * Размер шрифта
- * [ЗАМЕТКА] Шрифты ниже имеют стандартный размер, поэтому они закомментированы.
- * Не меняйте размер, если не знаете, что делаете. */
+ * Размер шрифта */
 // user_pref("font.size.fixed.x-cyrillic", 13);
 // user_pref("font.size.fixed.x-unicode", 13);
 // user_pref("font.size.fixed.x-western", 13);
@@ -212,11 +208,7 @@ user_pref("privacy.userContext.longPressBehavior", 0);
 // user_pref("font.size.variable.zh-TW", 16);
 
 /* Proportions (fonts)
- * [NOTE] The proportions given below are standard, so they are commented out.
- * Don't change the proportions if you don't know what you're doing.
- * Пропорции (шрифты)
- * [ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
- * Не изменяйте пропорции, если вы не знаете, что делаете. */
+ * Пропорции (шрифты) */
 // user_pref("font.default.ar", "sans-serif");
 // user_pref("font.default.el", "serif");
 // user_pref("font.default.he", "sans-serif");
@@ -1288,9 +1280,9 @@ user_pref("security.mixed_content.block_active_content", true);
 user_pref("security.mixed_content.block_display_content", true);
 
 /* SPDY protocol
- * [WARNING] The protocol contains problems with privacy, it is best to disable.
+ * [WARNING] SPDY can store an identifier and holds an extremely long open connection.
  * Протокол SPDY
- * [ВНИМАНИЕ] Протокол содержит проблемы с приватностью, лучше всего отключить. */
+ * [ВНИМАНИЕ] SPDY может хранить идентификатор и держит экстремально долгое открытое соединение. */
 // user_pref("network.http.spdy.enabled", false);
 // user_pref("network.http.spdy.enabled.deps", false);
 // user_pref("network.http.spdy.enabled.http2", false);
@@ -1576,7 +1568,12 @@ user_pref("security.tls.version.min", 3);
 user_pref("security.tls.version.max", 4);
 
 /* SSL session tracking
- * Отслеживание сеансов SSL */
+ * [NOTE] Disables sending Session Tickets (TLS) and Session Identifiers (SSL) - unique identifiers
+ * used to speed up the re-establishment of an encrypted connection, which can also be used to track a user. 
+ * Отслеживание сеансов SSL
+ * [ЗАМЕТКА] Отключает посылку Session Tickets (TLS) и Session Identifiers (SSL) - уникальных идентификаторов,
+ * применяемых для ускорения повторной установки шифрованного соединения, которые могут быть также использованы и
+ * для отслеживания пользователя. */
 user_pref("security.ssl.disable_session_identifiers", true);
 
 /* SSL Error Reporting
@@ -1970,3 +1967,11 @@ user_pref("network.notify.changed", false);
  * [WARNING] Required for normalization of timestamps and any timer resolution mitigations.
  * [ВНИМАНИЕ] Требуется для нормализации временных меток и любых смягчений разрешения таймера. */
 user_pref("dom.event.highrestimestamp.enabled", true);
+
+/* Allow websites to use their own fonts
+ *		0 = Block
+ *		1 = Allow
+ * Разрешить веб-сайтам использовать свои шрифты
+ *		0 = Заблокировать
+ *		1 = Разрешить */
+// user_pref("browser.display.use_document_fonts", 0);

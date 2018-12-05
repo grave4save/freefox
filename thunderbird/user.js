@@ -26,11 +26,7 @@
 user_pref("general.warnOnAboutConfig", false);
  
 /* Font size
- *		[NOTE] The fonts below have a standard size, so they are commented out.
- *		Don't change the size if you don't know what you're doing.
- * Размер шрифта
- *		[ЗАМЕТКА] Шрифты ниже имеют стандартный размер, поэтому они закомментированы.
- *		Не меняйте размер, если не знаете, что делаете. */
+ * Размер шрифта */
 // user_pref("font.size.fixed.x-cyrillic", 13);
 // user_pref("font.size.fixed.x-unicode", 13);
 // user_pref("font.size.fixed.x-western", 13);
@@ -91,11 +87,7 @@ user_pref("general.warnOnAboutConfig", false);
 // user_pref("font.size.variable.zh-TW", 16);
 
 /* Proportions (fonts)
- *		[NOTE] The proportions given below are standard, so they are commented out.
- *		Don't change the proportions if you don't know what you're doing.
- * Пропорции (шрифты)
- *		[ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
- *		Не изменяйте пропорции, если вы не знаете, что делаете. */
+ * Пропорции (шрифты) */
 // user_pref("font.default.ar", "sans-serif");
 // user_pref("font.default.el", "serif");
 // user_pref("font.default.he", "sans-serif");
@@ -127,16 +119,7 @@ user_pref("general.warnOnAboutConfig", false);
 // user_pref("font.default.zh-TW", "sans-serif");
 
 /* Default Fonts
- *		[NOTE] Instead of fonts DejaVu you can, for example, use Google fonts - Noto,
- *		but keep in mind that you must delete or comment out the DejaVu preferences.
- * Шрифты по умолчанию
- *		[ЗАМЕТКА] Вместо шрифтов DejaVu вы можете, например, использовать шрифты Google - Noto,
- *		но имейте в виду, что вы должны удалить или закомментировать настройки DejaVu. */
-
-user_pref("font.name.monospace.x-western", "DejaVu Sans Mono");
-user_pref("font.name.monospace.x-cyrillic", "DejaVu Sans Mono");
-user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
-
+ * Шрифты по умолчанию */
 // user_pref("font.name.serif.x-cyrillic", "Noto Serif");
 // user_pref("font.name.sans-serif.x-cyrillic", "Noto Sans");
 // user_pref("font.name.monospace.x-cyrillic", "Noto Mono");
@@ -332,9 +315,9 @@ user_pref("mail.SpellCheckBeforeSend", false);
 user_pref("mail.shell.checkDefaultClient", false);
 
 /* Master cleaner Thunderbird
- *		[NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
+ * [NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
  * Мастер очистки Thunderbird
- *		[ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
+ * [ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
 user_pref("privacy.cpd.cache", true); // Cache ~ Кэш
 user_pref("privacy.cpd.cookies", false); // Cookies ~ Куки
 user_pref("privacy.cpd.history", true); // History ~ История
@@ -396,9 +379,9 @@ user_pref("network.http.referer.XOriginPolicy", 1);
 user_pref("plugins.click_to_play", true);
 
 /* Require a valid OCSP response for OCSP enabled certificates
- *		[NOTE] When you turn on breaks some sites
+ * [NOTE] When you turn on breaks some sites
  * Требовать действительный ответ OCSP для сертификатов с поддержкой OCSP
- *		[ЗАМЕТКА] При включении ломается некоторые сайты */
+ * [ЗАМЕТКА] При включении ломается некоторые сайты */
 // user_pref("security.OCSP.require", true);
 
 /* Enumerate multimedia devices
@@ -422,9 +405,9 @@ user_pref("media.peerconnection.use_document_iceservers", false);
 user_pref("media.peerconnection.video.enabled", false);
 
 /* Web Audio API
- *		[WARNING] Dangerously, because can withdraw the sound fingerprints browser.
+ * [WARNING] Dangerously due to browser fingerprints.
  * API Веб-аудио
- *		[ВНИМАНИЕ] Опасно, потому что можно снять звуковые отпечатки браузера. */
+ * [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера. */
 user_pref("dom.webaudio.enabled", false);
 
 /* Sending video playback statistics
@@ -432,11 +415,7 @@ user_pref("dom.webaudio.enabled", false);
 user_pref("media.video_stats.enabled", false);
 
 /* Gamepad API
- *		[NOTE] Disables gamepad support, which can be used to obtain manufacturer and model IDs
- *		for gamepads connected to your computer.
- * API Геймпада
- *		[ЗАМЕТКА] Отключает поддержку геймпада, которое может быть использовано для получения
- *		идентификаторов производителя и модели подключенных к компьютеру геймпадов. */
+ * API Геймпада */
 user_pref("dom.gamepad.enabled", false);
 user_pref("dom.gamepad.extensions.enabled", false);
 user_pref("dom.gamepad.haptic_feedback.enabled", false);
@@ -477,7 +456,6 @@ user_pref("network.http.speculative-parallel-limit", 0);
  * Дополнительная аналитика, отправленная на веб-сервер */
 user_pref("beacon.enabled", false);
 
-
 /* Block dangerous and deceptive content (malware, phishing, dangerous downloads)
  * Блокировать опасное и обманывающее содержимое (вредоносные программы, фишинг, опасные загрузки) */
 user_pref("browser.safebrowsing.malware.enabled", false);
@@ -512,10 +490,10 @@ user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);
 user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
 
 /* Button "Ignore this warning" on the pages of safe browsing
- *		[NOTE] Useless for regular users, it's meant for admins on bigger network as a way to secure their users.
+ * [NOTE] Useless for regular users, it's meant for admins on bigger network as a way to secure their users.
  * Кнопка "Игнорировать это предупреждение" на страницах безопасного просмотра
- *		[ЗАМЕТКА] Бесполезный для обычных пользователей, он предназначен для администраторов в большей сети,
- *		как способ защитить своих пользователей. */
+ * [ЗАМЕТКА] Бесполезный для обычных пользователей, он предназначен для администраторов в большей сети,
+ * как способ защитить своих пользователей. */
 user_pref("browser.safebrowsing.allowOverride", false);
 
 /* Block known Flash trackers and fingerprints
@@ -594,11 +572,11 @@ user_pref("media.getusermedia.screensharing.enabled", false);
 /* Auto-play of HTML5 media
  *		TRUE = Allow
  *		FALSE = Block
- *		[WARNING] This may break video playback on various sites.
+ * [WARNING] This may break video playback on various sites.
  * Автоматическое воспроизведение мультимедиа в формате HTML5
  *		TRUE = Разрешить
  *		FALSE = Заблокировать
- *		[ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
+ * [ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
 user_pref("media.autoplay.enabled", false);
 
 /* Automatically play sound in inactive tabs
@@ -679,11 +657,11 @@ user_pref("browser.download.hide_plugins_without_extensions", false);
 user_pref("browser.download.forbid_open_with", true);
 
 /* Predictor (formerly Seer)
- *		[NOTE] This is a mechanism that stores the links between the hosts from
- *		which content is requested for a particular URL.
+ * [NOTE] This is a mechanism that stores the links between the hosts from
+ * which content is requested for a particular URL.
  * Предсказатель (бывший Seer)
- *		[ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
- *		с которых запрашивается контент для того или иного URL. */
+ * [ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
+ * с которых запрашивается контент для того или иного URL. */
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-prefetch", false);
 
@@ -703,9 +681,9 @@ user_pref("mail.taskbar.lists.tasks.enabled", false); // [WINDOWS]
 user_pref("network.dns.disableIPv6", true);
 
 /* Block allowed extension directories
- *		[WARNING] This will break extensions that do not use the default XPI directories.
+ * [WARNING] This will break extensions that do not use the default XPI directories.
  * Заблокировать разрешенные каталоги расширений
- *		[ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
+ * [ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
 user_pref("extensions.autoDisableScopes", 15);
 
 /* WebExtension Restrictions for Specific Mozilla Domains
@@ -748,12 +726,12 @@ user_pref("security.mixed_content.block_display_content", true);
 
 
 /* SPDY protocol
- *		[WARNING] This protocol has a privacy problem protocol, use at your own risk.
+ * [WARNING] SPDY can store an identifier and holds an extremely long open connection.
  * Протокол SPDY
- *		[ВНИМАНИЕ] Данный протокол имеет протокол проблемы с приватностью, используйте на свой страх и риск. */
-user_pref("network.http.spdy.enabled", true);
-user_pref("network.http.spdy.enabled.deps", true);
-user_pref("network.http.spdy.enabled.http2", true);
+ * [ВНИМАНИЕ] SPDY может хранить идентификатор и держит экстремально долгое открытое соединение. */
+// user_pref("network.http.spdy.enabled", true);
+// user_pref("network.http.spdy.enabled.deps", true);
+// user_pref("network.http.spdy.enabled.http2", true);
 
 /* WebGL (Web Graphics Library)
  * WebGL (Библиотека веб-графики) */
@@ -767,12 +745,12 @@ user_pref("network.http.spdy.enabled.http2", true);
 // user_pref("webgl.msaa-force", false);
 
 /* Service Workers
- *		[NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
- *		are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
- *		and resource requests, and caching resources.
- *		[ЗАМЕТКА] "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
- *		браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
- *		перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы. */
+ * [NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
+ * are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
+ * and resource requests, and caching resources.
+ * [ЗАМЕТКА] "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
+ * браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
+ * перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы. */
 user_pref("dom.serviceWorkers.enabled", false);
 
 /* Cookies for HTTP sites are set with the "secure" directive
@@ -784,11 +762,11 @@ user_pref("network.cookie.leave-secure-alone", true);
 user_pref("network.cookie.same-site.enabled", true);
 
 /* DOM (Document Object Model) Storage
- *		[WARNING] This will break a LOT of sites' functionality AND extensions.
- *		You are better off using an extension for more granular control.
+ * [WARNING] This will break a LOT of sites' functionality AND extensions.
+ * You are better off using an extension for more granular control.
  * Хранилище DOM (Объектная Модель Документа)
- *		[ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
- *		Вам лучше использовать расширение для более гранулированного контроля. */
+ * [ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
+ * Вам лучше использовать расширение для более гранулированного контроля. */
 user_pref("dom.storage.enabled", true);
 
 /* Warn showing red lock for "broken security"
@@ -807,9 +785,7 @@ user_pref("media.ondevicechange.enabled", false);
 user_pref("security.ssl.enable_ocsp_stapling", true);
 
 /* Sensor API
- *		[NOTE] Disables events from the accelerometer and other sensors.
- * API Сенсора
- *		[ЗАМЕТКА] Отключает события от акселерометра и других сенсоров. */
+ * API Сенсора */
 user_pref("device.sensors.enabled", false);
 
 /* CSP (Content Security Policy)
@@ -829,9 +805,7 @@ user_pref("security.csp.enable_violation_events", false);
 user_pref("security.OCSP.enabled", 1);
 
 /* Virtual Reality API
- *		[NOTE] Disables support for virtual reality devices.
- * API Виртуальной реальности
- *		[ЗАМЕТКА] Отключает поддержку устройств виртуальной реальности. */
+ * API Виртуальной реальности */
 user_pref("dom.vr.enabled", false);
 
 /* Pointer Events
@@ -839,11 +813,11 @@ user_pref("dom.vr.enabled", false);
 user_pref("dom.w3c_pointer_events.enabled", false);
 
 /* CSS :visited selectors
- *		[ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
- *		which prevents the user from finding out what URLs the user has in the browser history.
+ * [ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
+ * which prevents the user from finding out what URLs the user has in the browser history.
  * CSS :visited селекторы
- *		[ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
- *		что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
+ * [ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
+ * что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
 user_pref("layout.css.visited_links_enabled", false);
 
 /* Cookie
@@ -871,12 +845,27 @@ user_pref("network.cookie.lifetimePolicy", 0);
 user_pref("browser.tabs.closeWindowWithLastTab", false);
 
 /* Preferred language for displaying web pages
- * Предпочитаемый язык для отображения веб-страниц */
-// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en"); // It is recommended to select only english locales ~ Рекомендуется выбрать только английские локали
+ * [NOTE] It is recommended to select only english locales.
+ * Предпочитаемый язык для отображения веб-страниц
+ * [ЗАМЕТКА] Рекомендуется выбрать только английские языки. */
+// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en");
 
 /* In "about:addons" remove the item "Get add-ons"
- *		[WARNING] Uses Google Analytics.
+ * [WARNING] Uses Google Analytics.
  * В "about:addons" убрать пункт "Получить дополнения"
- *		[ВНИМАНИЕ] Использует Google Analytics. */
+ * [ВНИМАНИЕ] Использует Google Analytics. */
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.webservice.discoverURL", "");
+
+/* Allow websites to use their own fonts
+ *		0 = Block
+ *		1 = Allow
+ * Разрешить веб-сайтам использовать свои шрифты
+ *		0 = Заблокировать
+ *		1 = Разрешить */
+// user_pref("browser.display.use_document_fonts", 0);
+
+/* DOMHighResTimeStamp API
+ * [WARNING] Required for normalization of timestamps and any timer resolution mitigations.
+ * [ВНИМАНИЕ] Требуется для нормализации временных меток и любых смягчений разрешения таймера. */
+user_pref("dom.event.highrestimestamp.enabled", true);

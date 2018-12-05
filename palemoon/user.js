@@ -163,11 +163,7 @@ user_pref("browser.tabs.loadDivertedInBackground", true);
 // user_pref("font.size.variable.zh-TW", 15);
 
 /* Proportions (fonts)
- * [NOTE] The proportions given below are standard, so they are commented out.
- * Don't change the proportions if you don't know what you're doing.
- * Пропорции (шрифты)
- * [ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
- * Не изменяйте пропорции, если вы не знаете, что делаете. */
+ * Пропорции (шрифты) */
 // user_pref("font.default.ar", "sans-serif");
 // user_pref("font.default.el", "serif");
 // user_pref("font.default.he", "sans-serif");
@@ -905,9 +901,9 @@ user_pref("security.mixed_content.block_active_content", true);
 user_pref("security.mixed_content.block_display_content", true);
 
 /* SPDY protocol
- *		[WARNING] This protocol has a privacy problem protocol, use at your own risk.
+ * [WARNING] SPDY can store an identifier and holds an extremely long open connection.
  * Протокол SPDY
- *		[ВНИМАНИЕ] Данный протокол имеет протокол проблемы с приватностью, используйте на свой страх и риск. */
+ * [ВНИМАНИЕ] SPDY может хранить идентификатор и держит экстремально долгое открытое соединение. */
 // user_pref("network.http.spdy.enabled", true);
 // user_pref("network.http.spdy.enabled.deps", true);
 // user_pref("network.http.spdy.enabled.http2", true);
@@ -1513,3 +1509,11 @@ user_pref("toolkit.telemetry.debugSlowSql", false);
  * [WARNING] Required for normalization of timestamps and any timer resolution mitigations.
  * [ВНИМАНИЕ] Требуется для нормализации временных меток и любых смягчений разрешения таймера. */
 user_pref("dom.event.highrestimestamp.enabled", true);
+
+/* Allow websites to use their own fonts
+ *		0 = Block
+ *		1 = Allow
+ * Разрешить веб-сайтам использовать свои шрифты
+ *		0 = Заблокировать
+ *		1 = Разрешить */
+// user_pref("browser.display.use_document_fonts", 0);
