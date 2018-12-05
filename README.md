@@ -26,6 +26,9 @@ Download the entire VirginFox project at https://github.com/bogachenko/virginfox
 
 This project is aimed at eliminating security and privacy issues, as well as removing useless and annoying elements in browsers Firefox, Fennec (Firefox for mobile), Pale Moon, Waterfox and Thunderbird email client.
 
+# Download:
+Download the project can be on the link <https://github.com/bogachenko/virginfox/archive/master.zip>.
+
 ## Third Party Content
 * <https://github.com/pyllyukko/user.js>
 * <https://github.com/ghacksuserjs/ghacks-user.js>

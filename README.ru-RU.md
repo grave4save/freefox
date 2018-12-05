@@ -26,6 +26,9 @@ Download the entire VirginFox project at https://github.com/bogachenko/virginfox
 
 Этот проект направлен на устранение проблем безопасности и конфиденциальности, а так же удаление безполезных и раздражающих элементов у браузеров Firefox, Fennec (Firefox for mobile), Pale Moon, Waterfox и почтового клиента Thunderbird.
 
+# Download:
+Скачать проект можно по ссылке <https://github.com/bogachenko/virginfox/archive/master.zip>.
+
 ## Сторонний контент
 * <https://github.com/pyllyukko/user.js>
 * <https://github.com/ghacksuserjs/ghacks-user.js>
