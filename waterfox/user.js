@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/waterfox/
- * Last modified: December 5, 2018
+ * Last modified: December 6, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -821,3 +821,166 @@ user_pref("accessibility.force_disabled", 1);
 /* Additional analytics sent to the web server
  * Дополнительная аналитика, отправленная на веб-сервер */
 user_pref("beacon.enabled", false);
+
+/* Deleting temporary files opened by an external application
+ * Удаление временных файлов, открытые внешним приложением */
+user_pref("browser.helperApps.deleteTempFileOnExit", true);
+
+/* Web Speech
+ * Веб-речь */
+user_pref("media.webspeech.synth.enabled", false);
+user_pref("media.webspeech.recognition.enable", false);
+
+/* Sending video playback statistics
+ * Отправка статистики воспроизведения видео */
+user_pref("media.video_stats.enabled", false);
+
+/* Activity Stream */
+user_pref("browser.library.activity-stream.enabled", false)
+
+/* Block dangerous and deceptive content (malware, phishing, dangerous downloads)
+ * Блокировать опасное и обманывающее содержимое (вредоносные программы, фишинг, опасные загрузки) */
+user_pref("browser.safebrowsing.downloads.enabled", false);
+user_pref("browser.safebrowsing.malware.enabled", false);
+user_pref("browser.safebrowsing.phishing.enabled", false);
+
+/* Warning about unwanted and rarely downloaded programs
+ * Предупреждение о нежелательных и редко загружаемых программах */
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous", false);
+user_pref("browser.safebrowsing.downloads.remote.block_dangerous_host", false);
+user_pref("browser.safebrowsing.downloads.remote.block_potentially_unwanted", false);
+user_pref("browser.safebrowsing.downloads.remote.block_uncommon", false);
+
+/* Tracking protection in all windows
+ * [NOTE] When enabled, the load on the processor increases, plus any ad blocker can easily cope with
+ * the blocking of trackers when subscribing to the corresponding filter lists.
+ * Защита слежения во всех окнах
+ * [ЗАМЕТКА] При включении возрастает нагрузка на процессор, плюс ко всему с блокировкой трекеров
+ * легко справляется любой блокировщик рекламы при подписки на соответсвующими списки фильтров. */
+user_pref("privacy.trackingprotection.enabled", false);
+user_pref("privacy.trackingprotection.pbmode.enabled", false);
+user_pref("privacy.trackingprotection.introURL", "");
+user_pref("privacy.trackingprotection.annotate_channels", false);
+user_pref("privacy.trackingprotection.lower_network_priority", false);
+
+/* DOM forms
+ * DOM формы */
+user_pref("dom.forms.datetime", false);
+user_pref("dom.forms.datetime.others", false);
+user_pref("dom.forms.datetime.timepicker", false);
+
+/* Types of content
+ * Типы содержимого */
+user_pref("gecko.handlerService.schemes.mailto.0.name", "");
+user_pref("gecko.handlerService.schemes.mailto.0.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.mailto.1.name", "");
+user_pref("gecko.handlerService.schemes.mailto.1.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.mailto.2.name", "");
+user_pref("gecko.handlerService.schemes.mailto.2.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.mailto.3.name", "");
+user_pref("gecko.handlerService.schemes.mailto.3.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.0.name", "");
+user_pref("gecko.handlerService.schemes.webcal.0.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.1.name", "");
+user_pref("gecko.handlerService.schemes.webcal.1.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.2.name", "");
+user_pref("gecko.handlerService.schemes.webcal.2.uriTemplate", "");
+user_pref("gecko.handlerService.schemes.webcal.3.name", "");
+user_pref("gecko.handlerService.schemes.webcal.3.uriTemplate", "");
+
+/* Crash Reporter related information
+ * Crash Reporter связанная информация */
+user_pref("toolkit.crashreporter.infoURL", "");
+
+/* Send Flash crash reports
+ * Отправка отчетов о сбоях Flash */
+user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
+
+/* Submitting the URL of the website where the plug-in crashed
+ * Отправка URL-адреса веб-сайта, где произошел сбой плагина */
+user_pref("dom.ipc.plugins.reportCrashURL", false);
+
+/* Onboarding
+ * [WARNING] Onboarding uses Google Analytics and leaks resource://URIs.
+ * Введение
+ * [ВНИМАНИЕ] Введение использует Google Analytics содержит утечки resource://URIs. */
+user_pref("browser.onboarding.enabled", false);
+
+/* Forms autofill
+ * [NOTE] Stored data is NOT secure (uses a JSON file).
+ * Heuristics controls Form Autofill on forms without @autocomplete attributes.
+ * Формы автозаполнения
+ * [ЗАМЕТКА] Хранимые данные не защищены (использует файл JSON).
+ * Эвристика контролирует заполнение форм в формах без @autocomplete атрибутов. */
+user_pref("extensions.formautofill.addresses.enabled", false);
+user_pref("extensions.formautofill.available", "off");
+user_pref("extensions.formautofill.creditCards.enabled", false);
+user_pref("extensions.formautofill.heuristics.enabled", false);
+
+/* How often Firefox should ask for a master password
+ *		0 = The first time
+ *		1 = Every time it's needed
+ *		2 = Every "N" minutes
+ * Как часто Firefox должен запрашивать мастер-пароль
+ *		0 = Первый раз
+ *		1 = Каждый раз, когда это необходимо
+ *		2 = Каждые "N" минут */
+user_pref("security.ask_for_password", 2);
+
+/* How often (within how many minutes) Firefox should ask for a master password
+ * Как часто (в течение скольки минут) Firefox должен запрашивать мастер-пароль */
+user_pref("security.password_lifetime", 5);
+
+/* Auto-complete user name and password
+ * Aвтоматическое заполнение имени пользователя и пароля */
+user_pref("signon.autofillForms", false);
+user_pref("signon.autofillForms.http", false);
+user_pref("security.insecure_field_warning.contextual.enabled", true); // Message at login: "This connection is not secure" ~ Сообщение при вводе логина: "Это соединение не защищено"
+
+/* Smooth scrolling
+ * Плавная прокрутка */
+user_pref("general.smoothScroll", false);
+
+/* Automatic update themes
+ * Автоматическое обновление тем */
+user_pref("lightweightThemes.update.enabled", false);
+
+/* Experiments
+ * Эксперименты */
+user_pref("network.allow-experiments", false);
+
+/* Web Compatibility Reporter
+ * Отправка отчетов о совместимости с Интернетом */
+user_pref("extensions.webcompat-reporter.enabled", false);
+user_pref("extensions.webcompat-reporter.newIssueEndpoint", "");
+
+/* Favicons in shortcuts
+ * [NOTE] URL shortcuts use a cached randomly named .ico file which is stored in your shortcutCache directory.
+ * The .ico remains after the shortcut is deleted. If set to "false" then the shortcuts use a generic Firefox icon.
+ * Значки на ярлыках
+ * [ЗАМЕТКА] В ярлыках URL используется кешированный файл с произвольным именем .ico,
+ * который хранится в вашем каталоге shortcutCache. Файл .ico остается после удаления ярлыка.
+ * Если установлено значение "false", в ярлыках используется общий значок Firefox. */
+user_pref("browser.shell.shortcutFavicons", false);
+
+/* Favicons in web notifications
+ * Значки в веб-уведомлениях */
+user_pref("alerts.showFavicons", false);
+
+/* Path to save files
+ *		0 = Desktop
+ *		1 = Downloads
+ *		2 = Last used folder
+ * Путь для сохранения файлов
+ *		0 = Рабочий стол
+ *		1 = Загрузки
+ *		2 = Последняя используемая папка */
+user_pref("browser.download.folderList", 2);
+
+/* Request to save files
+ * Запрос на сохранение файлов */
+user_pref("browser.download.useDownloadDir", false);
+
+/* Adding downloads to the list of recent system documents
+ * Добавление загрузок в список последних документов системы */
+user_pref("browser.download.manager.addToRecentDocs", false);
