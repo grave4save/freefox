@@ -248,16 +248,7 @@ user_pref("privacy.userContext.longPressBehavior", 0);
 // user_pref("font.default.zh-TW", "sans-serif");
 
 /* Default Fonts
- * [NOTE] Instead of fonts DejaVu you can, for example, use Google fonts - Noto,
- * but keep in mind that you must delete or comment out the DejaVu preferences.
- * Шрифты по умолчанию
- * [ЗАМЕТКА] Вместо шрифтов DejaVu вы можете, например, использовать шрифты Google - Noto,
- * но имейте в виду, что вы должны удалить или закомментировать настройки DejaVu. */
-
-user_pref("font.name.monospace.x-western", "DejaVu Sans Mono");
-user_pref("font.name.monospace.x-cyrillic", "DejaVu Sans Mono");
-user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
-
+ * Шрифты по умолчанию */
 // user_pref("font.name.serif.x-cyrillic", "Noto Serif");
 // user_pref("font.name.sans-serif.x-cyrillic", "Noto Sans");
 // user_pref("font.name.monospace.x-cyrillic", "Noto Mono");
@@ -1315,13 +1306,7 @@ user_pref("pdfjs.enableWebGL", false);
 // user_pref("webgl.min_capability_mode", true);
 // user_pref("webgl.msaa-force", false);
 
-/* Service Workers
- * [NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
- * are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
- * and resource requests, and caching resources.
- * [ЗАМЕТКА] "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
- * браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
- * перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы. */
+/* Service Workers */
 user_pref("dom.serviceWorkers.enabled", false);
 
 /* Cookies for HTTP sites are set with the "secure" directive
@@ -1413,9 +1398,7 @@ user_pref("dom.enable_performance_navigation_timing", false);
 user_pref("dom.enable_performance_observer", false);
 
 /* Sensor API
- * [NOTE] Disables events from the accelerometer and other sensors.
- * API Сенсора
- * [ЗАМЕТКА] Отключает события от акселерометра и других сенсоров. */
+ * API Сенсора */
 user_pref("device.sensors.enabled", false);
  
 /* CSP (Content Security Policy)

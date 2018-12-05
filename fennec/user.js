@@ -799,13 +799,7 @@ user_pref("security.mixed_content.block_display_content", true);
 // user_pref("webgl.min_capability_mode", true);
 // user_pref("webgl.msaa-force", false);
 
-/* Service Workers
- * [NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
- * are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
- * and resource requests, and caching resources.
- * [ЗАМЕТКА] "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
- * браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
- * перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы. */
+/* Service Workers */
 user_pref("dom.serviceWorkers.enabled", false);
 
 /* Cookies for HTTP sites are set with the "secure" directive
@@ -890,9 +884,7 @@ user_pref("dom.enable_performance_navigation_timing", false);
 user_pref("dom.enable_performance_observer", false);
 
 /* Sensor API
- * [NOTE] Disables events from the accelerometer and other sensors.
- * API Сенсора
- * [ЗАМЕТКА] Отключает события от акселерометра и других сенсоров. */
+ * API Сенсора */
 user_pref("device.sensors.enabled", false);
 
 /* CSP (Content Security Policy)

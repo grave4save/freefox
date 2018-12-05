@@ -163,11 +163,11 @@ user_pref("browser.tabs.loadDivertedInBackground", true);
 // user_pref("font.size.variable.zh-TW", 15);
 
 /* Proportions (fonts)
- *		[NOTE] The proportions given below are standard, so they are commented out.
- *		Don't change the proportions if you don't know what you're doing.
+ * [NOTE] The proportions given below are standard, so they are commented out.
+ * Don't change the proportions if you don't know what you're doing.
  * Пропорции (шрифты)
- *		[ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
- *		Не изменяйте пропорции, если вы не знаете, что делаете. */
+ * [ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
+ * Не изменяйте пропорции, если вы не знаете, что делаете. */
 // user_pref("font.default.ar", "sans-serif");
 // user_pref("font.default.el", "serif");
 // user_pref("font.default.he", "sans-serif");
@@ -199,16 +199,7 @@ user_pref("browser.tabs.loadDivertedInBackground", true);
 // user_pref("font.default.zh-TW", "sans-serif");
 
 /* Default Fonts
- *    [NOTE] Instead of fonts DejaVu you can, for example, use Google fonts - Noto,
- *    but keep in mind that you must delete or comment out the DejaVu preferences.
- * Шрифты по умолчанию
- *    [ЗАМЕТКА] Вместо шрифтов DejaVu вы можете, например, использовать шрифты Google - Noto,
- *    но имейте в виду, что вы должны удалить или закомментировать настройки DejaVu. */
-
-user_pref("font.name.monospace.x-western", "DejaVu Sans Mono");
-user_pref("font.name.monospace.x-cyrillic", "DejaVu Sans Mono");
-user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
-
+ * Шрифты по умолчанию */
 // user_pref("font.name.serif.x-cyrillic", "Noto Serif");
 // user_pref("font.name.sans-serif.x-cyrillic", "Noto Sans");
 // user_pref("font.name.monospace.x-cyrillic", "Noto Mono");
@@ -299,8 +290,10 @@ user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
 // user_pref("font.language.group", "x-western");
 
 /* Preferred language for displaying web pages
- * Предпочитаемый язык для отображения веб-страниц */
-// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en"); // It is recommended to select only english locales ~ Рекомендуется выбрать только английские локали
+ * [NOTE] It is recommended to select only english locales.
+ * Предпочитаемый язык для отображения веб-страниц
+ * [ЗАМЕТКА] Рекомендуется выбрать только английские языки. */
+// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en");
 
 /* Automatic check for updates for extensions
  * Автоматическая проверка обновлений для расширений */
@@ -339,9 +332,9 @@ user_pref("browser.search.update", false);
 user_pref("browser.search.suggest.enabled", false);
 
 /* In "about:addons" remove the item "Get add-ons"
- *		[WARNING] Uses Google Analytics.
+ * [WARNING] Uses Google Analytics.
  * В "about:addons" убрать пункт "Получить дополнения"
- *		[ВНИМАНИЕ] Использует Google Analytics. */
+ * [ВНИМАНИЕ] Использует Google Analytics. */
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.webservice.discoverURL", "");
 
@@ -400,9 +393,9 @@ user_pref("privacy.clearOnShutdown.siteSettings", false); // Site settings ~ Н�
 user_pref("privacy.clearOnShutdown.connectivityData", true); // Данные о подключении к сайтам ~ Connection data to sites
 
 /* Master cleaner Pale Moon
- *		[NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
+ * [NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
  * Мастер очистки Pale Moon
- *		[ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
+ * [ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
 user_pref("privacy.cpd.cache", true); // Cache ~ Кэш
 user_pref("privacy.cpd.cookies", false); // Cookies ~ Куки
 user_pref("privacy.cpd.downloads", true); // Downloads ~ Загрузки
@@ -457,11 +450,11 @@ user_pref("media.getusermedia.audiocapture.enabled", false);
 /* Auto-play of HTML5 media
  *		TRUE = Allow
  *		FALSE = Block
- *		[WARNING] This may break video playback on various sites.
+ * [WARNING] This may break video playback on various sites.
  * Автоматическое воспроизведение мультимедиа в формате HTML5
  *		TRUE = Разрешить
  *		FALSE = Заблокировать
- *		[ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
+ * [ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
 user_pref("media.autoplay.default", true);
 
 /* Automatically play sound in inactive tabs
@@ -496,7 +489,7 @@ user_pref("browser.search.geoSpecificDefaults", false);
 
 /* Install only signed extensions
  * Установка только подписанных расширений */
-user_pref("xpinstall.signatures.required", true); // Require signing extensions ~ Требовать подписание расширений
+user_pref("xpinstall.signatures.required", true);
 
 /* Add-on installation delay
  * Задержка при установке дополнений */
@@ -573,11 +566,11 @@ user_pref("services.sync.engine.tabs", false);
 user_pref("services.sync.engine.addresses", false);
 
 /* Cache API (Cache storage)
- *		[NOTE] It is a repository on the user's computer where scripts can store information.
- *		It is part of the "Service Workers" specification, but can be used without them.
+ * [NOTE] It is a repository on the user's computer where scripts can store information.
+ * It is part of the "Service Workers" specification, but can be used without them.
  * API Кэша (Хранилище кэша)
- *		[ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
- *		Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
+ * [ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
+ * Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
 user_pref("dom.caches.enabled", false);
 
 /* Web notifications
@@ -676,9 +669,9 @@ user_pref("dom.indexedDB.logging.enabled", false);
 user_pref("dom.indexedDB.logging.profiler-marks", false);
 
 /* Storage API
- *		[NOTE] Disables another way for sites to store their data on the user's personal computer.
+ * [NOTE] Disables another way for sites to store their data on the user's personal computer.
  * API Хранилища
- *		[ЗАМЕТКА]Отключает еще один способ для сайтов хранить свои данные на персональном компьютере пользователя. */
+ * [ЗАМЕТКА]Отключает еще один способ для сайтов хранить свои данные на персональном компьютере пользователя. */
 user_pref("dom.storageManager.enabled", false);
 
 /* Limit events that can trigger a pop-up
@@ -707,9 +700,11 @@ user_pref("media.webspeech.recognition.enable", false);
 user_pref("media.video_stats.enabled", false);
 
 /* Tracking protection in all windows
- *		[NOTE] When enabled, the processor load increases, and the same uBlock Origin does well with this
+ * [NOTE] When enabled, the load on the processor increases, plus any ad blocker can easily cope with
+ * the blocking of trackers when subscribing to the corresponding filter lists.
  * Защита слежения во всех окнах
- *		[ЗАМЕТКА] При включении возрастает нагрузка на процессор, к тому же с этим хорошо справляется тот же uBlock Origin */
+ * [ЗАМЕТКА] При включении возрастает нагрузка на процессор, плюс ко всему с блокировкой трекеров
+ * легко справляется любой блокировщик рекламы при подписки на соответсвующими списки фильтров. */
 // user_pref("privacy.trackingprotection.enabled", true);
 // user_pref("privacy.trackingprotection.pbmode.enabled", true);
 
@@ -779,12 +774,12 @@ user_pref("lightweightThemes.update.enabled", false);
 user_pref("network.allow-experiments", false);
 
 /* Favicons in shortcuts
- *		[NOTE] URL shortcuts use a cached randomly named .ico file which is stored in your shortcutCache directory.
- *		The .ico remains after the shortcut is deleted. If set to "false" then the shortcuts use a generic Pale Moon icon.
+ * [NOTE] URL shortcuts use a cached randomly named .ico file which is stored in your shortcutCache directory.
+ * The .ico remains after the shortcut is deleted. If set to "false" then the shortcuts use a generic Pale Moon icon.
  * Значки на ярлыках
- *		[ЗАМЕТКА] В ярлыках URL используется кешированный файл с произвольным именем .ico,
- *		который хранится в вашем каталоге shortcutCache. Файл .ico остается после удаления ярлыка.
- *		Если установлено значение "false", в ярлыках используется общий значок Pale Moon. */
+ * [ЗАМЕТКА] В ярлыках URL используется кешированный файл с произвольным именем .ico,
+ * который хранится в вашем каталоге shortcutCache. Файл .ico остается после удаления ярлыка.
+ * Если установлено значение "false", в ярлыках используется общий значок Pale Moon. */
 user_pref("browser.shell.shortcutFavicons", false);
 
 /* Favicons in web notifications
@@ -818,11 +813,11 @@ user_pref("browser.download.hide_plugins_without_extensions", false);
 user_pref("browser.download.forbid_open_with", true);
 
 /* Predictor (formerly Seer)
- *		[NOTE] This is a mechanism that stores the links between the hosts from
- *		which content is requested for a particular URL.
+ * [NOTE] This is a mechanism that stores the links between the hosts from
+ * which content is requested for a particular URL.
  * Предсказатель (бывший Seer)
- *		[ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
- *		с которых запрашивается контент для того или иного URL. */
+ * [ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
+ * с которых запрашивается контент для того или иного URL. */
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-prefetch", false);
 
@@ -856,9 +851,9 @@ user_pref("browser.taskbar.previews.enable", false); // [WINDOWS]
 user_pref("network.dns.disableIPv6", true);
 
 /* Block allowed extension directories
- *		[WARNING] This will break extensions that do not use the default XPI directories.
+ * [WARNING] This will break extensions that do not use the default XPI directories.
  * Заблокировать разрешенные каталоги расширений
- *		[ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
+ * [ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
 user_pref("extensions.autoDisableScopes", 15);
 
 /* Warn when websites try to install add-ons
@@ -913,9 +908,9 @@ user_pref("security.mixed_content.block_display_content", true);
  *		[WARNING] This protocol has a privacy problem protocol, use at your own risk.
  * Протокол SPDY
  *		[ВНИМАНИЕ] Данный протокол имеет протокол проблемы с приватностью, используйте на свой страх и риск. */
-user_pref("network.http.spdy.enabled", true);
-user_pref("network.http.spdy.enabled.deps", true);
-user_pref("network.http.spdy.enabled.http2", true);
+// user_pref("network.http.spdy.enabled", true);
+// user_pref("network.http.spdy.enabled.deps", true);
+// user_pref("network.http.spdy.enabled.http2", true);
 
 /* WebGL (Web Graphics Library)
  * WebGL (Библиотека веб-графики) */
@@ -928,13 +923,7 @@ user_pref("network.http.spdy.enabled.http2", true);
 // user_pref("webgl.min_capability_mode", true);
 // user_pref("webgl.msaa-force", false);
 
-/* Service Workers
- *		[NOTE] "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
- *		are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
- *		and resource requests, and caching resources.
- *		[ЗАМЕТКА] "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
- *		браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
- *		перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы. */
+/* Service Workers */
 user_pref("dom.serviceWorkers.enabled", false);
 user_pref("dom.serviceWorkers.testUpdateOverOneDay", false);
 
@@ -943,11 +932,11 @@ user_pref("dom.serviceWorkers.testUpdateOverOneDay", false);
 user_pref("network.cookie.leave-secure-alone", true);
 
 /* DOM (Document Object Model) Storage
- *		[WARNING] This will break a LOT of sites' functionality AND extensions.
- *		You are better off using an extension for more granular control.
+ * [WARNING] This will break a LOT of sites' functionality AND extensions.
+ * You are better off using an extension for more granular control.
  * Хранилище DOM (Объектная Модель Документа)
- *		[ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
- *		Вам лучше использовать расширение для более гранулированного контроля. */
+ * [ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
+ * Вам лучше использовать расширение для более гранулированного контроля. */
 user_pref("dom.storage.enabled", true);
 
 /* Warn showing red lock for "broken security"
@@ -988,9 +977,7 @@ user_pref("dom.enable_performance_observer", false);
 user_pref("dom.enable_performance_navigation_timing", false);
 
 /* Sensor API
- *		[NOTE] Disables events from the accelerometer and other sensors.
- * API Сенсора
- *		[ЗАМЕТКА] Отключает события от акселерометра и других сенсоров. */
+ * API Сенсора */
 user_pref("device.sensors.enabled", false);
 
 /* CSP (Content Security Policy)
@@ -1010,18 +997,16 @@ user_pref("security.csp.experimentalEnabled", false);
 user_pref("security.OCSP.enabled", 1);
 
 /* Require a valid OCSP response for OCSP enabled certificates
- *		[NOTE] When you turn on breaks some sites.
+ * [NOTE] When you turn on breaks some sites.
  * Требовать действительный ответ OCSP для сертификатов с поддержкой OCSP
- *		[ЗАМЕТКА] При включении ломается некоторые сайты. */
+ * [ЗАМЕТКА] При включении ломается некоторые сайты. */
 // user_pref("security.OCSP.require", true);
 
 /* Battery Status API */
 user_pref("dom.battery.enabled", false);
 
 /* Virtual Reality API
- *		[NOTE] Disables support for virtual reality devices.
- * API Виртуальной реальности
- *		[ЗАМЕТКА] Отключает поддержку устройств виртуальной реальности. */
+ * API Виртуальной реальности */
 user_pref("dom.vr.enabled", false);
 
 /* Hardware acceleration
@@ -1032,9 +1017,9 @@ user_pref("dom.vr.enabled", false);
 // user_pref("layers.prefer-d3d9", false); // [WINDOWS];
 
 /* Web Audio API
- *		[WARNING] Dangerously, because can withdraw the sound fingerprints browser.
+ * [WARNING] Dangerously due to browser fingerprints.
  * API Веб-аудио
- *		[ВНИМАНИЕ] Опасно, потому что можно снять звуковые отпечатки браузера. */
+ * [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера. */
 user_pref("dom.webaudio.enabled", false);
 
 /* Pointer Events
@@ -1042,9 +1027,9 @@ user_pref("dom.webaudio.enabled", false);
 user_pref("dom.w3c_pointer_events.enabled", false);
 
 /* Saving zoom for sites
- *		[WARNING] Dangerously due to browser fingerprints.
+ * [WARNING] Dangerously due to browser fingerprints.
  * Сохранение масштаба для сайтов
- *		[ВНИМАНИЕ] Опасно, из-за отпечатков браузера. */
+ * [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера. */
 user_pref("browser.zoom.siteSpecific", false);
 
 /* Gamepad API
@@ -1091,7 +1076,7 @@ user_pref("dom.imagecapture.enabled", false);
 
 /* Tabs on top
  * Вкладки сверху */
-user_pref("rowser.tabs.onTop", true);
+user_pref("browser.tabs.onTop", true);
 
 /* OffscreenCanvas */
 user_pref("gfx.offscreencanvas.enabled", false);
@@ -1102,17 +1087,17 @@ user_pref("network.http.altsvc.enabled", false);
 user_pref("network.http.altsvc.oe", false);
 
 /* Access the URL of the PAC scripts
- *		[NOTE] The path and URL request components "https://" are deleted.
+ * [NOTE] The path and URL request components "https://" are deleted.
  * Доступ к URL-адресу у PAC скриптов
- *		[ЗАМЕТКА] Компоненты пути и запроса URL-адресов "https://" удаляются. */
+ * [ЗАМЕТКА] Компоненты пути и запроса URL-адресов "https://" удаляются. */
 user_pref("network.proxy.autoconfig_url.include_path", false);
 
 /* Sites with autocomplete="off" attribute
- *		[NOTE] This function allows you to save the entered passwords in the password manager,
- *		even if the site owner has set the autocomplete attribute to "off".
+ * [NOTE] This function allows you to save the entered passwords in the password manager,
+ * even if the site owner has set the autocomplete attribute to "off".
  * Сайты с атрибутом автозаполнение "Отключено"
- *		[ЗАМЕТКА] Данная функция позволяет сохранять введенные пароли в менеджере паролей,
- *		даже если владелец сайта установил атрибуту автозаполнение значение "Отключено". */
+ * [ЗАМЕТКА] Данная функция позволяет сохранять введенные пароли в менеджере паролей,
+ * даже если владелец сайта установил атрибуту автозаполнение значение "Отключено". */
 user_pref("signon.storeWhenAutocompleteOff", true);
 
 /* Show (do not show) password when using alternative URL
@@ -1234,12 +1219,12 @@ user_pref("dom.popup_maximum", 3);
  *		0 = Never send "Referrer" header
  *		1 = Send "Referrer" header only when clicking on links and similar elements
  *		2 = Send to all requests (e.g. images, links, etc.)
- *		[WARNING] When you disable the transfer of this header, many sites will stop working.
+ * [WARNING] When you disable the transfer of this header, many sites will stop working.
  * Контроль отправляемой информации независимо от источника
  *		0 = Никогда не отправлять заголовок "Referrer"
  *		1 = Отправлять заголовок "Referrer" только при клике по ссылкам и подобным элементам
  *		2 = Отправить на все запросы (например, изображения, ссылки и т.д.)
- *		[ВНИМАНИЕ] При отключении отправки этого заголовка, многие сайты перестанут работать. */
+ * [ВНИМАНИЕ] При отключении отправки этого заголовка, многие сайты перестанут работать. */
 user_pref("network.http.sendRefererHeader", 2);
 
 /* Control the number of "Referrer" sent regardless of the source
@@ -1326,31 +1311,33 @@ user_pref("devtools.webide.widget.enabled", false);
 user_pref("devtools.webide.widget.inNavbarByDefault", false);
 
 /* User Timing API
- *		[NOTE] Responsible for access to the high-frequency timer, which can be used to listen to the processor cache
- *		from unprivileged JS-code.
- *		[ЗАМЕТКА] Отвечает за доступ к высокочастотному таймеру, который можно использовать для прослушивания кэша
- *		процессора из непривилегированного JS-кода. */
+ * [NOTE] Responsible for access to the high-frequency timer, which can be used to listen to the processor cache
+ * from unprivileged JS-code.
+ *[ЗАМЕТКА] Отвечает за доступ к высокочастотному таймеру, который можно использовать для прослушивания кэша
+ * процессора из непривилегированного JS-кода. */
 user_pref("dom.enable_user_timing", false);
 user_pref("dom.performance.enable_user_timing_logging", false);
 
 /* File Handle API
- *		[NOTE] Responsible for accessing lower-level file operations.
- *		[ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям. */
+ * [NOTE] Responsible for accessing lower-level file operations.
+ * API для обработки файлов
+ * [ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям. */
 user_pref("dom.fileHandle.enabled", false);
 
 /* FlyWeb API
- *		[NOTE] Responsible for discovering and connecting directly to various electronic devices that provide Web APIs such as TVs,
- *		projectors, smart home elements and game consoles, without accessing intermediate cloud services.
- *		[ЗАМЕТКА] Отвечает за обнаружение и прямое соединение с различными электронными устройствами,
- *		предоставляющими Web API, такими как телевизоры, проекторы, элементы умного дома и игровые консоли,
- *		без обращения к промежуточным облачным сервисам. */
+ * [NOTE] Responsible for discovering and connecting directly to various electronic devices that provide Web APIs such as TVs,
+ * projectors, smart home elements and game consoles, without accessing intermediate cloud services.
+ * [ЗАМЕТКА] Отвечает за обнаружение и прямое соединение с различными электронными устройствами,
+ * предоставляющими Web API, такими как телевизоры, проекторы, элементы умного дома и игровые консоли,
+ * без обращения к промежуточным облачным сервисам. */
 user_pref("dom.flyweb.enabled", false);
 
 /* Device Storage API
- *		[NOTE] Responsible for access to the file system, this API allows the browser to
- *		read and/or write to the user's files.
- *		[ЗАМЕТКА] Отвечает за доступ к файловой системе, данный API позволяет браузеру самостоятельно
- *		читать и/или писать в файлах пользователя. */
+ * [NOTE] Responsible for access to the file system, this API allows the browser to
+ * read and/or write to the user's files.
+ * API хранилища устройств
+ * [ЗАМЕТКА] Отвечает за доступ к файловой системе, данный API позволяет браузеру самостоятельно
+ * читать и/или писать в файлах пользователя. */
 user_pref("device.storage.enabled", false);
 
 /* Windows Store launch links on Windows 8/8.1/10
@@ -1445,19 +1432,19 @@ user_pref("app.feedback.baseURL", "");
 user_pref("app.support.baseURL", "");
 
 /* Manual URL
- *		[NOTE] This preference determines the address that the user can view to update the browser manually
- *		if an application update has failed.
+ * [NOTE] This preference determines the address that the user can view to update the browser manually
+ * if an application update has failed.
  * URL мануала
- *		[ЗАМЕТКА] Это предпочтение определяет адрес, который пользователь может просмотреть для обновления браузера вручную,
- *		если обновление приложения потерпело неудачу. */
+ * [ЗАМЕТКА] Это предпочтение определяет адрес, который пользователь может просмотреть для обновления браузера вручную,
+ * если обновление приложения потерпело неудачу. */
 user_pref("app.update.url.details", "");
 
 /* CSS :visited selectors
- *		[ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
- *		which prevents the user from finding out what URLs the user has in the browser history.
+ * [ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
+ * which prevents the user from finding out what URLs the user has in the browser history.
  * CSS :visited селекторы
- *		[ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
- *		что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
+ * [ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
+ * что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
 user_pref("layout.css.visited_links_enabled", false);
 
 /* Exceptions for add-ons that slow down your browser
@@ -1469,9 +1456,9 @@ user_pref("browser.addon-watch.ignore", "");
 user_pref("browser.offline-apps.notify", true);
 
 /* Button "Know Your Rights"
- *		[NOTE] Displayed on first run.
+ * [NOTE] Displayed on first run.
  * Кнопка "Знай свои права"
- *		[ЗАМЕТКА] Отображается при первом запуске */
+ * [ЗАМЕТКА] Отображается при первом запуске */
 user_pref("browser.rights.3.shown", true);
 
 /* Show notifications about check default browser when you first open
@@ -1521,3 +1508,8 @@ user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("toolkit.telemetry.infoURL", "");
 user_pref("toolkit.telemetry.enabled", false);
 user_pref("toolkit.telemetry.debugSlowSql", false);
+
+/* DOMHighResTimeStamp API
+ * [WARNING] Required for normalization of timestamps and any timer resolution mitigations.
+ * [ВНИМАНИЕ] Требуется для нормализации временных меток и любых смягчений разрешения таймера. */
+user_pref("dom.event.highrestimestamp.enabled", true);
