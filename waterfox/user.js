@@ -984,3 +984,57 @@ user_pref("browser.download.useDownloadDir", false);
 /* Adding downloads to the list of recent system documents
  * Добавление загрузок в список последних документов системы */
 user_pref("browser.download.manager.addToRecentDocs", false);
+
+/* Hiding MIME types
+ * Скрытие типов MIME */
+user_pref("browser.download.hide_plugins_without_extensions", false);
+
+/* Show the "Open with" dialog box in the download window
+ * Показ диалогового окна "Открыть при помощи" в окне загрузки */
+user_pref("browser.download.forbid_open_with", true);
+
+/* Predictor (formerly Seer)
+ * [NOTE] This is a mechanism that stores the links between the hosts from
+ * which content is requested for a particular URL.
+ * Предсказатель (бывший Seer)
+ * [ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
+ * с которых запрашивается контент для того или иного URL. */
+user_pref("network.predictor.enabled", false);
+user_pref("network.predictor.enable-hover-on-ssl", false);
+user_pref("network.predictor.enable-prefetch", false);
+user_pref("network.predictor.prefetch-rolling-load-count", 0);
+
+/* Automatic preload pages when you hover over links
+ * Автоматическая предзагрузка страниц при наведении курсора на ссылки */
+user_pref("network.http.speculative-parallel-limit", 0);
+
+/* Search from address panel
+ * Поиск из панели адреса */
+// user_pref("keyword.enabled", false);
+
+/* Displays all parts of the URL in the address bar
+ * Отображения всех части URL-адреса в строке адреса */
+user_pref("browser.urlbar.trimURLs", false);
+
+/* Display JavaScript in history URLs
+ * Отображение JavaScript в URLs истории */
+user_pref("browser.urlbar.filter.javascript", true);
+
+/* Display search suggestions when using the address bar
+ * Отображать поисковые предложения при использовании панели адреса */
+user_pref("browser.urlbar.suggest.searches", false);
+user_pref("browser.urlbar.userMadeSearchSuggestionsChoice", true);
+
+/* Adding sites from Alexa Top 500 to the address bar auto-complete list
+ * Добавление сайтов из Alexa Top 500 в список автозаполнения адресной строки */
+user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
+
+/* Windows jumplist */
+user_pref("browser.taskbar.lists.enabled", false); // [WINDOWS]
+user_pref("browser.taskbar.lists.frequent.enabled", false); // [WINDOWS]
+user_pref("browser.taskbar.lists.recent.enabled", false); // [WINDOWS]
+user_pref("browser.taskbar.lists.tasks.enabled", false); // [WINDOWS]
+
+/* Display thumbnails of tabs on the taskbar
+ * Отображать эскизы вкладок на панели задач */
+user_pref("browser.taskbar.previews.enable", false); // [WINDOWS]
