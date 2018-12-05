@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/waterfox/
- * Last modified: December 4, 2018
+ * Last modified: December 5, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -747,3 +747,84 @@ user_pref("browser.cache.disk_cache_ssl", false);
  *		0 = Отключить
  *		-1 = Автоматически */
 user_pref("browser.sessionhistory.max_total_viewers", 0);
+
+/* Session Recovery Service for windows and tabs
+ * Служба восстановления сеанса для окон и вкладок */
+user_pref("browser.sessionstore.max_tabs_undo", 10);
+user_pref("browser.sessionstore.max_windows_undo", 10);
+
+/* Offline cache
+ * Автономный кэш */
+user_pref("browser.cache.offline.enable", false);
+user_pref("browser.cache.offline.capacity", 0);
+
+/* Request to use the offline cache
+ * Запрос на использование автономного кеша */
+user_pref("offline-apps.allow_by_default", false);
+
+/* Storing extra session data
+ *		0 = Everywhere
+ *		1 = Unencrypted sites
+ *		2 = Nowhere
+ * Сохранение дополнительных данных сеанса
+ *		0 = Везде
+ *		1 = Незашифрованные сайты
+ *		2 = Нигде */
+user_pref("browser.sessionstore.privacy_level", 2);
+
+/* Resume session after crash
+ * Возобновление сеанса после сбоя */
+user_pref("browser.sessionstore.resume_from_crash", false);
+
+/* Interval between saving sessions
+ * Интервал между сохранением сеансов */
+user_pref("browser.sessionstore.interval", 60000);
+
+/* Cookies
+ *		0 = Accept cookies and site data
+ *		1 = Block third-party cookies
+ *		2 = Block all cookies
+ *		3 = Block cookies from sites not visited
+ * Куки
+ *		0 = Принимать куки и данные сайтов
+ *		1 = Блокировать стороннии куки
+ *		2 = Блокировать все куки
+ *		3 = Блокировать куки с не посещенных сайтов */
+user_pref("network.cookie.cookieBehavior", 1);
+
+/* Third-party cookies are set for the session only
+ * Сторонние файлы куки устанавливаются только для сеанса */
+user_pref("network.cookie.thirdparty.sessionOnly", true);
+
+/* Сookie lifetime policy
+ *		0 = Save them before expiration
+ *		2 = Save them until close Firefox
+ * Политика жизни куки
+ *		0 = Сохранять их до истечения срока действия
+ *		2 = Сохранять их до закрытия Firefox */
+user_pref("network.cookie.lifetimePolicy", 0);
+
+/* Indexed database API
+ * API Индексированных баз данных */
+user_pref("dom.indexedDB.enabled", true);
+user_pref("dom.indexedDB.experimental", false);
+user_pref("dom.indexedDB.logging.details", false);
+user_pref("dom.indexedDB.logging.enabled", false);
+
+/* Storage API
+ * [NOTE] Disables another way for sites to store their data on the user's personal computer.
+ * API Хранилища
+ * [ЗАМЕТКА] Отключает еще один способ для сайтов хранить свои данные на персональном компьютере пользователя. */
+user_pref("dom.storageManager.enabled", false);
+
+/* Limit events that can trigger a pop-up
+ * Ограничения событий, которые могут вызвать всплывающее окно */
+user_pref("dom.popup_allowed_events", "click dblclick");
+
+/* Special services (accessibility support services)
+ * Специальные услуги (службы поддержки доступности) */
+user_pref("accessibility.force_disabled", 1);
+
+/* Additional analytics sent to the web server
+ * Дополнительная аналитика, отправленная на веб-сервер */
+user_pref("beacon.enabled", false);
