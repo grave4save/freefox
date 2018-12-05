@@ -1,28 +1,28 @@
 <!--
-This file is part of the MozBackup project,
+This file is part of the VirginFox project,
 Copyright (c) 2018 Bogachenko Vyacheslav
 
-MozBackup is a free project: you can distribute it and/or modify
+VirginFox is a free project: you can distribute it and/or modify
 it in accordance with the MIT license published by the Massachusetts Institute of Technology.
 
-The MozBackup project is distributed in the hope that it will be useful,
+The VirginFox project is distributed in the hope that it will be useful,
 and is provided "AS IS", WITHOUT ANY WARRANTY, EXPRESSLY EXPRESSED OR IMPLIED.
 WE ARE NOT RESPONSIBLE FOR ANY DAMAGES DUE TO THE USE OF THIS PROJECT OR ITS PARTS.
 For more information, see the MIT license.
 
 Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 Email: bogachenkove@gmail.com
-Github: https://github.com/bogachenko/mozbackup/
-Last modified: December 2, 2018
-License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
-Problem reports: https://github.com/bogachenko/mozbackup/issues
+Github: https://github.com/bogachenko/virginfox/
+Last modified: December 6, 2018
+License: MIT <https://github.com/bogachenko/virginfox/blob/master/LICENSE.md>
+Problem reports: https://github.com/bogachenko/virginfox/issues
 Title: README.md
-URL: https://github.com/bogachenko/mozbackup/blob/master/README.md
+URL: https://github.com/bogachenko/virginfox/blob/master/README.md
 
-Download the entire MozBackup project at https://github.com/bogachenko/mozbackup/archive/master.zip -->
+Download the entire VirginFox project at https://github.com/bogachenko/virginfox/archive/master.zip -->
 
-# MozBackup
-[![Build Status](https://travis-ci.org/bogachenko/mozbackup.svg?branch=master)](https://travis-ci.org/bogachenko/mozbackup)
+# VirginFox
+[![Build Status](https://travis-ci.org/bogachenko/virginfox.svg?branch=master)](https://travis-ci.org/bogachenko/virginfox)
 
 Template archive user.js and userChrome.css to ensure the security and privacy of browsers: Firefox, Fennec (Firefox for mobile), Pale Moon, Waterfox and email client Thunderbird
 
