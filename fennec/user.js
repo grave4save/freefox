@@ -348,8 +348,8 @@ user_pref("toolkit.telemetry.unified", false);
 user_pref("toolkit.telemetry.debugSlowSql", false);
 user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 
-/* Firefox health report
- * Отчет о состоянии здоровья Firefox */
+/* Fennec health report
+ * Отчет о состоянии здоровья Fennec */
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 
 /* Crash reports
@@ -387,8 +387,8 @@ user_pref("privacy.firstparty.isolate", true);
  * Ограничение изоляции первой стороны */
 user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
 
-/* Firefox Fingerprints
- * Отпечатки пальцев Firefox */
+/* Fennec Fingerprints
+ * Отпечатки пальцев Fennec */
 user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
 
@@ -560,10 +560,10 @@ user_pref("network.cookie.thirdparty.nonsecureSessionOnly", true);
 
 /* Сookie lifetime policy
  *		0 = Save them before expiration
- *		2 = Save them until close Firefox
+ *		2 = Save them until close Fennec
  * Политика жизни куки
  *		0 = Сохранять их до истечения срока действия
- *		2 = Сохранять их до закрытия Firefox */
+ *		2 = Сохранять их до закрытия Fennec */
 user_pref("network.cookie.lifetimePolicy", 0);
 
 /* Indexed database API
@@ -647,18 +647,18 @@ user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
  * Отправка URL-адреса веб-сайта, где произошел сбой плагина */
 user_pref("dom.ipc.plugins.reportCrashURL", false);
 
-/* How often Firefox should ask for a master password
+/* How often Fennec should ask for a master password
  *		0 = The first time
  *		1 = Every time it's needed
  *		2 = Every "N" minutes
- * Как часто Firefox должен запрашивать мастер-пароль
+ * Как часто Fennec должен запрашивать мастер-пароль
  *		0 = Первый раз
  *		1 = Каждый раз, когда это необходимо
  *		2 = Каждые "N" минут */
 user_pref("security.ask_for_password", 2);
 
-/* How often (within how many minutes) Firefox should ask for a master password
- * Как часто (в течение скольки минут) Firefox должен запрашивать мастер-пароль */
+/* How often (within how many minutes) Fennec should ask for a master password
+ * Как часто (в течение скольки минут) Fennec должен запрашивать мастер-пароль */
 user_pref("security.password_lifetime", 5);
 
 /* Auto-complete user name and password

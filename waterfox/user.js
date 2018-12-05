@@ -47,8 +47,8 @@ user_pref("general.platform.override", "Win32");
 user_pref("general.oscpu.override", "Windows NT 6.1");
 // user_pref("general.useragent.locale", "en-US");
 
-/* Check if Firefox is your default browser
- * Проверять, является ли Firefox вашим браузером по умолчанию */
+/* Check if Waterfox is your default browser
+ * Проверять, является ли Waterfox вашим браузером по умолчанию */
 user_pref("browser.shell.checkDefaultBrowser", false);
 
 /* Opening pages "Welcome and what's new?"
@@ -137,11 +137,11 @@ user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 user_pref("privacy.userContext.longPressBehavior", 0);
 
 /* Font size
- *		[NOTE] The fonts below have a standard size, so they are commented out.
- *		Don't change the size if you don't know what you're doing.
+ * [NOTE] The fonts below have a standard size, so they are commented out.
+ * Don't change the size if you don't know what you're doing.
  * Размер шрифта
- *		[ЗАМЕТКА] Шрифты ниже имеют стандартный размер, поэтому они закомментированы.
- *		Не меняйте размер, если не знаете, что делаете. */
+ * [ЗАМЕТКА] Шрифты ниже имеют стандартный размер, поэтому они закомментированы.
+ * Не меняйте размер, если не знаете, что делаете. */
 // user_pref("font.size.fixed.x-cyrillic", 13);
 // user_pref("font.size.fixed.x-unicode", 13);
 // user_pref("font.size.fixed.x-western", 13);
@@ -202,11 +202,11 @@ user_pref("privacy.userContext.longPressBehavior", 0);
 // user_pref("font.size.variable.zh-TW", 16);
 
 /* Proportions (fonts)
- *		[NOTE] The proportions given below are standard, so they are commented out.
- *		Don't change the proportions if you don't know what you're doing.
+ * [NOTE] The proportions given below are standard, so they are commented out.
+ * Don't change the proportions if you don't know what you're doing.
  * Пропорции (шрифты)
- *		[ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
- *		Не изменяйте пропорции, если вы не знаете, что делаете. */
+ * [ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
+ * Не изменяйте пропорции, если вы не знаете, что делаете. */
 // user_pref("font.default.ar", "sans-serif");
 // user_pref("font.default.el", "serif");
 // user_pref("font.default.he", "sans-serif");
@@ -238,16 +238,7 @@ user_pref("privacy.userContext.longPressBehavior", 0);
 // user_pref("font.default.zh-TW", "sans-serif");
 
 /* Default Fonts
- *		[NOTE] Instead of fonts DejaVu you can, for example, use Google fonts - Noto,
- *		but keep in mind that you must delete or comment out the DejaVu preferences.
- * Шрифты по умолчанию
- *		[ЗАМЕТКА] Вместо шрифтов DejaVu вы можете, например, использовать шрифты Google - Noto,
- *		но имейте в виду, что вы должны удалить или закомментировать настройки DejaVu. */
-
-user_pref("font.name.monospace.x-western", "DejaVu Sans Mono");
-user_pref("font.name.monospace.x-cyrillic", "DejaVu Sans Mono");
-user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
-
+ * Шрифты по умолчанию */
 // user_pref("font.name.serif.x-cyrillic", "Noto Serif");
 // user_pref("font.name.sans-serif.x-cyrillic", "Noto Sans");
 // user_pref("font.name.monospace.x-cyrillic", "Noto Mono");
@@ -338,15 +329,17 @@ user_pref("font.name.monospace.x-unicode", "DejaVu Sans Mono");
 // user_pref("font.language.group", "x-western");
 
 /* Preferred language for displaying web pages
- * Предпочитаемый язык для отображения веб-страниц */
-// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en"); // It is recommended to select only english locales ~ Рекомендуется выбрать только английские локали
+ * [NOTE] It is recommended to select only english locales.
+ * Предпочитаемый язык для отображения веб-страниц
+ * [ЗАМЕТКА] Рекомендуется выбрать только английские языки. */
+// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en");
 
 /* Automatic check for updates for extensions
  * Автоматическая проверка обновлений для расширений */
 user_pref("extensions.update.enabled", false);
 
-/* Automatic installation of updates for Firefox
- * Автоматическая установка обновлений для Firefox */
+/* Automatic installation of updates for Waterfox
+ * Автоматическая установка обновлений для Waterfox */
 user_pref("app.update.auto", false);
 
 /* Automatic installation of updates for extensions
@@ -374,9 +367,9 @@ user_pref("browser.search.update", false);
 user_pref("browser.search.suggest.enabled", false);
 
 /* In "about:addons" remove the item "Get add-ons"
- *		[WARNING] Uses Google Analytics.
+ * [WARNING] Uses Google Analytics.
  * В "about:addons" убрать пункт "Получить дополнения"
- *		[ВНИМАНИЕ] Использует Google Analytics. */
+ * [ВНИМАНИЕ] Использует Google Analytics. */
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.webservice.discoverURL", "");
 
@@ -425,8 +418,8 @@ user_pref("browser.formfill.expire_days", 0);
  * Автоматическое удаление истории при закрытии браузера */
 user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 
-/* What elements of the story should be automatically deleted when you close Firefox
- * Какие элементы истории должны быть автоматически удалены при закрытии Firefox */
+/* What elements of the story should be automatically deleted when you close Waterfox
+ * Какие элементы истории должны быть автоматически удалены при закрытии Waterfox */
 user_pref("privacy.clearOnShutdown.cache", true); // Cache ~ Кэш
 user_pref("privacy.clearOnShutdown.cookies", false);// Cookies ~ Куки
 user_pref("privacy.clearOnShutdown.downloads", true); // Downloads ~ Загрузки
@@ -436,10 +429,10 @@ user_pref("privacy.clearOnShutdown.offlineApps", false); // Offline website data
 user_pref("privacy.clearOnShutdown.sessions", true); // Active sessions ~ Активные сеансы
 user_pref("privacy.clearOnShutdown.siteSettings", false); // Site settings ~ Настройки сайтов
 
-/* Master cleaner Firefox
- *		[NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
- * Мастер очистки Firefox
- *		[ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
+/* Master cleaner Waterfox
+ * [NOTE] This dialog window is invoked by hotkeys - Ctrl + Shift + Del.
+ * Мастер очистки Waterfox
+ * [ЗАМЕТКА] Это диалоговое окно вызывается горячими клавишами - Ctrl + Shift + Del. */
 user_pref("privacy.cpd.cache", true); // Cache ~ Кэш
 user_pref("privacy.cpd.cookies", false); // Cookies ~ Куки
 user_pref("privacy.cpd.downloads", true); // Downloads ~ Загрузки
@@ -477,7 +470,7 @@ user_pref("browser.tabs.loadBookmarksInTabs", true);
 user_pref("browser.tabs.loadBookmarksInBackground", true);
 
 /* "Backspace" button value
- *  0 = Previous page
+ *		0 = Previous page
  *		1 = Scroll page up
  *		2 = Do nothing
  * Значение кнопки "Backspace"
@@ -515,11 +508,11 @@ user_pref("media.getusermedia.screensharing.enabled", false);
 /* Automatic HTML5 media playback
  *		TRUE = Allow
  *		FALSE = Block
- *		[WARNING] This may break video playback on various sites.
+ * [WARNING] This may break video playback on various sites.
  * Автоматическое воспроизведение мультимедиа в формате HTML5
  *		TRUE = Разрешить
  *		FALSE = Заблокировать
- *		[ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
+ * [ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах. */
 // user_pref("media.autoplay.enabled", false);
 
 /* Automatically play sound in inactive tabs
@@ -584,8 +577,8 @@ user_pref("intl.regional_prefs.use_os_locales", false);
 user_pref("privacy.firstparty.isolate", true);
 user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
 
-/* Firefox Fingerprints
- * Отпечатки пальцев Firefox */
+/* Waterfox Fingerprints
+ * Отпечатки пальцев Waterfox */
 user_pref("privacy.resistFingerprinting", true);
 
 /* Recommended themes
@@ -709,11 +702,11 @@ user_pref("services.sync.engine.prefs.modified", false);
 user_pref("services.sync.engine.tabs", false);
 
 /* Cache API (Cache storage)
- *		[NOTE] It is a repository on the user's computer where scripts can store information.
- *		It is part of the "Service Workers" specification, but can be used without them.
+ * [NOTE] It is a repository on the user's computer where scripts can store information.
+ * It is part of the "Service Workers" specification, but can be used without them.
  * API Кэша (Хранилище кэша)
- *		[ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
- *		Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
+ * [ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
+ * Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
 user_pref("dom.caches.enabled", false);
 
 /* Web notifications
@@ -798,10 +791,10 @@ user_pref("network.cookie.thirdparty.sessionOnly", true);
 
 /* Сookie lifetime policy
  *		0 = Save them before expiration
- *		2 = Save them until close Firefox
+ *		2 = Save them until close Waterfox
  * Политика жизни куки
  *		0 = Сохранять их до истечения срока действия
- *		2 = Сохранять их до закрытия Firefox */
+ *		2 = Сохранять их до закрытия Waterfox */
 user_pref("network.cookie.lifetimePolicy", 0);
 
 /* Indexed database API
