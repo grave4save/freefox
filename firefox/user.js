@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/mozbackup/tree/master/firefox/
- * Last modified: December 5, 2018
+ * Last modified: December 6, 2018
  * License: MIT <https://github.com/bogachenko/mozbackup/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/mozbackup/issues
  * Title: user.js
@@ -1091,7 +1091,8 @@ user_pref("security.password_lifetime", 5);
 /* Auto-complete user name and password
  * Aвтоматическое заполнение имени пользователя и пароля */
 user_pref("signon.autofillForms", false);
-user_pref("security.insecure_field_warning.contextual.enabled", true);
+user_pref("signon.autofillForms.http", false);
+user_pref("security.insecure_field_warning.contextual.enabled", true); // Message at login: "This connection is not secure" ~ Сообщение при вводе логина: "Это соединение не защищено"
 
 /* Smooth scrolling
  * Плавная прокрутка */
