@@ -691,6 +691,7 @@ user_pref("browser.download.forbid_open_with", true);
  * [ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
  * с которых запрашивается контент для того или иного URL. */
 user_pref("network.predictor.enabled", false);
+user_pref("network.predictor.cleaned-up", true);
 user_pref("network.predictor.enable-hover-on-ssl", false);
 user_pref("network.predictor.enable-prefetch", false);
 user_pref("network.predictor.prefetch-rolling-load-count", 0);
@@ -1343,3 +1344,32 @@ user_pref("dom.event.highrestimestamp.enabled", true);
  *		0 = Заблокировать
  *		1 = Разрешить */
 // user_pref("browser.display.use_document_fonts", 0);
+
+/* UserAgent */
+user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
+user_pref("general.buildID.override", "20100101");
+user_pref("general.useragent.updates.lastupdated", "");
+user_pref("general.appname.override", "Netscape");
+user_pref("general.appversion.override", "5.0 (Windows)");
+user_pref("general.platform.override", "Win32");
+user_pref("general.oscpu.override", "Windows NT 6.1");
+// user_pref("general.useragent.locale", "en-US");
+
+/* Fullscreen web surfing
+ * [NOTE] Hide the Firefox panel while scrolling down the page.
+ * Полноэкранный веб-серфинг
+ * [ЗАМЕТКА] Скрытие панели Firefox при прокрутке страницы вниз. */
+user_pref("browser.chrome.dynamictoolbar", false);
+
+/* Remote debugging
+ * Удаленная отладка */
+user_pref("devtools.debugger.remote-enabled", true);
+user_pref("devtools.remote.usb.enabled", true);
+
+/* The mode of home provider syncing
+ *		0 = Sync always
+ *		1 = Sync only when using Wi-Fi
+ * Режим синхронизации внутреннего поставщика
+ *		0 = Синхронизация всегда
+ *		1 = Синхронизация только при использовании Wi-Fi */
+ pref("home.sync.updateMode", 0);
