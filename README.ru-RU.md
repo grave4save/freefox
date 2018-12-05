@@ -24,7 +24,7 @@ Download the entire VirginFox project at https://github.com/bogachenko/virginfox
 # VirginFox
 [![Build Status](https://travis-ci.org/bogachenko/virginfox.svg?branch=master)](https://travis-ci.org/bogachenko/virginfox)
 
-Архив шаблонов user.js и userChrome.css для обеспечения безопасности и конфиденциальности браузеров: Firefox, Fennec (Firefox for mobile), Pale Moon, Waterfox и почтового клиента Thunderbird
+Этот проект направлен на устранение проблем безопасности и конфиденциальности, а так же удаление безполезных и раздражающих элементов у браузеров Firefox, Fennec (Firefox for mobile), Pale Moon, Waterfox и почтового клиента Thunderbird.
 
 ## Сторонний контент
 * <https://github.com/pyllyukko/user.js>
