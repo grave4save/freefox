@@ -26,13 +26,13 @@
 /* Unnecessary items in the menu
  * Ненужные элементы в меню */
 
-#menu_openHelp, /* Button «Help» on the menu bar Waterfox ~ Кнопка «Справки» на панели меню Waterfox */
-#menu_keyboardShortcuts, /* «Keyboard shortcut» button on the Waterfox menu bar ~ Кнопка «Сочетание клавиш» на панели меню Waterfox */
-#menu_HelpPopup_reportPhishingtoolmenu, /* Button "Keyboard shortcut" on the menu bar Waterfox ~ Кнопка «Сообщить о поддельном сайте (фишинг)» на панели меню Waterfox */
-#PanelUI-helpItems [oncommand="openHelpLink('firefox-help')"], /* «Help» button in the Waterfox menu ~ Кнопка «Справки» в меню Waterfox */
-#PanelUI-helpItems [oncommand="openHelpLink('keyboard-shortcuts')"], /* «Keyboard shortcut» button in the Waterfox menu ~ Кнопка «Сочетание клавиш» в меню Waterfox */
-#PanelUI-helpItems [oncommand="openUILink(gSafeBrowsing.getReportURL('Phish'), event);"], /* Button "Keyboard shortcut" in the menu Waterfox ~ Кнопка «Сообщить о поддельном сайте (фишинг)» в меню Waterfox */
-menuseparator /* «Separators» on the menu bar Waterfox ~ «Разделители» на панели меню Waterfox */
+#menu_openHelp, /* Button "Help" on the menu bar Waterfox ~ Кнопка "Справки" на панели меню Waterfox */
+#menu_keyboardShortcuts, /* "Keyboard shortcut" button on the Waterfox menu bar ~ Кнопка "Сочетание клавиш" на панели меню Waterfox */
+#menu_HelpPopup_reportPhishingtoolmenu, /* Button "Keyboard shortcut" on the menu bar Waterfox ~ Кнопка "Сообщить о поддельном сайте (фишинг)" на панели меню Waterfox */
+#PanelUI-helpItems [oncommand="openHelpLink('firefox-help')"], /* "Help" button in the Waterfox menu ~ Кнопка "Справки" в меню Waterfox */
+#PanelUI-helpItems [oncommand="openHelpLink('keyboard-shortcuts')"], /* "Keyboard shortcut" button in the Waterfox menu ~ Кнопка "Сочетание клавиш" в меню Waterfox */
+#PanelUI-helpItems [oncommand="openUILink(gSafeBrowsing.getReportURL('Phish'), event);"], /* Button "Keyboard shortcut" in the menu Waterfox ~ Кнопка "Сообщить о поддельном сайте (фишинг)" в меню Waterfox */
+menuseparator /* "Separators" on the menu bar Waterfox ~ "Разделители" на панели меню Waterfox */
 {
     display: none!important
 }

@@ -33,15 +33,15 @@
 /* Unnecessary items in the menu
  * Ненужные элементы в меню */
 
-#menu_openHelp, /* «Help» button in the Thunderbird menu ~ Кнопка «Справки» в меню Thunderbird */
-#whatsNew, /* Button «What's new?» on the Thunderbird menu bar ~ Кнопка «Что нового?» на панели меню Thunderbird */
-#releaseNotes, /* «Release notes» button on the Thunderbird menu bar ~ Кнопка «Примечания к выпуску» на панели меню Thunderbird */
-#appmenu_openHelp, /* «Help» button in the Thunderbird menu ~ Кнопка «Справки» в меню Thunderbird */
-#appmenu_whatsNew, /* Button «What's new?» in the Thunderbird menu ~ Кнопка «Что нового?» в меню Thunderbird */
-#appmenu_releaseNotes, /* «Release Notes» button on Thunderbird menu ~ Кнопка «Примечания к выпуску» в меню Thunderbird */
-#appmenuPrimaryPane > hbox, /* «Edit» buttons in the Thunderbird menu ~ Кнопки «Редактирования» в меню Thunderbird */ */
-#appmenu-quit, /* «Exit» button in Thunderbird menu ~ Кнопка «Выход» в меню Thunderbird */
-menuseparator /* «Separators» on the menu bar Thunderbird ~ «Разделители» на панели меню Thunderbird */
+#menu_openHelp, /* "Help" button in the Thunderbird menu ~ Кнопка "Справки" в меню Thunderbird */
+#whatsNew, /* Button "What's new?" on the Thunderbird menu bar ~ Кнопка "Что нового?" на панели меню Thunderbird */
+#releaseNotes, /* "Release notes" button on the Thunderbird menu bar ~ Кнопка "Примечания к выпуску" на панели меню Thunderbird */
+#appmenu_openHelp, /* "Help" button in the Thunderbird menu ~ Кнопка "Справки" в меню Thunderbird */
+#appmenu_whatsNew, /* Button "What's new?" in the Thunderbird menu ~ Кнопка "Что нового?" в меню Thunderbird */
+#appmenu_releaseNotes, /* "Release Notes" button on Thunderbird menu ~ Кнопка "Примечания к выпуску" в меню Thunderbird */
+#appmenuPrimaryPane > hbox, /* "Edit" buttons in the Thunderbird menu ~ Кнопки "Редактирования" в меню Thunderbird */ */
+#appmenu-quit, /* "Exit" button in Thunderbird menu ~ Кнопка "Выход" в меню Thunderbird */
+menuseparator /* "Separators" on the menu bar Thunderbird ~ "Разделители" на панели меню Thunderbird */
 {
     display: none!important
 }
