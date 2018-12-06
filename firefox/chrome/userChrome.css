@@ -34,34 +34,35 @@
 /* Unnecessary items in the menu
  * Ненужные элементы в меню */
 
-#appMenuRestoreLastSession, /* Button «Restore last session» in Firefox menu ~ Кнопка «Восстановить последнюю сессию» в меню Firefox */
-#appMenu-zoom-controls, /* Button «Zoom» in Firefox menu ~ Кнопка «Масштаб» в меню Firefox */
-#appMenu-edit-controls, /* «Edit» buttons in the Firefox menu ~ Кнопки «Редактирования» в меню Firefox */
-#appMenu-library-button, /* Button «Library» in the Firefox menu ~ Кнопка «Библиотека» в меню Firefox */
-#appMenu-customize-button, /* Button «Personalization editor» in the Firefox menu ~ Кнопка «Редактор персонализации» в меню Firefox */
-#appMenu-open-file-button, /* Button «Open file» menu in Firefox ~ Кнопка «Открыть файл» меню в Firefox */
-#appMenu-save-file-button, /* Button «Save File» menu in Firefox ~ Кнопка «Сохранить файл» меню в Firefox */
-#appMenu-print-button, /* «Print» button in the Firefox menu ~ Кнопка «Печать» в меню Firefox */
-#appMenu-quit-button, /* «Exit» button in the Firefox menu ~ Кнопка «Выход» в меню Firefox */
-#appMenu-find-button, /* «Find on this page» button in the Firefox menu ~ Кнопка «Найти на этой странице» в меню Firefox */
-#PanelUI-helpItems [oncommand="openHelpLink('firefox-help')"], /* «Help» button in the Firefox menu ~ Кнопка «Справки» в меню Firefox */
-#PanelUI-helpItems [oncommand="openTourPage();"], /* «Firefox Tour» button in the Firefox menu bar ~ Кнопка «Тур по Firefox» в панели меню Firefox */
-#PanelUI-helpItems [oncommand="openHelpLink('keyboard-shortcuts')"], /* «Keyboard shortcut» button in the Firefox menu ~ Кнопка «Сочетание клавиш» в меню Firefox */
-#PanelUI-helpItems [oncommand="openFeedbackPage()"],
-#PanelUI-helpItems [oncommand="openUILink(gSafeBrowsing.getReportURL('Phish'), event, {triggeringPrincipal: Services.scriptSecurityManager.createNullPrincipal({})});"],
-#menu_openHelp, /* «Firefox Help» button on the Firefox menu ~ Кнопка «Справка Firefox» в меню Firefox */
-#menu_openTour, /* «Firefox Tour» Button in Firefox Menu ~ Кнопка «Тур по Firefox» в меню Firefox */
-#menu_keyboardShortcuts, /* Button «Keyboard shortcut» in the Firefox menu ~ Кнопка «Сочетание клавиш» в меню Firefox */
-#healthReport,
-#feedbackPage,
-#menu_HelpPopup_reportPhishingtoolmenu, /* «Report fake website» button in the Firefox menu ~ Кнопка «Сообщить о поддельном сайте» в меню Firefox */
-#context-sendpagetodevice, /* Button "Send page to devices" in the context menu of Firefox ~ Кнопка «Отправить страницу на устройства» в контекстном меню Firefox */
-#context-pocket, /* Button «Pocket» in the context menu of Firefox. Disabled in user.js ~ Кнопка «Pocket» в контекстном меню Firefox. Отключена в user.js */
-#context-viewbgimage, /* «Open background image» button in Firefox context menu ~ Кнопка «Открыть фоновое изображение» в контекстном меню Firefox */
-#context-sendimage, 
-#context-setDesktopBackground, /* Button «Set as desktop background image» in the context menu of Firefox ~ Кнопка «Сделать фоновым изображением рабочего стола» в контекстном меню Firefox */
-#context-sendvideo,
-#context-sendaudio,
+#appMenuRestoreLastSession, /* "Restore last session" button in Firefox application menu ~ Кнопка "Восстановить последнюю сессию" в меню приложения Firefox */
+#appMenu-zoom-controls, /* Buttons "Zoom" in Firefox application menu ~ Кнопки "Масштаба" в меню приложения Firefox */
+#appMenu-edit-controls, /* "Edit" buttons in the application menu Firefox ~ Кнопки "Редактировать" в меню приложения Firefox
+ */
+#appMenu-library-button, /* "Libraries" button in the Firefox application menu ~ Кнопка "Библиотеки" в меню приложения Firefox */
+#appMenu-customize-button, /* "Personalization editor" button in the Firefox application menu ~ Кнопка "Редактор персонализации" в меню Firefox */
+#appMenu-open-file-button, /* Button "Open file" in the application menu Firefox ~ Кнопка "Открыть файл" в меню приложения Firefox */
+#appMenu-save-file-button, /* "Save file" button in Firefox application menu ~ Кнопка "Сохранить файл" в меню приложения Firefox */
+#appMenu-print-button, /* "Print" button in the application menu Firefox ~ Кнопка "Печать" в меню приложения Firefox */
+#appMenu-quit-button, /* "Exit" button in Firefox application menu ~ Кнопка "Выхода" в меню приложения Firefox */
+#appMenu-find-button, /* "Find on this page" button in the Firefox application menu ~ Кнопка "Найти на этой странице" в меню приложения Firefox */
+#PanelUI-helpItems [oncommand="openHelpLink('firefox-help')"], /* "Help" button in the Firefox menu panel ~ Кнопка "Справки" в панели меню Firefox */
+#PanelUI-helpItems [oncommand="openTourPage();"], /* "Firefox Tour button" in the Firefox menu panel ~ Кнопка "Тур по Firefox" в панели меню Firefox */
+#PanelUI-helpItems [oncommand="openHelpLink('keyboard-shortcuts')"], /* "Keyboard shortcut" button in the Firefox menu panel ~ Кнопка "Сочетание клавиш" в панели меню Firefox */
+#PanelUI-helpItems [oncommand="openFeedbackPage()"], /* "Send Feedback..." button in the Firefox menu bar ~ Кнопка "Отправить отзыв..." в панели меню Firefox */
+#PanelUI-helpItems [oncommand="openUILink(gSafeBrowsing.getReportURL('Phish'), event, {triggeringPrincipal: Services.scriptSecurityManager.createNullPrincipal({})});"], /* "Report phishing website" button in the Firefox menu panel ~ Кнопка "Сообщить о поддельном сайте" в панели меню Firefox */
+#menu_openHelp, /* "Help" button in the Firefox menu ~ Кнопка "Справки" в меню Firefox */
+#menu_openTour, /* Button "Tour of Firefox" in the Firefox menu ~ Кнопка "Тур по Firefox" в меню Firefox */
+#menu_keyboardShortcuts, /* Button "Keyboard shortcut" in the Firefox menu ~ Кнопка "Сочетание клавиш" в меню Firefox */
+#feedbackPage, /* Button "Send feedback..." in the Firefox menu ~ Кнопка "Отправить отзыв..." в меню Firefox */
+#context_sendTabToDevice, /* "Send tab to device" button in Firefox context menu ~ Кнопка "Отправить вкладку на устройство" в контекстном меню Firefox */
+#menu_HelpPopup_reportPhishingtoolmenu, /* "Report phishing website" button in the Firefox menu ~ Кнопка "Сообщить о поддельном сайте" в меню Firefox */
+#context-sendpagetodevice, /* Button "Send page to device" in the context menu of Firefox ~ Кнопка "Отправить страницу на устройство" в контекстном меню Firefox */
+#context-pocket, /* Button "Pocket" in the context menu of Firefox. Disabled in user.js! ~ Кнопка "Pocket" в контекстном меню Firefox. Отключена в user.js! */
+#context-viewbgimage, /* "Open background image" button in Firefox context menu ~ Кнопка "Открыть фоновое изображение" в контекстном меню Firefox */
+#context-sendimage, /* "Send image by mail" button in Firefox context menu ~ Кнопка "Отправить изображение по почте" в контекстном меню Firefox */
+#context-setDesktopBackground, /* Button "Set as desktop background image" in the context menu of Firefox ~ Кнопка "Сделать фоновым изображением рабочего стола" в контекстном меню Firefox */
+#context-sendvideo, /* "Send video by mail" button in Firefox context menu ~ Кнопка "Отправить видео по почте" в контекстном меню Firefox */
+#context-sendaudio, /* "Send audio by mail" button in Firefox context menu ~ Кнопка "Отправить аудио по почте" в контекстном меню Firefox */
 #context_reloadAllTabs,
 #context_bookmarkAllTabs,
 #context_closeTabsToTheEnd,
@@ -73,7 +74,7 @@
 #appMenu-edit-controls + toolbarseparator,
 #appMenu-customize-button + toolbarseparator,
 #appMenu-help-button + toolbarseparator,
-menuseparator /* «Separators» on the menu bar Firefox ~ «Разделители» на панели меню Firefox */
+menuseparator /* "Separators" on the menu bar Firefox ~ "Разделители" на панели меню Firefox */
 {
     display: none!important
 }
