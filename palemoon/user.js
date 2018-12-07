@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
- * Last modified: December 7, 2018
+ * Last modified: December 8, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -1517,3 +1517,16 @@ user_pref("dom.event.highrestimestamp.enabled", true);
  *		0 = Заблокировать
  *		1 = Разрешить */
 // user_pref("browser.display.use_document_fonts", 0);
+
+/* UserAgent */
+user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
+user_pref("general.buildID.override", "20100101");
+user_pref("general.appname.override", "Netscape");
+user_pref("general.appversion.override", "5.0 (Windows)");
+user_pref("general.platform.override", "Win32");
+user_pref("general.oscpu.override", "Windows NT 6.1");
+// user_pref("general.useragent.locale", "en-US");
+
+/* Canvas fingerprinting
+ * Отпечатки пальцев холста */
+user_pref("canvas.poisondata", true);
