@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
- * Last modified: December 7, 2018
+ * Last modified: December 8, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -869,3 +869,38 @@ user_pref("extensions.webservice.discoverURL", "");
  * [WARNING] Required for normalization of timestamps and any timer resolution mitigations.
  * [ВНИМАНИЕ] Требуется для нормализации временных меток и любых смягчений разрешения таймера. */
 user_pref("dom.event.highrestimestamp.enabled", true);
+
+/* Special services (accessibility support services)
+ * Специальные услуги (службы поддержки доступности) */
+user_pref("accessibility.force_disabled", 1);
+
+/* Disk cache
+ * Кэш-диска */
+user_pref("browser.cache.disk.capacity", 0);
+user_pref("browser.cache.disk.enable", false);
+user_pref("browser.cache.disk.smart_size.enabled", false);
+user_pref("browser.cache.disk.smart_size.first_run", false);
+
+/* Disk cache for SSL pages
+ * Кэш-диск для SSL-страниц */
+user_pref("browser.cache.disk_cache_ssl", false);
+
+/* Fastback cache
+ *		0 = Disable
+ *		-1 = Auto
+ * Кэш Fastback
+ *		0 = Отключить
+ *		-1 = Автоматически */
+user_pref("browser.sessionhistory.max_total_viewers", 0);
+
+/* Offline cache
+ * Автономный кэш */
+user_pref("browser.cache.offline.enable", false);
+
+/* Offline cache on insecure sites
+ * Автономный кэш на небезопасных сайтах */
+user_pref("browser.cache.offline.insecure.enable", false);
+
+/* Request to use the offline cache
+ * Запрос на использование автономного кеша */
+user_pref("offline-apps.allow_by_default", false);
