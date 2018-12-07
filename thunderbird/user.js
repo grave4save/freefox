@@ -378,6 +378,10 @@ user_pref("network.http.referer.XOriginPolicy", 1);
  * Активация плагина по клику */
 user_pref("plugins.click_to_play", true);
 
+/* Time to run plugins
+ * Время для запуска плагинов */
+user_pref("plugin.sessionPermissionNow.intervalInMinutes", 0);
+
 /* Require a valid OCSP response for OCSP enabled certificates
  * [NOTE] When you turn on breaks some sites
  * Требовать действительный ответ OCSP для сертификатов с поддержкой OCSP
@@ -529,13 +533,13 @@ user_pref("network.dns.disablePrefetch", true);
 user_pref("network.prefetch-next", false);
 
 /* UserAgent */
+user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
+user_pref("general.buildID.override", "20100101");
 user_pref("general.appname.override", "Netscape");
 user_pref("general.appversion.override", "5.0 (Windows)");
-user_pref("general.buildID.override", "20100101");
-user_pref("general.oscpu.override", "Windows NT 6.1");
 user_pref("general.platform.override", "Win32");
+user_pref("general.oscpu.override", "Windows NT 6.1");
 // user_pref("general.useragent.locale", "en-US");
-user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
 
 /* Smooth scrolling
  * Плавная прокрутка */
@@ -845,10 +849,8 @@ user_pref("network.cookie.lifetimePolicy", 0);
 user_pref("browser.tabs.closeWindowWithLastTab", false);
 
 /* Preferred language for displaying web pages
- * [NOTE] It is recommended to select only english locales.
- * Предпочитаемый язык для отображения веб-страниц
- * [ЗАМЕТКА] Рекомендуется выбрать только английские языки. */
-// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en");
+ * Предпочитаемый язык для отображения веб-страниц */
+// user_pref("intl.accept_languages", "en-US, en");
 
 /* In "about:addons" remove the item "Get add-ons"
  * [WARNING] Uses Google Analytics.
@@ -904,3 +906,83 @@ user_pref("browser.cache.offline.insecure.enable", false);
 /* Request to use the offline cache
  * Запрос на использование автономного кеша */
 user_pref("offline-apps.allow_by_default", false);
+
+/* First Party Isolation
+ * Изоляция первой стороны */
+user_pref("privacy.firstparty.isolate", true);
+user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
+
+/* Use the application language over the language of your operating system in the regional settings
+ * Использовать язык приложения поверх языка вашей операционной системы в региональных настройках */
+user_pref("intl.regional_prefs.use_os_locales", false);
+
+/* Firefox Fingerprints
+ * Отпечатки пальцев Firefox */
+user_pref("privacy.resistFingerprinting", true);
+user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
+
+/* Install only signed extensions
+ * Установка только подписанных расширений */
+user_pref("extensions.langpacks.signatures.required", true); // Require signing language pack ~ Требование подписи языкового пакета
+user_pref("xpinstall.signatures.required", true); // Require signing extensions ~ Требовать подписание расширений
+
+/* Add-on installation delay
+ * Задержка при установке дополнений */
+user_pref("security.dialog_enable_delay", 0);
+
+/* Default plugins state
+ *		0 = Disabled
+ *		1 = Request activation
+ *		2 = Active, individual plugins can be overridden
+ * Состояние плагинов по умолчанию
+ *		0 = Отключено
+ *		1 = Запрашивать активацию
+ *		2 = Активно, можно переопределить отдельные плагины */
+user_pref("plugin.default.state", 0);
+user_pref("plugin.defaultXpi.state", 0);
+
+/* Flash plugin
+ *		0 = Off
+ *		1 = Ask
+ *		2 = On
+ * Flash плагин
+ *		0 = Выключить
+ *		1 = Спросить
+ *		2 = Включить */
+user_pref("plugin.state.flash", 0);
+
+/* Scanning the system for plug-ins
+ * Сканирование системы на наличие плагинов */
+user_pref("plugin.scan.plid.all", false); // [WINDOWS]
+
+/* Sending ping
+ * Отправка пинга */
+user_pref("browser.send_pings", false);
+user_pref("browser.send_pings.max_per_link", 0);
+user_pref("browser.send_pings.require_same_host", true);
+
+/* Send DNS requests through a proxy using SOCKS 5
+ * Отправлять DNS-запросы через прокси при использовании SOCKS 5 */
+user_pref("network.proxy.socks_remote_dns", true);
+
+/* Redirecting to the provider's page
+ * Перенаправление на страницу провайдера */
+user_pref("captivedetect.canonicalURL", "");
+user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.captive-portal-service.minInterval", 0);
+
+/* HTTP Header "Do Not Track"
+ * Заголовок HTTP "Не Отслеживать" */
+// user_pref("privacy.donottrackheader.enabled", true);
+
+/* TOR: hide referrer when leaving a .onion domain
+ * TOR: скрыть referrer при выходе с домена .onion */
+user_pref("network.http.referer.hideOnionSource", true);
+
+/* Cache API (Cache storage)
+ * [NOTE] It is a repository on the user's computer where scripts can store information.
+ * It is part of the "Service Workers" specification, but can be used without them.
+ * API Кэша (Хранилище кэша)
+ * [ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
+ * Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
+user_pref("dom.caches.enabled", false);

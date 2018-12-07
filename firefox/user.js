@@ -331,10 +331,8 @@ user_pref("privacy.userContext.longPressBehavior", 0);
 // user_pref("font.language.group", "x-western");
 
 /* Preferred language for displaying web pages
- * [NOTE] It is recommended to select only english locales.
- * Предпочитаемый язык для отображения веб-страниц
- * [ЗАМЕТКА] Рекомендуется выбрать только английские языки. */
-// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en");
+ * Предпочитаемый язык для отображения веб-страниц */
+// user_pref("intl.accept_languages", "en-US, en");
 
 /* Forced to use UTF-8 for text files
  * Принудительное использование UTF-8 для текстовых файлов */
@@ -638,7 +636,7 @@ user_pref("browser.search.geoip.timeout", 0);
 
 /* Application language
  * Язык приложения */
-// user_pref("intl.locale.requested", "ru");
+// user_pref("intl.locale.requested", "en");
 
 /* Regional specificity for search results and search engines
  * Региональная специфика для результатов поиска и поисковых систем */
