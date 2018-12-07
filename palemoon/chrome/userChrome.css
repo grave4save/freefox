@@ -26,11 +26,11 @@
 /* Unnecessary items in the menu
  * Ненужные элементы в меню */
 
-#appmenu_openHelp, /* "Help" button in the Pale Moon menu ~ Кнопка "Справки" в меню Pale Moon */
-#appmenu_feedbackPage, /* "Send feedback" button in the Pale Moon menu ~ Кнопка "Отправка отзыва" в меню Pale Moon */
-#feedbackPage, /* Button "Send feedback" on the menu bar in the Pale Moon ~ Кнопка "Отправка отзыва" на панели меню Pale Moon */
+#appmenu_openHelp, /* "Help" button in the Pale Moon application menu ~ Кнопка "Справки" в меню приложения Pale Moon */
+#appmenu_feedbackPage, /* "Send feedback" button in the Pale Moon application menu ~ Кнопка "Отправка отзыва" в меню приложения Pale Moon */
 #appmenuPrimaryPane > hbox, /* "Edit" buttons in the Pale Moon menu ~ Кнопки "Редактирования" в меню Pale Moon */
-#menu_openHelp, /* Button "Help" on the menu bar Pale Moon ~ Кнопка "Справки" на панели меню Pale Moon */
+#feedbackPage, /* Button "Send feedback..." in the Pale Moon menu ~ Кнопка "Отправить отзыв..." в меню Pale Moon */
+#menu_openHelp, /* "Help" button in the Pale Moon menu ~ Кнопка "Справки" в меню Pale Moon */
 menuseparator /* "Separators" on the menu bar Pale Moon ~ "Разделители" на панели меню Pale Moon */
 {
 display: none!important
