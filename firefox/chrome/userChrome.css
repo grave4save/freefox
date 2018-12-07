@@ -74,7 +74,7 @@
 #appMenu-edit-controls + toolbarseparator,
 #appMenu-customize-button + toolbarseparator,
 #appMenu-help-button + toolbarseparator,
-menuseparator /* "Separators" on the menu bar Firefox ~ "Разделители" на панели меню Firefox */
+menuseparator /* "Separators" in the Firefox menu ~ "Разделители" в меню Firefox */
 {
     display: none!important
 }
