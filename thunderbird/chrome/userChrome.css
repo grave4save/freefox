@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
- * Last modified: December 7, 2018
+ * Last modified: December 8, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: userChrome.css
@@ -39,7 +39,7 @@
 #appmenu_openHelp, /* "Help" button in the Thunderbird application menu ~ Кнопка "Справки" в меню приложения Thunderbird */
 #appmenu_whatsNew, /* Button "What's new?" in the Thunderbird application menu ~ Кнопка "Что нового?" в меню приложения Thunderbird */
 #appmenu_releaseNotes, /* "Release Notes" button on Thunderbird application menu ~ Кнопка "Примечания к выпуску" в меню приложения Thunderbird */
-#appmenuPrimaryPane > hbox, /* "Edit" buttons in the Thunderbird application menu ~ Кнопки "Редактирования" в меню приложения Thunderbird */ */
+#appmenuPrimaryPane > hbox, /* "Edit" buttons in the Thunderbird application menu ~ Кнопки "Редактирования" в меню приложения Thunderbird */
 #appmenu-quit, /* "Exit" button in Thunderbird application menu ~ Кнопка "Выход" в меню приложения Thunderbird */
 menuseparator /* "Separators" in the Thunderbird menu ~ "Разделители" в меню Thunderbird */
 {
