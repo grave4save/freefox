@@ -1219,8 +1219,11 @@ user_pref("extensions.webextensions.restrictedDomains", "");
 user_pref("xpinstall.whitelist.required", true);
 
 /* Fullscreen API
- * API Полного экрана */
-user_pref("full-screen-api.enabled", true);
+ * [WARNING] Dangerously due to browser fingerprints.
+ * API Полного экрана
+ * [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера. */
+// user_pref("full-screen-api.enabled", false);
+// user_pref("full-screen-api.unprefix.enabled", false);
 user_pref("full-screen-api.warning.delay", 0);
 user_pref("full-screen-api.warning.timeout", 0);
 
@@ -1970,3 +1973,11 @@ user_pref("dom.event.highrestimestamp.enabled", true);
  *		1 = Корни Symantec не доверяют сертификатам, выданным после отключения
  *		2 = Корни Symantec доверяют независимо от даты */
 user_pref("security.pki.distrust_ca_policy", 2);
+
+/* Enable collecting of docgroup activity in the scheduler
+ * Включить сбор активности группы документов в планировщике */
+user_pref("dom.performance.enable_scheduler_timing", false);
+
+/* Runtime Storage for API calls
+ * Хранилище времени выполнения для вызовов API */
+user_pref("extensions.webextensions.enablePerformanceCounters", false);
