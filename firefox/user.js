@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/firefox/
- * Last modified: December 7, 2018
+ * Last modified: December 12, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -40,7 +40,6 @@ user_pref("browser.tabs.warnOnOpen", true);
 
 /* UserAgent */
 user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
-user_pref("general.buildID.override", "20100101");
 user_pref("general.appname.override", "Netscape");
 user_pref("general.appversion.override", "5.0 (Windows)");
 user_pref("general.platform.override", "Win32");
@@ -80,7 +79,7 @@ user_pref("browser.startup.homepage", "about:blank");
 
 /* Snippets
  * Сниппеты */
-user_pref("browser.aboutHomeSnippets.updateUrl", "data:,");
+user_pref("browser.aboutHomeSnippets.updateUrl", "");
 
 /* New inset
  *		TRUE = Activity Stream
@@ -984,6 +983,10 @@ user_pref("browser.newtabpage.activity-stream.showSearch", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.cfr", "");
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.onboarding", "");
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false);
 
 /* Block dangerous and deceptive content (malware, phishing, dangerous downloads)
  * Блокировать опасное и обманывающее содержимое (вредоносные программы, фишинг, опасные загрузки) */
@@ -1046,12 +1049,6 @@ user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
 /* Submitting the URL of the website where the plug-in crashed
  * Отправка URL-адреса веб-сайта, где произошел сбой плагина */
 user_pref("dom.ipc.plugins.reportCrashURL", false);
-
-/* Onboarding
- * [WARNING] Onboarding uses Google Analytics and leaks resource://URIs.
- * Введение
- * [ВНИМАНИЕ] Введение использует Google Analytics содержит утечки resource://URIs. */
-user_pref("browser.onboarding.enabled", false);
 
 /* Forms autofill
  * [NOTE] Stored data is NOT secure (uses a JSON file).
@@ -1395,7 +1392,6 @@ user_pref("device.sensors.enabled", false);
 /* CSP (Content Security Policy)
  * Политика безопасности контента */
 user_pref("security.csp.enable", true);
-user_pref("security.csp.enable_violation_events", false);
 user_pref("security.csp.experimentalEnabled", false);
 user_pref("security.data_uri.block_toplevel_data_uri_navigations", true);
 
@@ -1421,6 +1417,7 @@ user_pref("dom.battery.enabled", false);
 /* Virtual Reality API
  * API Виртуальной реальности */
 user_pref("dom.vr.enabled", false);
+user_pref("dom.vr.service.enabled", false); 
 
 /* Enumerate multimedia devices
  * Перечисление устройств мультимедиа */
@@ -1627,10 +1624,11 @@ user_pref("devtools.debugger.prompt-connection", true);
 user_pref("devtools.debugger.remote-enabled", false);
 user_pref("devtools.webide.adbAddonURL", "");
 user_pref("devtools.webide.autoConnectRuntime", false);
-user_pref("devtools.webide.autoinstallADBHelper", false);
 user_pref("devtools.webide.enableLocalRuntime", false);
 user_pref("devtools.webide.enabled", false);
 user_pref("devtools.webide.templatesURL", "");
+user_pref("devtools.webide.autoinstallADBExtension", false);
+user_pref("devtools.remote.adb.extensionURL", "");
 
 /* WebChannel whitelist */
 user_pref("webchannel.allowObject.urlWhitelist", "");
@@ -1782,11 +1780,6 @@ user_pref("network.IDN_show_punycode", true);
 /* Old SSL/TLS "insecure" renegotiation (vulnerable to a MiTM attack)
  * Старое "небезопасное" повторное согласование SSL/TLS (уязвимое к атаке MiTM) */
 user_pref("security.ssl.require_safe_negotiation", true);
-
-/* The "screenshot --imgur" command, with the help of which it was possible to publish screenshots on Imgur.com
- * Команда "screenshot --imgur", с помощью которой можно было публиковать скриншоты на Imgur.com */
-user_pref("devtools.gcli.imgurClientID", "");
-user_pref("devtools.gcli.imgurUploadURL", "");
 
 /* Prevent connection to the device on Firefox OS for debugging over Wi-Fi Internet
  * Запрет соединения с устройством на Firefox ОС для отладки по сети Wi-Fi Интернет */
@@ -1951,12 +1944,6 @@ user_pref("urlclassifier.flashSubDocTable", "");
 user_pref("urlclassifier.flashSubDocExceptTable", "");
 user_pref("urlclassifier.flashInfobarTable", "");
 
-/* Disable the import window when you first start Firefox
- * Отключить окно импорта при первом запуске Firefox */
-user_pref("browser.migrate.automigrate.enabled", false);
-user_pref("browser.migrate.automigrate.ui.enabled", false);
-user_pref("browser.migrate.automigrate.inpage.ui.enabled", false);
-
 /* Do not track network topology
  * Не отслеживать топологию сети */
 user_pref("network.notify.changed", false);
@@ -1973,3 +1960,13 @@ user_pref("dom.event.highrestimestamp.enabled", true);
  *		0 = Заблокировать
  *		1 = Разрешить */
 // user_pref("browser.display.use_document_fonts", 0);
+
+/* Control: which root programs do not trust politicians
+ *		0 = No distrust policies enforced
+ *		1 = Symantec roots distrusted for certificates issued after cutoff
+ *		2 = Symantec roots distrusted regardless of date
+ * Контроль: какие корневые программы не доверяют политикам
+ *		0 = Политика недоверия не применяется
+ *		1 = Корни Symantec не доверяют сертификатам, выданным после отключения
+ *		2 = Корни Symantec доверяют независимо от даты */
+user_pref("security.pki.distrust_ca_policy", 2);
