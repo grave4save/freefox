@@ -13,11 +13,12 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/firefox/
- * Last modified: December 12, 2018
+ * Last modified: December 13, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
  * URL: https://github.com/bogachenko/libertyfox/blob/master/firefox/user.js
+ * Version: 64.0
  *
  * Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip */
  
@@ -380,6 +381,7 @@ user_pref("extensions.webservice.discoverURL", "");
 /* Guessing the domain in the address bar
  * Угадывание домена в адресной строке */
 user_pref("browser.fixup.alternate.enabled", false);
+user_pref("browser.fixup.domainwhitelist.localhost", false);
 
 /* Number of steps  "To previous page" and  "To next page"
  * Количество шагов "На предыдущую страницу" и "На следующую страницу" */
@@ -583,6 +585,7 @@ user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.unified", false);
 user_pref("toolkit.telemetry.unifiedIsOptIn", true);
 user_pref("toolkit.telemetry.updatePing.enabled", false);
+user_pref("toolkit.coverage.opt-out", true);
 
 /* Firefox health report
  * Отчет о состоянии здоровья Firefox */
@@ -1625,7 +1628,6 @@ user_pref("devtools.chrome.enabled", false);
 user_pref("devtools.debugger.force-local", true);
 user_pref("devtools.debugger.prompt-connection", true);
 user_pref("devtools.debugger.remote-enabled", false);
-user_pref("devtools.webide.adbAddonURL", "");
 user_pref("devtools.webide.autoConnectRuntime", false);
 user_pref("devtools.webide.enableLocalRuntime", false);
 user_pref("devtools.webide.enabled", false);
