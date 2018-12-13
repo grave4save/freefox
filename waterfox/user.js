@@ -13,11 +13,12 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
- * Last modified: December 7, 2018
+ * Last modified: December 13, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
  * URL: https://github.com/bogachenko/libertyfox/blob/master/waterfox/user.js
+ * Version: 56.2.5
  *
  * Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip */
 
@@ -1038,3 +1039,314 @@ user_pref("browser.taskbar.lists.tasks.enabled", false); // [WINDOWS]
 /* Display thumbnails of tabs on the taskbar
  * Отображать эскизы вкладок на панели задач */
 user_pref("browser.taskbar.previews.enable", false); // [WINDOWS]
+
+/* IPv6 */
+user_pref("network.dns.disableIPv6", true);
+
+/* Block allowed extension directories
+ * [WARNING] This will break extensions that do not use the default XPI directories.
+ * Заблокировать разрешенные каталоги расширений
+ * [ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию. */
+user_pref("extensions.autoDisableScopes", 15);
+
+/* Warning when websites try to install add-ons
+ * Предупреждение при попытке веб-сайтов установить дополнения */
+user_pref("xpinstall.whitelist.required", true);
+
+/* Fullscreen API
+ * [WARNING] Dangerously due to browser fingerprints.
+ * API Полного экрана
+ * [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера. */
+// user_pref("full-screen-api.enabled", false);
+// user_pref("full-screen-api.unprefix.enabled", false);
+user_pref("full-screen-api.warning.delay", 0);
+user_pref("full-screen-api.warning.timeout", 0);
+
+/* Animated gradient that runs through the tab after the page is fully loaded
+ * Анимированный градиент, который пробегает по вкладке после полной загрузки страницы */
+user_pref("toolkit.cosmeticAnimations.enabled", false);
+
+/* Search for text on the page as it is typed
+ * Искать текст на странице по мере его набора */
+user_pref("accessibility.typeaheadfind", false);
+
+/* Spellchecking
+ *		0 = Do not check
+ *		1 = Check in multiline fields
+ *		2 = Check in all text fields
+ * Проверка орфографии
+ *		0 = Не проверять
+ *		1 = Проверка в многострочных полях
+ *		2 = Проверка во всех текстовых полях */
+user_pref("layout.spellcheckDefault", 2);
+
+/* Auto Scroll
+ * Автоматическая прокрутка */
+user_pref("general.autoScroll", false);
+
+/* Automatic copying
+ * Автоматическое копирование */
+user_pref("clipboard.autocopy", false);
+
+/* Reader View */
+user_pref("reader.parse-on-load.enabled", false);
+
+/* Text reader function in Reader View
+ * Функция зачитывания текста в Reader View */
+user_pref("narrate.enabled", false);
+
+/* WebGL debug info being available to websites
+ * Информация об отладке WebGL доступна для веб-сайтов */
+user_pref("webgl.enable-debug-renderer-info", false);
+
+/* Mixed content
+ * Смешанное содержание */
+user_pref("security.mixed_content.block_active_content", true); 
+user_pref("security.mixed_content.block_display_content", true);
+
+/* SPDY protocol
+ * [WARNING] SPDY can store an identifier and holds an extremely long open connection.
+ * Протокол SPDY
+ * [ВНИМАНИЕ] SPDY может хранить идентификатор и держит экстремально долгое открытое соединение. */
+// user_pref("network.http.spdy.enabled", false);
+// user_pref("network.http.spdy.enabled.deps", false);
+// user_pref("network.http.spdy.enabled.http2", false);
+
+/* WebGL (Web Graphics Library)
+ * WebGL (Библиотека веб-графики) */
+user_pref("pdfjs.enableWebGL", false);
+// user_pref("webgl.disable-extensions", true);
+// user_pref("webgl.disable-fail-if-major-performance-caveat", true);
+// user_pref("webgl.disabled", true);
+// user_pref("webgl.dxgl.enabled", false); // [WINDOWS]
+// user_pref("webgl.enable-webgl2", false);
+// user_pref("webgl.force-enabled", false);
+// user_pref("webgl.min_capability_mode", true);
+// user_pref("webgl.msaa-force", false);
+
+/* Service Workers */
+user_pref("dom.serviceWorkers.enabled", false);
+
+/* Cookies for HTTP sites are set with the "secure" directive
+ * Файлы куки для сайтов HTTP устанавливаются с "защищенной" директивой */
+user_pref("network.cookie.leave-secure-alone", true);
+
+/* DOM (Document Object Model) Storage
+ * [WARNING] This will break a LOT of sites' functionality AND extensions.
+ * You are better off using an extension for more granular control.
+ * Хранилище DOM (Объектная Модель Документа)
+ * [ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
+ * Вам лучше использовать расширение для более гранулированного контроля. */
+user_pref("dom.storage.enabled", true);
+
+/* Warn showing red lock for "broken security"
+ * Предупреждать, показывая красный замок для "сломанной безопасности" */
+user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
+
+/* In the "Add Security Exception" dialog box on SSL warnings
+ *		0 = Do not fill out the current URL as an exception and do not select an SSL certificate
+ *		1 = Pre-populate the current URL, but do not pre-select the certificate
+ *		2 = Pre-populate the current URL and select a certificate
+ * В диалоговом окне "Добавить исключение безопасности" на предупреждениях SSL
+ *		0 = Не заполнять текущий URL-адрес в качестве исключения и
+ *			не выполнять выбор SSL-сертификата
+ *		1 = Предварительно заполнять текущий URL-адрес,
+ *			но не выполнять предварительный выбор сертификата
+ *		2 = Предварительно заполнить текущий URL-адрес и выбрать сертификат */
+user_pref("browser.ssl_override_behavior", 0);
+
+/* Additional information about the pages warning about unsafe connections
+ * Дополнительная информация о страницах, предупреждающая о небезопасном подключении */
+user_pref("browser.xul.error_pages.expert_bad_cert", true);
+
+/* MediaDevices */
+user_pref("media.ondevicechange.enabled", false);
+
+/* Querying Google Application Reputation database for downloaded binary files
+ * Запрос базы данных репутации приложения Google для загруженных двоичных файлов */
+user_pref("browser.safebrowsing.downloads.remote.enabled", false);
+user_pref("browser.safebrowsing.downloads.remote.url", "");
+
+/* Safebrowsing reports
+ * Отчеты Safebrowsing */
+user_pref("browser.safebrowsing.provider.google4.reportMalwareMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportPhishMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google4.reportURL", "");
+user_pref("browser.safebrowsing.provider.google.reportMalwareMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google.reportPhishMistakeURL", "");
+user_pref("browser.safebrowsing.provider.google.reportURL", "");
+user_pref("browser.safebrowsing.reportPhishURL", "");
+user_pref("browser.safebrowsing.provider.mozilla.lists", "");
+user_pref("browser.safebrowsing.provider.mozilla.updateURL", "");
+user_pref("browser.safebrowsing.provider.mozilla.gethashURL", "");
+
+/* Button "Ignore this warning" on the pages of safe browsing
+ * [NOTE] Useless for regular users, it's meant for admins on bigger network as a way to secure their users.
+ * Кнопка "Игнорировать это предупреждение" на страницах безопасного просмотра
+ * [ЗАМЕТКА] Бесполезный для обычных пользователей, он предназначен для администраторов в большей сети,
+ * как способ защитить своих пользователей. */
+user_pref("browser.safebrowsing.allowOverride", false);
+
+/* OCSP Stapling
+ * Сшивание OCSP */
+user_pref("security.ssl.enable_ocsp_stapling", true);
+user_pref("security.ssl.enable_ocsp_must_staple", true);
+
+/* Resource timing API
+ * API Ресурсов времени */
+user_pref("dom.enable_resource_timing", false);
+
+/* Browser sends information about the start and end time of page loading
+ * Передача браузером информации о времени начала и окончания загрузки страницы */
+user_pref("dom.enable_performance", false);
+user_pref("dom.enable_performance_observer", false);
+
+/* Sensor API
+ * API Сенсора */
+user_pref("device.sensors.enabled", false);
+
+/* CSP (Content Security Policy)
+ * Политика безопасности контента */
+user_pref("security.csp.enable", true);
+user_pref("security.csp.experimentalEnabled", false);
+user_pref("security.data_uri.block_toplevel_data_uri_navigations", true);
+
+/* Online Certificate Status Protocol
+ *		0 = Disabled
+ *		1 = Enabled
+ *		2 = Enabled for EV certificates only
+ * Протокол статуса сертификата онлайн
+ *		0 = Отключено
+ *		1 = Включен
+ *		2 = Включено только для сертификатов EV */
+user_pref("security.OCSP.enabled", 1);
+
+/* Require a valid OCSP response for OCSP enabled certificates
+ * [WARNING] When you turn on breaks some sites.
+ * Требовать действительный ответ OCSP для сертификатов с поддержкой OCSP
+ * [ВНИМАНИЕ] При включении ломается некоторые сайты. */
+// user_pref("security.OCSP.require", true);
+
+/* Battery Status API */
+user_pref("dom.battery.enabled", false);
+
+/* Virtual Reality API
+ * API Виртуальной реальности */
+user_pref("dom.vr.enabled", false);
+
+/* Enumerate multimedia devices
+ * Перечисление устройств мультимедиа */
+user_pref("media.navigator.enabled", false);
+
+/* Hardware acceleration
+ * Аппаратное ускорение */
+// user_pref("layers.acceleration.force-enabled", false);
+// user_pref("layers.acceleration.disabled", true);
+// user_pref("gfx.direct2d.disabled", true); // [WINDOWS]
+
+/* Web Audio API
+ * [WARNING] Dangerously due to browser fingerprints.
+ * API Веб-аудио
+ * [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера. */
+user_pref("dom.webaudio.enabled", false);
+
+/* Pointer Events
+ * События указателя */
+user_pref("dom.w3c_pointer_events.enabled", false);
+
+/* Saving zoom for sites
+ * [WARNING] Dangerously due to browser fingerprints.
+ * Сохранение масштаба для сайтов
+ * [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера. */
+user_pref("browser.zoom.siteSpecific", false);
+
+/* Gamepad API
+ * API Геймпада */
+user_pref("dom.gamepad.enabled", false);
+user_pref("dom.gamepad.test.enabled", false);
+user_pref("dom.gamepad.extensions.enabled", false);
+user_pref("dom.gamepad.haptic_feedback.enabled", false);
+
+/* Providing network information
+ * Предоставление информации о сети */
+user_pref("dom.netinfo.enabled", false);
+
+/* Touch-events
+ *		0 = Disabled
+ *		1 = Enabled
+ *		2 = Automatic detection
+ * Тач-события
+ *		0 = Отключить
+ *		1 = Включить
+ *		2 = Автоматическое обнаружение */
+user_pref("dom.w3c_touch_events.enabled", 0);
+
+/* SHA-1 Algorithm
+ *		0 = All SHA1 certs are allowed
+ *		1 = All SHA1 certs are blocked (including perfectly valid ones from 2015 and earlier)
+ *		2 = Deprecated option that now maps to 1
+ *		3 = Only allowed for locally-added roots (e.g. anti-virus)
+ *		4 = Only allowed for locally-added roots or for certs in 2015 and earlier
+ * Алгоритм SHA-1
+ *		0 = Все сертификаты SHA1 разрешены
+ *		1 = Все сертификаты SHA1 заблокированы (в том числе вполне допустимые с 2015 года и ранее)
+ *		2 = Deprecated option that now maps to 1
+ *		3 = Разрешено только для локально добавляемых корней (например, Антивирус)
+ *		4 = Разрешено только для локально добавленных корней или сертификатов в 2015 году и ранее */
+user_pref("security.pki.sha1_enforcement_level", 1);
+
+/* Capture Stream API
+ * API Потокового захвата */
+user_pref("canvas.capturestream.enabled", false);
+
+/* Image Capture API
+ * API Захвата изображений */
+user_pref("dom.imagecapture.enabled", false);
+
+/* OffscreenCanvas */
+user_pref("gfx.offscreencanvas.enabled", false);
+
+/* Block known Flash trackers and fingerprints
+ * Блокировать известные Flash трекеры и отпечатки пальцев */
+user_pref("browser.safebrowsing.blockedURIs.enabled", false);
+user_pref("urlclassifier.blockedTable", "");
+
+/* HTTP Alternative Services
+ * Альтернативные услуги HTTP */
+user_pref("network.http.altsvc.enabled", false);
+user_pref("network.http.altsvc.oe", false);
+
+/* Access the URL of the PAC scripts
+ * [NOTE] The path and URL request components "https://" are deleted.
+ * Доступ к URL-адресу у PAC скриптов
+ * [ЗАМЕТКА] Компоненты пути и запроса URL-адресов "https://" удаляются. */
+user_pref("network.proxy.autoconfig_url.include_path", false);
+
+/* Sites with autocomplete="off" attribute
+ * [NOTE] This function allows you to save the entered passwords in the password manager,
+ * even if the site owner has set the autocomplete attribute to "off".
+ * Сайты с атрибутом автозаполнение "Отключено"
+ * [ЗАМЕТКА] Данная функция позволяет сохранять введенные пароли в менеджере паролей,
+ * даже если владелец сайта установил атрибуту автозаполнение значение "Отключено". */
+user_pref("signon.storeWhenAutocompleteOff", true);
+
+/* Display a warning when you log on to unprotected pages (not HTTPS)
+ * При входе на незащищенные страницы (не HTTPS) отображать предупреждение */
+user_pref("security.insecure_password.ui.enabled", true);
+
+/* Show (do not show) password when using alternative URL
+ * Показывать (не показывать) пароль при использовании альтернативного URL */
+user_pref("browser.fixup.hide_user_pass", true);
+
+/* Formless login capture
+ * Бесформенный захват входа */
+user_pref("signon.formlessCapture.enabled", false);
+
+/* HTTP Authentication on 3rd party images
+ * Аутентификация HTTP на сторонних изображениях */
+user_pref("network.auth.subresource-img-cross-origin-http-auth-allow", false);
+
+/* Control TLS versions
+ * Контроль TLS версий */
+user_pref("security.tls.version.min", 3);
+user_pref("security.tls.version.max", 4);
