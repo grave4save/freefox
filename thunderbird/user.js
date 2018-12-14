@@ -13,11 +13,12 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
- * Last modified: December 8, 2018
+ * Last modified: December 14, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
  * URL: https://github.com/bogachenko/libertyfox/blob/master/thunderbird/user.js
+ * Version: 60.3.3
  *
  * Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip */
 
@@ -986,3 +987,7 @@ user_pref("network.http.referer.hideOnionSource", true);
  * [ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
  * Оно является частью спецификации "Service Workers", но может быть использовано и без них. */
 user_pref("dom.caches.enabled", false);
+
+/* Setting default permissions (resource://app/defaults/permissions) in the Permission Manager
+ * Установка по умолчанию разрешений (resource://app/defaults/permissions) в Менеджере Разрешений */
+user_pref("permissions.manager.defaultsUrl", "");
