@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/firefox/
- * Last modified: December 13, 2018
+ * Last modified: December 15, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -1983,3 +1983,11 @@ user_pref("dom.performance.enable_scheduler_timing", false);
 /* Runtime Storage for API calls
  * Хранилище времени выполнения для вызовов API */
 user_pref("extensions.webextensions.enablePerformanceCounters", false);
+
+/* Preferences for the new performance panel This pref configures the base URL
+ * for the perf.html instance to use
+ * [WARNING] Uses Google Analytics
+ * Предпочтения для новой панели производительности. Этот преф настраивает базовый URL
+ * для используемого экземпляра perf.html
+ * [ВНИМАНИЕ] Использует Google Analytics */
+pref("devtools.performance.recording.ui-base-url", "");
