@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/fennec/
- * Last modified: December 6, 2018
+ * Last modified: December 15, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -1372,4 +1372,22 @@ user_pref("devtools.remote.usb.enabled", true);
  * Режим синхронизации внутреннего поставщика
  *		0 = Синхронизация всегда
  *		1 = Синхронизация только при использовании Wi-Fi */
- pref("home.sync.updateMode", 0);
+ user_pref("home.sync.updateMode", 0);
+ 
+ /* Control: which root programs do not trust politicians
+ *		0 = No distrust policies enforced
+ *		1 = Symantec roots distrusted for certificates issued after cutoff
+ *		2 = Symantec roots distrusted regardless of date
+ * Контроль: какие корневые программы не доверяют политикам
+ *		0 = Политика недоверия не применяется
+ *		1 = Корни Symantec не доверяют сертификатам, выданным после отключения
+ *		2 = Корни Symantec доверяют независимо от даты */
+user_pref("security.pki.distrust_ca_policy", 2);
+
+/* Enable collecting of docgroup activity in the scheduler
+ * Включить сбор активности группы документов в планировщике */
+user_pref("dom.performance.enable_scheduler_timing", false);
+
+/* Clip-path (CSS property)
+ * Клип-путь (Свойство CSS) */
+pref("layout.css.clip-path-shapes.enabled", false);
