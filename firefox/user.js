@@ -773,8 +773,7 @@ user_pref("network.captive-portal-service.minInterval", 0);
 
 /* HTTP Header "Do Not Track"
  * Заголовок HTTP "Не Отслеживать" */
-// user_pref("privacy.donottrackheader.enabled", true);
-// user_pref("privacy.donottrackheader.value", 1);
+user_pref("privacy.donottrackheader.enabled", true);
 
 /* TOR: hide referrer when leaving a .onion domain
  * TOR: скрыть referrer при выходе с домена .onion */
