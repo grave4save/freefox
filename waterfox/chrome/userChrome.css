@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
- * Last modified: December 7, 2018
+ * Last modified: December 16, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: userChrome.css
@@ -22,6 +22,16 @@
  * Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip */
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* Removed the space before the first tab in the COMPACT THEME
+ * Удалено пространство перед первой вкладкой в КОМПАКТНОЙ ТЕМЕ */
+
+/*
+#main-window[sizemode="normal"] #TabsToolbar,
+#main-window .tabbrowser-arrowscrollbox > .arrowscrollbox-scrollbox{
+padding-left: 0px !important;
+}
+*/
 
 /* Unnecessary items in the menu
  * Ненужные элементы в меню */
