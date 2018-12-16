@@ -1415,3 +1415,207 @@ user_pref("dom.vibrator.enabled", false);
 
 /* Shared Memory API */
 user_pref("javascript.options.shared_memory", false);
+
+/* Permissions to scripts
+ * Разрешения скриптам */
+user_pref("dom.disable_window_move_resize", true);
+user_pref("dom.disable_window_open_feature.close", true);
+user_pref("dom.disable_window_open_feature.location", true);
+user_pref("dom.disable_window_open_feature.menubar", true);
+user_pref("dom.disable_window_open_feature.minimizable", true);
+user_pref("dom.disable_window_open_feature.personalbar", true);
+user_pref("dom.disable_window_open_feature.resizable", true);
+user_pref("dom.disable_window_open_feature.status", true);
+user_pref("dom.disable_window_open_feature.titlebar", true);
+user_pref("dom.disable_window_open_feature.toolbar", true);
+
+/* How to open links that indicate opening new Windows
+ *		1 = Open in current tab
+ *		2 = Open in new window
+ *		3 = Open in new tab
+ * Как открывать ссылки, в которых указано открытие новых окон
+ *		1 = Открыть в текущей вкладке
+ *		2 = Открывать в новом окне
+ *		3 = Открывать в новой вкладке */
+user_pref("browser.link.open_newwindow", 3);
+
+/* Allows you to open tabs instead of new Windows
+ *		0 = Open all links in tabs
+ *		1 = Open links in windows
+ *		2 = Open links in tabs with the exception of cases
+ *      	when non-standard window parameters are specified
+ * Позволяет открывать вкладки вместо новых окон
+ *		0 = Открывать все ссылки во вкладках
+ *		1 = Открывать ссылки в окнах
+ *		2 = Открывать ссылки во вкладках за исключением случаев,
+ *      	когда заданы нестандартные параметры окна */
+user_pref("browser.link.open_newwindow.restriction", 0);
+
+/* Block pop-ups
+ * Блокировать всплывающие окна */
+user_pref("dom.disable_open_during_load", true);
+
+/* Maximum number of pop-ups
+ * Максимальное количество всплывающих окон */
+user_pref("dom.popup_maximum", 3);
+
+/* Control of sent information regardless of the source
+ *		0 = Never send "Referrer" header
+ *		1 = Send "Referrer" header only when clicking on links and similar elements
+ *		2 = Send to all requests (e.g. images, links, etc.)
+ * [WARNING] When you disable the transfer of this header, many sites will stop working.
+ * Контроль отправляемой информации независимо от источника
+ *		0 = Никогда не отправлять заголовок "Referrer"
+ *		1 = Отправлять заголовок "Referrer" только при клике по ссылкам и подобным элементам
+ *		2 = Отправить на все запросы (например, изображения, ссылки и т.д.)
+ * [ВНИМАНИЕ] При отключении отправки этого заголовка, многие сайты перестанут работать. */
+user_pref("network.http.sendRefererHeader", 2);
+
+/* Control the number of "Referrer" sent regardless of the source
+ *		0 = Send the full URL
+ *		1 = Send URL without query string (scheme + host + port + path)
+ *		2 = Send only origin (scheme + host + port)
+ * Контроль количества "Referrer" отправляемых независимо от источника
+ *		0 = Отправлять полный URL
+ *		1 = Отправлять URL-адрес без строки запроса (схема + хост + порт + путь)
+ *		2 = Отправлять только начало (схема + хост + порт) */
+user_pref("network.http.referer.trimmingPolicy", 0);
+
+/* Control the selection of sent "Referrer" through sources
+ *		0 = Send "Referrer" in all cases
+ *		1 = Send only if the base domains match
+ *		2 = Send "Referer" only to the same host
+ * Контроль выбора отправляемых "Referrer" через источники
+ *		0 = Отправлять "Referrer" во всех случаях
+ *		1 = Отправлять, только если базовые домены совпадают
+ *		2 = Отправить "Referer" только на тот же хост */
+user_pref("network.http.referer.XOriginPolicy", 1);
+
+/* Control the number of "Referrer" sent by origin
+ *		0 = Send the full URL
+ *		1 = Send URL without query string (scheme + host + port + path)
+ *		2 = Send only origin (scheme + host + port)
+ * Контроль количества "Referrer" отправляемых по происхождению
+ *		0 = Отправлять полный URL
+ *		1 = Отправлять URL-адрес без строки запроса (схема + хост + порт + путь)
+ *		2 = Отправлять только начало (схема + хост + порт) */
+user_pref("network.http.referer.XOriginTrimmingPolicy", 0);
+
+/* Spoofing a referer
+ *		TRUE = Spoof referer
+ *		FALSE = Real referer
+ * Фальсифицировать Referrer
+ *		TRUE = Подделывать Referrer
+ *		FALSE = Настоящий Referrer */
+user_pref("network.http.referer.spoofSource", true);
+
+/* Open links from the clipboard with the middle mouse button
+ * Открывать ссылки из буфера обмена средней кнопкой мышки */
+user_pref("middlemouse.contentLoadURL", false);
+
+/* Restrict HTTP Redirection
+ * Ограничить переадресацию HTTP */
+user_pref("network.http.redirection-limit", 10);
+
+/* Setting default permissions (resource://app/defaults/permissions) in the Permission Manager
+ * Установка по умолчанию разрешений (resource://app/defaults/permissions) в Менеджере Разрешений */
+user_pref("permissions.manager.defaultsUrl", "");
+
+/* IDN Punycode */
+user_pref("network.IDN_show_punycode", true);
+
+/* Old SSL/TLS "insecure" renegotiation (vulnerable to a MiTM attack)
+ * Старое "небезопасное" повторное согласование SSL/TLS (уязвимое к атаке MiTM) */
+user_pref("security.ssl.require_safe_negotiation", true);
+
+/* Prevent connection to the device on Firefox OS for debugging over Wi-Fi Internet
+ * Запрет соединения с устройством на Firefox ОС для отладки по сети Wi-Fi Интернет */
+user_pref("devtools.remote.wifi.scan", false);
+user_pref("network.tickle-wifi.enabled", false);
+user_pref("geo.wifi.uri", "");
+
+/* File Handle API
+ * [NOTE] Responsible for accessing lower-level file operations.
+ * API для обработки файлов
+ * [ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям. */
+user_pref("dom.fileHandle.enabled", false);
+
+/* Device Storage API
+ * [NOTE] Responsible for access to the file system, this API allows the browser to
+ * read and/or write to the user's files.
+ * API хранилища устройств
+ * [ЗАМЕТКА] Отвечает за доступ к файловой системе, данный API позволяет браузеру самостоятельно
+ * читать и/или писать в файлах пользователя. */
+user_pref("device.storage.enabled", false);
+
+/* Windows Store launch links on Windows 8/8.1/10
+ * Ссылки запуска Windows Store на Windows 8/8.1/10 ***/
+user_pref("network.protocol-handler.external.ms-windows-store", false); // [WINDOWS]
+
+/* Browser function that allows you to save objects by keyboard shortcut, left mouse button and ALT key
+ *		TRUE = When you click on an object with Alt plus LMB, it is saved
+ *		FALSE = Disable this feature
+ * Функция браузера, которая позволяет сохранять объекты с помощью сочетания клавиш, левой кнопки мыши и клавиши ALT
+ *		TRUE = При клике на объект клавишами Alt плюс ЛКМ происходит его сохранение
+ *		FALSE = Отключить эту функцию */
+user_pref("browser.altClickSave", true);
+
+/* Bookmark save format
+ *		TRUE = Save to HTML
+ *		FALSE = Save to SQLITE
+ * Формат сохранения закладок
+ *		TRUE = Сохранение в HTML
+ *		FALSE = Сохранение в SQLITE */
+user_pref("browser.bookmarks.autoExportHTML", true);
+
+/* Showing search results
+ *		TRUE = Open search result in current page
+ *		FALSE = Open search result in new page
+ * Показ результатов поиска
+ *		TRUE = Открывать результат поиска в текущей странице
+ *		FALSE = Открывать результат поиска на новой странице */
+user_pref("browser.search.openintab", true);
+
+/* Automatic selection of the entire line in the address bar
+ * Автоматическое выделение всей строки в поле адресной строки */
+user_pref("browser.urlbar.clickSelectsAll", false);
+
+/* Showing search results
+ *		TRUE = To wrap lines
+ *		FALSE = Do not wrap lines
+ * Показ результатов поиска
+ *		TRUE = Переносить строки
+ *		FALSE = Не переносить строки */
+user_pref("view_source.wrap_long_lines", true);
+
+/* Feedback URL
+ * URL обратной связи */
+user_pref("app.feedback.baseURL", "");
+
+/* Help URL
+ * URL справки */
+user_pref("app.support.baseURL", "");
+
+/* Manual URL
+ * [NOTE] This preference determines the address that the user can view to update the browser manually
+ * if an application update has failed.
+ * URL мануала
+ * [ЗАМЕТКА] Это предпочтение определяет адрес, который пользователь может просмотреть для обновления браузера вручную,
+ * если обновление приложения потерпело неудачу. */
+user_pref("app.update.url.details", "");
+
+/* CSS :visited selectors
+ * [ЗАМЕТКА] Disables the use of styles with the: visited selector to visited links,
+ * which prevents the user from finding out what URLs the user has in the browser history.
+ * CSS :visited селекторы
+ * [ЗАМЕТКА] Отключает применение к посещенным ссылкам стилей с селектором :visited,
+ * что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
+user_pref("layout.css.visited_links_enabled", false);
+
+/* Closing Firefox when closing the last tab
+ * Закрытие Firefox при закрытии последней вкладки */
+user_pref("browser.tabs.closeWindowWithLastTab", false);
+
+/* Private browsing mode
+ * Режим приватного просмотра */
+// user_pref("browser.privatebrowsing.autostart", true);
