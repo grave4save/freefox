@@ -18,6 +18,7 @@
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
  * URL: https://github.com/bogachenko/libertyfox/blob/master/fennec/user.js
+ * Version: 63.0.2
  *
  * Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip */
 
@@ -1390,4 +1391,8 @@ user_pref("dom.performance.enable_scheduler_timing", false);
 
 /* Clip-path (CSS property)
  * Клип-путь (Свойство CSS) */
-pref("layout.css.clip-path-shapes.enabled", false);
+user_pref("layout.css.clip-path-shapes.enabled", false);
+
+/* Multiprocess windows
+ * Многопроцессные окна */
+user_pref("browser.tabs.remote.autostart", true);
