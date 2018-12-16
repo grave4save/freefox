@@ -13,11 +13,12 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
- * Last modified: December 10, 2018
+ * Last modified: December 16, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
  * URL: https://github.com/bogachenko/libertyfox/blob/master/palemoon/user.js
+ * Version: 28.2.2
  *
  * Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip */
 
@@ -77,7 +78,7 @@ user_pref("browser.startup.homepage", "about:blank");
  *		TRUE = New page
  *		FALSE = Blank page
  * Новая вкладкa
- *		TRUE = New page
+ *		TRUE = Новыя вкладка
  *		FALSE = Пустая страница */
 user_pref("browser.newtabpage.enabled", false);
 
@@ -286,10 +287,8 @@ user_pref("browser.tabs.loadDivertedInBackground", true);
 // user_pref("font.language.group", "x-western");
 
 /* Preferred language for displaying web pages
- * [NOTE] It is recommended to select only english locales.
- * Предпочитаемый язык для отображения веб-страниц
- * [ЗАМЕТКА] Рекомендуется выбрать только английские языки. */
-// user_pref("intl.accept_languages", "ru-RU, ru, en-US, en");
+ * Предпочитаемый язык для отображения веб-страниц */
+// user_pref("intl.accept_languages", "en-US, en");
 
 /* Automatic check for updates for extensions
  * Автоматическая проверка обновлений для расширений */
