@@ -13,12 +13,12 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/fennec/
- * Last modified: December 15, 2018
+ * Last modified: December 16, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
  * URL: https://github.com/bogachenko/libertyfox/blob/master/fennec/user.js
- * Version: 63.0.2
+ * Version: 64
  *
  * Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip */
 
@@ -275,6 +275,7 @@ user_pref("browser.bookmarks.max_backups", 3);
 /* WebRTC (Web Real-Time Communication)
  * WebRTC (Веб Связь в Реальном Времени) */
 user_pref("media.navigator.video.enabled", false);
+user_pref("media.navigator.mediadatadecoder_h264_enabled",false);
 user_pref("media.peerconnection.dtmf.enabled", false);
 user_pref("media.peerconnection.enabled", false);
 user_pref("media.peerconnection.ice.tcp", false);
@@ -1077,6 +1078,7 @@ user_pref("devtools.chrome.enabled", false);
 user_pref("devtools.debugger.force-local", true);
 user_pref("devtools.debugger.prompt-connection", true);
 user_pref("devtools.debugger.remote-enabled", false);
+user_pref("devtools.remote.adb.extensionURL", "");
 
 /* WebChannel whitelist */
 user_pref("webchannel.allowObject.urlWhitelist", "");
@@ -1396,3 +1398,8 @@ user_pref("layout.css.clip-path-shapes.enabled", false);
 /* Multiprocess windows
  * Многопроцессные окна */
 user_pref("browser.tabs.remote.autostart", true);
+
+/* Virtual Reality API
+ * API Виртуальной реальности */
+user_pref("dom.vr.enabled", false);
+user_pref("dom.vr.service.enabled", false); 
