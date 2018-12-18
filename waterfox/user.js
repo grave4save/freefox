@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
- * Last modified: December 16, 2018
+ * Last modified: December 18, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -918,18 +918,18 @@ user_pref("extensions.formautofill.available", "off");
 user_pref("extensions.formautofill.creditCards.enabled", false);
 user_pref("extensions.formautofill.heuristics.enabled", false);
 
-/* How often Firefox should ask for a master password
+/* How often Waterfox should ask for a master password
  *		0 = The first time
  *		1 = Every time it's needed
  *		2 = Every "N" minutes
- * Как часто Firefox должен запрашивать мастер-пароль
+ * Как часто Waterfox должен запрашивать мастер-пароль
  *		0 = Первый раз
  *		1 = Каждый раз, когда это необходимо
  *		2 = Каждые "N" минут */
 user_pref("security.ask_for_password", 2);
 
-/* How often (within how many minutes) Firefox should ask for a master password
- * Как часто (в течение скольки минут) Firefox должен запрашивать мастер-пароль */
+/* How often (within how many minutes) Waterfox should ask for a master password
+ * Как часто (в течение скольки минут) Waterfox должен запрашивать мастер-пароль */
 user_pref("security.password_lifetime", 5);
 
 /* Auto-complete user name and password
@@ -957,11 +957,11 @@ user_pref("extensions.webcompat-reporter.newIssueEndpoint", "");
 
 /* Favicons in shortcuts
  * [NOTE] URL shortcuts use a cached randomly named .ico file which is stored in your shortcutCache directory.
- * The .ico remains after the shortcut is deleted. If set to "false" then the shortcuts use a generic Firefox icon.
+ * The .ico remains after the shortcut is deleted. If set to "false" then the shortcuts use a generic Waterfox icon.
  * Значки на ярлыках
  * [ЗАМЕТКА] В ярлыках URL используется кешированный файл с произвольным именем .ico,
  * который хранится в вашем каталоге shortcutCache. Файл .ico остается после удаления ярлыка.
- * Если установлено значение "false", в ярлыках используется общий значок Firefox. */
+ * Если установлено значение "false", в ярлыках используется общий значок Waterfox. */
 user_pref("browser.shell.shortcutFavicons", false);
 
 /* Favicons in web notifications
@@ -1612,10 +1612,75 @@ user_pref("app.update.url.details", "");
  * что предотвращает возможность выяснить, какие URL есть у пользователя в истории браузера. */
 user_pref("layout.css.visited_links_enabled", false);
 
-/* Closing Firefox when closing the last tab
- * Закрытие Firefox при закрытии последней вкладки */
+/* Closing Waterfox when closing the last tab
+ * Закрытие Waterfox при закрытии последней вкладки */
 user_pref("browser.tabs.closeWindowWithLastTab", false);
 
 /* Private browsing mode
  * Режим приватного просмотра */
 // user_pref("browser.privatebrowsing.autostart", true);
+
+/* Limit the availability of fonts in the system to white lists
+ * Ограничить доступность шрифтов в системе к белым спискам */
+// user_pref("font.system.whitelist", "Arial, Batang, 바탕, Cambria Math, Courier New, Euphemia, Gautami, Georgia, Gulim, 굴림, GulimChe, 굴림체, Iskoola Pota, Kalinga, Kartika, Latha, Lucida Console, MS Gothic, ＭＳ ゴシック, MS Mincho, ＭＳ 明朝, MS PGothic, ＭＳ Ｐゴシック, MS PMincho, ＭＳ Ｐ明朝, MV Boli, Malgun Gothic, Mangal, Meiryo, Meiryo UI, Microsoft Himalaya, Microsoft JhengHei, Microsoft JengHei UI, Microsoft YaHei, 微软雅黑, Microsoft YaHei UI, MingLiU, 細明體, Noto Sans Buginese, Noto Sans Khmer, Noto Sans Lao, Noto Sans Myanmar, Noto Sans Yi, Nyala, PMingLiU, 新細明體, Plantagenet Cherokee, Raavi, Segoe UI, Shruti, SimSun, 宋体, Sylfaen, Tahoma, Times New Roman, Tunga, Verdana, Vrinda, Yu Gothic UI, Segoe UI Emoji");
+
+/* asm.js */
+user_pref("javascript.options.asmjs", false);
+
+/* WebAssembly */
+user_pref("javascript.options.wasm", false);
+
+/* The time of inactivity of the user through which the browser will begin to save the session
+ * Время отсутствия активности пользователя, через который браузер начнет сохранять сессию */
+user_pref("browser.sessionstore.idleDelay", 720000);
+
+/* Preloading documents or resources specified via <link rel = "preload">
+ * Предзагрузка документов или ресурсов, указанных через <link rel="preload"> */
+user_pref("network.preload", false);
+
+/* Semi Transparent tab previews
+ * Полупрозрачная превью вкладок */
+user_pref("nglayout.enable_drag_images", false);
+
+/* Disable preconnects and preresolves
+ * Отключить предварительные соединения и пререзоливы */
+user_pref("network.predictor.prefetch-min-confidence", 101);
+user_pref("network.predictor.preconnect-min-confidence", 101);
+user_pref("network.predictor.preresolve-min-confidence", 101);
+
+/* Module LaterRun
+ * [NOTE] Displaying new users with various help information when N starts up the browser.
+ * Модуль LaterRun
+ * [ЗАМЕТКА] Показ новых пользователей различной справочной информация при "N" запуске браузера. */
+user_pref("browser.laterrun.enabled", false);
+
+/* Disables the registration of the Safebrowsing and Tracking Protection tables in the URL Classifier
+ * Отключает регистрацию таблиц Safebrowsing и Tracking Protection в URL Classifier */
+user_pref("urlclassifier.malwareTable", "");
+user_pref("urlclassifier.phishTable", "");
+user_pref("urlclassifier.downloadBlockTable", "");
+user_pref("urlclassifier.downloadAllowTable", "");
+user_pref("urlclassifier.trackingTable", "");
+user_pref("urlclassifier.trackingWhitelistTable", "");
+user_pref("urlclassifier.disallow_completions", "");
+user_pref("urlclassifier.passwordAllowTable", "");
+
+/* Disable the whitelist domain list for Flash
+ * Отключить белый список доменов для Flash */
+user_pref("plugins.flashBlock.enabled", false);
+user_pref("urlclassifier.flashAllowTable", "");
+user_pref("urlclassifier.flashAllowExceptTable", "");
+user_pref("urlclassifier.flashTable", "");
+user_pref("urlclassifier.flashExceptTable", "");
+user_pref("urlclassifier.flashSubDocTable", "");
+user_pref("urlclassifier.flashSubDocExceptTable", "");
+user_pref("urlclassifier.flashInfobarTable", "");
+
+/* Do not track network topology
+ * Не отслеживать топологию сети */
+user_pref("network.notify.changed", false);
+
+/* DOMHighResTimeStamp API
+ * [WARNING] Required for normalization of timestamps and any timer resolution mitigations.
+ * [ВНИМАНИЕ] Требуется для нормализации временных меток и любых смягчений разрешения таймера. */
+user_pref("dom.event.highrestimestamp.enabled", true);
