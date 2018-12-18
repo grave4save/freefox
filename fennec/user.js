@@ -13,12 +13,12 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/fennec/
- * Last modified: December 16, 2018
+ * Last modified: December 18, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
  * URL: https://github.com/bogachenko/libertyfox/blob/master/fennec/user.js
- * Version: 64
+ * Version: 64.0
  *
  * Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip */
 
@@ -1402,4 +1402,14 @@ user_pref("browser.tabs.remote.autostart", true);
 /* Virtual Reality API
  * API Виртуальной реальности */
 user_pref("dom.vr.enabled", false);
-user_pref("dom.vr.service.enabled", false); 
+user_pref("dom.vr.service.enabled", false);
+
+/* HTTP authentication credentials dialogs triggered by sub-resources hardens against potential credentials phishing
+ *		0 = Don't allow sub-resources to open HTTP authentication credentials dialogs
+ *		1 = Don't allow cross-origin sub-resources to open HTTP authentication credentials dialogs
+ *		2 = Allow sub-resources to open HTTP authentication credentials dialogs
+ * Диалоги аутентификации HTTP, запускаемые подресурсами, защищают от фишинга потенциальных учетных данных
+ *		0 = Не разрешать субресурсам открывать диалоги аутентификации HTTP
+ *		1 = Не позволяйте подресурсам из разных источников открывать диалоги аутентификации HTTP
+ *		2 = Разрешить субресурсам открывать диалоги аутентификации HTTP */
+user_pref("network.auth.subresource-http-auth-allow", 1);

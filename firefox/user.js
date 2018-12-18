@@ -586,6 +586,7 @@ user_pref("toolkit.telemetry.unified", false);
 user_pref("toolkit.telemetry.unifiedIsOptIn", true);
 user_pref("toolkit.telemetry.updatePing.enabled", false);
 user_pref("toolkit.coverage.opt-out", true);
+user_pref("toolkit.telemetry.coverage.opt-out", true);
 
 /* Firefox health report
  * Отчет о состоянии здоровья Firefox */
@@ -1989,4 +1990,14 @@ user_pref("extensions.webextensions.enablePerformanceCounters", false);
  * Предпочтения для новой панели производительности. Этот преф настраивает базовый URL
  * для используемого экземпляра perf.html
  * [ВНИМАНИЕ] Использует Google Analytics */
-pref("devtools.performance.recording.ui-base-url", "");
+user_pref("devtools.performance.recording.ui-base-url", "");
+
+/* HTTP authentication credentials dialogs triggered by sub-resources hardens against potential credentials phishing
+ *		0 = Don't allow sub-resources to open HTTP authentication credentials dialogs
+ *		1 = Don't allow cross-origin sub-resources to open HTTP authentication credentials dialogs
+ *		2 = Allow sub-resources to open HTTP authentication credentials dialogs
+ * Диалоги аутентификации HTTP, запускаемые подресурсами, защищают от фишинга потенциальных учетных данных
+ *		0 = Не разрешать субресурсам открывать диалоги аутентификации HTTP
+ *		1 = Не позволяйте подресурсам из разных источников открывать диалоги аутентификации HTTP
+ *		2 = Разрешить субресурсам открывать диалоги аутентификации HTTP */
+user_pref("network.auth.subresource-http-auth-allow", 1);

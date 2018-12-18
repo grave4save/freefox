@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
- * Last modified: December 16, 2018
+ * Last modified: December 18, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -1530,6 +1530,16 @@ user_pref("general.oscpu.override", "Windows NT 6.1");
  * Отпечатки пальцев холста */
 user_pref("canvas.poisondata", true);
 
-/* Firefox Fingerprints
- * Отпечатки пальцев Firefox */
+/* Palemoon Fingerprints
+ * Отпечатки пальцев Palemoon */
 user_pref("privacy.resistFingerprinting", true);
+
+/* HTTP authentication credentials dialogs triggered by sub-resources hardens against potential credentials phishing
+ *		0 = Don't allow sub-resources to open HTTP authentication credentials dialogs
+ *		1 = Don't allow cross-origin sub-resources to open HTTP authentication credentials dialogs
+ *		2 = Allow sub-resources to open HTTP authentication credentials dialogs
+ * Диалоги аутентификации HTTP, запускаемые подресурсами, защищают от фишинга потенциальных учетных данных
+ *		0 = Не разрешать субресурсам открывать диалоги аутентификации HTTP
+ *		1 = Не позволяйте подресурсам из разных источников открывать диалоги аутентификации HTTP
+ *		2 = Разрешить субресурсам открывать диалоги аутентификации HTTP */
+user_pref("network.auth.subresource-http-auth-allow", 1);

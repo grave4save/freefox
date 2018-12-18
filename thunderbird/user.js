@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
- * Last modified: December 14, 2018
+ * Last modified: December 18, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -991,3 +991,13 @@ user_pref("dom.caches.enabled", false);
 /* Setting default permissions (resource://app/defaults/permissions) in the Permission Manager
  * Установка по умолчанию разрешений (resource://app/defaults/permissions) в Менеджере Разрешений */
 user_pref("permissions.manager.defaultsUrl", "");
+
+/* HTTP authentication credentials dialogs triggered by sub-resources hardens against potential credentials phishing
+ *		0 = Don't allow sub-resources to open HTTP authentication credentials dialogs
+ *		1 = Don't allow cross-origin sub-resources to open HTTP authentication credentials dialogs
+ *		2 = Allow sub-resources to open HTTP authentication credentials dialogs
+ * Диалоги аутентификации HTTP, запускаемые подресурсами, защищают от фишинга потенциальных учетных данных
+ *		0 = Не разрешать субресурсам открывать диалоги аутентификации HTTP
+ *		1 = Не позволяйте подресурсам из разных источников открывать диалоги аутентификации HTTP
+ *		2 = Разрешить субресурсам открывать диалоги аутентификации HTTP */
+user_pref("network.auth.subresource-http-auth-allow", 1);
