@@ -223,6 +223,7 @@ user_pref("browser.snippets.updateUrl", "");
 // user_pref("font.name.sans-serif.x-cans", "sans-serif");
 // user_pref("font.name.monospace.x-cans", "monospace");
 // user_pref("font.language.group", "x-western");
+user_pref("font.name-list.emoji", "Noto Color Emoji");
 
 /* Forced to use UTF-8 for text files
  * Принудительное использование UTF-8 для текстовых файлов */
@@ -827,7 +828,7 @@ user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
  *		1 = Предварительно заполнять текущий URL-адрес,
  *			но не выполнять предварительный выбор сертификата
  *		2 = Предварительно заполнить текущий URL-адрес и выбрать сертификат */
-user_pref("browser.ssl_override_behavior", 0);
+user_pref("browser.ssl_override_behavior", 2);
 
 /* Additional information about the pages warning about unsafe connections
  * Дополнительная информация о страницах, предупреждающая о небезопасном подключении */

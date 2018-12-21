@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
- * Last modified: December 18, 2018
+ * Last modified: December 22, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -138,196 +138,188 @@ user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 user_pref("privacy.userContext.longPressBehavior", 0);
 
 /* Font size
- * [NOTE] The fonts below have a standard size, so they are commented out.
- * Don't change the size if you don't know what you're doing.
- * Размер шрифта
- * [ЗАМЕТКА] Шрифты ниже имеют стандартный размер, поэтому они закомментированы.
- * Не меняйте размер, если не знаете, что делаете. */
-// user_pref("font.size.fixed.x-cyrillic", 13);
-// user_pref("font.size.fixed.x-unicode", 13);
-// user_pref("font.size.fixed.x-western", 13);
-// user_pref("font.size.fixed.ar", 13);
-// user_pref("font.size.fixed.el", 13);
-// user_pref("font.size.fixed.he", 13);
-// user_pref("font.size.fixed.ja", 16);
-// user_pref("font.size.fixed.ko", 16);
-// user_pref("font.size.fixed.th", 13);
-// user_pref("font.size.fixed.x-armn", 13);
-// user_pref("font.size.fixed.x-beng", 13);
-// user_pref("font.size.fixed.x-cans", 13);
-// user_pref("font.size.fixed.x-devanagari", 13);
-// user_pref("font.size.fixed.x-ethi", 13);
-// user_pref("font.size.fixed.x-geor", 13);
-// user_pref("font.size.fixed.x-gujr", 13);
-// user_pref("font.size.fixed.x-guru", 13);
-// user_pref("font.size.fixed.x-khmr", 13);
-// user_pref("font.size.fixed.x-knda", 13);
-// user_pref("font.size.fixed.x-math", 13);
-// user_pref("font.size.fixed.x-mlym", 13);
-// user_pref("font.size.fixed.x-orya", 13);
-// user_pref("font.size.fixed.x-sinh", 13);
-// user_pref("font.size.fixed.x-tamil", 13);
-// user_pref("font.size.fixed.x-telu", 13);
-// user_pref("font.size.fixed.x-tibt", 13);
-// user_pref("font.size.fixed.zh-CN", 16);
-// user_pref("font.size.fixed.zh-HK", 16);
-// user_pref("font.size.fixed.zh-TW", 16);
-// user_pref("font.size.variable.ar", 16);
-// user_pref("font.size.variable.el", 16);
-// user_pref("font.size.variable.he", 16);
-// user_pref("font.size.variable.ja", 16);
-// user_pref("font.size.variable.ko", 16);
-// user_pref("font.size.variable.th", 16);
-// user_pref("font.size.variable.x-armn", 16);
-// user_pref("font.size.variable.x-beng", 16);
-// user_pref("font.size.variable.x-cans", 16);
-// user_pref("font.size.variable.x-cyrillic", 16);
-// user_pref("font.size.variable.x-devanagari", 16);
-// user_pref("font.size.variable.x-ethi", 16);
-// user_pref("font.size.variable.x-geor", 16);
-// user_pref("font.size.variable.x-gujr", 16);
-// user_pref("font.size.variable.x-guru", 16);
-// user_pref("font.size.variable.x-khmr", 16);
-// user_pref("font.size.variable.x-knda", 16);
-// user_pref("font.size.variable.x-math", 16);
-// user_pref("font.size.variable.x-mlym", 16);
-// user_pref("font.size.variable.x-orya", 16);
-// user_pref("font.size.variable.x-sinh", 16);
-// user_pref("font.size.variable.x-tamil", 16);
-// user_pref("font.size.variable.x-telu", 16);
-// user_pref("font.size.variable.x-tibt", 16);
-// user_pref("font.size.variable.x-unicode", 16);
-// user_pref("font.size.variable.x-western", 16);
-// user_pref("font.size.variable.zh-CN", 16);
-// user_pref("font.size.variable.zh-HK", 16);
-// user_pref("font.size.variable.zh-TW", 16);
+ * Размер шрифта */
+user_pref("font.size.fixed.x-cyrillic", 13);
+user_pref("font.size.fixed.x-unicode", 13);
+user_pref("font.size.fixed.x-western", 13);
+user_pref("font.size.fixed.ar", 13);
+user_pref("font.size.fixed.el", 13);
+user_pref("font.size.fixed.he", 13);
+user_pref("font.size.fixed.ja", 16);
+user_pref("font.size.fixed.ko", 16);
+user_pref("font.size.fixed.th", 13);
+user_pref("font.size.fixed.x-armn", 13);
+user_pref("font.size.fixed.x-beng", 13);
+user_pref("font.size.fixed.x-cans", 13);
+user_pref("font.size.fixed.x-devanagari", 13);
+user_pref("font.size.fixed.x-ethi", 13);
+user_pref("font.size.fixed.x-geor", 13);
+user_pref("font.size.fixed.x-gujr", 13);
+user_pref("font.size.fixed.x-guru", 13);
+user_pref("font.size.fixed.x-khmr", 13);
+user_pref("font.size.fixed.x-knda", 13);
+user_pref("font.size.fixed.x-math", 13);
+user_pref("font.size.fixed.x-mlym", 13);
+user_pref("font.size.fixed.x-orya", 13);
+user_pref("font.size.fixed.x-sinh", 13);
+user_pref("font.size.fixed.x-tamil", 13);
+user_pref("font.size.fixed.x-telu", 13);
+user_pref("font.size.fixed.x-tibt", 13);
+user_pref("font.size.fixed.zh-CN", 16);
+user_pref("font.size.fixed.zh-HK", 16);
+user_pref("font.size.fixed.zh-TW", 16);
+user_pref("font.size.variable.ar", 16);
+user_pref("font.size.variable.el", 16);
+user_pref("font.size.variable.he", 16);
+user_pref("font.size.variable.ja", 16);
+user_pref("font.size.variable.ko", 16);
+user_pref("font.size.variable.th", 16);
+user_pref("font.size.variable.x-armn", 16);
+user_pref("font.size.variable.x-beng", 16);
+user_pref("font.size.variable.x-cans", 16);
+user_pref("font.size.variable.x-cyrillic", 16);
+user_pref("font.size.variable.x-devanagari", 16);
+user_pref("font.size.variable.x-ethi", 16);
+user_pref("font.size.variable.x-geor", 16);
+user_pref("font.size.variable.x-gujr", 16);
+user_pref("font.size.variable.x-guru", 16);
+user_pref("font.size.variable.x-khmr", 16);
+user_pref("font.size.variable.x-knda", 16);
+user_pref("font.size.variable.x-math", 16);
+user_pref("font.size.variable.x-mlym", 16);
+user_pref("font.size.variable.x-orya", 16);
+user_pref("font.size.variable.x-sinh", 16);
+user_pref("font.size.variable.x-tamil", 16);
+user_pref("font.size.variable.x-telu", 16);
+user_pref("font.size.variable.x-tibt", 16);
+user_pref("font.size.variable.x-unicode", 16);
+user_pref("font.size.variable.x-western", 16);
+user_pref("font.size.variable.zh-CN", 16);
+user_pref("font.size.variable.zh-HK", 16);
+user_pref("font.size.variable.zh-TW", 16);
 
 /* Proportions (fonts)
- * [NOTE] The proportions given below are standard, so they are commented out.
- * Don't change the proportions if you don't know what you're doing.
- * Пропорции (шрифты)
- * [ЗАМЕТКА] Указанные ниже пропорции являются стандартными, поэтому они закомментированы.
- * Не изменяйте пропорции, если вы не знаете, что делаете. */
-// user_pref("font.default.ar", "sans-serif");
-// user_pref("font.default.el", "serif");
-// user_pref("font.default.he", "sans-serif");
-// user_pref("font.default.ja", "sans-serif");
-// user_pref("font.default.ko", "sans-serif");
-// user_pref("font.default.th", "sans-serif");
-// user_pref("font.default.x-armn", "serif");
-// user_pref("font.default.x-beng", "serif");
-// user_pref("font.default.x-cans", "serif");
-// user_pref("font.default.x-cyrillic", "serif");
-// user_pref("font.default.x-devanagari", "serif");
-// user_pref("font.default.x-ethi", "serif");
-// user_pref("font.default.x-geor", "serif");
-// user_pref("font.default.x-gujr", "serif");
-// user_pref("font.default.x-guru", "serif");
-// user_pref("font.default.x-khmr", "serif");
-// user_pref("font.default.x-knda", "serif");
-// user_pref("font.default.x-math", "serif");
-// user_pref("font.default.x-mlym", "serif");
-// user_pref("font.default.x-orya", "serif");
-// user_pref("font.default.x-sinh", "serif");
-// user_pref("font.default.x-tamil", "serif");
-// user_pref("font.default.x-telu", "serif");
-// user_pref("font.default.x-tibt", "serif");
-// user_pref("font.default.x-unicode", "serif");
-// user_pref("font.default.x-western", "serif");
-// user_pref("font.default.zh-CN", "sans-serif");
-// user_pref("font.default.zh-HK", "sans-serif");
-// user_pref("font.default.zh-TW", "sans-serif");
+ * Пропорции (шрифты) */
+user_pref("font.default.ar", "sans-serif");
+user_pref("font.default.el", "serif");
+user_pref("font.default.he", "sans-serif");
+user_pref("font.default.ja", "sans-serif");
+user_pref("font.default.ko", "sans-serif");
+user_pref("font.default.th", "sans-serif");
+user_pref("font.default.x-armn", "serif");
+user_pref("font.default.x-beng", "serif");
+user_pref("font.default.x-cans", "serif");
+user_pref("font.default.x-cyrillic", "serif");
+user_pref("font.default.x-devanagari", "serif");
+user_pref("font.default.x-ethi", "serif");
+user_pref("font.default.x-geor", "serif");
+user_pref("font.default.x-gujr", "serif");
+user_pref("font.default.x-guru", "serif");
+user_pref("font.default.x-khmr", "serif");
+user_pref("font.default.x-knda", "serif");
+user_pref("font.default.x-math", "serif");
+user_pref("font.default.x-mlym", "serif");
+user_pref("font.default.x-orya", "serif");
+user_pref("font.default.x-sinh", "serif");
+user_pref("font.default.x-tamil", "serif");
+user_pref("font.default.x-telu", "serif");
+user_pref("font.default.x-tibt", "serif");
+user_pref("font.default.x-unicode", "serif");
+user_pref("font.default.x-western", "serif");
+user_pref("font.default.zh-CN", "sans-serif");
+user_pref("font.default.zh-HK", "sans-serif");
+user_pref("font.default.zh-TW", "sans-serif");
 
 /* Default Fonts
  * Шрифты по умолчанию */
-// user_pref("font.name.serif.x-cyrillic", "Noto Serif");
-// user_pref("font.name.sans-serif.x-cyrillic", "Noto Sans");
-// user_pref("font.name.monospace.x-cyrillic", "Noto Mono");
-// user_pref("font.name.serif.x-western", "Noto Serif");
-// user_pref("font.name.sans-serif.x-western", "Noto Sans");
-// user_pref("font.name.monospace.x-western", "Noto Mono");
-// user_pref("font.name.serif.ar", "Noto Naskh Arabic");
-// user_pref("font.name.sans-serif.ar", "Noto Naskh Arabic");
-// user_pref("font.name.monospace.ar", "Noto Naskh Arabic");
-// user_pref("font.name.serif.x-armn", "Noto Serif Armenian");
-// user_pref("font.name.sans-serif.x-armn", "Noto Sans Armenian");
-// user_pref("font.name.monospace.x-armn", "Noto Sans Armenian");
-// user_pref("font.name.serif.x-beng", "Noto Serif Bengali");
-// user_pref("font.name.sans-serif.x-beng", "Noto Sans Bengali");
-// user_pref("font.name.monospace.x-beng", "Noto Sans Bengali");
-// user_pref("font.name.serif.zh-CN", "Noto Serif CJK SC");
-// user_pref("font.name.sans-serif.zh-CN", "Noto Sans CJK SC");
-// user_pref("font.name.monospace.zh-CN", "Noto Sans CJK SC");
-// user_pref("font.name.serif.zh-TW", "Noto Serif CJK TC");
-// user_pref("font.name.sans-serif.zh-TW", "Noto Sans CJK TC");
-// user_pref("font.name.monospace.zh-TW", "Noto Sans CJK TC");
-// user_pref("font.name.serif.zh-HK", "Noto Serif CJK TC");
-// user_pref("font.name.sans-serif.zh-HK", "Noto Sans CJK TC");
-// user_pref("font.name.monospace.zh-HK", "Noto Sans CJK TC");
-// user_pref("font.name.serif.x-devanagari", "Noto Serif Devanagari");
-// user_pref("font.name.sans-serif.x-devanagari", "Noto Sans Devanagari");
-// user_pref("font.name.monospace.x-devanagari", "Noto Sans Devanagari");
-// user_pref("font.name.serif.x-ethi", "Noto Serif Ethiopic");
-// user_pref("font.name.sans-serif.x-ethi", "Noto Sans Ethiopic");
-// user_pref("font.name.monospace.x-ethi", "Noto Sans Ethiopic");
-// user_pref("font.name.serif.x-geor", "Noto Serif Georgian");
-// user_pref("font.name.sans-serif.x-geor", "Noto Sans Georgian");
-// user_pref("font.name.monospace.x-geor", "Noto Sans Georgian");
-// user_pref("font.name.serif.x-gujr", "Noto Serif Gujarati");
-// user_pref("font.name.sans-serif.x-gujr", "Noto Sans Gujarati");
-// user_pref("font.name.monospace.x-gujr", "Noto Sans Gujarati");
-// user_pref("font.name.serif.x-guru", "Noto Serif Gurmukhi");
-// user_pref("font.name.sans-serif.x-guru", "Noto Sans Gurmukhi");
-// user_pref("font.name.monospace.x-guru", "Noto Sans Gurmukhi");
-// user_pref("font.name.serif.he", "Noto Serif Hebrew");
-// user_pref("font.name.sans-serif.he", "Noto Sans Hebrew");
-// user_pref("font.name.monospace.he", "Noto Sans Hebrew");
-// user_pref("font.name.serif.ja", "Noto Serif CJK JP");
-// user_pref("font.name.sans-serif.ja", "Noto Sans CJK JP");
-// user_pref("font.name.monospace.ja", "Noto Sans CJK JP");
-// user_pref("font.name.serif.el", "Noto Serif");
-// user_pref("font.name.sans-serif.el", "Noto Sans");
-// user_pref("font.name.monospace.el", "Noto Sans Mono");
-// user_pref("font.name.serif.x-knda", "Noto Serif Kannada");
-// user_pref("font.name.sans-serif.x-knda", "Noto Sans Kannada");
-// user_pref("font.name.monospace.x-knda", "Noto Sans Kannada");
-// user_pref("font.name.serif.x-khmr", "Noto Serif Khmer");
-// user_pref("font.name.sans-serif.x-khmr", "Noto Sans Khmer");
-// user_pref("font.name.monospace.x-khmr", "Noto Sans Khmer");
-// user_pref("font.name.serif.ko", "Noto Serif CJK KR");
-// user_pref("font.name.sans-serif.ko", "Noto Sans CJK KR");
-// user_pref("font.name.monospace.ko", "Noto Sans CJK KR");
-// user_pref("font.name.serif.x-mlym", "Noto Serif Malayalam");
-// user_pref("font.name.sans-serif.x-mlym", "Noto Sans Malayalam");
-// user_pref("font.name.monospace.x-mlym", "Noto Sans Malayalam");
-// user_pref("font.name.serif.x-orya", "Noto Sans Oriya");
-// user_pref("font.name.sans-serif.x-orya", "Noto Sans Oriya");
-// user_pref("font.name.monospace.x-orya", "Noto Sans Oriya");
-// user_pref("font.name.serif.x-math", "Latin Modern Math");
-// user_pref("font.name.sans-serif.x-math", "Latin Modern Math");
-// user_pref("font.name.monospace.x-math", "Latin Modern Math");
-// user_pref("font.name.serif.x-sinh", "Noto Serif Sinhala");
-// user_pref("font.name.sans-serif.x-sinh", "Noto Sans Sinhala");
-// user_pref("font.name.monospace.x-sinh", "Noto Sans Sinhala");
-// user_pref("font.name.serif.x-tamil", "Noto Serif Tamil");
-// user_pref("font.name.sans-serif.x-tamil", "Noto Sans Tamil");
-// user_pref("font.name.monospace.x-tamil", "Noto Sans Tamil");
-// user_pref("font.name.serif.x-telu", "Noto Serif Telugu");
-// user_pref("font.name.sans-serif.x-telu", "Noto Sans Telugu");
-// user_pref("font.name.monospace.x-telu", "Noto Sans Telugu");
-// user_pref("font.name.serif.x-tibt", "Noto Sans Tibetan");
-// user_pref("font.name.sans-serif.x-tibt", "Noto Sans Tibetan");
-// user_pref("font.name.monospace.x-tibt", "Noto Sans Tibetan");
-// user_pref("font.name.serif.x-unicode", "Noto Serif");
-// user_pref("font.name.sans-serif.x-unicode", "Noto Sans");
-// user_pref("font.name.monospace.x-unicode", "Noto Mono");
-// user_pref("font.name.serif.th", "Noto Serif Thai");
-// user_pref("font.name.sans-serif.th", "Noto Sans Thai");
-// user_pref("font.name.monospace.th", "Noto Sans Thai");
-// user_pref("font.name.serif.x-cans", "serif");
-// user_pref("font.name.sans-serif.x-cans", "sans-serif");
-// user_pref("font.name.monospace.x-cans", "monospace");
-// user_pref("font.language.group", "x-western");
+user_pref("font.name.serif.x-cyrillic", "Noto Serif");
+user_pref("font.name.sans-serif.x-cyrillic", "Noto Sans");
+user_pref("font.name.monospace.x-cyrillic", "Noto Mono");
+user_pref("font.name.serif.x-western", "Noto Serif");
+user_pref("font.name.sans-serif.x-western", "Noto Sans");
+user_pref("font.name.monospace.x-western", "Noto Mono");
+user_pref("font.name.serif.ar", "Noto Naskh Arabic");
+user_pref("font.name.sans-serif.ar", "Noto Naskh Arabic");
+user_pref("font.name.monospace.ar", "Noto Naskh Arabic");
+user_pref("font.name.serif.x-armn", "Noto Serif Armenian");
+user_pref("font.name.sans-serif.x-armn", "Noto Sans Armenian");
+user_pref("font.name.monospace.x-armn", "Noto Sans Armenian");
+user_pref("font.name.serif.x-beng", "Noto Serif Bengali");
+user_pref("font.name.sans-serif.x-beng", "Noto Sans Bengali");
+user_pref("font.name.monospace.x-beng", "Noto Sans Bengali");
+user_pref("font.name.serif.zh-CN", "Noto Serif CJK SC");
+user_pref("font.name.sans-serif.zh-CN", "Noto Sans CJK SC");
+user_pref("font.name.monospace.zh-CN", "Noto Sans CJK SC");
+user_pref("font.name.serif.zh-TW", "Noto Serif CJK TC");
+user_pref("font.name.sans-serif.zh-TW", "Noto Sans CJK TC");
+user_pref("font.name.monospace.zh-TW", "Noto Sans CJK TC");
+user_pref("font.name.serif.zh-HK", "Noto Serif CJK TC");
+user_pref("font.name.sans-serif.zh-HK", "Noto Sans CJK TC");
+user_pref("font.name.monospace.zh-HK", "Noto Sans CJK TC");
+user_pref("font.name.serif.x-devanagari", "Noto Serif Devanagari");
+user_pref("font.name.sans-serif.x-devanagari", "Noto Sans Devanagari");
+user_pref("font.name.monospace.x-devanagari", "Noto Sans Devanagari");
+user_pref("font.name.serif.x-ethi", "Noto Serif Ethiopic");
+user_pref("font.name.sans-serif.x-ethi", "Noto Sans Ethiopic");
+user_pref("font.name.monospace.x-ethi", "Noto Sans Ethiopic");
+user_pref("font.name.serif.x-geor", "Noto Serif Georgian");
+user_pref("font.name.sans-serif.x-geor", "Noto Sans Georgian");
+user_pref("font.name.monospace.x-geor", "Noto Sans Georgian");
+user_pref("font.name.serif.x-gujr", "Noto Serif Gujarati");
+user_pref("font.name.sans-serif.x-gujr", "Noto Sans Gujarati");
+user_pref("font.name.monospace.x-gujr", "Noto Sans Gujarati");
+user_pref("font.name.serif.x-guru", "Noto Serif Gurmukhi");
+user_pref("font.name.sans-serif.x-guru", "Noto Sans Gurmukhi");
+user_pref("font.name.monospace.x-guru", "Noto Sans Gurmukhi");
+user_pref("font.name.serif.he", "Noto Serif Hebrew");
+user_pref("font.name.sans-serif.he", "Noto Sans Hebrew");
+user_pref("font.name.monospace.he", "Noto Sans Hebrew");
+user_pref("font.name.serif.ja", "Noto Serif CJK JP");
+user_pref("font.name.sans-serif.ja", "Noto Sans CJK JP");
+user_pref("font.name.monospace.ja", "Noto Sans CJK JP");
+user_pref("font.name.serif.el", "Noto Serif");
+user_pref("font.name.sans-serif.el", "Noto Sans");
+user_pref("font.name.monospace.el", "Noto Sans Mono");
+user_pref("font.name.serif.x-knda", "Noto Serif Kannada");
+user_pref("font.name.sans-serif.x-knda", "Noto Sans Kannada");
+user_pref("font.name.monospace.x-knda", "Noto Sans Kannada");
+user_pref("font.name.serif.x-khmr", "Noto Serif Khmer");
+user_pref("font.name.sans-serif.x-khmr", "Noto Sans Khmer");
+user_pref("font.name.monospace.x-khmr", "Noto Sans Khmer");
+user_pref("font.name.serif.ko", "Noto Serif CJK KR");
+user_pref("font.name.sans-serif.ko", "Noto Sans CJK KR");
+user_pref("font.name.monospace.ko", "Noto Sans CJK KR");
+user_pref("font.name.serif.x-mlym", "Noto Serif Malayalam");
+user_pref("font.name.sans-serif.x-mlym", "Noto Sans Malayalam");
+user_pref("font.name.monospace.x-mlym", "Noto Sans Malayalam");
+user_pref("font.name.serif.x-orya", "Noto Sans Oriya");
+user_pref("font.name.sans-serif.x-orya", "Noto Sans Oriya");
+user_pref("font.name.monospace.x-orya", "Noto Sans Oriya");
+user_pref("font.name.serif.x-math", "Latin Modern Math");
+user_pref("font.name.sans-serif.x-math", "Latin Modern Math");
+user_pref("font.name.monospace.x-math", "Latin Modern Math");
+user_pref("font.name.serif.x-sinh", "Noto Serif Sinhala");
+user_pref("font.name.sans-serif.x-sinh", "Noto Sans Sinhala");
+user_pref("font.name.monospace.x-sinh", "Noto Sans Sinhala");
+user_pref("font.name.serif.x-tamil", "Noto Serif Tamil");
+user_pref("font.name.sans-serif.x-tamil", "Noto Sans Tamil");
+user_pref("font.name.monospace.x-tamil", "Noto Sans Tamil");
+user_pref("font.name.serif.x-telu", "Noto Serif Telugu");
+user_pref("font.name.sans-serif.x-telu", "Noto Sans Telugu");
+user_pref("font.name.monospace.x-telu", "Noto Sans Telugu");
+user_pref("font.name.serif.x-tibt", "Noto Sans Tibetan");
+user_pref("font.name.sans-serif.x-tibt", "Noto Sans Tibetan");
+user_pref("font.name.monospace.x-tibt", "Noto Sans Tibetan");
+user_pref("font.name.serif.x-unicode", "Noto Serif");
+user_pref("font.name.sans-serif.x-unicode", "Noto Sans");
+user_pref("font.name.monospace.x-unicode", "Noto Mono");
+user_pref("font.name.serif.th", "Noto Serif Thai");
+user_pref("font.name.sans-serif.th", "Noto Sans Thai");
+user_pref("font.name.monospace.th", "Noto Sans Thai");
+user_pref("font.name.serif.x-cans", "serif");
+user_pref("font.name.sans-serif.x-cans", "sans-serif");
+user_pref("font.name.monospace.x-cans", "monospace");
+user_pref("font.language.group", "x-western");
 
 /* Preferred language for displaying web pages
  * [NOTE] It is recommended to select only english locales.
@@ -349,7 +341,7 @@ user_pref("extensions.update.autoUpdateDefault", false);
 
 /* Background update service
  * Служба для фонового обновления */
-user_pref("app.update.staging.enabled", false);
+user_pref("app.update.staging.enabled", true);
 
 /* Display information about the update
  * Отображение информация об обновлении */
@@ -1153,7 +1145,7 @@ user_pref("security.ssl.treat_unsafe_negotiation_as_broken", true);
  *		1 = Предварительно заполнять текущий URL-адрес,
  *			но не выполнять предварительный выбор сертификата
  *		2 = Предварительно заполнить текущий URL-адрес и выбрать сертификат */
-user_pref("browser.ssl_override_behavior", 0);
+user_pref("browser.ssl_override_behavior", 2);
 
 /* Additional information about the pages warning about unsafe connections
  * Дополнительная информация о страницах, предупреждающая о небезопасном подключении */
@@ -1622,7 +1614,7 @@ user_pref("browser.tabs.closeWindowWithLastTab", false);
 
 /* Limit the availability of fonts in the system to white lists
  * Ограничить доступность шрифтов в системе к белым спискам */
-// user_pref("font.system.whitelist", "Arial, Batang, 바탕, Cambria Math, Courier New, Euphemia, Gautami, Georgia, Gulim, 굴림, GulimChe, 굴림체, Iskoola Pota, Kalinga, Kartika, Latha, Lucida Console, MS Gothic, ＭＳ ゴシック, MS Mincho, ＭＳ 明朝, MS PGothic, ＭＳ Ｐゴシック, MS PMincho, ＭＳ Ｐ明朝, MV Boli, Malgun Gothic, Mangal, Meiryo, Meiryo UI, Microsoft Himalaya, Microsoft JhengHei, Microsoft JengHei UI, Microsoft YaHei, 微软雅黑, Microsoft YaHei UI, MingLiU, 細明體, Noto Sans Buginese, Noto Sans Khmer, Noto Sans Lao, Noto Sans Myanmar, Noto Sans Yi, Nyala, PMingLiU, 新細明體, Plantagenet Cherokee, Raavi, Segoe UI, Shruti, SimSun, 宋体, Sylfaen, Tahoma, Times New Roman, Tunga, Verdana, Vrinda, Yu Gothic UI, Segoe UI Emoji");
+user_pref("font.system.whitelist", "Arial, Batang, 바탕, Cambria Math, Courier New, Euphemia, Gautami, Georgia, Gulim, 굴림, GulimChe, 굴림체, Iskoola Pota, Kalinga, Kartika, Latha, Lucida Console, MS Gothic, ＭＳ ゴシック, MS Mincho, ＭＳ 明朝, MS PGothic, ＭＳ Ｐゴシック, MS PMincho, ＭＳ Ｐ明朝, MV Boli, Malgun Gothic, Mangal, Meiryo, Meiryo UI, Microsoft Himalaya, Microsoft JhengHei, Microsoft JengHei UI, Microsoft YaHei, 微软雅黑, Microsoft YaHei UI, MingLiU, 細明體, Nyala, PMingLiU, 新細明體, Plantagenet Cherokee, Raavi, Segoe UI, Shruti, SimSun, 宋体, Sylfaen, Tahoma, Times New Roman, Tunga, Verdana, Vrinda, Yu Gothic UI, Segoe UI Emoji, Twemoji Mozilla, Noto Mono, Noto Sans, Noto Serif, Noto Naskh Arabic, Noto Serif Armenian, Noto Sans Armenian, Noto Serif Bengali, Noto Sans Bengali, Noto Serif CJK SC, Noto Sans CJK SC, Noto Serif CJK TC, Noto Sans CJK TC, Noto Serif CJK TC, Noto Sans CJK TC, Noto Serif Devanagari, Noto Sans Devanagari, Noto Serif Ethiopic, Noto Sans Ethiopic, Noto Serif Georgian, Noto Sans Georgian, Noto Serif Gujarati, Noto Sans Gujarati, Noto Serif Gurmukhi, Noto Sans Gurmukhi, Noto Serif Hebrew, Noto Sans Hebrew, Noto Serif CJK JP, Noto Sans CJK JP, Noto Serif Kannada, Noto Sans Kannada, Noto Serif Khmer, Noto Sans Khmer, Noto Serif CJK KR, Noto Sans CJK KR, Noto Serif Malayalam, Noto Sans Malayalam, Noto Sans Oriya, Noto Sans Oriya, Latin Modern Math, Noto Serif Sinhala, Noto Sans Sinhala, Noto Serif Tamil, Noto Sans Tamil, Noto Serif Telugu, Noto Sans Telugu, Noto Sans Tibetan, Noto Sans Tibetan, Noto Serif Thai, Noto Sans Thai");
 
 /* asm.js */
 user_pref("javascript.options.asmjs", false);
