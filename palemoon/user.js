@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
- * Last modified: December 22, 2018
+ * Last modified: December 23, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -285,7 +285,7 @@ user_pref("browser.tabs.loadDivertedInBackground", true);
 // user_pref("font.name.sans-serif.x-cans", "sans-serif");
 // user_pref("font.name.monospace.x-cans", "monospace");
 user_pref("font.language.group", "x-western");
-user_pref("font.name-list.emoji", "Segoe UI Emoji, Twemoji Mozilla");
+// user_pref("font.name-list.emoji", "Noto Color Emoji");
 
 /* Preferred language for displaying web pages
  * Предпочитаемый язык для отображения веб-страниц */

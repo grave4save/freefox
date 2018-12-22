@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/firefox/
- * Last modified: December 22, 2018
+ * Last modified: December 23, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -329,7 +329,7 @@ user_pref("privacy.userContext.longPressBehavior", 0);
 // user_pref("font.name.sans-serif.x-cans", "sans-serif");
 // user_pref("font.name.monospace.x-cans", "monospace");
 user_pref("font.language.group", "x-western");
-user_pref("font.name-list.emoji", "Segoe UI Emoji, Twemoji Mozilla");
+// user_pref("font.name-list.emoji", "Noto Color Emoji");
 
 /* Preferred language for displaying web pages
  * Предпочитаемый язык для отображения веб-страниц */
@@ -1896,7 +1896,7 @@ user_pref("browser.tabs.closeWindowWithLastTab", false);
 
 /* List of allowed fonts
  * Список разрешенных шрифтов */
-// user_pref("font.system.whitelist", "Arial, Batang, 바탕, Cambria Math, Courier New, Euphemia, Gautami, Georgia, Gulim, 굴림, GulimChe, 굴림체, Iskoola Pota, Kalinga, Kartika, Latha, Lucida Console, MS Gothic, ＭＳ ゴシック, MS Mincho, ＭＳ 明朝, MS PGothic, ＭＳ Ｐゴシック, MS PMincho, ＭＳ Ｐ明朝, MV Boli, Malgun Gothic, Mangal, Meiryo, Meiryo UI, Microsoft Himalaya, Microsoft JhengHei, Microsoft JengHei UI, Microsoft YaHei, 微软雅黑, Microsoft YaHei UI, MingLiU, 細明體, Nyala, PMingLiU, 新細明體, Plantagenet Cherokee, Raavi, Segoe UI, Shruti, SimSun, 宋体, Sylfaen, Tahoma, Times New Roman, Tunga, Verdana, Vrinda, Yu Gothic UI, Segoe UI Emoji, Twemoji Mozilla, Noto Mono, Noto Sans, Noto Serif, Noto Naskh Arabic, Noto Serif Armenian, Noto Sans Armenian, Noto Serif Bengali, Noto Sans Bengali, Noto Serif CJK SC, Noto Sans CJK SC, Noto Serif CJK TC, Noto Sans CJK TC, Noto Serif CJK TC, Noto Sans CJK TC, Noto Serif Devanagari, Noto Sans Devanagari, Noto Serif Ethiopic, Noto Sans Ethiopic, Noto Serif Georgian, Noto Sans Georgian, Noto Serif Gujarati, Noto Sans Gujarati, Noto Serif Gurmukhi, Noto Sans Gurmukhi, Noto Serif Hebrew, Noto Sans Hebrew, Noto Serif CJK JP, Noto Sans CJK JP, Noto Serif Kannada, Noto Sans Kannada, Noto Serif Khmer, Noto Sans Khmer, Noto Serif CJK KR, Noto Sans CJK KR, Noto Serif Malayalam, Noto Sans Malayalam, Noto Sans Oriya, Noto Sans Oriya, Latin Modern Math, Noto Serif Sinhala, Noto Sans Sinhala, Noto Serif Tamil, Noto Sans Tamil, Noto Serif Telugu, Noto Sans Telugu, Noto Sans Tibetan, Noto Sans Tibetan, Noto Serif Thai, Noto Sans Thai");
+// user_pref("font.system.whitelist", "");
 
 /* asm.js */
 user_pref("javascript.options.asmjs", false);
