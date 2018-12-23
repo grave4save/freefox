@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/firefox/
- * Last modified: December 7, 2018
+ * Last modified: December 24, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: userChrome.css
@@ -63,17 +63,15 @@
 #context-setDesktopBackground, /* Button "Set as desktop background image" in the context menu of Firefox ~ Кнопка "Сделать фоновым изображением рабочего стола" в контекстном меню Firefox */
 #context-sendvideo, /* "Send video by mail" button in Firefox context menu ~ Кнопка "Отправить видео по почте" в контекстном меню Firefox */
 #context-sendaudio, /* "Send audio by mail" button in Firefox context menu ~ Кнопка "Отправить аудио по почте" в контекстном меню Firefox */
-#context_reloadAllTabs,
-#context_bookmarkAllTabs,
-#context_closeTabsToTheEnd,
-#context_closeOtherTabs,
-#context-printframe,
-#context-navigation,
-#appMenuRestoreLastSession + toolbarseparator,
-#appMenu-zoom-controls + toolbarseparator,
-#appMenu-edit-controls + toolbarseparator,
-#appMenu-customize-button + toolbarseparator,
-#appMenu-help-button + toolbarseparator,
+#context_closeTabsToTheEnd, /* Button "Close tabs on the right" in the context menu of tabs ~ Кнопка "Закрыть вкладки справа" в контекстном меню вкладок */
+#context_closeOtherTabs, /* Button "Close other tabs" in the context menu of tabs ~ Кнопка "Закрыть другие вкладки" в контекстном меню вкладок */
+#context-navigation, /* Navigation buttons (back, forward, reload/stop, add to bookmarks) in the context menu of Firefox ~ Кнопки навигации (назад, вперед, перезагрузить/остановить, добавить в закладки) в контекстном меню Firefox */
+#appMenuRestoreLastSession + toolbarseparator, /* "Separator" after "Restore previous session" button in Firefox application menu ~ "Разделитель" после кнопки "Восстановить предыдущий сеанс" в меню приложения Firefox */
+#appMenu-zoom-controls + toolbarseparator, /* "Separator" after the "Zoom" button in the Firefox application menu ~ "Разделитель" после кнопки "Масштаб" в меню приложений Firefox */
+#appMenu-edit-controls + toolbarseparator, /* "Separator" after the "Edit" button in the Firefox application menu ~ "Разделитель" после кнопки "Редактировать" в меню приложения Firefox */
+#appMenu-customize-button + toolbarseparator, /* "Separator" after the "Personalization editor" button in the Firefox application menu
+ ~ "Разделитель" после кнопки "Редактора персонализации" в меню приложения Firefox */
+#appMenu-help-button + toolbarseparator, /* "Separator" after the "Help" button in the Firefox application menu ~ "Разделитель" после кнопки "Помощи" в меню приложения Firefox */
 menuseparator /* "Separators" in the Firefox menu ~ "Разделители" в меню Firefox */
 {
     display: none!important

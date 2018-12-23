@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
- * Last modified: December 16, 2018
+ * Last modified: December 24, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: userChrome.css
@@ -42,6 +42,12 @@ padding-left: 0px !important;
 #PanelUI-helpItems [oncommand="openHelpLink('firefox-help')"], /* "Help" button in the Waterfox menu panel ~ Кнопка "Справки" в панели меню Waterfox */
 #PanelUI-helpItems [oncommand="openHelpLink('keyboard-shortcuts')"], /* "Keyboard shortcut" button in the Waterfox menu panel ~ Кнопка "Сочетание клавиш" в панели меню Waterfox */
 #PanelUI-helpItems [oncommand="openUILink(gSafeBrowsing.getReportURL('Phish'), event);"], /* "Report phishing website" button in the Waterfox menu panel ~ Кнопка "Сообщить о поддельном сайте" в панели меню Waterfox */
+#context_closeTabsToTheEnd, /* Button "Close tabs on the right" in the context menu of tabs ~ Кнопка "Закрыть вкладки справа" в контекстном меню вкладок */
+#context_closeOtherTabs, /* Button "Close other tabs" in the context menu of tabs ~ Кнопка "Закрыть другие вкладки" в контекстном меню вкладок */
+#context-printframe, /* Navigation buttons (back, forward, reload/stop, add to bookmarks) in the context menu of Waterfox ~ Кнопки навигации (назад, вперед, перезагрузить/остановить, добавить в закладки) в контекстном меню Waterfox */
+#context_sendTabToDevice, /* "Send tab to device" button in Waterfox context menu ~ Кнопка "Отправить вкладку на устройство" в контекстном меню Waterfox */
+#context-sendpagetodevice, /* Button "Send page to device" in the context menu of Waterfox ~ Кнопка "Отправить страницу на устройство" в контекстном меню Waterfox */
+#context-viewbgimage, /* "Open background image" button in Waterfox context menu ~ Кнопка "Открыть фоновое изображение" в контекстном меню Waterfox */
 menuseparator /* "Separators" in the Waterfox menu ~ "Разделители" в меню Waterfox */
 {
     display: none!important

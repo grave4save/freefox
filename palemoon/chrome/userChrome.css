@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
- * Last modified: December 7, 2018
+ * Last modified: December 24, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: userChrome.css
@@ -66,8 +66,7 @@ font-size: 12px !important;
 box-shadow: none!important;
 }
 
-/* Removed the blue and green background on the right side of the address bar (on place of displaying
- * information about the site and certificate)
+/* Removed the blue and green background on the right side of the address bar (on place of displaying information about the site and certificate)
  * Убран синий и зеленый фон в правой части адресной строки (на месте отображения информации о сайте и сертификате) */
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedDomain,
 #urlbar[pageproxystate="valid"] > #identity-box.verifiedIdentity
