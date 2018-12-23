@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
- * Last modified: December 23, 2018
+ * Last modified: December 24, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -826,9 +826,6 @@ user_pref("media.webspeech.recognition.enable", false);
 /* Sending video playback statistics
  * Отправка статистики воспроизведения видео */
 user_pref("media.video_stats.enabled", false);
-
-/* Activity Stream */
-user_pref("browser.library.activity-stream.enabled", false)
 
 /* Block dangerous and deceptive content (malware, phishing, dangerous downloads)
  * Блокировать опасное и обманывающее содержимое (вредоносные программы, фишинг, опасные загрузки) */
