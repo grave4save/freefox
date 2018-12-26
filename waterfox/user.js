@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
- * Last modified: December 24, 2018
+ * Last modified: December 26, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -672,7 +672,7 @@ user_pref("network.captive-portal-service.minInterval", 0);
 
 /* HTTP Header "Do Not Track"
  * Заголовок HTTP "Не Отслеживать" */
-// user_pref("privacy.donottrackheader.enabled", true);
+user_pref("privacy.donottrackheader.enabled", true);
 
 /* TOR: hide referrer when leaving a .onion domain
  * TOR: скрыть referrer при выходе с домена .onion */
