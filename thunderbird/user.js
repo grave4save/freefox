@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
- * Last modified: December 23, 2018
+ * Last modified: December 28, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -827,11 +827,21 @@ user_pref("dom.w3c_pointer_events.enabled", false);
 user_pref("layout.css.visited_links_enabled", false);
 
 /* Cookie
+ * A Cookie is a piece of data (a small text file) that is sent by the server and stored in a browser.
+ * When the user re-loads the same page, the browser sends the cookie back to the server
+ * and notifies it of the previous activity of the application.
+ * Cookies store information such as passwords, logins, session data, credit card data, email addresses,
+ * and record various user activity and other statistics.
  *		0 = Always accept cookies from third-party sites
  *		1 = Never accept cookies from third-party sites
  *		2 = Do not accept cookies at all
  *		3 = Accept cookies from third-party sites, only from previously visited sites
  * Куки
+ * Cookie - фрагмент данных (небольшой текстовый файл), отправляемый сервером и сохраняющийся в браузере.
+ * Когда пользователь вновь загружает ту же самую страницу, браузер отсылает cookie назад на сервер
+ * и уведомляет его тем самым о предыдущей активности приложения.
+ * Cookie хранят такую информацию, как пароли, логины, сеансовые данные, данные кредитных карт,
+ * электронные почтовые адреса и записывают различную пользовательскую активность и прочую статистику.
  *		0 = Всегда принимать файлы куки с сторонних сайтов
  *		1 = Никогда не принимать файлы куки с сторонних сайтов
  *		2 = Не принимать куки вообще
@@ -844,7 +854,7 @@ user_pref("network.cookie.cookieBehavior", 1);
  * Политика жизни куки
  *		0 = Сохранять их до истечения срока действия
  *		2 = Сохранять их до закрытия Thunderbird */
-user_pref("network.cookie.lifetimePolicy", 0);
+user_pref("network.cookie.lifetimePolicy", 2);
 
 /* Closing Thunderbird when closing the last tab
  * Закрытие Thunderbird при закрытии последней вкладки */
@@ -1002,3 +1012,27 @@ user_pref("permissions.manager.defaultsUrl", "");
  *		1 = Не позволяйте подресурсам из разных источников открывать диалоги аутентификации HTTP
  *		2 = Разрешить субресурсам открывать диалоги аутентификации HTTP */
 user_pref("network.auth.subresource-http-auth-allow", 1);
+
+/* JavaScript
+ *
+ * JavaScript is a programming language; one of the main web technologies.
+ * At the same time, JavaScript allows you to run malicious code on any computer using two main types of vulnerabilities.
+ * XSS vulnerabilities are used if the attacker has the ability to embed the executable code on the page and demonstrate it to the user.
+ * In this case, an attacker could gain user rights and use them for their own purposes.
+ * Another type of vulnerability is CSRF, when an attacker attempts to force a browser to perform an undesirable action on another site,
+ * such as transferring funds from an account to an account.
+ * JavaScript technologies can leak a variety of information about the operating system, browser, monitor size and resolution,
+ * installed fonts, and other data.
+ * [NOTE] It is recommended not to enable this setting, and to use addition-type NoScript or uMatrix
+ *
+ * JavaScript - язык программирования; одна из главных веб-технологий.
+ * В то же время JavaScript позволяет запускать вредоносный код на любом компьютере при помощи двух основных типов уязвимостей.
+ * XSS-уязвимости используются, если у атакующей стороны есть возможность внедрить исполняемый код на страницу
+ * и продемонстрировать ее пользователю.
+ * В этом случае злоумышленник может получить права данного пользователя и использовать их в своих целях.
+ * Иной тип уязвимости - CSRF, когда атакующая сторона пытается заставить браузер осуществить нежелательное действие на другом сайте,
+ * например - перевести средства со счета на счет.
+ * JavaScript-технологии могут способствовать утечкам разнообразной информации об операционной системе,
+ * браузере, размере и разрешении монитора, установленных шрифтах и других данных.
+ * [ЗАМЕТКА] Рекомендуется не включать этот параметр, а использовать дополнение типа NoScript или uMatrix. */
+// user_pref("javascript.enabled", false);
