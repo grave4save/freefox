@@ -13,7 +13,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
- * Last modified: December 28, 2018
+ * Last modified: December 29, 2018
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: user.js
@@ -1130,12 +1130,17 @@ user_pref("dom.serviceWorkers.enabled", false);
 user_pref("network.cookie.leave-secure-alone", true);
 
 /* DOM (Document Object Model) Storage
+ * The DOM specifications of web applications define a mechanism that allows web pages to store their data
+ * on the client side in a special storage.
  * [WARNING] This will break a LOT of sites' functionality AND extensions.
  * You are better off using an extension for more granular control.
+ *
  * Хранилище DOM (Объектная Модель Документа)
+ * DOM-спецификации веб-приложений определяют механизм, разрешающий веб-страницам сохранять свои данные
+ * на клиентской стороне в специальном хранилище.
  * [ВНИМАНИЕ] Отключение этого предпочтения сломает много функций и расширений сайтов.
  * Вам лучше использовать расширение для более гранулированного контроля. */
-user_pref("dom.storage.enabled", true);
+// user_pref("dom.storage.enabled", false);
 
 /* Warn showing red lock for "broken security"
  * Предупреждать, показывая красный замок для "сломанной безопасности" */
@@ -1414,18 +1419,35 @@ user_pref("dom.vibrator.enabled", false);
 /* Shared Memory API */
 user_pref("javascript.options.shared_memory", false);
 
-/* Permissions to scripts
- * Разрешения скриптам */
-user_pref("dom.disable_window_move_resize", true);
-user_pref("dom.disable_window_open_feature.close", true);
-user_pref("dom.disable_window_open_feature.location", true);
-user_pref("dom.disable_window_open_feature.menubar", true);
-user_pref("dom.disable_window_open_feature.minimizable", true);
-user_pref("dom.disable_window_open_feature.personalbar", true);
-user_pref("dom.disable_window_open_feature.resizable", true);
-user_pref("dom.disable_window_open_feature.status", true);
-user_pref("dom.disable_window_open_feature.titlebar", true);
-user_pref("dom.disable_window_open_feature.toolbar", true);
+/* DOM (Document Object Model) JavaScript
+ * Disable JavaScript, executable by the DOM.
+ * When a web page is loaded, the browser creates its "behavior model"
+ * and may allow the hypothetical execution of unwanted and potentially dangerous functionality.
+ * To prevent the following actions:
+ *		1. JavaScript can add, change, or delete any HTML element or page attribute.
+ *		2. JavaScript can change all CSS styles on a page.
+ *		3. JavaScript can respond to any event on the page.
+ *		4. JavaScript can create new events on the page.
+ *
+ * JavaScript DOM (Объектная Модель Документа)
+ * Отключение JavaScript, исполняемого с помощью DOM. Когда веб-страница загружена, браузер создает ее "модель поведения"
+ * и может позволить гипотетическое исполнение нежелательного и потенциально опасного функционала.
+ * Для предотвращения следующих действий:
+ *		1. JavaScript может добавлять, менять и удалять любые HTML-элементы и атрибуты страницы.
+ *		2. JavaScript может менять все стили CSS на странице.
+ *		3. JavaScript может реагировать на любые события на странице.
+ *		4. JavaScript может создавать новые события на странице. */
+user_pref("dom.allow_scripts_to_close_windows", true); // Prevent scripts from closing windows ~ Запрет скриптам закрывать окна
+user_pref("dom.disable_window_flip", true); // Prevent scripts from changing the focus of windows (move one to another) ~ Запрет скриптам менять фокус окон (перемещать одно под другое)
+user_pref("dom.disable_window_move_resize", true); // Prevent scripts from resizing and/or moving Windows ~ Запрет скриптам менять размер и/или перемещать окна
+user_pref("dom.disable_window_open_feature.close", true); // Prevent scripts from disabling the window close button ~ Запрет скриптам отключать кнопку закрытия окна
+user_pref("dom.disable_window_open_feature.location", true); // Prevent scripts from hiding the address bar ~ Запрет скриптам скрывать адресную строку
+user_pref("dom.disable_window_open_feature.menubar", true); // Prevent scripts from hiding the menu bar ~ Запрет скриптам скрывать панель меню
+user_pref("dom.disable_window_open_feature.minimizable", true); // Prevent scripts from hiding the minimize window button ~ Запрет скриптам скрывать кнопку минимизации окна
+user_pref("dom.disable_window_open_feature.resizable", true); // Prevent scripts from resizing the window ~ Запрет скриптам изменять размер окна
+user_pref("dom.disable_window_open_feature.status", true); // Prevent scripts from hiding the status bar ~ Запрет скриптам скрывать панель состояния
+user_pref("dom.disable_window_open_feature.personalbar", true); // Prevent scripts from hiding user bookmarks bar ~ Запрет скриптам скрывать пользовательскую панель закладок
+user_pref("dom.disable_window_open_feature.toolbar", true); // Prevent scripts from hiding the navigation bar ~ Запрет скриптам скрывать панель навигации
 
 /* How to open links that indicate opening new Windows
  *		1 = Open in current tab
