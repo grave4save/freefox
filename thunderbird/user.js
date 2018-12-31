@@ -395,15 +395,8 @@ user_pref("plugin.sessionPermissionNow.intervalInMinutes", 0);
 // [ЗАМЕТКА] При включении ломается некоторые сайты.
 // user_pref("security.OCSP.require", true);
 
-// Enumerate multimedia devices
-// Перечисление устройств мультимедиа
-user_pref("media.navigator.enabled", false);
-
 // WebRTC (Web Real-Time Communication)
 // WebRTC (Веб Связь в Реальном Времени)
-user_pref("media.gmp-manager.cert.checkAttributes", false);
-user_pref("media.gmp-manager.cert.requireBuiltIn", false);
-user_pref("media.navigator.video.enabled", false);
 user_pref("media.peerconnection.dtmf.enabled", false);
 user_pref("media.peerconnection.enabled", false);
 user_pref("media.peerconnection.ice.tcp", false);
@@ -415,14 +408,36 @@ user_pref("media.peerconnection.turn.disable", true);
 user_pref("media.peerconnection.use_document_iceservers", false);
 user_pref("media.peerconnection.video.enabled", false);
 
+// OpenH264 codec (Gecko Media Plugins)
+// Кодек OpenH264 (Gecko Медиа Плагины)
+user_pref("media.gmp-manager.cert.checkAttributes", false);
+user_pref("media.gmp-manager.cert.requireBuiltIn", false);
+user_pref("media.gmp-manager.certs.1.commonName", "");
+user_pref("media.gmp-manager.certs.1.issuerName", "");
+user_pref("media.gmp-manager.certs.2.commonName", "");
+user_pref("media.gmp-manager.certs.2.issuerName", "");
+user_pref("media.gmp-manager.url", "data:text/plain,");
+
+// Indexed database API
+// API Индексированных баз данных
+// user_pref("dom.indexedDB.enabled", false);
+user_pref("dom.indexedDB.experimental", false);
+user_pref("dom.indexedDB.logging.details", false);
+user_pref("dom.indexedDB.logging.enabled", false);
+
+// API for microphone and webcam interaction
+// API для взаимодействия с микрофоном и веб-камерой
+user_pref("media.navigator.enabled", false);
+user_pref("media.navigator.video.enabled", false);
+
 // Web Audio API
 // [WARNING] Dangerously due to browser fingerprints.
 // API Веб-аудио
 // [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера.
 user_pref("dom.webaudio.enabled", false);
 
-// Sending video playback statistics
-// Отправка статистики воспроизведения видео
+// Collecting HTML video statistics
+// Сбор HTML-видеостатистики
 user_pref("media.video_stats.enabled", false);
 
 // Gamepad API
@@ -464,7 +479,9 @@ user_pref("dom.enable_resource_timing", false);
 user_pref("network.http.speculative-parallel-limit", 0);
 
 // Additional analytics sent to the web server
+// [NOTE] HTTP-data leaking from UserAgent to the server, especially when leaving the page.
 // Дополнительная аналитика, отправленная на веб-сервер
+// [ЗАМЕТКА] HTTP-данные утекающих от UserAgent на сервер, особенно при покидании страницы.
 user_pref("beacon.enabled", false);
 
 // Block dangerous and deceptive content (malware, phishing, dangerous downloads)
@@ -501,7 +518,7 @@ user_pref("browser.safebrowsing.provider.google4.dataSharing.enabled", false);
 user_pref("browser.safebrowsing.provider.google4.dataSharingURL", "");
 
 // Button "Ignore this warning" on the pages of safe browsing
-// [NOTE] Useless for regular users, it's meant for admins on bigger network as a way to secure their users.
+// [NOTE] Useless for regular users, its meant for admins on bigger network as a way to secure their users.
 // Кнопка "Игнорировать это предупреждение" на страницах безопасного просмотра
 // [ЗАМЕТКА] Бесполезный для обычных пользователей, он предназначен для администраторов в большей сети,
 // как способ защитить своих пользователей.
@@ -519,7 +536,7 @@ user_pref("browser.safebrowsing.blockedURIs.enabled", false);
 // 		0 = Отключить
 // 		1 = Только попытка обнаружить режим безопасности семьи (не импортировать корень)
 // 		2 = Определить режим безопасности семьи и импортировать корень
-user_pref("security.family_safety.mode", 0); // [WINDOWS]
+user_pref("security.family_safety.mode", 0);
 
 // IDN Punycode
 user_pref("network.IDN_show_punycode", true);
@@ -577,7 +594,7 @@ user_pref("general.autoScroll", false);
 // Аппаратное ускорение
 user_pref("layers.acceleration.force-enabled", false);
 user_pref("layers.acceleration.disabled", true);
-user_pref("gfx.direct2d.disabled", true); // [WINDOWS]
+user_pref("gfx.direct2d.disabled", true);
 
 // Maximum number of backup bookmarks
 // Максимальное количество резервных закладок
@@ -624,7 +641,7 @@ user_pref("media.mediasource.webm.enabled", true);
 
 // How often Thunderbird should ask for a master password
 // 		0 = The first time
-// 		1 = Every time it's needed
+// 		1 = Every time its needed
 // 		2 = Every "N" minutes
 // Как часто Thunderbird должен запрашивать мастер-пароль
 // 		0 = Первый раз
@@ -702,8 +719,8 @@ user_pref("keyword.enabled", true);
 user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
 
 // Windows jumplist
-user_pref("mail.taskbar.lists.enabled", false); // [WINDOWS]
-user_pref("mail.taskbar.lists.tasks.enabled", false); // [WINDOWS]
+user_pref("mail.taskbar.lists.enabled", false);
+user_pref("mail.taskbar.lists.tasks.enabled", false);
 
 // IPv6
 user_pref("network.dns.disableIPv6", true);
@@ -741,7 +758,7 @@ user_pref("accessibility.typeaheadfind", false);
 
 // Automatic copying
 // Автоматическое копирование
-user_pref("clipboard.autocopy", false); // [LINUX]
+user_pref("clipboard.autocopy", false);
 
 // Reader View
 user_pref("reader.parse-on-load.enabled", false);
@@ -765,11 +782,15 @@ user_pref("network.http.spdy.enabled.deps", true);
 user_pref("network.http.spdy.enabled.http2", true);
 
 // WebGL (Web Graphics Library)
+// [NOTE] Turning off WebGL to block the definition of the CPU and the speed of the video card on the "digital fingerprints".
+// Also recommended for braking, crashes and problems with the video card.
 // WebGL (Библиотека веб-графики)
+// [ЗАМЕТКА] Выключение WebGL с целью блокирования определения CPU и скорости видеокарты по "цифровым отпечаткам".
+// Также рекомендовано при торможениях, сбоях и проблемах с видеокартой.
 user_pref("webgl.disable-extensions", true);
 user_pref("webgl.disable-fail-if-major-performance-caveat", true);
 user_pref("webgl.disabled", true);
-user_pref("webgl.dxgl.enabled", false); // [WINDOWS]
+user_pref("webgl.dxgl.enabled", false);
 user_pref("webgl.enable-webgl2", false);
 user_pref("webgl.force-enabled", false);
 user_pref("webgl.min_capability_mode", true);
@@ -955,7 +976,7 @@ user_pref("browser.cache.offline.insecure.enable", false);
 // Запрос на использование автономного кеша
 user_pref("offline-apps.allow_by_default", false);
 
-// First Party Isolation
+// First party isolation
 // Изоляция первой стороны
 user_pref("privacy.firstparty.isolate", true);
 user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
@@ -1024,7 +1045,7 @@ user_pref("plugin.state.java", 0);
 
 // Scanning the system for plug-ins
 // Сканирование системы на наличие плагинов
-user_pref("plugin.scan.plid.all", false); // [WINDOWS]
+user_pref("plugin.scan.plid.all", false);
 
 // Sending ping
 // Отправка пинга

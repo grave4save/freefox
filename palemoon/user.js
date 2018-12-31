@@ -510,18 +510,18 @@ user_pref("plugin.sessionPermissionNow.intervalInMinutes", 0);
 
 // Scanning the system for plug-ins
 // Сканирование системы на наличие плагинов
-user_pref("plugin.scan.plid.all", false);  // [WINDOWS]
+user_pref("plugin.scan.plid.all", false); 
 
-// GMP (Gecko Media Plugins)
-// GMP (Gecko Медиа Плагины)
+// OpenH264 codec (Gecko Media Plugins)
+// Кодек OpenH264 (Gecko Медиа Плагины)
 user_pref("media.gmp-manager.cert.checkAttributes", false);
 user_pref("media.gmp-manager.cert.requireBuiltIn", false);
-user_pref("media.gmp-manager.url", "data:text/plain,");
-user_pref("media.gmp.decoder.enabled", false);
 user_pref("media.gmp-manager.certs.1.commonName", "");
 user_pref("media.gmp-manager.certs.1.issuerName", "");
 user_pref("media.gmp-manager.certs.2.commonName", "");
 user_pref("media.gmp-manager.certs.2.issuerName", "");
+user_pref("media.gmp-manager.url", "data:text/plain,");
+user_pref("media.gmp.decoder.enabled", false);
 
 // Preload browser links
 // Предварительная загрузка браузером ссылок
@@ -692,7 +692,9 @@ user_pref("dom.popup_allowed_events", "click dblclick");
 user_pref("accessibility.force_disabled", 1);
 
 // Additional analytics sent to the web server
+// [NOTE] HTTP-data leaking from UserAgent to the server, especially when leaving the page.
 // Дополнительная аналитика, отправленная на веб-сервер
+// [ЗАМЕТКА] HTTP-данные утекающих от UserAgent на сервер, особенно при покидании страницы.
 user_pref("beacon.enabled", false);
 
 // Deleting temporary files opened by an external application
@@ -704,8 +706,8 @@ user_pref("browser.helperApps.deleteTempFileOnExit", true);
 user_pref("media.webspeech.synth.enabled", false);
 user_pref("media.webspeech.recognition.enable", false);
 
-// Sending video playback statistics
-// Отправка статистики воспроизведения видео
+// Collecting HTML video statistics
+// Сбор HTML-видеостатистики
 user_pref("media.video_stats.enabled", false);
 
 // Tracking protection in all windows
@@ -727,12 +729,6 @@ user_pref("dom.forms.datetime.timepicker", false);
 // Типы содержимого
 user_pref("browser.contentHandlers.types.0.title", "");
 user_pref("browser.contentHandlers.types.0.uri", "");
-user_pref("goanna.handlerService.schemes.webcal.0.name", "");
-user_pref("goanna.handlerService.schemes.webcal.0.uriTemplate", "");
-user_pref("goanna.handlerService.schemes.mailto.0.name", "");
-user_pref("goanna.handlerService.schemes.mailto.0.uriTemplate", "");
-user_pref("goanna.handlerService.schemes.mailto.1.name", "");
-user_pref("goanna.handlerService.schemes.mailto.1.uriTemplate", "");
 user_pref("gecko.handlerService.schemes.webcal.0.name", "");
 user_pref("gecko.handlerService.schemes.webcal.0.uriTemplate", "");
 user_pref("gecko.handlerService.schemes.webcal.1.name", "");
@@ -741,6 +737,12 @@ user_pref("gecko.handlerService.schemes.webcal.2.name", "");
 user_pref("gecko.handlerService.schemes.webcal.2.uriTemplate", "");
 user_pref("gecko.handlerService.schemes.webcal.3.name", "");
 user_pref("gecko.handlerService.schemes.webcal.3.uriTemplate", "");
+user_pref("goanna.handlerService.schemes.mailto.0.name", "");
+user_pref("goanna.handlerService.schemes.mailto.0.uriTemplate", "");
+user_pref("goanna.handlerService.schemes.mailto.1.name", "");
+user_pref("goanna.handlerService.schemes.mailto.1.uriTemplate", "");
+user_pref("goanna.handlerService.schemes.webcal.0.name", "");
+user_pref("goanna.handlerService.schemes.webcal.0.uriTemplate", "");
 
 // Send Flash crash reports
 // Отправка отчетов о сбоях Flash
@@ -752,7 +754,7 @@ user_pref("dom.ipc.plugins.reportCrashURL", false);
 
 // How often Palemoon should ask for a master password
 //		0 = The first time
-//		1 = Every time it's needed
+//		1 = Every time its needed
 //		2 = Every "N" minutes
 // Как часто Palemoon должен запрашивать мастер-пароль
 //		0 = Первый раз
@@ -848,14 +850,14 @@ user_pref("browser.urlbar.trimURLs", false);
 user_pref("browser.urlbar.filter.javascript", true);
 
 // Windows jumplist
-user_pref("browser.taskbar.lists.enabled", false); // [WINDOWS]
-user_pref("browser.taskbar.lists.frequent.enabled", false); // [WINDOWS]
-user_pref("browser.taskbar.lists.recent.enabled", false); // [WINDOWS]
-user_pref("browser.taskbar.lists.tasks.enabled", false); // [WINDOWS]
+user_pref("browser.taskbar.lists.enabled", false);
+user_pref("browser.taskbar.lists.frequent.enabled", false);
+user_pref("browser.taskbar.lists.recent.enabled", false);
+user_pref("browser.taskbar.lists.tasks.enabled", false);
 
 // Display thumbnails of tabs on the taskbar
 // Отображать эскизы вкладок на панели задач
-user_pref("browser.taskbar.previews.enable", false); // [WINDOWS]
+user_pref("browser.taskbar.previews.enable", false);
 
 // IPv6
 user_pref("network.dns.disableIPv6", true);
@@ -925,11 +927,15 @@ user_pref("network.http.spdy.enabled.deps", true);
 user_pref("network.http.spdy.enabled.http2", true);
 
 // WebGL (Web Graphics Library)
+// [NOTE] Turning off WebGL to block the definition of the CPU and the speed of the video card on the "digital fingerprints".
+// Also recommended for braking, crashes and problems with the video card.
 // WebGL (Библиотека веб-графики)
+// [ЗАМЕТКА] Выключение WebGL с целью блокирования определения CPU и скорости видеокарты по "цифровым отпечаткам".
+// Также рекомендовано при торможениях, сбоях и проблемах с видеокартой.
 user_pref("webgl.disable-extensions", true);
 user_pref("webgl.disable-fail-if-major-performance-caveat", true);
 user_pref("webgl.disabled", true);
-user_pref("webgl.dxgl.enabled", false); // [WINDOWS]
+user_pref("webgl.dxgl.enabled", false);
 user_pref("webgl.enable-webgl2", false);
 user_pref("webgl.force-enabled", false);
 user_pref("webgl.min_capability_mode", true);
@@ -1037,8 +1043,8 @@ user_pref("dom.vr.enabled", false);
 // Аппаратное ускорение
 user_pref("layers.acceleration.force-enabled", false);
 user_pref("layers.acceleration.disabled", true);
-user_pref("gfx.direct2d.disabled", true); // [WINDOWS]
-user_pref("layers.prefer-d3d9", false); // [WINDOWS];
+user_pref("gfx.direct2d.disabled", true);
+user_pref("layers.prefer-d3d9", false);;
 
 // Web Audio API
 // [WARNING] Dangerously due to browser fingerprints.
@@ -1162,7 +1168,7 @@ user_pref("security.tls.enable_0rtt_data", false);
 //		0 = Отключить
 //		1 = Только попытка обнаружить режим безопасности семьи (не импортировать корень)
 //		2 = Определить режим безопасности семьи и импортировать корень
-user_pref("security.family_safety.mode", 0); // [WINDOWS]
+user_pref("security.family_safety.mode", 0);
 
 // Enfore Public Key Pinning
 //		0 = Disable
@@ -1384,7 +1390,11 @@ user_pref("device.storage.enabled", false);
 
 // Windows Store launch links on Windows 8/8.1/10
 // Ссылки запуска Windows Store на Windows 8/8.1/10
-user_pref("network.protocol-handler.external.ms-windows-store", false); // [WINDOWS]
+user_pref("network.protocol-handler.external.ms-windows-store", false);
+
+// API for microphone and webcam interaction
+// API для взаимодействия с микрофоном и веб-камерой
+user_pref("camera.control.face_detection.enabled", false);
 
 // Browser function that allows you to save objects by keyboard shortcut, left mouse button and ALT key
 //		TRUE = When you click on an object with Alt plus LMB, it is saved
