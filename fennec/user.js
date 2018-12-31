@@ -596,7 +596,7 @@ user_pref("network.cookie.lifetimePolicy", 2);
 
 // Indexed database API
 // API Индексированных баз данных
-user_pref("dom.indexedDB.enabled", true);
+// user_pref("dom.indexedDB.enabled", false);
 user_pref("dom.indexedDB.experimental", false);
 user_pref("dom.indexedDB.logging.details", false);
 user_pref("dom.indexedDB.logging.enabled", false);
@@ -689,7 +689,7 @@ user_pref("security.ask_for_password", 2);
 // Как часто (в течение скольки минут) Fennec должен запрашивать мастер-пароль
 user_pref("security.password_lifetime", 5);
 
-// Auto-complete user name and password
+// Autocomplete user name and password
 // Aвтоматическое заполнение имени пользователя и пароля
 user_pref("signon.autofillForms", false);
 user_pref("signon.autofillForms.http", false);
@@ -744,7 +744,7 @@ user_pref("network.http.speculative-parallel-limit", 0);
 // Отображения всех части URL-адреса в строке адреса
 user_pref("browser.urlbar.trimURLs", false);
 
-// Adding sites from Alexa Top 500 to the address bar auto-complete list
+// Adding sites from Alexa Top 500 to the address bar Autocomplete list
 // Добавление сайтов из Alexa Top 500 в список автозаполнения адресной строки
 user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
 
@@ -1418,7 +1418,7 @@ user_pref("browser.display.use_document_fonts", 0);
 // between the client program and the server. With the help of its analysis, the server determines the optimal parameters
 // for interaction on the basis of existing specifications of a software, data on its purpose
 // (browser, email client, etc.) and the current version.
-// The above is the user Agent from Firefox ESR, but you can change it and find the fake UserAgent values on the Internet.
+// [NOTE] The above is the user Agent from Firefox ESR, but you can change it and find the fake UserAgent values on the Internet.
 // Please choose the most common options (as shown in the example above), trying not to "stand out" from the total mass of browsers.
 // [WARNING] To prevent leaks of information about your operating system and browser through UA analysis,
 // additionally disable JavaScript globally!

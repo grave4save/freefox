@@ -45,7 +45,7 @@ user_pref("browser.tabs.warnOnOpen", true);
 // between the client program and the server. With the help of its analysis, the server determines the optimal parameters
 // for interaction on the basis of existing specifications of a software, data on its purpose
 // (browser, email client, etc.) and the current version.
-// The above is the user Agent from Firefox ESR, but you can change it and find the fake UserAgent values on the Internet.
+// [NOTE] The above is the user Agent from Firefox ESR, but you can change it and find the fake UserAgent values on the Internet.
 // Please choose the most common options (as shown in the example above), trying not to "stand out" from the total mass of browsers.
 // [WARNING] To prevent leaks of information about your operating system and browser through UA analysis,
 // additionally disable JavaScript globally!
@@ -566,14 +566,6 @@ user_pref("permissions.default.microphone", 2);
 // [ВНИМАНИЕ] Это может нарушить воспроизведение видео на разных сайтах.
 user_pref("media.autoplay.default", 1);
 
-// Logic blocking autoplay version 2 and enable user interface
-// Логика блокировки автовоспроизведения версии 2 и включить пользовательский интерфейс
-user_pref("media.autoplay.enabled.user-gestures-needed", true);
-
-// Allow asking for permission to autoplay to appear in user interface
-// Запрашивать разрешение на автовоспроизведение в пользовательском интерфейсе
-user_pref("media.autoplay.ask-permission", true);
-
 // Automatically play sound in inactive tabs
 //		TRUE = Do not play
 //		FALSE = Play
@@ -663,7 +655,7 @@ user_pref("browser.search.geoip.timeout", 0);
 
 // Application language
 // Язык приложения
-// user_pref("intl.locale.requested", "en");
+// user_pref("intl.locale.requested", "en-US");
 
 // Regional specificity for search results and search engines
 // Региональная специфика для результатов поиска и поисковых систем
@@ -685,7 +677,7 @@ user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
 user_pref("privacy.firstparty.isolate.block_post_message", true);
 
 // Firefox Fingerprints
-// [NOTE] Blocking the recognition of the browser’s “digital fingerprints” - external dimensions (height and width) of the active browser window.
+// [NOTE] Blocking the recognition of the browsers "digital fingerprints" - external dimensions (height and width) of the active browser window.
 // As a rule, most users maximize the active browser window to full screen.
 // Using a specially prepared web page, a hypothetical attacker (using the window.screen object and CSS media queries)
 // can identify the physical dimensions of the monitor (in pixels) in this case, even if scripts are globally forbidden in the browser.
@@ -959,7 +951,7 @@ user_pref("network.cookie.lifetimePolicy", 2);
 
 // Indexed database API
 // API Индексированных баз данных
-user_pref("dom.indexedDB.enabled", true);
+user_pref("dom.indexedDB.enabled", false);
 user_pref("dom.indexedDB.experimental", false);
 user_pref("dom.indexedDB.logging.details", false);
 user_pref("dom.indexedDB.logging.enabled", false);
@@ -1130,7 +1122,7 @@ user_pref("security.ask_for_password", 2);
 // Как часто (в течение скольки минут) Firefox должен запрашивать мастер-пароль
 user_pref("security.password_lifetime", 5);
 
-// Auto-complete user name and password
+// Autocomplete user name and password
 // Aвтоматическое заполнение имени пользователя и пароля
 user_pref("signon.autofillForms", false);
 user_pref("signon.autofillForms.http", false);
@@ -1145,9 +1137,15 @@ user_pref("general.smoothScroll", false);
 user_pref("lightweightThemes.update.enabled", false);
 
 // Pocket extension
+// Proprietary application Pocket (formerly known as Read It Later) allows you to save links to texts in the cloud storage
+// for further reading, storing data about user activity and synchronizing them between all devices subscribed to the service.
+// This can de-anonymize users and reveal their preferences.
 // [NOTE] Pocket is a third-party (now owned by Mozilla) cloud service,
 // which operates on the principle of "Save for later use".
 // Расширение Pocket
+// Проприетарное приложение Pocket (ранее известное как Read It Later) позволяет сохранять ссылки на тексты в облачном хранилище
+// для их дальнейшего прочтения, храня таким образом данные о пользовательской активности и синхронизируя их между всеми устройствами,
+// подписанным на услуги сервиса. Это может деанонимизировать пользователей и раскрыть их предпочтения.
 // [ЗАМЕТКА] Pocket является сторонним (теперь принадлежит Mozilla) облачным сервисом,
 // который работает по принципу "Сохранить для последующего использования".
 user_pref("extensions.pocket.enabled", false);
@@ -1237,7 +1235,7 @@ user_pref("browser.urlbar.filter.javascript", true);
 user_pref("browser.urlbar.suggest.searches", false);
 user_pref("browser.urlbar.userMadeSearchSuggestionsChoice", true);
 
-// Adding sites from Alexa Top 500 to the address bar auto-complete list
+// Adding sites from Alexa Top 500 to the address bar Autocomplete list
 // Добавление сайтов из Alexa Top 500 в список автозаполнения адресной строки
 user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
 
