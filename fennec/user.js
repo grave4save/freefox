@@ -347,7 +347,13 @@ user_pref("toolkit.telemetry.reportingpolicy.firstRun", false);
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
 
 // Crash reports
+// [NOTE] This feature sends information about browser crashes to the Mozilla server,
+// including technical information (memory status, etc.), the time of the incident and the web links visited,
+// as well as some user information.
 // Отчеты о сбоях
+// [ЗАМЕТКА] Эта функция отсылает на сервер Mozilla сведения о сбоях браузера,
+// включая техническую информацию (состояние памяти и т.п.), время происшествия и посещаемые веб-ссылки,
+// а также некоторую пользовательскую информацию.
 user_pref("breakpad.reportURL", "");
 
 // Location accounting
@@ -382,7 +388,20 @@ user_pref("privacy.firstparty.isolate", true);
 user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
 
 // Fennec Fingerprints
+// [NOTE] Blocking the recognition of the browser’s “digital fingerprints” - external dimensions (height and width) of the active browser window.
+// As a rule, most users maximize the active browser window to full screen.
+// Using a specially prepared web page, a hypothetical attacker (using the window.screen object and CSS media queries)
+// can identify the physical dimensions of the monitor (in pixels) in this case, even if scripts are globally forbidden in the browser.
+// Activating this setting will lead to the fact that a minor information about the size of the visible area of the web page being
+// viewed will be available to the third party - i.e. without considering the size of the chrome elements of the browser window.
 // Отпечатки пальцев Fennec
+// [ЗАМЕТКА] Блокирование опознания "цифровых отпечатков" браузера - внешних размеров (высоты и ширины) активного окна браузера.
+// Как правило, большинство пользователей разворачивает активное окно браузера на весь экран.
+// При помощи специально подготовленной веб-страницы гипотетическая атакующая сторона
+// (посредством использования объекта window.screen и CSS медиа-запросов) может опознать в этом случае физические размеры монитора (в пикселях),
+// даже если в браузере глобально запрещены скрипты.
+// Активация этой настройки приведет к тому, что третьей стороне будет доступна малозначительная информация о размере видимой области
+// просматриваемой веб-страницы - т.е. без учета размеров chrome-элементов окна браузера.
 user_pref("privacy.resistFingerprinting", true);
 user_pref("privacy.resistFingerprinting.autoDeclineNoUserInputCanvasPrompts", false);
 
@@ -1399,11 +1418,18 @@ user_pref("browser.display.use_document_fonts", 0);
 // between the client program and the server. With the help of its analysis, the server determines the optimal parameters
 // for interaction on the basis of existing specifications of a software, data on its purpose
 // (browser, email client, etc.) and the current version.
+// The above is the user Agent from Firefox ESR, but you can change it and find the fake UserAgent values on the Internet.
+// Please choose the most common options (as shown in the example above), trying not to "stand out" from the total mass of browsers.
+// [WARNING] To prevent leaks of information about your operating system and browser through UA analysis,
+// additionally disable JavaScript globally!
 // UserAgent
 // Строка User-Agent (часть HTTP-заголовка) используется для связи и передачи содержимого (контента)
 // между клиентской программой и сервером. С помощью ее анализа сервер определяет оптимальные параметры
 // для взаимодействия на основании уже имеющихся спецификаций того или иного программного обеспечения,
 // данных о его назначении (браузер, почтовый клиент и т.п.) и текущей версии.
+// [ЗАМЕТКА] Выше представлен UserAgent от Firefox ESR, однако вы можете его изменить и найти поддельные значения UserAgent в интернете.
+// Пожалуйста, выбирайте наиболее общеупотребимые варианты (как это показано в примере выше), стараясь "не выделяться" из общей массы браузеров.
+// [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA, дополнительно запретите JavaScript глобально!
 user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
 user_pref("general.buildID.override", "20100101");
 user_pref("general.useragent.updates.lastupdated", "");
@@ -1411,7 +1437,7 @@ user_pref("general.appname.override", "Netscape");
 user_pref("general.appversion.override", "5.0 (Windows)");
 user_pref("general.platform.override", "Win32");
 user_pref("general.oscpu.override", "Windows NT 6.1");
-// user_pref("general.useragent.locale", "en-US");
+user_pref("general.useragent.locale", "en-US");
 
 // Fullscreen web surfing
 // [NOTE] Hide the Fennec panel while scrolling down the page.
