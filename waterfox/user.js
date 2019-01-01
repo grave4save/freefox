@@ -1,5 +1,5 @@
 // This file is part of the Liberty fox project,
-// Copyright (c) 2018 Bogachenko Vyacheslav
+// Copyright (c) 2019 Bogachenko Vyacheslav
 //
 // Liberty fox is a free project: you can distribute it and/or modify
 // it in accordance with the MIT license published by the Massachusetts Institute of Technology.
@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
-// Last modified: December 31, 2018
+// Last modified: January 1, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -362,7 +362,15 @@ user_pref("app.update.staging.enabled", true);
 user_pref("app.update.silent", false);
 
 // Update extension metadata
+// [NOTE] Disable profiled add-on information and block the sending of user metadata about the use of add-ons.
+// The browser, based on the list of already installed add-ons, offers new ones on the "Get Add-ons" page
+// in the add-ons manager. At the same time, Mozilla receives and analyzes information from the browser: version number,
+// IP address, and so on.
 // Обновление метаданных расширения
+// [ЗАМЕТКА] Отключение профилируемой информации о дополнениях и блокирование отсылки пользовательских метаданных
+// об использовании дополнений. Браузер, отталкиваясь от списка уже установленных дополнений, предлагает новые
+// на странице "Get Add-ons" в менеджере дополнений. При этом Mozilla получает и анализирует информацию,
+// поступающую от браузера: номер версии, IP-адрес и прочее.
 user_pref("extensions.getAddons.cache.enabled", false);
 
 // Automatic update of search engines
@@ -543,7 +551,15 @@ user_pref("media.block-autoplay-until-in-foreground", true);
 user_pref("media.mediasource.webm.enabled", true);
 
 // Telemetry
+// This feature sends data to Mozilla servers about usage, browser performance, user interface features,
+// memory and hardware configuration, as well as real IP.
+// In addition, information may be collected about the sites visited. This is a serious source of leakage and user tracking,
+// it should be disabled.
 // Телеметрия
+// Эта функция шлет на серверы Mozilla данные об использовании, производительности браузера,
+// особенностях пользовательского интерфейса, памяти и конфигурации оборудования, а также реальный IP.
+// Кроме того, может собираться информация о посещаемых сайтах. Это серьезный источник утечек и слежения за пользователем,
+// его следует отключить.
 user_pref("toolkit.telemetry.archive.enabled", false);
 user_pref("toolkit.telemetry.enabled", false);
 user_pref("toolkit.telemetry.newProfilePing.enabled", false);
@@ -1164,8 +1180,13 @@ user_pref("security.mixed_content.block_active_content", true);
 user_pref("security.mixed_content.block_display_content", true);
 
 // SPDY protocol
+// SPDY protocol developed with the participation of Google for the transport of web content.
+// SPDY modifies web traffic in order to reduce its download time by compression, multiplex and prioritization mechanism.
 // [WARNING] SPDY can store an identifier and holds an extremely long open connection.
 // Протокол SPDY
+// SPDY протокол, разработанный с участием Google для транспортировки веб-контента.
+// SPDY видоизменяет веб-трафик с целью сокращения времени его загрузки путем компрессии,
+// мультиплекса и механизма расстановки приоритетов.
 // [ВНИМАНИЕ] SPDY может хранить идентификатор и держит экстремально долгое открытое соединение.
 user_pref("network.http.spdy.enabled", false);
 user_pref("network.http.spdy.enabled.deps", false);

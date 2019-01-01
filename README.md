@@ -1,6 +1,6 @@
 <!--
 This file is part of the Liberty fox project,
-Copyright (c) 2018 Bogachenko Vyacheslav
+Copyright (c) 2019 Bogachenko Vyacheslav
 
 Liberty fox is a free project: you can distribute it and/or modify
 it in accordance with the MIT license published by the Massachusetts Institute of Technology.
@@ -13,7 +13,7 @@ For more information, see the MIT license.
 Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 Email: bogachenkove@gmail.com
 Github: https://github.com/bogachenko/libertyfox/
-Last modified: December 6, 2018
+Last modified: January 1, 2019
 License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 Problem reports: https://github.com/bogachenko/libertyfox/issues
 Title: README.md
