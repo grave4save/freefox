@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
-// Last modified: January 1, 2019
+// Last modified: January 2, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -1122,6 +1122,13 @@ user_pref("dom.imagecapture.enabled", false);
 user_pref("browser.tabs.onTop", true);
 
 // OffscreenCanvas
+// This mechanism provides the ability to perform rendering through WebGL in a separate thread.
+// Running WebGL in a separate thread is done using The offscreen Canvas API added to the Workers system,
+// which provides tools for background execution of long JavaScript operations (even when the application is already closed!).
+// OffscreenCanvas
+// Этот механизм обеспечивает возможность выполнения отрисовки через WebGL в отдельном потоке.
+// Запуск WebGL в отдельном потоке производится с помощью API OffscreenCanvas, добавленного в систему Workers,
+// предоставляющую средства для фонового выполнения длительных JavaScript-операций (даже при уже закрытом приложении!).
 user_pref("gfx.offscreencanvas.enabled", false);
 
 // HTTP Alternative Services
@@ -1547,7 +1554,11 @@ user_pref("browser.tabs.closeWindowWithLastTab", false);
 user_pref("network.jar.block-remote-files", true);
 
 // Disable JAR and mark as unsafe file types
+// [NOTE] Mozilla supports jar: - a protocol that allows the browser to "directly" download files from jar archives.
+// Opening/executing them can lead to security problems.
 // Отключить JAR и пометить, как небезопасный типов файлов
+// [ЗАМЕТКА] Mozilla поддерживает jar: - протокол, который позволяет браузеру "напрямую" загружать файлы из jar-архивов.
+// Их открытие/исполнение может привести к проблемам в безопасности.
 user_pref("network.jar.open-unsafe-types", false);
 
 // Semi Transparent tab previews
@@ -1674,3 +1685,28 @@ user_pref("network.auth.subresource-http-auth-allow", 1);
 // браузере, размере и разрешении монитора, установленных шрифтах и других данных.
 // [ЗАМЕТКА] Рекомендуется не включать этот параметр, а использовать дополнение типа NoScript или uMatrix.
 // user_pref("javascript.enabled", false);
+
+// Black ports list
+// Prevent connections on certain ports. Many ports are reserved for different services, serving, for example, FTP, POP, etc.
+// To prevent the potential risk it is necessary to prohibit access.
+// Список черных портов
+// Запрет на установку соединений по определенным портам. Многие порты зарезервированы за разными службами, обслуживающими,
+// к примеру, FTP, POP и т.п. Для предотвращения потенциального риска необходимо запретить обращения к ним.
+user_pref("network.security.ports.banned", "9050,9051,9150,9151,8118,4444");
+
+// Synchronization integration
+// Palemoon Sync - remote synchronization of user data. Sync is a set of components that, using a single user account,
+// remotely synchronizes data on different devices with Palemoon installed (bookmarks, history, passwords, form data, open tabs, etc.).
+// [WARNING] Unexpected leakage of such data (logins, passwords, cookies) in the process of synchronization,
+// transfer them outside the individual device or during storage is incredibly critical and dangerous!
+// Интеграция синхронизации
+// Palemoon Sync - удаленной синхронизации пользовательских данных. Sync - набор компонентов,
+// который при помощи единого пользовательского аккаунта удаленно синхронизирует данные на разных устройствах
+// с установленным Palemoon (закладки, историю, пароли, данные форм, открытые вкладки и т.п.).
+// [ВНИМАНИЕ] Непредвиденная утечка подобных данных (логинов, паролей, cookie) в процессе синхронизации,
+// передачи их за пределы отдельного устройства или во время хранения - невероятно критична и опасна!
+// user_pref("identity.fxaccounts.auth.uri", "");
+
+// Отключение библиотеки шрифтов Graphite
+// Disable Graphite font library
+user_pref("gfx.font_rendering.graphite.enabled", false)
