@@ -1,5 +1,4 @@
-/*
- * This file is part of the Liberty fox project,
+/* This file is part of the Liberty fox project,
  * Copyright (c) 2018 Bogachenko Vyacheslav
  *
  * Liberty fox is a free project: you can distribute it and/or modify
@@ -13,7 +12,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
- * Last modified: December 8, 2018
+ * Last modified: January 2, 2019
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: userChrome.css
@@ -33,15 +32,15 @@
 /* Unnecessary items in the menu
  * Ненужные элементы в меню */
 
-#menu_openHelp, /* "Help" button in the Thunderbird menu ~ Кнопка "Справки" в меню Thunderbird */
-#whatsNew, /* Button "What's new?" in the Thunderbird menu ~ Кнопка "Что нового?" в меню Thunderbird */
-#releaseNotes, /* "Release notes" button in the Thunderbird menu ~ Кнопка "Примечания к выпуску" в меню Thunderbird */
-#appmenu_openHelp, /* "Help" button in the Thunderbird application menu ~ Кнопка "Справки" в меню приложения Thunderbird */
-#appmenu_whatsNew, /* Button "What's new?" in the Thunderbird application menu ~ Кнопка "Что нового?" в меню приложения Thunderbird */
-#appmenu_releaseNotes, /* "Release Notes" button on Thunderbird application menu ~ Кнопка "Примечания к выпуску" в меню приложения Thunderbird */
-#appmenuPrimaryPane > hbox, /* "Edit" buttons in the Thunderbird application menu ~ Кнопки "Редактирования" в меню приложения Thunderbird */
-#appmenu-quit, /* "Exit" button in Thunderbird application menu ~ Кнопка "Выход" в меню приложения Thunderbird */
-menuseparator /* "Separators" in the Thunderbird menu ~ "Разделители" в меню Thunderbird */
+#menu_openHelp, /* "Help" button in the Thunderbird menu / Кнопка "Справки" в меню Thunderbird */
+#whatsNew, /* Button "What's new?" in the Thunderbird menu / Кнопка "Что нового?" в меню Thunderbird */
+#releaseNotes, /* "Release notes" button in the Thunderbird menu / Кнопка "Примечания к выпуску" в меню Thunderbird */
+#appmenu_openHelp, /* "Help" button in the Thunderbird application menu / Кнопка "Справки" в меню приложения Thunderbird */
+#appmenu_whatsNew, /* Button "What's new?" in the Thunderbird application menu / Кнопка "Что нового?" в меню приложения Thunderbird */
+#appmenu_releaseNotes, /* "Release Notes" button on Thunderbird application menu / Кнопка "Примечания к выпуску" в меню приложения Thunderbird */
+#appmenuPrimaryPane > hbox, /* "Edit" buttons in the Thunderbird application menu / Кнопки "Редактирования" в меню приложения Thunderbird */
+#appmenu-quit, /* "Exit" button in Thunderbird application menu / Кнопка "Выход" в меню приложения Thunderbird */
+menuseparator /* "Separators" in the Thunderbird menu / "Разделители" в меню Thunderbird */
 {
     display: none!important
 }

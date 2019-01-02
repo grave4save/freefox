@@ -1,5 +1,4 @@
-/*
- * This file is part of the Liberty fox project,
+/* This file is part of the Liberty fox project,
  * Copyright (c) 2018 Bogachenko Vyacheslav
  *
  * Liberty fox is a free project: you can distribute it and/or modify
@@ -13,7 +12,7 @@
  * Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
  * Email: bogachenkove@gmail.com
  * Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
- * Last modified: December 24, 2018
+ * Last modified: January 2, 2019
  * License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
  * Problem reports: https://github.com/bogachenko/libertyfox/issues
  * Title: userChrome.css
@@ -26,12 +25,12 @@
 /* Unnecessary items in the menu
  * Ненужные элементы в меню */
 
-#appmenu_openHelp, /* "Help" button in the Pale Moon application menu ~ Кнопка "Справки" в меню приложения Pale Moon */
-#appmenu_feedbackPage, /* "Send feedback" button in the Pale Moon application menu ~ Кнопка "Отправка отзыва" в меню приложения Pale Moon */
-#appmenuPrimaryPane > hbox, /* "Edit" buttons in the Pale Moon menu ~ Кнопки "Редактирования" в меню Pale Moon */
-#feedbackPage, /* Button "Send feedback..." in the Pale Moon menu ~ Кнопка "Отправить отзыв..." в меню Pale Moon */
-#menu_openHelp, /* "Help" button in the Pale Moon menu ~ Кнопка "Справки" в меню Pale Moon */
-menuseparator /* "Separators" in the Pale Moon menu ~ "Разделители" в меню Pale Moon */
+#appmenu_openHelp, /* "Help" button in the Pale Moon application menu / Кнопка "Справки" в меню приложения Pale Moon */
+#appmenu_feedbackPage, /* "Send feedback" button in the Pale Moon application menu / Кнопка "Отправка отзыва" в меню приложения Pale Moon */
+#appmenuPrimaryPane > hbox, /* "Edit" buttons in the Pale Moon menu / Кнопки "Редактирования" в меню Pale Moon */
+#feedbackPage, /* Button "Send feedback..." in the Pale Moon menu / Кнопка "Отправить отзыв..." в меню Pale Moon */
+#menu_openHelp, /* "Help" button in the Pale Moon menu / Кнопка "Справки" в меню Pale Moon */
+menuseparator /* "Separators" in the Pale Moon menu / "Разделители" в меню Pale Moon */
 {
 display: none!important
 }
