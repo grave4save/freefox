@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
-// Last modified: January 2, 2019
+// Last modified: January 3, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -490,8 +490,8 @@ user_pref("dom.enable_resource_timing", false);
 // Просмотр содержимого буфера обмена
 // user_pref("dom.event.clipboardevents.enabled", false);
 
-// Automatic preload pages when you hover over links
-// Автоматическая предзагрузка страниц при наведении курсора на ссылки
+// Speculative pre-connections
+// Спекулятивные предварительные соединения
 user_pref("network.http.speculative-parallel-limit", 0);
 
 // Additional analytics sent to the web server
@@ -554,7 +554,8 @@ user_pref("browser.safebrowsing.blockedURIs.enabled", false);
 // 		2 = Определить режим безопасности семьи и импортировать корень
 user_pref("security.family_safety.mode", 0);
 
-// IDN Punycode
+// Force Punycode for Internationalized Domain Names
+// Принудительное использование Юникода для интернационализированных доменных имен
 user_pref("network.IDN_show_punycode", true);
 
 // Automatic update check for Thunderbird
@@ -622,7 +623,9 @@ user_pref("media.peerconnection.ice.default_address_only", true);
 user_pref("media.peerconnection.ice.no_host", true);
 
 // Screensharing
+// Blocking additional functionality of WebRTC WG (capture and video broadcasting of desktops) and Media Capture Task Force.
 // Общий доступ к экрану
+// Блокирование дополнительного функционала WebRTC WG (захват и видеотрансляция рабочих столов) и Media Capture Task Force.
 user_pref("media.getusermedia.aec_enable", false);
 user_pref("media.getusermedia.agc_enabled", false);
 user_pref("media.getusermedia.audiocapture.enabled", false);
@@ -680,7 +683,9 @@ user_pref("security.insecure_field_warning.contextual.enabled", true); // Messag
 user_pref("lightweightThemes.update.enabled", false);
 
 // Experiments
+// [NOTE] Allows you to automatically download and run tested add-ons.
 // Эксперименты
+// [ЗАМЕТКА] Позволяет автоматически загружать и запускать тестируемые дополнения.
 user_pref("network.allow-experiments", false);
 
 // Web Compatibility Reporter
@@ -718,11 +723,13 @@ user_pref("browser.download.hide_plugins_without_extensions", false);
 user_pref("browser.download.forbid_open_with", true);
 
 // Predictor (formerly Seer)
-// [NOTE] This is a mechanism that stores the links between the hosts from
-// which content is requested for a particular URL.
+// This function creates the simplest connections to the server. When the cursor is over a certain link,
+// Firefox tries to predict further user actions on the page in order to increase the performance
+// and speed of processing the content on the page.
 // Предсказатель (бывший Seer)
-// [ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
-// с которых запрашивается контент для того или иного URL.
+// Это функция создает простейшие соединения с сервером. Когда курсор находится над определенной ссылкой,
+// Firefox пытается предугадать дальнейшие действия пользователя на странице с целью увеличения производительность
+// и скорости обработки контента на странице.
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-prefetch", false);
 
@@ -821,10 +828,12 @@ user_pref("webgl.msaa-force", false);
 // "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
 // are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
 // and resource requests, and caching resources.
+// [NOTE] This heavily loads the system resources and takes up most of the RAM.
 // Service Workers
 // "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
 // браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
 // перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы.
+// [ЗАМЕТКА] Это сильно нагружает ресурсы системы и занимает большую часть оперативной памяти.
 user_pref("dom.serviceWorkers.enabled", false);
 
 // Cookies for HTTP sites are set with the "secure" directive

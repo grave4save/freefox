@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
-// Last modified: January 2, 2019
+// Last modified: January 3, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -446,9 +446,13 @@ user_pref("browser.bookmarks.max_backups", 3);
 user_pref("browser.backspace_action", 2);
 
 // Screensharing
+// Blocking additional functionality of WebRTC WG (capture and video broadcasting of desktops) and Media Capture Task Force.
 // Общий доступ к экрану
+// Блокирование дополнительного функционала WebRTC WG (захват и видеотрансляция рабочих столов) и Media Capture Task Force.
 user_pref("media.getusermedia.screensharing.enabled", false);
 user_pref("media.getusermedia.audiocapture.enabled", false);
+user_pref("media.getusermedia.screensharing.allow_on_old_platforms", false);
+user_pref("media.getusermedia.screensharing.allowed_domains", "");
 
 // Auto-play of HTML5 media
 //		TRUE = Allow
@@ -789,7 +793,9 @@ user_pref("general.smoothScroll", false);
 user_pref("lightweightThemes.update.enabled", false);
 
 // Experiments
+// [NOTE] Allows you to automatically download and run tested add-ons.
 // Эксперименты
+// [ЗАМЕТКА] Позволяет автоматически загружать и запускать тестируемые дополнения.
 user_pref("network.allow-experiments", false);
 
 // Favicons in shortcuts
@@ -832,16 +838,18 @@ user_pref("browser.download.hide_plugins_without_extensions", false);
 user_pref("browser.download.forbid_open_with", true);
 
 // Predictor (formerly Seer)
-// [NOTE] This is a mechanism that stores the links between the hosts from
-// which content is requested for a particular URL.
+// This function creates the simplest connections to the server. When the cursor is over a certain link,
+// Firefox tries to predict further user actions on the page in order to increase the performance
+// and speed of processing the content on the page.
 // Предсказатель (бывший Seer)
-// [ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
-// с которых запрашивается контент для того или иного URL.
+// Это функция создает простейшие соединения с сервером. Когда курсор находится над определенной ссылкой,
+// Firefox пытается предугадать дальнейшие действия пользователя на странице с целью увеличения производительность
+// и скорости обработки контента на странице.
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-prefetch", false);
 
-// Automatic preload pages when you hover over links
-// Автоматическая предзагрузка страниц при наведении курсора на ссылки
+// Speculative pre-connections
+// Спекулятивные предварительные соединения
 user_pref("network.http.speculative-parallel-limit", 0);
 
 // Search from address panel
@@ -958,10 +966,12 @@ user_pref("webgl.msaa-force", false);
 // "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
 // are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
 // and resource requests, and caching resources.
+// [NOTE] This heavily loads the system resources and takes up most of the RAM.
 // Service Workers
 // "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
 // браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
 // перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы.
+// [ЗАМЕТКА] Это сильно нагружает ресурсы системы и занимает большую часть оперативной памяти.
 user_pref("dom.serviceWorkers.enabled", false);
 user_pref("dom.serviceWorkers.testUpdateOverOneDay", false);
 
@@ -1335,7 +1345,8 @@ user_pref("network.http.referer.spoofSource", true);
 // Ограничить переадресацию HTTP
 user_pref("network.http.redirection-limit", 10);
 
-// IDN Punycode
+// Force Punycode for Internationalized Domain Names
+// Принудительное использование Юникода для интернационализированных доменных имен
 user_pref("network.IDN_show_punycode", true);
 
 // Old SSL/TLS "insecure" renegotiation (vulnerable to a MiTM attack)
@@ -1352,7 +1363,13 @@ user_pref("devtools.gcli.imgurUploadURL", "");
 user_pref("browser.tabs.onTop", true);
 
 // Prevent connection to the device on Firefox OS for debugging over Wi-Fi Internet
+// Firefox collects information about the closest wireless access points and your real IP address
+// and then transfers it to the nearest geolocation provider, as well as to Google Location Services.
+// [WARNING] Dangerous, may reveal your location.
 // Запрет соединения с устройством на Firefox ОС для отладки по сети Wi-Fi Интернет
+// Firefox собирает информацию о ближайших беспроводных точках доступа и вашем реальном IP-адресе
+// и затем передает ее в ближайшему геолокационному провайдеру, а также в службу Google Location Services.
+// [ВНИМАНИЕ] Опасно, может раскрыть ваше расположение.
 user_pref("devtools.remote.wifi.scan", false);
 user_pref("devtools.remote.wifi.visible", false);
 user_pref("geo.wifi.uri", "");

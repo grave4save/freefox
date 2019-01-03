@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/fennec/
-// Last modified: January 2, 2019
+// Last modified: January 3, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -30,7 +30,19 @@ user_pref("general.warnOnAboutConfig", false);
 user_pref("network.warnOnAboutNetworking", false);
 
 // Snippets
+// Disable sending statistical information related to the technology Snippets (eng.: "piece", "fragment", "nothingness").
+// The default Firefox home page (about:home) includes a built-in mechanism to show some information and track user preferences at the same time.
+// Once a day, Firefox connects to the Mozilla server and then offers a new "piece". Mozilla keeps track of the number of taps,
+// their names, the locale of the browser and its version. This information is stored on the Mozilla server for 60 days.
+// To show the most suitable scraps, Firefox monthly sends a request to your Mozilla server about your location and IP address.
+// Some "snatches" are interactive and can distribute your mailing address and phone number, which is especially dangerous.
 // Сниппеты
+// Отключение отсылки статистической информации, связанной с технологией Snippets (англ.: "обрывок", "фрагмент", "ничтожество").
+// Домашняя страница Firefox, установленная по умолчанию (about:home), содержит встроенный механизм показа некоторой информации
+// и одновременного слежения за пользовательскими предпочтениями. Раз в день Firefox соединяется с сервером Mozilla и затем предлагает новый "обрывок".
+// Mozilla отслеживает количество нажатий, их имена, локаль браузера и его версию. Эта информация хранится на сервере Mozilla 60 дней.
+// Для показа наиболее подходящих "обрывков", Firefox ежемесячно посылает на сервер Mozilla запрос о вашем местонахождении и IP-адресе.
+// Некоторые "обрывки" интерактивны и могут распространять ваш почтовый адрес и телефонный номер, что особенно опасно.
 user_pref("browser.snippets.enabled", false);
 user_pref("browser.snippets.firstrunHomepage.enabled", false);
 user_pref("browser.snippets.geoUrl", "");
@@ -304,7 +316,9 @@ user_pref("media.peerconnection.ice.default_address_only", true);
 user_pref("media.peerconnection.ice.no_host", true);
 
 // Screensharing
+// Blocking additional functionality of WebRTC WG (capture and video broadcasting of desktops) and Media Capture Task Force.
 // Общий доступ к экрану
+// Блокирование дополнительного функционала WebRTC WG (захват и видеотрансляция рабочих столов) и Media Capture Task Force.
 user_pref("media.getusermedia.agc_enabled", false);
 user_pref("media.getusermedia.audiocapture.enabled", false);
 user_pref("media.getusermedia.browser.enabled", false);
@@ -717,7 +731,9 @@ user_pref("signon.autofillForms.http", false);
 user_pref("security.insecure_field_warning.contextual.enabled", true); // Message at login: "This connection is not secure" / Сообщение при вводе логина: "Это соединение не защищено"
 
 // Experiments
+// [NOTE] Allows you to automatically download and run tested add-ons.
 // Эксперименты
+// [ЗАМЕТКА] Позволяет автоматически загружать и запускать тестируемые дополнения.
 user_pref("network.allow-experiments", false);
 
 // Web Compatibility Reporter
@@ -742,19 +758,21 @@ user_pref("browser.download.manager.addToRecentDocs", false);
 user_pref("browser.download.forbid_open_with", true);
 
 // Predictor (formerly Seer)
-// [NOTE] This is a mechanism that stores the links between the hosts from
-// which content is requested for a particular URL.
+// This function creates the simplest connections to the server. When the cursor is over a certain link,
+// Firefox tries to predict further user actions on the page in order to increase the performance
+// and speed of processing the content on the page.
 // Предсказатель (бывший Seer)
-// [ЗАМЕТКА] Это механизм, запоминающий связи между хостами,
-// с которых запрашивается контент для того или иного URL.
+// Это функция создает простейшие соединения с сервером. Когда курсор находится над определенной ссылкой,
+// Firefox пытается предугадать дальнейшие действия пользователя на странице с целью увеличения производительность
+// и скорости обработки контента на странице.
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.cleaned-up", true);
 user_pref("network.predictor.enable-hover-on-ssl", false);
 user_pref("network.predictor.enable-prefetch", false);
 user_pref("network.predictor.prefetch-rolling-load-count", 0);
 
-// Automatic preload pages when you hover over links
-// Автоматическая предзагрузка страниц при наведении курсора на ссылки
+// Speculative pre-connections
+// Спекулятивные предварительные соединения
 user_pref("network.http.speculative-parallel-limit", 0);
 
 // Search from address panel
@@ -864,10 +882,12 @@ user_pref("webgl.msaa-force", false);
 // "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
 // are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
 // and resource requests, and caching resources.
+// [NOTE] This heavily loads the system resources and takes up most of the RAM.
 // Service Workers
 // "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
 // браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
 // перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы.
+// [ЗАМЕТКА] Это сильно нагружает ресурсы системы и занимает большую часть оперативной памяти.
 user_pref("dom.serviceWorkers.enabled", false);
 
 // Cookies for HTTP sites are set with the "secure" directive
@@ -1317,7 +1337,8 @@ user_pref("network.http.redirection-limit", 10);
 // Воздействие системных цветов на CSS или canvas
 user_pref("ui.use_standins_for_native_colors", true);
 
-// IDN Punycode
+// Force Punycode for Internationalized Domain Names
+// Принудительное использование Юникода для интернационализированных доменных имен
 user_pref("network.IDN_show_punycode", true);
 
 // Old SSL/TLS "insecure" renegotiation (vulnerable to a MiTM attack)
