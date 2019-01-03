@@ -331,7 +331,13 @@ user_pref("extensions.getAddons.cache.enabled", false);
 user_pref("browser.search.update", false);
 
 // Search suggestions
+// The default search engine uses geolocation-related data (your real location, determined by IP address).
+// This data is sent to the Mozilla and Google servers. In addition, Google collects and stores data
+// about your search queries and preferences.
 // Поисковые предложения
+// Поисковый механизм по умолчанию использует данные, связанные с геолокацией (вашим реальным местонахождением,
+// определяемым по IP-адресу). Эти данные отсылаются на серверы Mozilla и Google. Кроме того, Google собирает и
+// хранит данные о ваших поисковых запросах и предпочтениях.
 user_pref("browser.search.suggest.enabled", false);
 
 // In "about:addons" remove the item "Get add-ons"
@@ -480,7 +486,13 @@ user_pref("media.default_volume", "0.5");
 user_pref("media.mediasource.webm.enabled", true);
 
 // Location accounting
+// Firefox has built-in tools for transferring GEODATA (your location). This uses information obtained from the operating systems
+// geolocation facilities, Wi-Fi networks, telephone and Internet operators, as well as a real IP address.
+// In addition, the above data is sent to Google servers.
 // Учет местоположения
+// Firefox располагает встроенными средствами передачи геоданных (вашего местонахождения). При этом используются сведения,
+// получаемые от геолокационных средств операционной системы, сетей Wi-Fi, телефонных и интернет-операторов, а также реальный IP-адрес.
+// Кроме того, вышеперечисленные данные отсылаются на серверы Google.
 user_pref("geo.enabled", false);
 user_pref("browser.geolocation.warning.infoURL", "");
 
@@ -490,8 +502,8 @@ user_pref("browser.search.region", "US");
 user_pref("browser.search.geoip.url", "");
 user_pref("browser.search.geoip.timeout", 0);
 
-// Regional specificity for search results and search engines
-// Региональная специфика для результатов поиска и поисковых систем
+// Browser geolocation (GeoIP) when working with search servers
+// Геопозиционирования браузера (GeoIP) при работе с поисковыми серверами
 user_pref("browser.search.geoSpecificDefaults", false);
 
 // Install only signed extensions
@@ -1029,7 +1041,9 @@ user_pref("dom.enable_performance_observer", false);
 user_pref("dom.enable_performance_navigation_timing", false);
 
 // Sensor API
+// Collecting information from sensors
 // API Сенсора
+// Сбора информации с сенсоров
 user_pref("device.sensors.enabled", false);
 
 // Content Security Policy (CSP)
@@ -1054,8 +1068,10 @@ user_pref("security.OCSP.enabled", 1);
 // [ЗАМЕТКА] При включении ломается некоторые сайты.
 // user_pref("security.OCSP.require", true);
 
-// Battery Status API
-// API Статуса батареи
+// Battery API
+// Monitoring computer battery
+// API аккумулятора
+// Мониторинга аккумулятора компьютера
 user_pref("dom.battery.enabled", false);
 
 // Virtual Reality API
@@ -1218,8 +1234,8 @@ user_pref("security.cert_pinning.enforcement_level", 2);
 // Диалоговое окно "Подтвердить, что вы хотите уйти" при закрытии страницы
 user_pref("dom.disable_beforeunload", false);
 
-// Shaking and vibrating the screen
-// Встряхивание и вибрирование экрана
+// Interaction with a mobile device vibrator
+// Взаимодействие с вибратором мобильного устройства
 user_pref("dom.vibrator.enabled", false);
 
 // WebAssembly
