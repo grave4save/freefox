@@ -1,40 +1,44 @@
-#!/usr/bin/env bash
+#!/bin/sh
 
-## prefs.js cleaner for Linux/Mac
-## author: @claustromaniac
-## version: 1.1
-
-## special thanks to @overdodactyl and @earthlng for a few snippets that I stol..*cough* borrowed from the updater.sh
+## This file is part of the Liberty fox project,
+## Copyright (c) 2019 Bogachenko Vyacheslav
+##
+## Liberty fox is a free project: you can distribute it and/or modify
+## it in accordance with the MIT license published by the Massachusetts Institute of Technology.
+##
+## The Liberty fox project is distributed in the hope that it will be useful,
+## and is provided "AS IS", WITHOUT ANY WARRANTY, EXPRESSLY EXPRESSED OR IMPLIED.
+## WE ARE NOT RESPONSIBLE FOR ANY DAMAGES DUE TO THE USE OF THIS PROJECT OR ITS PARTS.
+## For more information, see the MIT license.
+##
+## Author: claustromaniac <https://github.com/claustromaniac>; Bogachenko Vyacheslav <https://github.com/bogachenko>
+## Email: bogachenkove@gmail.com
+## Github: https://github.com/bogachenko/libertyfox/
+## Last modified: January 9, 2019
+## License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
+## Problem reports: https://github.com/bogachenko/libertyfox/issues
+## Title: prefsCleaner.sh
+## URL: https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/prefsCleaner.sh
+## Version: 0.0.2
+##
+## Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip
 
 currdir=$(pwd)
-
-## get the full path of this script (readlink for Linux, greadlink for Mac with coreutils installed)
 sfp=$(readlink -f "${BASH_SOURCE[0]}" 2>/dev/null || greadlink -f "${BASH_SOURCE[0]}" 2>/dev/null)
-
-## fallback for Macs without coreutils
 if [ -z "$sfp" ]; then sfp=${BASH_SOURCE[0]}; fi
-
-## change directory to the Firefox profile directory
 cd "$(dirname "${sfp}")"
-
-fQuit() {
-	## change directory back to the original working directory
+ProcessQuit() {
 	cd "${currdir}"
 	echo -e "\n$2"
 	exit $1
 }
-
-fFF_check() {
-	# there are many ways to see if firefox is running or not, some more reliable than others
-	# this isn't elegant and might not be future-proof but should at least be compatible with any environment
+ProcessСheck() {
 	while [ -e webappsstore.sqlite-shm ]; do
-		echo -e "\nThis Firefox profile seems to be in use. Close Firefox and try again.\n"
+		echo -e "\nThis profile is used. Close your browser or email program and try again.\n"
 		read -p "Press any key to continue."
 	done
 }
-
-fClean() {
-	# the magic happens here
+ProcessClean() {
 	prefs="@@"
 	prefexp="user_pref[ 	]*\([ 	]*[\"']([^\"']+)[\"'][ 	]*,"
 	while read -r line; do
@@ -53,47 +57,40 @@ fClean() {
 		fi
 	done < "$1" > prefs.js
 }
-
-echo -e "\n\n"
-echo "                   ╔══════════════════════════╗"
-echo "                   ║     prefs.js cleaner     ║"
-echo "                   ║    by claustromaniac     ║"
-echo "                   ║           v1.1           ║"
-echo "                   ╚══════════════════════════╝"
-echo -e "\nThis script should be run from your Firefox profile directory.\n"
-echo "It will remove any entries from prefs.js that also exist in user.js."
+echo -e "\nThis script should be run from the profile folder of your browser or email client.\n"
+echo "This file will remove the entries from prefs.js that already exist in user.js."
 echo "This will allow inactive preferences to be reset to their default values."
-echo -e "\nThis Firefox profile shouldn't be in use during the process.\n"
+echo -e "\nYour profile should not be used during this process.\n"
 select option in Start Help Exit; do
 	case $option in
 		Start)
 			if [ ! -e user.js ]; then
-				fQuit 1 "user.js not found in the current directory."
+				ProcessQuit 1 "user.js not found in the current directory."
 			elif [ ! -e prefs.js ]; then
-				fQuit 1 "prefs.js not found in the current directory."
+				ProcessQuit 1 "prefs.js not found in the current directory."
 			fi
 
-			fFF_check
+			ProcessСheck
 			bakfile="prefs.js.backup.$(date +"%Y-%m-%d_%H%M")"
-			mv prefs.js "${bakfile}" || fQuit 1 "Operation aborted.\nReason: Could not create backup file $bakfile"
+			mv prefs.js "${bakfile}" || ProcessQuit 1 "Operation aborted.\nReason: Could not create backup file $bakfile"
 			echo -e "\nprefs.js backed up: $bakfile"
 			echo "Cleaning prefs.js..."
-			fClean "$bakfile"
-			fQuit 0 "All done!"
+			ProcessClean "$bakfile"
+			ProcessQuit 0 "All done!"
 			;;
 		Help)
 			echo -e "\nThis script creates a backup of your prefs.js file before doing anything."
-			echo -e "It should be safe, but you can follow these steps if something goes wrong:\n"
-			echo "1. Make sure Firefox is closed."
+			echo -e "This should go safely, but you can follow these steps if something goes wrong:\n"
+			echo "1. Make sure the program is closed."
 			echo "2. Delete prefs.js in your profile folder."
 			echo "3. Delete Invalidprefs.js if you have one in the same folder."
 			echo "4. Rename or copy your latest backup to prefs.js."
-			echo "5. Run Firefox and see if you notice anything wrong with it."
-			echo "6. If you do notice something wrong, especially with your extensions, and/or with the UI, go to about:support, and restart Firefox with add-ons disabled. Then, restart it again normally, and see if the problems were solved."
-			echo -e "If you are able to identify the cause of your issues, please bring it up on ghacks-user.js GitHub repository.\n"
+			echo "5. Run the program and check them out."
+			echo "6. If you do notice something wrong, especially with your extensions, and/or with the UI, go to about:support, and restart your program with add-ons disabled. Then restart the program again and see if the problems are resolved."
+			echo -e "If you cannot determine the cause of your problems, please raise this problem on GitHub.\n"
 			;;
 		Exit)
-			fQuit 0
+			ProcessQuit 0
 			;;
 	esac
 done
