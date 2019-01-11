@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/fennec/
-// Last modified: January 3, 2019
+// Last modified: January 11, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -460,10 +460,20 @@ user_pref("xpinstall.signatures.required", true); // Require signing extensions 
 user_pref("security.dialog_enable_delay", 0);
 
 // Default plugins state
+// A plug - in is third-party software that allows a browser to process web content
+// that it cannot play on its own. Usually these are proprietary (non-free)
+// proprietary formats for processing audio and video content (Adobe Flash, Apple QuickTime,
+// Microsoft Silverlight), as well as online games, presentations, tools for intercepting downloads and
+// transferring them to special software-downloaders, etc.
 // 		0 = Disabled
 // 		1 = Request activation
 // 		2 = Active, individual plugins can be overridden
 // Состояние плагинов по умолчанию
+// Плагин - стороннее программное обеспечение, которое позволяет браузеру обрабатывать веб-контент,
+// который он не может воспроизвести самостоятельно. Обычно это проприетарные (несвободные)
+// патентованные форматы для обработки аудио- и видео-содержимого (Adobe Flash, Apple QuickTime,
+// Microsoft Silverlight), а также онлайн-игры, презентации, средства для перехвата закачек и
+// передачи их в специальные программы-даунлоадеры и т.п.
 // 		0 = Отключено
 // 		1 = Запрашивать активацию
 // 		2 = Активно, можно переопределить отдельные плагины
@@ -714,13 +724,10 @@ user_pref("dom.forms.datetime", false);
 user_pref("dom.forms.datetime.others", false);
 user_pref("dom.forms.datetime.timepicker", false);
 
-// Send Flash crash reports
-// Отправка отчетов о сбоях Flash
-user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
-
-// Submitting the URL of the website where the plug-in crashed
-// Отправка URL-адреса веб-сайта, где произошел сбой плагина
+// Sending telemetry data and website address, about where and how the plugin failed
+// Отправка телеметрических данных и адреса сайта, о том, где и как произошел сбой плагина
 user_pref("dom.ipc.plugins.reportCrashURL", false);
+user_pref("dom.ipc.plugins.flash.subprocess.crashreporter.enabled", false);
 
 // How often Fennec should ask for a master password
 // 		0 = The first time
