@@ -1,24 +1,42 @@
+## This file is part of the Liberty fox project,
+## Copyright (c) 2019 Bogachenko Vyacheslav
+##
+## Liberty fox is a free project: you can distribute it and/or modify
+## it in accordance with the MIT license published by the Massachusetts Institute of Technology.
+##
+## The Liberty fox project is distributed in the hope that it will be useful,
+## and is provided "AS IS", WITHOUT ANY WARRANTY, EXPRESSLY EXPRESSED OR IMPLIED.
+## WE ARE NOT RESPONSIBLE FOR ANY DAMAGES DUE TO THE USE OF THIS PROJECT OR ITS PARTS.
+## For more information, see the MIT license.
+##
+## Author: claustromaniac <https://github.com/claustromaniac>, Bogachenko Vyacheslav <https://github.com/bogachenko>
+## Email: bogachenkove@gmail.com
+## Github: https://github.com/bogachenko/libertyfox/
+## Last modified: January 12, 2019
+## License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
+## Problem reports: https://github.com/bogachenko/libertyfox/issues
+## Title: Compare-PrefJSnUserJS.ps1
+## URL: https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/Compare-PrefJSnUserJS.ps1
+## Version: 0.0.2
+##
+## Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip
+
 [CmdletBinding()]
 PARAM (
 	[Parameter(Mandatory=$true,HelpMessage='Insert the path to the first file to be compared.')]
 	[ValidateNotNullOrEmpty()]
 	[string]$filepath_A,
-
 	[Parameter(Mandatory=$true,HelpMessage='Insert the path to the second file to be compared.')]
 	[ValidateNotNullOrEmpty()]
 	[string]$filepath_B,
-
 	[ValidateNotNullOrEmpty()]
-	[string]$outputFile = 'userJS_diff.log',
+	[string]$outputFile = 'Compare-PrefJSnUserJS.log',
 	[switch]$append = $false,
 	[switch]$noCommentsA = $false,
 	[switch]$noCommentsB = $false,
-
 	[uint32]$hideMask = 0,
 	[switch]$inJS = $false
 )
-$myVersion = 'v1.19.0'
-$ErrorActionPreference = 'Stop'
 $myPath = Split-Path -parent $MyInvocation.MyCommand.Definition
 Set-Location -path $myPath
 if ($Env:OS) {$nl = "`r`n"} else {$nl = "`n"}
@@ -30,7 +48,7 @@ if ($fileNameA -ceq $fileNameB) { $fileNameA, $fileNameB = $filepath_A, $filepat
 [regex] $rx_c = '(?!(?:(?:[^"\n]|(?<=[^\\]\\(?:\\\\)*)")*"|(?:[^''\n]|(?<=[^\\]\\(?:\\\\)*)'')*'')\s*\)\s*;)'
 [regex] $rx_s = '(?:"(?:[^"\n]|(?<=[^\\]\\(?:\\\\)*)")*")|(?:''(?:[^''\n]|(?<=[^\\]\\(?:\\\\)*)'')*'')'
 if ($inJS) {
-	if ($outputFile -ceq 'userJS_diff.log') { $outputFile = 'userJS_diff.js' }
+	if ($outputFile -ceq 'Compare-PrefJSnUserJS.log') {$outputFile = 'Compare-PrefJSnUserJS.js'}
 	$inactive_flag = '//'
 } else { $inactive_flag = '[i]' }
 $mlc_mark = $false

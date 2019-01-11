@@ -12,15 +12,15 @@ TITLE prefsCleaner.bat
 :: WE ARE NOT RESPONSIBLE FOR ANY DAMAGES DUE TO THE USE OF THIS PROJECT OR ITS PARTS.
 :: For more information, see the MIT license.
 ::
-:: Author: claustromaniac <https://github.com/claustromaniac>; Bogachenko Vyacheslav <https://github.com/bogachenko>
+:: Author: claustromaniac <https://github.com/claustromaniac>, Bogachenko Vyacheslav <https://github.com/bogachenko>
 :: Email: bogachenkove@gmail.com
 :: Github: https://github.com/bogachenko/libertyfox/
-:: Last modified: January 9, 2019
+:: Last modified: January 12, 2019
 :: License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 :: Problem reports: https://github.com/bogachenko/libertyfox/issues
 :: Title: prefsCleaner.bat
 :: URL: https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/prefsCleaner.bat
-:: Version: 0.0.2
+:: Version: 0.0.3
 ::
 :: Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip
 
