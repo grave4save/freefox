@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/fennec/
-// Last modified: January 11, 2019
+// Last modified: January 12, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -505,12 +505,16 @@ user_pref("media.gmp.trial-create.enabled", false);
 // Управление цифровыми правами
 user_pref("media.eme.enabled", false);
 
-// Preload browser links
-// Предварительная загрузка браузером ссылок
+// Preload a page that the browser considers to be a logical next page
+// Предварительная загрузка страницы, которую браузер считает логической следующей страницей
 user_pref("network.prefetch-next", false);
 
-// DNS browser preloading
-// Предварительная загрузка браузером DNS
+// Pre-query DNS for all links on the active page (for HTTP and HTTPS-protected pages)
+// [NOTE] This feature allows the browser in the background to determine the DNS for various web content
+// in order to speed up the subsequent download (for links, graphics, CSS, JavaScript, etc.).
+// Предварительный запрос DNS для всех ссылок на активной странице (для HTTP и HTTPS-защищенной страницы)
+// [ЗАМЕТКА] Эта функция позволяет браузеру в фоновом режиме определять DNS для различного веб-контента
+// с целью ускорения последующей загрузки (для ссылок, графики, CSS, JavaScript и т.п.).
 user_pref("network.dns.disablePrefetch", true);
 user_pref("network.dns.disablePrefetchFromHTTPS", true);
 
@@ -521,7 +525,14 @@ user_pref("browser.send_pings.max_per_link", 0);
 user_pref("browser.send_pings.require_same_host", true);
 
 // Send DNS requests through a proxy using SOCKS 5
+// [WARNING] This setting is valid only if you are working through a remote server.
+// For example, using onion routing. If the remote server is not used, the DNS server addresses
+// specified in the properties of the current network connection of the computer are used,
+// i.e. the setting does not matter.
 // Отправлять DNS-запросы через прокси при использовании SOCKS 5
+// [ВНИМАНИЕ] Этот параметр действителен, только если вы работаете через удаленный сервер.
+// Например, используя луковую маршрутизацию. Если удаленный сервер не используется, то применяются адреса DNS-серверов,
+// указанные в свойствах текущего сетевого подключения компьютера, т.е. настройка не имеет значения.
 user_pref("network.proxy.socks_remote_dns", true);
 
 // Redirecting to the provider's page
@@ -806,7 +817,8 @@ user_pref("browser.urlbar.trimURLs", false);
 // Добавление сайтов из Alexa Top 500 в список автозаполнения адресной строки
 user_pref("browser.urlbar.usepreloadedtopurls.enabled", false);
 
-// IPv6
+// Sending DNS requests via IPv6
+// Отправление DNS-запросов посредством IPv6
 user_pref("network.dns.disableIPv6", true);
 
 // Block allowed extension directories
@@ -1059,8 +1071,8 @@ user_pref("dom.gamepad.test.enabled", false);
 user_pref("dom.gamepad.extensions.enabled", false);
 user_pref("dom.gamepad.haptic_feedback.enabled", false);
 
-// Providing network information
-// Предоставление информации о сети
+// Definition and sending of parameters (type) of network connection (Wi-Fi, LAN, etc.) and current speed
+// Определение и отправка параметров (типа) сетевого соединения (Wi-Fi, LAN и т.п.) и текущей скорости
 user_pref("dom.netinfo.enabled", false);
 
 // Touch-events
@@ -1495,12 +1507,13 @@ user_pref("dom.event.highrestimestamp.enabled", true);
 user_pref("browser.display.use_document_fonts", 0);
 
 // UserAgent
-// The User-Agent string (part of the HTTP header) is used to communicate and transfer content (content)
-// between the client program and the server. With the help of its analysis, the server determines the optimal parameters
-// for interaction on the basis of existing specifications of a software, data on its purpose
-// (browser, email client, etc.) and the current version.
-// [NOTE] The above is the user Agent from Firefox ESR, but you can change it and find the fake UserAgent values on the Internet.
-// Please choose the most common options (as shown in the example above), trying not to "stand out" from the total mass of browsers.
+// The UserAgent string (part of the HTTP header) is used to communicate
+// and transfer content (content) between the client program and the server. With the help of its analysis,
+// the server determines the optimal parameters for interaction on the basis of existing specifications of a software,
+// data on its purpose (browser, email client, etc.) and the current version.
+// [NOTE] The above is the UserAgent from Firefox ESR, but you can change it and find
+// the fake UserAgent values on the Internet. Please choose the most common options (as shown in the example above),
+// trying not to "stand out" from the total mass of browsers.
 // [WARNING] To prevent leaks of information about your operating system and browser through UA analysis,
 // additionally disable JavaScript globally!
 // UserAgent
@@ -1508,8 +1521,9 @@ user_pref("browser.display.use_document_fonts", 0);
 // между клиентской программой и сервером. С помощью ее анализа сервер определяет оптимальные параметры
 // для взаимодействия на основании уже имеющихся спецификаций того или иного программного обеспечения,
 // данных о его назначении (браузер, почтовый клиент и т.п.) и текущей версии.
-// [ЗАМЕТКА] Выше представлен UserAgent от Firefox ESR, однако вы можете его изменить и найти поддельные значения UserAgent в интернете.
-// Пожалуйста, выбирайте наиболее общеупотребимые варианты (как это показано в примере выше), стараясь "не выделяться" из общей массы браузеров.
+// [ЗАМЕТКА] Выше представлен UserAgent от Firefox ESR, однако вы можете его изменить и найти
+// поддельные значения UserAgent в интернете. Пожалуйста, выбирайте наиболее общеупотребимые варианты
+// (как это показано в примере выше), стараясь "не выделяться" из общей массы браузеров.
 // [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA, дополнительно запретите JavaScript глобально!
 user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
 user_pref("general.buildID.override", "20100101");
@@ -1578,22 +1592,23 @@ user_pref("network.auth.subresource-http-auth-allow", 1);
 
 // JavaScript
 // JavaScript is a programming language; one of the main web technologies.
-// At the same time, JavaScript allows you to run malicious code on any computer using two main types of vulnerabilities.
-// XSS vulnerabilities are used if the attacker has the ability to embed the executable code on the page and demonstrate it to the user.
+// At the same time, JavaScript allows you to run malicious code on any computer using
+// two main types of vulnerabilities. XSS vulnerabilities are used if the attacker has
+// the ability to embed the executable code on the page and demonstrate it to the user.
 // In this case, an attacker could gain user rights and use them for their own purposes.
-// Another type of vulnerability is CSRF, when an attacker attempts to force a browser to perform an undesirable action on another site,
-// such as transferring funds from an account to an account.
-// JavaScript technologies can leak a variety of information about the operating system, browser, monitor size and resolution,
-// installed fonts, and other data.
-// [NOTE] It is recommended not to enable this setting, and to use addition-type NoScript or uMatrix
+// Another type of vulnerability is CSRF, when an attacker attempts to force a browser to perform
+// an undesirable action on another site, such as transferring funds from an account to an account.
+// JavaScript technologies can leak a variety of information about the operating system, browser,
+// monitor size and resolution, installed fonts, and other data.
+// [NOTE] It is recommended not to enable this setting, and to use addition-type NoScript or uMatrix.
 // JavaScript
 // JavaScript - язык программирования; одна из главных веб-технологий.
-// В то же время JavaScript позволяет запускать вредоносный код на любом компьютере при помощи двух основных типов уязвимостей.
-// XSS-уязвимости используются, если у атакующей стороны есть возможность внедрить исполняемый код на страницу
-// и продемонстрировать ее пользователю.
+// В то же время JavaScript позволяет запускать вредоносный код на любом компьютере при помощи
+// двух основных типов уязвимостей. XSS-уязвимости используются, если у атакующей стороны есть
+// возможность внедрить исполняемый код на страницу и продемонстрировать ее пользователю.
 // В этом случае злоумышленник может получить права данного пользователя и использовать их в своих целях.
-// Иной тип уязвимости - CSRF, когда атакующая сторона пытается заставить браузер осуществить нежелательное действие на другом сайте,
-// например - перевести средства со счета на счет.
+// Иной тип уязвимости - CSRF, когда атакующая сторона пытается заставить браузер осуществить нежелательное действие
+// на другом сайте, например - перевести средства со счета на счет.
 // JavaScript-технологии могут способствовать утечкам разнообразной информации об операционной системе,
 // браузере, размере и разрешении монитора, установленных шрифтах и других данных.
 // [ЗАМЕТКА] Рекомендуется не включать этот параметр, а использовать дополнение типа NoScript или uMatrix.
@@ -1622,4 +1637,4 @@ user_pref("network.security.ports.banned", "9050,9051,9150,9151,8118,4444");
 
 // Отключение библиотеки шрифтов Graphite
 // Disable Graphite font library
-user_pref("gfx.font_rendering.graphite.enabled", false)
+user_pref("gfx.font_rendering.graphite.enabled", false);
