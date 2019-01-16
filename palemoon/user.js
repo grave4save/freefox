@@ -1100,13 +1100,13 @@ user_pref("layers.acceleration.disabled", true);
 user_pref("gfx.direct2d.disabled", true);
 user_pref("layers.prefer-d3d9", false);;
 
-// Web Audio API
+// Web audio API
 // [WARNING] Dangerously due to browser fingerprints.
 // API Веб-аудио
 // [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера.
 user_pref("dom.webaudio.enabled", false);
 
-// Pointer Events
+// Pointer events
 // События указателя
 user_pref("dom.w3c_pointer_events.enabled", false);
 
@@ -1150,11 +1150,11 @@ user_pref("dom.w3c_touch_events.enabled", 0);
 //		4 = Разрешено только для локально добавленных корней или сертификатов в 2015 году и ранее
 user_pref("security.pki.sha1_enforcement_level", 1);
 
-// Capture Stream API
+// Capture stream API
 // API Потокового захвата
 user_pref("canvas.capturestream.enabled", false);
 
-// Image Capture API
+// Image capture API
 // API Захвата изображений
 user_pref("dom.imagecapture.enabled", false);
 
@@ -1172,7 +1172,7 @@ user_pref("browser.tabs.onTop", true);
 // предоставляющую средства для фонового выполнения длительных JavaScript-операций (даже при уже закрытом приложении!).
 user_pref("gfx.offscreencanvas.enabled", false);
 
-// HTTP Alternative Services
+// HTTP Alternative services
 // Альтернативные услуги HTTP
 user_pref("network.http.altsvc.enabled", false);
 user_pref("network.http.altsvc.oe", false);
@@ -1208,7 +1208,7 @@ user_pref("security.tls.version.max", 4);
 // Открывать ссылки из буфера обмена средней кнопкой мышки
 user_pref("middlemouse.contentLoadURL", false);
 
-// SSL Error Reporting
+// SSL Error reporting
 // Отчеты об ошибках SSL
 user_pref("security.ssl.errorReporting.automatic", false);
 user_pref("security.ssl.errorReporting.enabled", false);
@@ -1262,7 +1262,7 @@ user_pref("javascript.options.asmjs", false);
 // Intersection Observer API
 user_pref("dom.IntersectionObserver.enabled", true);
 
-// Shared Memory API
+// Shared memory API
 user_pref("javascript.options.shared_memory", false);
 
 // DOM (Document Object Model) JavaScript
@@ -1372,11 +1372,11 @@ user_pref("network.http.referer.XOriginTrimmingPolicy", 0);
 //		FALSE = Настоящий Referrer
 user_pref("network.http.referer.spoofSource", true);
 
-// Restrict HTTP Redirection
+// Restrict HTTP redirection
 // Ограничить переадресацию HTTP
 user_pref("network.http.redirection-limit", 10);
 
-// Force Punycode for Internationalized Domain Names
+// Force punycode for internationalized domain names
 // Принудительное использование Юникода для интернационализированных доменных имен
 user_pref("network.IDN_show_punycode", true);
 
@@ -1424,7 +1424,7 @@ user_pref("devtools.webide.widget.autoinstall", false);
 user_pref("devtools.webide.widget.enabled", false);
 user_pref("devtools.webide.widget.inNavbarByDefault", false);
 
-// User Timing API
+// User timing API
 // [NOTE] Responsible for access to the high-frequency timer, which can be used to listen to the processor cache
 // from unprivileged JS-code.
 // API синхронизации пользователя
@@ -1433,7 +1433,7 @@ user_pref("devtools.webide.widget.inNavbarByDefault", false);
 user_pref("dom.enable_user_timing", false);
 user_pref("dom.performance.enable_user_timing_logging", false);
 
-// File Handle API
+// File handle API
 // [NOTE] Responsible for accessing lower-level file operations.
 // API для обработки файлов
 // [ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям.
@@ -1448,7 +1448,7 @@ user_pref("dom.fileHandle.enabled", false);
 // без обращения к промежуточным облачным сервисам.
 user_pref("dom.flyweb.enabled", false);
 
-// Device Storage API
+// Device storage API
 // [NOTE] Responsible for access to the file system, this API allows the browser to
 // read and/or write to the user's files.
 // API хранилища устройств
@@ -1456,7 +1456,7 @@ user_pref("dom.flyweb.enabled", false);
 // читать и/или писать в файлах пользователя.
 user_pref("device.storage.enabled", false);
 
-// Windows Store launch links on Windows 8/8.1/10
+// Windows store launch links on Windows 8/8.1/10
 // Ссылки запуска Windows Store на Windows 8/8.1/10
 user_pref("network.protocol-handler.external.ms-windows-store", false);
 

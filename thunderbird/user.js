@@ -252,7 +252,7 @@ user_pref("security.ssl.errorReporting.url", "");
 user_pref("toolkit.telemetry.infoURL", "");
 user_pref("toolkit.telemetry.previousBuildID", "");
 
-// Crash Reporter related information
+// Crash reporter related information
 // Crash Reporter связанная информация
 user_pref("toolkit.crashreporter.infoURL", "");
 
@@ -449,7 +449,7 @@ user_pref("dom.indexedDB.logging.enabled", false);
 user_pref("media.navigator.enabled", false);
 user_pref("media.navigator.video.enabled", false);
 
-// Web Audio API
+// Web audio API
 // [WARNING] Dangerously due to browser fingerprints.
 // API Веб-аудио
 // [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера.
@@ -563,7 +563,7 @@ user_pref("browser.safebrowsing.blockedURIs.enabled", false);
 // 		2 = Определить режим безопасности семьи и импортировать корень
 user_pref("security.family_safety.mode", 0);
 
-// Force Punycode for Internationalized Domain Names
+// Force punycode for internationalized domain names
 // Принудительное использование Юникода для интернационализированных доменных имен
 user_pref("network.IDN_show_punycode", true);
 
@@ -707,8 +707,8 @@ user_pref("lightweightThemes.update.enabled", false);
 // [ЗАМЕТКА] Позволяет автоматически загружать и запускать тестируемые дополнения.
 user_pref("network.allow-experiments", false);
 
-// Web Compatibility Reporter
-// Отправка отчетов о совместимости с Интернетом
+// Web compatibility reporter
+// Отправка отчетов о совместимости с интернетом
 user_pref("extensions.webcompat-reporter.enabled", false);
 
 // Favicons in web notifications
@@ -913,11 +913,11 @@ user_pref("security.csp.enable_violation_events", false);
 // 		2 = Включено только для сертификатов EV
 user_pref("security.OCSP.enabled", 1);
 
-// Virtual Reality API
+// Virtual reality API
 // API Виртуальной реальности
 user_pref("dom.vr.enabled", false);
 
-// Pointer Events
+// Pointer events
 // События указателя
 user_pref("dom.w3c_pointer_events.enabled", false);
 

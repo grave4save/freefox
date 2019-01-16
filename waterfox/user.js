@@ -1023,7 +1023,7 @@ user_pref("gecko.handlerService.schemes.webcal.2.uriTemplate", "");
 user_pref("gecko.handlerService.schemes.webcal.3.name", "");
 user_pref("gecko.handlerService.schemes.webcal.3.uriTemplate", "");
 
-// Crash Reporter related information
+// Crash reporter related information
 // Crash Reporter связанная информация
 user_pref("toolkit.crashreporter.infoURL", "");
 
@@ -1083,9 +1083,9 @@ user_pref("lightweightThemes.update.enabled", false);
 // [ЗАМЕТКА] Позволяет автоматически загружать и запускать тестируемые дополнения.
 user_pref("network.allow-experiments", false);
 
-// Web Compatibility Reporter
+// Web compatibility reporter
 //
-// Отправка отчетов о совместимости с Интернетом
+// Отправка отчетов о совместимости с интернетом
 user_pref("extensions.webcompat-reporter.enabled", false);
 user_pref("extensions.webcompat-reporter.newIssueEndpoint", "");
 
@@ -1394,7 +1394,7 @@ user_pref("security.OCSP.enabled", 1);
 // Мониторинга аккумулятора компьютера
 user_pref("dom.battery.enabled", false);
 
-// Virtual Reality API
+// Virtual reality API
 // API Виртуальной реальности
 user_pref("dom.vr.enabled", false);
 
@@ -1404,13 +1404,13 @@ user_pref("layers.acceleration.force-enabled", false);
 user_pref("layers.acceleration.disabled", true);
 user_pref("gfx.direct2d.disabled", true);
 
-// Web Audio API
+// Web audio API
 // [WARNING] Dangerously due to browser fingerprints.
 // API Веб-аудио
 // [ВНИМАНИЕ] Опасно из-за отпечатков пальцев браузера.
 user_pref("dom.webaudio.enabled", false);
 
-// Pointer Events
+// Pointer events
 // События указателя
 user_pref("dom.w3c_pointer_events.enabled", false);
 
@@ -1455,11 +1455,11 @@ user_pref("dom.w3c_touch_events.enabled", 0);
 //		4 = Разрешено только для локально добавленных корней или сертификатов в 2015 году и ранее
 user_pref("security.pki.sha1_enforcement_level", 1);
 
-// Capture Stream API
+// Capture stream API
 // API Потокового захвата
 user_pref("canvas.capturestream.enabled", false);
 
-// Image Capture API
+// Image capture API
 // API Захвата изображений
 user_pref("dom.imagecapture.enabled", false);
 
@@ -1478,7 +1478,7 @@ user_pref("gfx.offscreencanvas.enabled", false);
 user_pref("browser.safebrowsing.blockedURIs.enabled", false);
 user_pref("urlclassifier.blockedTable", "");
 
-// HTTP Alternative Services
+// HTTP Alternative services
 // Альтернативные услуги HTTP
 user_pref("network.http.altsvc.enabled", false);
 user_pref("network.http.altsvc.oe", false);
@@ -1518,7 +1518,7 @@ user_pref("network.auth.subresource-img-cross-origin-http-auth-allow", false);
 user_pref("security.tls.version.min", 3);
 user_pref("security.tls.version.max", 4);
 
-// SSL Error Reporting
+// SSL Error reporting
 // Отчеты об ошибках SSL
 user_pref("security.ssl.errorReporting.automatic", false);
 user_pref("security.ssl.errorReporting.enabled", false);
@@ -1580,7 +1580,7 @@ user_pref("dom.disable_beforeunload", false);
 // Взаимодействие с вибратором мобильного устройства
 user_pref("dom.vibrator.enabled", false);
 
-// Shared Memory API
+// Shared memory API
 user_pref("javascript.options.shared_memory", false);
 
 // DOM (Document Object Model) JavaScript
@@ -1696,7 +1696,7 @@ user_pref("network.http.referer.spoofSource", true);
 // Открывать ссылки из буфера обмена средней кнопкой мышки
 user_pref("middlemouse.contentLoadURL", false);
 
-// Restrict HTTP Redirection
+// Restrict HTTP redirection
 // Ограничить переадресацию HTTP
 user_pref("network.http.redirection-limit", 10);
 
@@ -1704,7 +1704,7 @@ user_pref("network.http.redirection-limit", 10);
 // Установка по умолчанию разрешений (resource://app/defaults/permissions) в Менеджере Разрешений
 user_pref("permissions.manager.defaultsUrl", "");
 
-// Force Punycode for Internationalized Domain Names
+// Force punycode for internationalized domain names
 // Принудительное использование Юникода для интернационализированных доменных имен
 user_pref("network.IDN_show_punycode", true);
 
@@ -1724,13 +1724,13 @@ user_pref("devtools.remote.wifi.scan", false);
 user_pref("network.tickle-wifi.enabled", false);
 user_pref("geo.wifi.uri", "");
 
-// File Handle API
+// File handle API
 // [NOTE] Responsible for accessing lower-level file operations.
 // API для обработки файлов
 // [ЗАМЕТКА] Отвечает за доступ к более низкоуровневым файловым операциям.
 user_pref("dom.fileHandle.enabled", false);
 
-// Device Storage API
+// Device storage API
 // [NOTE] Responsible for access to the file system, this API allows the browser to
 // read and/or write to the user's files.
 // API хранилища устройств
@@ -1738,7 +1738,7 @@ user_pref("dom.fileHandle.enabled", false);
 // читать и/или писать в файлах пользователя.
 user_pref("device.storage.enabled", false);
 
-// Windows Store launch links on Windows 8/8.1/10
+// Windows store launch links on Windows 8/8.1/10
 // Ссылки запуска Windows Store на Windows 8/8.1/10
 user_pref("network.protocol-handler.external.ms-windows-store", false);
 
