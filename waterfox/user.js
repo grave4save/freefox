@@ -413,7 +413,7 @@ user_pref("extensions.webservice.discoverURL", "");
 // Угадывание домена в адресной строке
 user_pref("browser.fixup.alternate.enabled", false);
 
-// Number of steps  "To previous page" and  "To next page"
+// Number of steps "To previous page" and "To next page"
 // Количество шагов "На предыдущую страницу" и "На следующую страницу"
 user_pref("browser.sessionhistory.max_entries", 10);
 
@@ -615,7 +615,7 @@ user_pref("identity.mobilepromo.android", "");
 user_pref("identity.mobilepromo.ios", "");
 
 // Location accounting
-// Waterfox has built-in tools for transferring GEODATA (your location). This uses information obtained from the operating systems
+// Waterfox has built-in tools for transferring geodata (your location). This uses information obtained from the operating systems
 // geolocation facilities, Wi-Fi networks, telephone and Internet operators, as well as a real IP address.
 // In addition, the above data is sent to Google servers.
 // Учет местоположения
@@ -645,7 +645,7 @@ user_pref("intl.regional_prefs.use_os_locales", false);
 user_pref("privacy.firstparty.isolate", true);
 user_pref("privacy.firstparty.isolate.restrict_opener_access", true);
 
-// Waterfox Fingerprints
+// Waterfox fingerprints
 // [NOTE] Blocking the recognition of the browser’s “digital fingerprints” - external dimensions (height and width) of the active browser window.
 // As a rule, most users maximize the active browser window to full screen.
 // Using a specially prepared web page, a hypothetical attacker (using the window.screen object and CSS media queries)
@@ -749,7 +749,7 @@ user_pref("media.gmp.trial-create.enabled", false);
 user_pref("media.gmp-widevinecdm.visible", false);
 user_pref("media.gmp-widevinecdm.enabled", false);
 
-// Digital Rights Management (DRM)
+// Digital rights management (DRM)
 // Управление цифровыми правами
 user_pref("media.eme.enabled", false);
 user_pref("browser.eme.ui.enabled", false);
@@ -784,7 +784,7 @@ user_pref("browser.send_pings.require_same_host", true);
 // указанные в свойствах текущего сетевого подключения компьютера, т.е. настройка не имеет значения.
 user_pref("network.proxy.socks_remote_dns", true);
 
-// Redirecting to the provider's page
+// Redirecting to the providers page
 // Перенаправление на страницу провайдера
 user_pref("captivedetect.canonicalURL", "");
 user_pref("network.captive-portal-service.enabled", false);
@@ -824,10 +824,10 @@ user_pref("services.sync.engine.tabs", false);
 
 // Cache API (Cache storage)
 // [NOTE] It is a repository on the user's computer where scripts can store information.
-// It is part of the "Service Workers" specification, but can be used without them.
+// It is part of the "Service workers" specification, but can be used without them.
 // API Кэша (Хранилище кэша)
 // [ЗАМЕТКА] Это хранилище на компьютере пользователя, куда скрипты могут складывать информацию.
-// Оно является частью спецификации "Service Workers", но может быть использовано и без них.
+// Оно является частью спецификации "Service workers", но может быть использовано и без них.
 user_pref("dom.caches.enabled", false);
 
 // Web notifications
@@ -1024,7 +1024,7 @@ user_pref("gecko.handlerService.schemes.webcal.3.name", "");
 user_pref("gecko.handlerService.schemes.webcal.3.uriTemplate", "");
 
 // Crash reporter related information
-// Crash Reporter связанная информация
+// Информация о сбоях репортера
 user_pref("toolkit.crashreporter.infoURL", "");
 
 // Sending telemetry data and website address, about where and how the plugin failed
@@ -1225,11 +1225,11 @@ user_pref("general.autoScroll", false);
 // Автоматическое копирование
 user_pref("clipboard.autocopy", false);
 
-// Reader View
+// Reader view
 user_pref("reader.parse-on-load.enabled", false);
 
-// Text reader function in Reader View
-// Функция зачитывания текста в Reader View
+// Text reader function in Reader view
+// Функция зачитывания текста в Reader view
 user_pref("narrate.enabled", false);
 
 // WebGL debug info being available to websites
@@ -1270,12 +1270,12 @@ user_pref("webgl.force-enabled", false);
 user_pref("webgl.min_capability_mode", true);
 user_pref("webgl.msaa-force", false);
 
-// Service Workers
+// Service workers
 // "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
 // are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
 // and resource requests, and caching resources.
 // [NOTE] This heavily loads the system resources and takes up most of the RAM.
-// Service Workers
+// Service workers
 // "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
 // браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
 // перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы.
@@ -1321,7 +1321,7 @@ user_pref("browser.xul.error_pages.expert_bad_cert", true);
 // MediaDevices
 user_pref("media.ondevicechange.enabled", false);
 
-// Querying Google Application Reputation database for downloaded binary files
+// Querying Google application reputation database for downloaded binary files
 // Запрос базы данных репутации приложения Google для загруженных двоичных файлов
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 user_pref("browser.safebrowsing.downloads.remote.url", "");
@@ -1361,9 +1361,9 @@ user_pref("dom.enable_performance", false);
 user_pref("dom.enable_performance_observer", false);
 
 // Sensor API
-// Collecting information from sensors
+// [NOTE] Collecting information from sensors
 // API Сенсора
-// Сбора информации с сенсоров
+// [ЗАМЕТКА] Сбора информации с сенсоров
 user_pref("device.sensors.enabled", false);
 
 // Content security policy (CSP)
@@ -1565,7 +1565,8 @@ user_pref("devtools.webide.enableLocalRuntime", false);
 user_pref("devtools.webide.enabled", false);
 user_pref("devtools.webide.templatesURL", "");
 
-// WebChannel whitelist
+// Web channel whitelist
+// Белый список веб-каналов
 user_pref("webchannel.allowObject.urlWhitelist", "");
 
 // View clipboard content
@@ -1580,7 +1581,7 @@ user_pref("dom.disable_beforeunload", false);
 // Взаимодействие с вибратором мобильного устройства
 user_pref("dom.vibrator.enabled", false);
 
-// Shared memory API
+// JS Shared Memory
 user_pref("javascript.options.shared_memory", false);
 
 // DOM (Document Object Model) JavaScript
@@ -1836,7 +1837,7 @@ user_pref("browser.sessionstore.idleDelay", 720000);
 // Предзагрузка документов или ресурсов, указанных через <link rel="preload">
 user_pref("network.preload", false);
 
-// Semi Transparent tab previews
+// Semi transparent tab previews
 // Полупрозрачная превью вкладок
 user_pref("nglayout.enable_drag_images", false);
 
@@ -1926,6 +1927,6 @@ user_pref("network.auth.subresource-http-auth-allow", 1);
 // к примеру, FTP, POP и т.п. Для предотвращения потенциального риска необходимо запретить обращения к ним.
 user_pref("network.security.ports.banned", "9050,9051,9150,9151,8118,4444");
 
-// Отключение библиотеки шрифтов Graphite
-// Disable Graphite font library
+// Disable graphite font library
+// Отключение библиотеки шрифтов graphite
 user_pref("gfx.font_rendering.graphite.enabled", false);
