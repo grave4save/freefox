@@ -17,7 +17,7 @@
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
 // URL: https://github.com/bogachenko/libertyfox/blob/master/fennec/user.js
-// Version: 64.0
+// Version: 64.0.2
 // 
 // Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip
 
@@ -691,7 +691,7 @@ user_pref("beacon.enabled", false);
 // Удаление временных файлов, открытые внешним приложением
 user_pref("browser.helperApps.deleteTempFileOnExit", true);
 
-// Web Speech
+// Web speech
 // Веб-речь
 user_pref("media.webspeech.synth.enabled", false);
 user_pref("media.webspeech.recognition.enable", false);
@@ -1012,14 +1012,14 @@ user_pref("dom.enable_performance_observer", false);
 // Сбора информации с сенсоров
 user_pref("device.sensors.enabled", false);
 
-// Content Security Policy (CSP)
+// Content security policy (CSP)
 // Политика безопасности контента
 user_pref("security.csp.enable", true);
 user_pref("security.csp.enable_violation_events", false);
 user_pref("security.csp.experimentalEnabled", false);
 user_pref("security.data_uri.block_toplevel_data_uri_navigations", true);
 
-// Online Certificate Status Protocol
+// Online certificate status protocol
 // 		0 = Disabled
 // 		1 = Enabled
 // 		2 = Enabled for EV certificates only
@@ -1107,13 +1107,13 @@ user_pref("canvas.capturestream.enabled", false);
 // API Захвата изображений
 user_pref("dom.imagecapture.enabled", false);
 
-// OffscreenCanvas
+// Offscreen Canvas
 // This mechanism provides the ability to perform rendering through WebGL in a separate thread.
 // Running WebGL in a separate thread is done using The offscreen Canvas API added to the Workers system,
 // which provides tools for background execution of long JavaScript operations (even when the application is already closed!).
-// OffscreenCanvas
+// Offscreen Canvas
 // Этот механизм обеспечивает возможность выполнения отрисовки через WebGL в отдельном потоке.
-// Запуск WebGL в отдельном потоке производится с помощью API OffscreenCanvas, добавленного в систему Workers,
+// Запуск WebGL в отдельном потоке производится с помощью API Offscreen Canvas, добавленного в систему Workers,
 // предоставляющую средства для фонового выполнения длительных JavaScript-операций (даже при уже закрытом приложении!).
 user_pref("gfx.offscreencanvas.enabled", false);
 
@@ -1185,7 +1185,7 @@ user_pref("security.ssl.errorReporting.url", "");
 // TLS1.3 Zero Round Trip Time
 user_pref("security.tls.enable_0rtt_data", false);
 
-// Windows 8.1 Family Security
+// Windows 8.1 family security
 // 		0 = Disable
 // 		1 = Only attempt to detect Family Safety mode (don't import the root)
 // 		2 = Detect Family Safety mode and import the root
@@ -1195,7 +1195,7 @@ user_pref("security.tls.enable_0rtt_data", false);
 // 		2 = Определить режим безопасности семьи и импортировать корень
 user_pref("security.family_safety.mode", 0);
 
-// Enfore Public Key Pinning
+// Enfore public key pinning
 // 		0 = Disable
 // 		1 = Allow user MiTM (such as your antivirus)
 // 		2 = Strict
@@ -1347,7 +1347,7 @@ user_pref("network.http.referer.XOriginTrimmingPolicy", 0);
 // 		FALSE = Настоящий Referrer
 user_pref("network.http.referer.spoofSource", true);
 
-// Referrer Policy
+// Referrer policy
 // 		0 = No referer
 // 		1 = Same origin
 // 		2 = Strict origin when crossing origin
@@ -1379,11 +1379,6 @@ user_pref("network.IDN_show_punycode", true);
 // Old SSL/TLS "insecure" renegotiation (vulnerable to a MiTM attack)
 // Старое "небезопасное" повторное согласование SSL/TLS (уязвимое к атаке MiTM)
 user_pref("security.ssl.require_safe_negotiation", true);
-
-// The "screenshot --imgur" command, with the help of which it was possible to publish screenshots on Imgur.com
-// Команда "screenshot --imgur", с помощью которой можно было публиковать скриншоты на Imgur.com
-user_pref("devtools.gcli.imgurClientID", "");
-user_pref("devtools.gcli.imgurUploadURL", "");
 
 // Prevent connection to the device on Firefox OS for debugging over Wi-Fi Internet
 // Запрет соединения с устройством на Firefox ОС для отладки по сети Wi-Fi Интернет

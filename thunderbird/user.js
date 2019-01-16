@@ -553,7 +553,7 @@ user_pref("browser.safebrowsing.allowOverride", false);
 // Блокировать известные Flash трекеры и отпечатки пальцев
 user_pref("browser.safebrowsing.blockedURIs.enabled", false);
 
-// Windows 8.1 Family Security
+// Windows 8.1 family security
 // 		0 = Disable
 // 		1 = Only attempt to detect Family Safety mode (don't import the root)
 // 		2 = Detect Family Safety mode and import the root
@@ -897,13 +897,13 @@ user_pref("security.ssl.enable_ocsp_stapling", true);
 // Сбора информации с сенсоров
 user_pref("device.sensors.enabled", false);
 
-// Content Security Policy (CSP)
+// Content security policy (CSP)
 // Политика безопасности контента
 user_pref("security.csp.enable", true);
 user_pref("security.csp.enableStrictDynamic", false);
 user_pref("security.csp.enable_violation_events", false);
 
-// Online Certificate Status Protocol
+// Online certificate status protocol
 // 		0 = Disabled
 // 		1 = Enabled
 // 		2 = Enabled for EV certificates only
@@ -1223,13 +1223,13 @@ user_pref("dom.disable_window_open_feature.toolbar", true); // Prevent scripts f
 // к примеру, FTP, POP и т.п. Для предотвращения потенциального риска необходимо запретить обращения к ним.
 user_pref("network.security.ports.banned", "9050,9051,9150,9151,8118,4444");
 
-// OffscreenCanvas
+// Offscreen Canvas
 // This mechanism provides the ability to perform rendering through WebGL in a separate thread.
 // Running WebGL in a separate thread is done using The offscreen Canvas API added to the Workers system,
 // which provides tools for background execution of long JavaScript operations (even when the application is already closed!).
-// OffscreenCanvas
+// Offscreen Canvas
 // Этот механизм обеспечивает возможность выполнения отрисовки через WebGL в отдельном потоке.
-// Запуск WebGL в отдельном потоке производится с помощью API OffscreenCanvas, добавленного в систему Workers,
+// Запуск WebGL в отдельном потоке производится с помощью API Offscreen Canvas, добавленного в систему Workers,
 // предоставляющую средства для фонового выполнения длительных JavaScript-операций (даже при уже закрытом приложении!).
 user_pref("gfx.offscreencanvas.enabled", false);
 
