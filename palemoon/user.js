@@ -12,12 +12,12 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
-// Last modified: January 12, 2019
+// Last modified: January 17, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
 // URL: https://github.com/bogachenko/libertyfox/blob/master/palemoon/user.js
-// Version: 28.2.2
+// Version: 28.3.0
 //
 // Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip
 
@@ -1093,10 +1093,6 @@ user_pref("security.OCSP.enabled", 1);
 // Мониторинга аккумулятора компьютера
 user_pref("dom.battery.enabled", false);
 
-// Virtual Reality API
-// API Виртуальной реальности
-user_pref("dom.vr.enabled", false);
-
 // Hardware acceleration
 // Аппаратное ускорение
 user_pref("layers.acceleration.force-enabled", false);
@@ -1765,3 +1761,27 @@ user_pref("network.security.ports.banned", "9050,9051,9150,9151,8118,4444");
 // Отключение библиотеки шрифтов Graphite
 // Disable Graphite font library
 user_pref("gfx.font_rendering.graphite.enabled", false);
+
+// Allow add-ons to be synced from non-trusted sources
+// Разрешить синхронизацию надстроек из ненадежных источников
+user_pref("services.sync.addons.ignoreRepositoryChecking", true);
+
+// Performance warnings
+// Предупреждения о производительности
+// user_pref("devtools.errorconsole.performance_warnings", false);
+
+// Normalization of favicon-images depending on screen parameters
+// Нормализация favicon-изображений в зависимости от параметров экрана
+user_pref("browser.chrome.favicons.process", false);
+
+// The display of the sound indicator in the tab
+// Показ индикатора звука на вкладке
+user_pref("browser.tabs.showAudioPlayingIcon", true);
+
+// Sketches of visited pages
+// Эскизы посещенных страниц
+user_pref("browser.pagethumbnails.capturing_disabled", true);
+
+// AV1 video codec
+// Видеокодек AV1
+user_pref("media.av1.enabled", true);
