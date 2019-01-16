@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
-// Last modified: January 12, 2019
+// Last modified: January 17, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -56,7 +56,8 @@ user_pref("browser.tabs.warnOnOpen", true);
 // [ЗАМЕТКА] Выше представлен UserAgent от Firefox ESR, однако вы можете его изменить и найти
 // поддельные значения UserAgent в интернете. Пожалуйста, выбирайте наиболее общеупотребимые варианты
 // (как это показано в примере выше), стараясь "не выделяться" из общей массы браузеров.
-// [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA, дополнительно запретите JavaScript глобально!
+// [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA,
+// дополнительно запретите JavaScript глобально!
 user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
 user_pref("general.buildID.override", "20100101");
 user_pref("general.appname.override", "Netscape");
@@ -94,17 +95,17 @@ user_pref("browser.startup.homepage", "about:blank");
 
 // Snippets
 // Disable sending statistical information related to the technology Snippets (eng.: "piece", "fragment", "nothingness").
-// The default Firefox home page (about:home) includes a built-in mechanism to show some information and track user preferences at the same time.
-// Once a day, Firefox connects to the Mozilla server and then offers a new "piece". Mozilla keeps track of the number of taps,
+// The default Waterfox home page (about:home) includes a built-in mechanism to show some information and track user preferences at the same time.
+// Once a day, Waterfox connects to the Mozilla server and then offers a new "piece". Mozilla keeps track of the number of taps,
 // their names, the locale of the browser and its version. This information is stored on the Mozilla server for 60 days.
-// To show the most suitable scraps, Firefox monthly sends a request to your Mozilla server about your location and IP address.
+// To show the most suitable scraps, Waterfox monthly sends a request to your Mozilla server about your location and IP address.
 // Some "snatches" are interactive and can distribute your mailing address and phone number, which is especially dangerous.
 // Сниппеты
 // Отключение отсылки статистической информации, связанной с технологией Snippets (англ.: "обрывок", "фрагмент", "ничтожество").
-// Домашняя страница Firefox, установленная по умолчанию (about:home), содержит встроенный механизм показа некоторой информации
-// и одновременного слежения за пользовательскими предпочтениями. Раз в день Firefox соединяется с сервером Mozilla и затем предлагает новый "обрывок".
+// Домашняя страница Waterfox, установленная по умолчанию (about:home), содержит встроенный механизм показа некоторой информации
+// и одновременного слежения за пользовательскими предпочтениями. Раз в день Waterfox соединяется с сервером Mozilla и затем предлагает новый "обрывок".
 // Mozilla отслеживает количество нажатий, их имена, локаль браузера и его версию. Эта информация хранится на сервере Mozilla 60 дней.
-// Для показа наиболее подходящих "обрывков", Firefox ежемесячно посылает на сервер Mozilla запрос о вашем местонахождении и IP-адресе.
+// Для показа наиболее подходящих "обрывков", Waterfox ежемесячно посылает на сервер Mozilla запрос о вашем местонахождении и IP-адресе.
 // Некоторые "обрывки" интерактивны и могут распространять ваш почтовый адрес и телефонный номер, что особенно опасно.
 user_pref("browser.aboutHomeSnippets.updateUrl", "data:,");
 
@@ -614,11 +615,11 @@ user_pref("identity.mobilepromo.android", "");
 user_pref("identity.mobilepromo.ios", "");
 
 // Location accounting
-// Firefox has built-in tools for transferring GEODATA (your location). This uses information obtained from the operating systems
+// Waterfox has built-in tools for transferring GEODATA (your location). This uses information obtained from the operating systems
 // geolocation facilities, Wi-Fi networks, telephone and Internet operators, as well as a real IP address.
 // In addition, the above data is sent to Google servers.
 // Учет местоположения
-// Firefox располагает встроенными средствами передачи геоданных (вашего местонахождения). При этом используются сведения,
+// Waterfox располагает встроенными средствами передачи геоданных (вашего местонахождения). При этом используются сведения,
 // получаемые от геолокационных средств операционной системы, сетей Wi-Fi, телефонных и интернет-операторов, а также реальный IP-адрес.
 // Кроме того, вышеперечисленные данные отсылаются на серверы Google.
 user_pref("geo.enabled", false);
@@ -1129,11 +1130,11 @@ user_pref("browser.download.forbid_open_with", true);
 
 // Predictor (formerly Seer)
 // This function creates the simplest connections to the server. When the cursor is over a certain link,
-// Firefox tries to predict further user actions on the page in order to increase the performance
+// Waterfox tries to predict further user actions on the page in order to increase the performance
 // and speed of processing the content on the page.
 // Предсказатель (бывший Seer)
 // Это функция создает простейшие соединения с сервером. Когда курсор находится над определенной ссылкой,
-// Firefox пытается предугадать дальнейшие действия пользователя на странице с целью увеличения производительность
+// Waterfox пытается предугадать дальнейшие действия пользователя на странице с целью увеличения производительность
 // и скорости обработки контента на странице.
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-hover-on-ssl", false);
@@ -1712,11 +1713,11 @@ user_pref("network.IDN_show_punycode", true);
 user_pref("security.ssl.require_safe_negotiation", true);
 
 // Prevent connection to the device on Firefox OS for debugging over Wi-Fi Internet
-// Firefox collects information about the closest wireless access points and your real IP address
+// Waterfox collects information about the closest wireless access points and your real IP address
 // and then transfers it to the nearest geolocation provider, as well as to Google Location Services.
 // [WARNING] Dangerous, may reveal your location.
 // Запрет соединения с устройством на Firefox ОС для отладки по сети Wi-Fi Интернет
-// Firefox собирает информацию о ближайших беспроводных точках доступа и вашем реальном IP-адресе
+// Waterfox собирает информацию о ближайших беспроводных точках доступа и вашем реальном IP-адресе
 // и затем передает ее в ближайшему геолокационному провайдеру, а также в службу Google Location Services.
 // [ВНИМАНИЕ] Опасно, может раскрыть ваше расположение.
 user_pref("devtools.remote.wifi.scan", false);

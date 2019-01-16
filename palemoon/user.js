@@ -486,11 +486,11 @@ user_pref("media.default_volume", "0.5");
 user_pref("media.mediasource.webm.enabled", true);
 
 // Location accounting
-// Firefox has built-in tools for transferring GEODATA (your location). This uses information obtained from the operating systems
+// Palemoon has built-in tools for transferring GEODATA (your location). This uses information obtained from the operating systems
 // geolocation facilities, Wi-Fi networks, telephone and Internet operators, as well as a real IP address.
 // In addition, the above data is sent to Google servers.
 // Учет местоположения
-// Firefox располагает встроенными средствами передачи геоданных (вашего местонахождения). При этом используются сведения,
+// Palemoon располагает встроенными средствами передачи геоданных (вашего местонахождения). При этом используются сведения,
 // получаемые от геолокационных средств операционной системы, сетей Wi-Fi, телефонных и интернет-операторов, а также реальный IP-адрес.
 // Кроме того, вышеперечисленные данные отсылаются на серверы Google.
 user_pref("geo.enabled", false);
@@ -869,11 +869,11 @@ user_pref("browser.download.forbid_open_with", true);
 
 // Predictor (formerly Seer)
 // This function creates the simplest connections to the server. When the cursor is over a certain link,
-// Firefox tries to predict further user actions on the page in order to increase the performance
+// Palemoon tries to predict further user actions on the page in order to increase the performance
 // and speed of processing the content on the page.
 // Предсказатель (бывший Seer)
 // Это функция создает простейшие соединения с сервером. Когда курсор находится над определенной ссылкой,
-// Firefox пытается предугадать дальнейшие действия пользователя на странице с целью увеличения производительность
+// Palemoon пытается предугадать дальнейшие действия пользователя на странице с целью увеличения производительность
 // и скорости обработки контента на странице.
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-prefetch", false);
@@ -1394,11 +1394,11 @@ user_pref("devtools.gcli.imgurUploadURL", "");
 user_pref("browser.tabs.onTop", true);
 
 // Prevent connection to the device on Firefox OS for debugging over Wi-Fi Internet
-// Firefox collects information about the closest wireless access points and your real IP address
+// Palemoon collects information about the closest wireless access points and your real IP address
 // and then transfers it to the nearest geolocation provider, as well as to Google Location Services.
 // [WARNING] Dangerous, may reveal your location.
 // Запрет соединения с устройством на Firefox ОС для отладки по сети Wi-Fi Интернет
-// Firefox собирает информацию о ближайших беспроводных точках доступа и вашем реальном IP-адресе
+// Palemoon собирает информацию о ближайших беспроводных точках доступа и вашем реальном IP-адресе
 // и затем передает ее в ближайшему геолокационному провайдеру, а также в службу Google Location Services.
 // [ВНИМАНИЕ] Опасно, может раскрыть ваше расположение.
 user_pref("devtools.remote.wifi.scan", false);
@@ -1673,7 +1673,8 @@ user_pref("browser.display.use_document_fonts", 0);
 // [ЗАМЕТКА] Выше представлен UserAgent от Firefox ESR, однако вы можете его изменить и найти
 // поддельные значения UserAgent в интернете. Пожалуйста, выбирайте наиболее общеупотребимые варианты
 // (как это показано в примере выше), стараясь "не выделяться" из общей массы браузеров.
-// [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA, дополнительно запретите JavaScript глобально!
+// [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA,
+// дополнительно запретите JavaScript глобально!
 user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
 user_pref("general.buildID.override", "20100101");
 user_pref("general.appname.override", "Netscape");

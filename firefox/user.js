@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/firefox/
-// Last modified: January 12, 2019
+// Last modified: January 17, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -56,7 +56,8 @@ user_pref("browser.tabs.warnOnOpen", true);
 // [ЗАМЕТКА] Выше представлен UserAgent от Firefox ESR, однако вы можете его изменить и найти
 // поддельные значения UserAgent в интернете. Пожалуйста, выбирайте наиболее общеупотребимые варианты
 // (как это показано в примере выше), стараясь "не выделяться" из общей массы браузеров.
-// [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA, дополнительно запретите JavaScript глобально!
+// [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA,
+// дополнительно запретите JavaScript глобально!
 user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
 user_pref("general.appname.override", "Netscape");
 user_pref("general.appversion.override", "5.0 (Windows)");

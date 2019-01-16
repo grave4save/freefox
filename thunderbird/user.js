@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
-// Last modified: January 12, 2019
+// Last modified: January 17, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -466,11 +466,11 @@ user_pref("dom.gamepad.extensions.enabled", false);
 user_pref("dom.gamepad.haptic_feedback.enabled", false);
 
 // Location accounting
-// Firefox has built-in tools for transferring GEODATA (your location). This uses information obtained from the operating systems
+// Thunderbird has built-in tools for transferring GEODATA (your location). This uses information obtained from the operating systems
 // geolocation facilities, Wi-Fi networks, telephone and Internet operators, as well as a real IP address.
 // In addition, the above data is sent to Google servers.
 // Учет местоположения
-// Firefox располагает встроенными средствами передачи геоданных (вашего местонахождения). При этом используются сведения,
+// Thunderbird располагает встроенными средствами передачи геоданных (вашего местонахождения). При этом используются сведения,
 // получаемые от геолокационных средств операционной системы, сетей Wi-Fi, телефонных и интернет-операторов, а также реальный IP-адрес.
 // Кроме того, вышеперечисленные данные отсылаются на серверы Google.
 user_pref("geo.enabled", false);
@@ -608,7 +608,8 @@ user_pref("network.prefetch-next", false);
 // [ЗАМЕТКА] Выше представлен UserAgent от Firefox ESR, однако вы можете его изменить и найти
 // поддельные значения UserAgent в интернете. Пожалуйста, выбирайте наиболее общеупотребимые варианты
 // (как это показано в примере выше), стараясь "не выделяться" из общей массы браузеров.
-// [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA, дополнительно запретите JavaScript глобально!
+// [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA,
+// дополнительно запретите JavaScript глобально!
 user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
 user_pref("general.buildID.override", "20100101");
 user_pref("general.appname.override", "Netscape");
@@ -742,11 +743,11 @@ user_pref("browser.download.forbid_open_with", true);
 
 // Predictor (formerly Seer)
 // This function creates the simplest connections to the server. When the cursor is over a certain link,
-// Firefox tries to predict further user actions on the page in order to increase the performance
+// Thunderbird tries to predict further user actions on the page in order to increase the performance
 // and speed of processing the content on the page.
 // Предсказатель (бывший Seer)
 // Это функция создает простейшие соединения с сервером. Когда курсор находится над определенной ссылкой,
-// Firefox пытается предугадать дальнейшие действия пользователя на странице с целью увеличения производительность
+// Thunderbird пытается предугадать дальнейшие действия пользователя на странице с целью увеличения производительность
 // и скорости обработки контента на странице.
 user_pref("network.predictor.enabled", false);
 user_pref("network.predictor.enable-prefetch", false);
