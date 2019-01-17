@@ -14,12 +14,12 @@
 ## Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 ## Email: bogachenkove@gmail.com
 ## Github: https://github.com/bogachenko/libertyfox/
-## Last modified: January 4, 2019
+## Last modified: January 18, 2019
 ## License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 ## Problem reports: https://github.com/bogachenko/libertyfox/issues
 ## Title: Update.sh
 ## URL: https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/update.sh
-## Version: 0.0.2
+## Version: 0.0.3
 ##
 ## Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip
 
@@ -34,3 +34,5 @@ wget https://raw.githubusercontent.com/bogachenko/libertyfox/master/waterfox/use
 wget https://raw.githubusercontent.com/bogachenko/libertyfox/master/waterfox/chrome/userChrome.css -O ../waterfox/chrome/userChrome.css
 wget https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/prefsCleaner.bat -O ../scripts/prefsCleaner.bat
 wget https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/prefsCleaner.sh -O ../scripts/prefsCleaner.sh
+wget https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/Compare-PrefJSnUserJS.ps1 -O ../scripts/Compare-PrefJSnUserJS.ps1
+wget https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/Verify-UserJS.sh -O ../scripts/Verify-UserJS.sh
