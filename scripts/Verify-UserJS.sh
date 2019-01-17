@@ -19,14 +19,11 @@
 ## Problem reports: https://github.com/bogachenko/libertyfox/issues
 ## Title: verify-userjs.sh
 ## URL: https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/verify-userjs.sh
-## Version: 0.0.2
+## Version: 0.0.3
 ##
 ## Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip
 
 clear
-
-echo "\033[37;1;41m User.js \033[0m"
-grep -E -n -v '^[ 	]*(//|#[a-z]+|(user_pref\("[a-zA-Z0-9._-]+", (true|false|-?[0-9]+|"([^\"]|\\")*")\);)|$)' user.js
 
 echo "\033[37;1;41m Fennec \033[0m"
 grep -E -n -v '^[ 	]*(//|#[a-z]+|(user_pref\("[a-zA-Z0-9._-]+", (true|false|-?[0-9]+|"([^\"]|\\")*")\);)|$)' fennec/user.js
