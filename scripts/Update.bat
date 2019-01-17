@@ -12,12 +12,12 @@
 :: Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 :: Email: bogachenkove@gmail.com
 :: Github: https://github.com/bogachenko/libertyfox/
-:: Last modified: January 4, 2019
+:: Last modified: January 18, 2019
 :: License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 :: Problem reports: https://github.com/bogachenko/libertyfox/issues
 :: Title: Update.bat
 :: URL: https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/update.bat
-:: Version: 0.0.1
+:: Version: 0.0.2
 ::
 :: Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip
 
@@ -32,3 +32,5 @@ powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.github
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/bogachenko/libertyfox/master/waterfox/chrome/userChrome.css', '../waterfox/chrome/userChrome.css')"
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/prefsCleaner.bat', '../scripts/prefsCleaner.bat')"
 powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/prefsCleaner.sh', '../scripts/prefsCleaner.sh')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/Compare-PrefJSnUserJS.ps1', '../scripts/Compare-PrefJSnUserJS.ps1')"
+powershell -Command "(New-Object Net.WebClient).DownloadFile('https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/Verify-UserJS.sh', '../scripts/Verify-UserJS.sh')"
