@@ -620,11 +620,11 @@ user_pref("general.useragent.locale", "en-US");
 
 // Smooth scrolling
 // Плавная прокрутка
-user_pref("general.smoothScroll", false);
+// user_pref("general.smoothScroll", false);
 
 // Auto Scroll
 // Автоматическая прокрутка
-user_pref("general.autoScroll", false);
+// user_pref("general.autoScroll", false);
 
 // Hardware acceleration
 // Аппаратное ускорение
@@ -774,7 +774,7 @@ user_pref("network.dns.disableIPv6", true);
 // [ВНИМАНИЕ] Это приведет к разрыву расширений, которые не используют каталоги XPI по умолчанию.
 user_pref("extensions.autoDisableScopes", 15);
 
-// WebExtension Restrictions for Specific Mozilla Domains
+// WebExtension restrictions for specific Mozilla domains
 // Ограничения WebExtension для определенных доменов Mozilla
 user_pref("extensions.webextensions.restrictedDomains", "");
 
@@ -792,18 +792,18 @@ user_pref("full-screen-api.warning.timeout", 0);
 
 // Animated gradient that runs through the tab after the page is fully loaded
 // Анимированный градиент, который пробегает по вкладке после полной загрузки страницы
-user_pref("toolkit.cosmeticAnimations.enabled", false);
+// user_pref("toolkit.cosmeticAnimations.enabled", false);
 
 // Search for text on the page as it is typed
 // Искать текст на странице по мере его набора
-user_pref("accessibility.typeaheadfind", false);
+// user_pref("accessibility.typeaheadfind", false);
 
 // Automatic copying
 // Автоматическое копирование
-user_pref("clipboard.autocopy", false);
+// user_pref("clipboard.autocopy", false);
 
 // Reader view
-user_pref("reader.parse-on-load.enabled", false);
+// user_pref("reader.parse-on-load.enabled", false);
 
 // WebGL debug info being available to websites
 //
@@ -843,12 +843,12 @@ user_pref("webgl.force-enabled", false);
 user_pref("webgl.min_capability_mode", true);
 user_pref("webgl.msaa-force", false);
 
-// Service workers
+// Service Workers
 // "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
 // are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
 // and resource requests, and caching resources.
 // [NOTE] This heavily loads the system resources and takes up most of the RAM.
-// Service workers
+// Service Workers
 // "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
 // браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
 // перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы.
@@ -866,7 +866,7 @@ user_pref("network.cookie.same-site.enabled", true);
 // DOM (Document Object Model) Storage
 // The DOM specifications of web applications define a mechanism that allows web pages to store their data
 // on the client side in a special storage.
-// [WARNING] This will break a lot of sites' functionality and extensions.
+// [WARNING] This will break a lot of sites functionality and extensions.
 // You are better off using an extension for more granular control.
 // Хранилище DOM (Объектная Модель Документа)
 // DOM-спецификации веб-приложений определяют механизм, разрешающий веб-страницам сохранять свои данные

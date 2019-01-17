@@ -828,7 +828,7 @@ user_pref("network.dns.disableIPv6", true);
 user_pref("extensions.enabledScopes", 1);
 user_pref("extensions.autoDisableScopes", 15);
 
-// WebExtension Restrictions for Specific Mozilla Domains
+// WebExtension restrictions for specific Mozilla domains
 // Ограничения WebExtension для определенных доменов Mozilla
 user_pref("extensions.webextensions.restrictedDomains", "");
 
@@ -846,11 +846,11 @@ user_pref("full-screen-api.warning.timeout", 0);
 
 // Animated gradient that runs through the tab after the page is fully loaded
 // Анимированный градиент, который пробегает по вкладке после полной загрузки страницы
-user_pref("toolkit.cosmeticAnimations.enabled", false);
+// user_pref("toolkit.cosmeticAnimations.enabled", false);
 
 // Search for text on the page as it is typed
 // Искать текст на странице по мере его набора
-user_pref("accessibility.typeaheadfind", false);
+// user_pref("accessibility.typeaheadfind", false);
 
 // Spellchecking
 // 		0 = Do not check
@@ -864,14 +864,14 @@ user_pref("layout.spellcheckDefault", 2);
 
 // Automatic copying
 // Автоматическое копирование
-user_pref("clipboard.autocopy", false);
+// user_pref("clipboard.autocopy", false);
 
 // Reader view
-user_pref("reader.parse-on-load.enabled", false);
+// user_pref("reader.parse-on-load.enabled", false);
 
 // Text reader function in Reader view
 // Функция зачитывания текста в Reader view
-user_pref("narrate.enabled", false);
+// user_pref("narrate.enabled", false);
 
 // WebGL debug info being available to websites
 // Информация об отладке WebGL доступна для веб-сайтов
@@ -909,12 +909,12 @@ user_pref("webgl.force-enabled", false);
 user_pref("webgl.min_capability_mode", true);
 user_pref("webgl.msaa-force", false);
 
-// Service workers
+// Service Workers
 // "Service workers" essentially act as proxy servers that sit between web apps, and the browser and network,
 // are event driven, and can control the web page/site it is associated with, intercepting and modifying navigation
 // and resource requests, and caching resources.
 // [NOTE] This heavily loads the system resources and takes up most of the RAM.
-// Service workers
+// Service Workers
 // "Service workers" по существу действуют как прокси-серверы, которые находятся между веб-приложениями,
 // браузером и сетью, управляются событиями и могут управлять веб-страницей или сайтом, с которыми они связаны,
 // перехватывать и изменять запросы навигации и ресурсов, а также кэшировать ресурсы.
@@ -932,7 +932,7 @@ user_pref("network.cookie.same-site.enabled", true);
 // DOM (Document Object Model) Storage
 // The DOM specifications of web applications define a mechanism that allows web pages to store their data
 // on the client side in a special storage.
-// [WARNING] This will break a lot of sites' functionality and extensions.
+// [WARNING] This will break a lot of sites functionality and extensions.
 // You are better off using an extension for more granular control.
 // Хранилище DOM (Объектная Модель Документа)
 // DOM-спецификации веб-приложений определяют механизм, разрешающий веб-страницам сохранять свои данные
@@ -1363,7 +1363,7 @@ user_pref("network.http.referer.defaultPolicy.pbmode", 2);
 
 // Open links from the clipboard with the middle mouse button
 // Открывать ссылки из буфера обмена средней кнопкой мышки
-user_pref("middlemouse.contentLoadURL", false);
+// user_pref("middlemouse.contentLoadURL", false);
 
 // Restrict HTTP redirection
 // Ограничить переадресацию HTTP
@@ -1402,7 +1402,7 @@ user_pref("device.storage.enabled", false);
 
 // Automatic selection of the entire line in the address bar
 // Автоматическое выделение всей строки в поле адресной строки
-user_pref("browser.urlbar.clickSelectsAll", false);
+// user_pref("browser.urlbar.clickSelectsAll", false);
 
 // Showing search results
 // 		TRUE = To wrap lines
@@ -1454,7 +1454,7 @@ user_pref("network.preload", false);
 
 // Semi transparent tab previews
 // Полупрозрачная превью вкладок
-user_pref("nglayout.enable_drag_images", false);
+// user_pref("nglayout.enable_drag_images", false);
 
 // Disable preconnects and preresolves
 // Отключить предварительные соединения и пререзоливы
