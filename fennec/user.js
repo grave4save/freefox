@@ -1523,7 +1523,6 @@ user_pref("browser.display.use_document_fonts", 0);
 // [ВНИМАНИЕ] Для предотвращения утечек информации об используемой ОС и браузере посредством анализа UA,
 // дополнительно запретите JavaScript глобально!
 user_pref("general.useragent.override", "Mozilla/5.0 (Windows NT 6.1; rv:60.0) Gecko/20100101 Firefox/60.0");
-user_pref("general.buildID.override", "20100101");
 user_pref("general.useragent.updates.lastupdated", "");
 user_pref("general.appname.override", "Netscape");
 user_pref("general.appversion.override", "5.0 (Windows)");
@@ -1635,3 +1634,7 @@ user_pref("network.security.ports.banned", "9050,9051,9150,9151,8118,4444");
 // Disable graphite font library
 // Отключение библиотеки шрифтов graphite
 user_pref("gfx.font_rendering.graphite.enabled", false);
+
+// Runtime storage for API calls
+// Хранилище времени выполнения для вызовов API
+user_pref("extensions.webextensions.enablePerformanceCounters", false);
