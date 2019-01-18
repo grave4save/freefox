@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/firefox/
-// Last modified: January 17, 2019
+// Last modified: January 19, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -2230,3 +2230,7 @@ user_pref("network.auth.subresource-http-auth-allow", 1);
 // Запрет на установку соединений по определенным портам. Многие порты зарезервированы за разными службами, обслуживающими,
 // к примеру, FTP, POP и т.п. Для предотвращения потенциального риска необходимо запретить обращения к ним.
 user_pref("network.security.ports.banned", "9050,9051,9150,9151,8118,4444");
+
+// Recommended performance settings
+// Рекомендуемые настройки производительности
+user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);

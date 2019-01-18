@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
-// Last modified: January 17, 2019
+// Last modified: January 19, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -1930,3 +1930,7 @@ user_pref("network.security.ports.banned", "9050,9051,9150,9151,8118,4444");
 // Disable graphite font library
 // Отключение библиотеки шрифтов graphite
 user_pref("gfx.font_rendering.graphite.enabled", false);
+
+// Recommended performance settings
+// Рекомендуемые настройки производительности
+user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
