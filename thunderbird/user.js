@@ -1252,3 +1252,7 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
 // Definition and sending of parameters (type) of network connection (Wi-Fi, LAN, etc.) and current speed
 // Определение и отправка параметров (типа) сетевого соединения (Wi-Fi, LAN и т.п.) и текущей скорости
 user_pref("dom.netinfo.enabled", false);
+
+// Application language
+// Язык приложения
+user_pref("intl.locale.requested", "en-US");
