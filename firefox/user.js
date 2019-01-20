@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/firefox/
-// Last modified: January 19, 2019
+// Last modified: January 20, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -475,7 +475,7 @@ user_pref("privacy.sanitize.sanitizeOnShutdown", true);
 // What elements of the story should be automatically deleted when you close Firefox
 // Какие элементы истории должны быть автоматически удалены при закрытии Firefox
 user_pref("privacy.clearOnShutdown.cache", true); // Cache / Кэш
-user_pref("privacy.clearOnShutdown.cookies", false);// Cookies / Куки
+user_pref("privacy.clearOnShutdown.cookies", false); // Cookies / Куки
 user_pref("privacy.clearOnShutdown.downloads", true); // Downloads / Загрузки
 user_pref("privacy.clearOnShutdown.formdata", true); // Form data / Данные форм
 user_pref("privacy.clearOnShutdown.history", true); // History / История
