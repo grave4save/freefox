@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
-// Last modified: January 22, 2019
+// Last modified: January 23, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -352,7 +352,9 @@ user_pref("extensions.webservice.discoverURL", "");
 user_pref("browser.fixup.alternate.enabled", false);
 
 // Number of steps "To previous page" and "To next page"
+// If you change the value to "0", you can not use the "Back" button.
 // Количество шагов "На предыдущую страницу" и "На следующую страницу"
+// [ЗАМЕТКА] Если вы измените значение на "0", то не сможете воспользоваться кнопкой "Назад".
 user_pref("browser.sessionhistory.max_entries", 10);
 
 // Autocomplete and suggestion types
@@ -675,8 +677,8 @@ user_pref("offline-apps.permissions", 1);
 user_pref("browser.sessionstore.privacy_level", 2);
 user_pref("browser.sessionstore.privacy_level_deferred", 2);
 
-// Resume session after crash
-// Возобновление сеанса после сбоя
+// Restore active session in case of browser crash
+// Восстановления активной сессии в случае падения браузера
 user_pref("browser.sessionstore.resume_from_crash", false);
 
 // Interval between saving sessions

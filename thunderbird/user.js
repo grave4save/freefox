@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
-// Last modified: January 22, 2019
+// Last modified: January 23, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
