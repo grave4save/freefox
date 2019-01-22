@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/firefox/
-// Last modified: January 20, 2019
+// Last modified: January 22, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -466,7 +466,7 @@ user_pref("browser.formfill.expire_days", 0);
 
 // Remember your browsing and download history
 // Помните историю посещений и загрузок
-user_pref("places.history.enabled", true);
+user_pref("places.history.enabled", false);
 
 // Automatic deletion of history when closing the browser
 // Автоматическое удаление истории при закрытии браузера
@@ -2234,3 +2234,7 @@ user_pref("network.security.ports.banned", "9050,9051,9150,9151,8118,4444");
 // Recommended performance settings
 // Рекомендуемые настройки производительности
 user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
+
+// Intelligent definition of a set of localized characters
+// Интеллектуальное определение набора локализованных символов
+user_pref("intl.charset.detector", "");

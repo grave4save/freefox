@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
-// Last modified: January 17, 2019
+// Last modified: January 22, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -233,7 +233,7 @@ user_pref("browser.fixup.alternate.suffix", "");
 
 // Remember your browsing and download history
 // Помните историю посещений и загрузок
-user_pref("places.history.enabled", true);
+user_pref("places.history.enabled", false);
 
 // Telemetry
 // This feature sends data to Mozilla servers about usage, browser performance, user interface features,
@@ -1256,3 +1256,7 @@ user_pref("dom.netinfo.enabled", false);
 // Application language
 // Язык приложения
 user_pref("intl.locale.requested", "en-US");
+
+// Intelligent definition of a set of localized characters
+// Интеллектуальное определение набора локализованных символов
+user_pref("intl.charset.detector", "");

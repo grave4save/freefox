@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/waterfox/
-// Last modified: January 20, 2019
+// Last modified: January 22, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -1934,3 +1934,11 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
 // Recommended performance settings
 // Рекомендуемые настройки производительности
 user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
+
+// Intelligent definition of a set of localized characters
+// Интеллектуальное определение набора локализованных символов
+user_pref("intl.charset.detector", "");
+
+// Remember your browsing and download history
+// Помните историю посещений и загрузок
+user_pref("places.history.enabled", false);

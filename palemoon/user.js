@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/palemoon/
-// Last modified: January 20, 2019
+// Last modified: January 22, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -383,7 +383,7 @@ user_pref("browser.formfill.saveHttpsForms", false);
 
 // Remember your browsing and download history
 // Помните историю посещений и загрузок
-user_pref("places.history.enabled", true);
+user_pref("places.history.enabled", false);
 
 // Automatically delete history when closing Pale Moon
 // Автоматическое удаление истории при закрытии Pale Moon
@@ -1786,3 +1786,7 @@ user_pref("browser.pagethumbnails.capturing_disabled", true);
 // AV1 Video codec
 // Видеокодек AV1
 user_pref("media.av1.enabled", true);
+
+// Intelligent definition of a set of localized characters
+// Интеллектуальное определение набора локализованных символов
+user_pref("intl.charset.detector", "");

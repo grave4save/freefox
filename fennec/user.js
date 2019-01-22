@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/libertyfox/tree/master/fennec/
-// Last modified: January 17, 2019
+// Last modified: January 22, 2019
 // License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/libertyfox/issues
 // Title: user.js
@@ -465,19 +465,15 @@ user_pref("security.dialog_enable_delay", 0);
 // proprietary formats for processing audio and video content (Adobe Flash, Apple QuickTime,
 // Microsoft Silverlight), as well as online games, presentations, tools for intercepting downloads and
 // transferring them to special software-downloaders, etc.
-// 		0 = Disabled
-// 		1 = Request activation
-// 		2 = Active, individual plugins can be overridden
 // Состояние плагинов по умолчанию
 // Плагин - стороннее программное обеспечение, которое позволяет браузеру обрабатывать веб-контент,
 // который он не может воспроизвести самостоятельно. Обычно это проприетарные (несвободные)
 // патентованные форматы для обработки аудио- и видео-содержимого (Adobe Flash, Apple QuickTime,
 // Microsoft Silverlight), а также онлайн-игры, презентации, средства для перехвата закачек и
 // передачи их в специальные программы-даунлоадеры и т.п.
-// 		0 = Отключено
-// 		1 = Запрашивать активацию
-// 		2 = Активно, можно переопределить отдельные плагины
-user_pref("plugin.default.state", 0);
+user_pref("plugin.default.state", 0); // 0 = Disabled / 0 = Отключено // 1 = Request activation / 1 = Запрашивать активацию // 2 = Active, individual plugins can be overridden / 2 = Активно, можно переопределить отдельные плагины
+user_pref("media.plugins.enabled", false);
+user_pref("plugin.disable", false);
 
 // Activate the plugin by clicking
 // Активация плагина по клику
@@ -1638,3 +1634,7 @@ user_pref("gfx.font_rendering.graphite.enabled", false);
 // Runtime storage for API calls
 // Хранилище времени выполнения для вызовов API
 user_pref("extensions.webextensions.enablePerformanceCounters", false);
+
+// Intelligent definition of a set of localized characters
+// Интеллектуальное определение набора локализованных символов
+user_pref("intl.charset.detector", "");
