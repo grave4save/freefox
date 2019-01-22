@@ -571,7 +571,14 @@ user_pref("network.dns.disablePrefetch", true);
 user_pref("network.dns.disablePrefetchFromHTTPS", true);
 
 // Sending ping
+// Sending data about clicking on a link to the addresses specified in the "a" tag ("ping" attribute).
+// HTML5 allows you to use this attribute for an element called ping. This function sends data by the URI defined in the hyperlink
+// (if the user clicks on it). It allows you to track user activity, preferences and collect statistics about them.
 // Отправка пинга
+// Отправка данных о нажатии на ссылку адресам, указанным в тэге "a" (атрибут "ping").
+// HTML5 позволяет использовать этот атрибут для элемента под названием ping. Эта функция отсылает данные по URI,
+// определенному в гиперссылке (если на нее нажимает пользователь). Это позволяет отслеживать активность, предпочтения
+// ыпользователей и собирать статистику о них.
 user_pref("browser.send_pings", false);
 user_pref("browser.send_pings.max_per_link", 0);
 user_pref("browser.send_pings.require_same_host", true);
