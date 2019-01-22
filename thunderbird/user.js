@@ -1271,3 +1271,31 @@ user_pref("intl.charset.detector", "");
 // Show content from the Internet
 // Показ содержимого из Интернета
 user_pref("mailnews.message_display.disable_remote_image", false);
+
+// Control: which root programs do not trust politicians
+//		0 = No distrust policies enforced
+//		1 = Symantec roots distrusted for certificates issued after cutoff
+//		2 = Symantec roots distrusted regardless of date
+// Контроль: какие корневые программы не доверяют политикам
+//		0 = Политика недоверия не применяется
+//		1 = Корни Symantec не доверяют сертификатам, выданным после отключения
+//		2 = Корни Symantec доверяют независимо от даты
+user_pref("security.pki.distrust_ca_policy", 2);
+
+// DNS-over-HTTPS (DoH)
+//		0 = Disable
+//		1 = DNS or TRR is used, whichever is faster
+//		2 = TRR is used by default, and DNS as a fallback
+//		3 = Only TRR is used
+//		4 = Race for statistics, mirroring mode in which TRR and DNS are enabled in parallel
+// [WARNING] DoH bypasses hosts and gives info to yet another party (e.g. Cloudflare).
+// DNS-над-HTTPS
+//		0 = Отключить
+//		1 = Используется DNS или TRR, в зависимости от того, что быстрее
+//		2 = Используется TRR по умолчанию, а DNS как запасной вариант
+//		3 = Используется только TRR
+//		4 = Гонка за статистикой, режим зеркалирования при котором TRR и DNS задействованы параллельно
+// [ВНИМАНИЕ] DoH обходит хосты и предоставляет информацию еще одной стороне (например, Cloudflare).
+// user_pref("network.trr.mode", 0);
+// user_pref("network.trr.bootstrapAddress", "");
+// user_pref("network.trr.uri", "");
