@@ -1260,3 +1260,7 @@ user_pref("intl.locale.requested", "en-US");
 // Intelligent definition of a set of localized characters
 // Интеллектуальное определение набора локализованных символов
 user_pref("intl.charset.detector", "");
+
+// Show content from the Internet
+// Показ содержимого из Интернета
+user_pref("mailnews.message_display.disable_remote_image", false);
