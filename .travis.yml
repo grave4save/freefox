@@ -1,11 +1,12 @@
+sudo: false
 language: node_js
 node_js:
   - "node"
 before_script:
   - npm install -g acorn
 script:
-- acorn --silent firefox/user.js
-- acorn --silent fennec/user.js
-- acorn --silent thunderbird/user.js
-- acorn --silent waterfox/user.js
-- acorn --silent palemoon/user.js
+- acorn firefox/user.js
+- acorn fennec/user.js
+- acorn thunderbird/user.js
+- acorn waterfox/user.js
+- acorn palemoon/user.js
