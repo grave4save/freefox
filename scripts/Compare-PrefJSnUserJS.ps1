@@ -12,12 +12,12 @@
 ## Author: claustromaniac <https://github.com/claustromaniac>, Bogachenko Vyacheslav <https://github.com/bogachenko>
 ## Email: bogachenkove@gmail.com
 ## Github: https://github.com/bogachenko/freefox/
-## Last modified: January 12, 2019
+## Last modified: January 23, 2019
 ## License: MIT <https://github.com/bogachenko/freefox/blob/master/LICENSE.md>
 ## Problem reports: https://github.com/bogachenko/freefox/issues
 ## Title: Compare-PrefJSnUserJS.ps1
 ## URL: https://raw.githubusercontent.com/bogachenko/freefox/master/scripts/Compare-PrefJSnUserJS.ps1
-## Version: 0.0.2
+## Version: 0.0.3
 ##
 ## Download the entire Free Fox project at https://github.com/bogachenko/freefox/archive/master.zip
 
