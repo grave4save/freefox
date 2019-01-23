@@ -905,10 +905,10 @@ user_pref("browser.urlbar.trimURLs", false);
 user_pref("browser.urlbar.filter.javascript", true);
 
 // Windows jumplist
-user_pref("browser.taskbar.lists.enabled", false);
-user_pref("browser.taskbar.lists.frequent.enabled", false);
-user_pref("browser.taskbar.lists.recent.enabled", false);
-user_pref("browser.taskbar.lists.tasks.enabled", false);
+// user_pref("browser.taskbar.lists.enabled", false);
+// user_pref("browser.taskbar.lists.frequent.enabled", false);
+// user_pref("browser.taskbar.lists.recent.enabled", false);
+// user_pref("browser.taskbar.lists.tasks.enabled", false);
 
 // Display thumbnails of tabs on the taskbar
 // Отображать эскизы вкладок на панели задач
