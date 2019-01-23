@@ -1,25 +1,25 @@
-// This file is part of the Liberty fox project,
+// This file is part of the Free Fox project,
 // Copyright (c) 2019 Bogachenko Vyacheslav
 // 
-// Liberty fox is a free project: you can distribute it and/or modify
+// Free Fox is a free project: you can distribute it and/or modify
 // it in accordance with the MIT license published by the Massachusetts Institute of Technology.
 // 
-// The Liberty fox project is distributed in the hope that it will be useful,
+// The Free Fox project is distributed in the hope that it will be useful,
 // and is provided "AS IS", WITHOUT ANY WARRANTY, EXPRESSLY EXPRESSED OR IMPLIED.
 // WE ARE NOT RESPONSIBLE FOR ANY DAMAGES DUE TO THE USE OF THIS PROJECT OR ITS PARTS.
 // For more information, see the MIT license.
 // 
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
-// Github: https://github.com/bogachenko/libertyfox/tree/master/thunderbird/
+// Github: https://github.com/bogachenko/freefox/tree/master/thunderbird/
 // Last modified: January 23, 2019
-// License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
-// Problem reports: https://github.com/bogachenko/libertyfox/issues
+// License: MIT <https://github.com/bogachenko/freefox/blob/master/LICENSE.md>
+// Problem reports: https://github.com/bogachenko/freefox/issues
 // Title: user.js
-// URL: https://github.com/bogachenko/libertyfox/blob/master/thunderbird/user.js
+// URL: https://github.com/bogachenko/freefox/blob/master/thunderbird/user.js
 // Version: 60.4.0
 // 
-// Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip
+// Download the entire Free Fox project at https://github.com/bogachenko/freefox/archive/master.zip
 
 // Warning in "about:config"
 // Предупреждение в "about:config"

@@ -1,28 +1,28 @@
 @ECHO OFF & SETLOCAL DisableDelayedExpansion
 TITLE prefsCleaner.bat
 
-:: This file is part of the Liberty fox project,
+:: This file is part of the Free Fox project,
 :: Copyright (c) 2019 Bogachenko Vyacheslav
 ::
-:: Liberty fox is a free project: you can distribute it and/or modify
+:: Free Fox is a free project: you can distribute it and/or modify
 :: it in accordance with the MIT license published by the Massachusetts Institute of Technology.
 ::
-:: The Liberty fox project is distributed in the hope that it will be useful,
+:: The Free Fox project is distributed in the hope that it will be useful,
 :: and is provided "AS IS", WITHOUT ANY WARRANTY, EXPRESSLY EXPRESSED OR IMPLIED.
 :: WE ARE NOT RESPONSIBLE FOR ANY DAMAGES DUE TO THE USE OF THIS PROJECT OR ITS PARTS.
 :: For more information, see the MIT license.
 ::
 :: Author: claustromaniac <https://github.com/claustromaniac>, Bogachenko Vyacheslav <https://github.com/bogachenko>
 :: Email: bogachenkove@gmail.com
-:: Github: https://github.com/bogachenko/libertyfox/
+:: Github: https://github.com/bogachenko/freefox/
 :: Last modified: January 12, 2019
-:: License: MIT <https://github.com/bogachenko/libertyfox/blob/master/LICENSE.md>
-:: Problem reports: https://github.com/bogachenko/libertyfox/issues
+:: License: MIT <https://github.com/bogachenko/freefox/blob/master/LICENSE.md>
+:: Problem reports: https://github.com/bogachenko/freefox/issues
 :: Title: prefsCleaner.bat
-:: URL: https://raw.githubusercontent.com/bogachenko/libertyfox/master/scripts/prefsCleaner.bat
+:: URL: https://raw.githubusercontent.com/bogachenko/freefox/master/scripts/prefsCleaner.bat
 :: Version: 0.0.3
 ::
-:: Download the entire Liberty fox project at https://github.com/bogachenko/libertyfox/archive/master.zip
+:: Download the entire Free Fox project at https://github.com/bogachenko/freefox/archive/master.zip
 
 CD /D "%~dp0"
 :begin
