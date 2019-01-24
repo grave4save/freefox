@@ -12,7 +12,7 @@
 // Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
 // Email: bogachenkove@gmail.com
 // Github: https://github.com/bogachenko/freefox/tree/master/firefox/
-// Last modified: January 23, 2019
+// Last modified: January 24, 2019
 // License: MIT <https://github.com/bogachenko/freefox/blob/master/LICENSE.md>
 // Problem reports: https://github.com/bogachenko/freefox/issues
 // Title: user.js
@@ -1094,10 +1094,15 @@ user_pref("media.av1.enabled", true);
 // Показ системных расширений
 user_pref("devtools.aboutdebugging.showSystemAddons", true);
 
-// Activity stream
+// Activity stream extension
+// Расширение Activity stream
 user_pref("browser.library.activity-stream.enabled", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.devtoolsEnabled", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.messageProviders", "");
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.cfr", "");
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.onboarding", "");
+user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
+user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false);
 user_pref("browser.newtabpage.activity-stream.default.sites", "");
 user_pref("browser.newtabpage.activity-stream.disableSnippets", true);
 user_pref("browser.newtabpage.activity-stream.feeds.aboutpreferences", false);
@@ -1107,6 +1112,7 @@ user_pref("browser.newtabpage.activity-stream.feeds.migration", false);
 user_pref("browser.newtabpage.activity-stream.feeds.newtabinit", false);
 user_pref("browser.newtabpage.activity-stream.feeds.places", false);
 user_pref("browser.newtabpage.activity-stream.feeds.prefs", false);
+user_pref("browser.newtabpage.activity-stream.feeds.section.highlights", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories.options", "");
 user_pref("browser.newtabpage.activity-stream.feeds.sections", false);
@@ -1115,24 +1121,29 @@ user_pref("browser.newtabpage.activity-stream.feeds.systemtick", false);
 user_pref("browser.newtabpage.activity-stream.feeds.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
 user_pref("browser.newtabpage.activity-stream.filterAdult", false);
+user_pref("browser.newtabpage.activity-stream.fxaccounts.endpoint", "");
 user_pref("browser.newtabpage.activity-stream.improvesearch.noDefaultSearchTile", false);
+user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts", false);
+user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.havePinned", "");
 user_pref("browser.newtabpage.activity-stream.improvesearch.topSiteSearchShortcuts.searchEngines", "");
 user_pref("browser.newtabpage.activity-stream.migrationExpired", true);
+user_pref("browser.newtabpage.activity-stream.migrationLastShownDate", 0);
+user_pref("browser.newtabpage.activity-stream.migrationRemainingDays", 0);
 user_pref("browser.newtabpage.activity-stream.pocketCta", "");
 user_pref("browser.newtabpage.activity-stream.prerender", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includeBookmarks", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includeDownloads", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includePocket", false);
 user_pref("browser.newtabpage.activity-stream.section.highlights.includeVisited", false);
+user_pref("browser.newtabpage.activity-stream.section.highlights.rows", 0);
+user_pref("browser.newtabpage.activity-stream.section.topstories.rows", 0);
 user_pref("browser.newtabpage.activity-stream.sectionOrder", "");
 user_pref("browser.newtabpage.activity-stream.showSearch", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.telemetry", false);
 user_pref("browser.newtabpage.activity-stream.telemetry.ping.endpoint", "");
-user_pref("browser.newtabpage.activity-stream.asrouter.providers.cfr", "");
-user_pref("browser.newtabpage.activity-stream.asrouter.providers.onboarding", "");
-user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
-user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr", false);
+user_pref("browser.newtabpage.activity-stream.telemetry.ut.events", false);
+user_pref("browser.newtabpage.activity-stream.topSitesRows", 0);
 
 // Block dangerous and deceptive content (malware, phishing, dangerous downloads)
 // Блокировать опасное и обманывающее содержимое (вредоносные программы, фишинг, опасные загрузки)
@@ -2247,3 +2258,9 @@ user_pref("browser.preferences.defaultPerformanceSettings.enabled", false);
 // Intelligent definition of a set of localized characters
 // Интеллектуальное определение набора локализованных символов
 user_pref("intl.charset.detector", "");
+
+// Breakdowns reports for Content blocking
+// Отчеты об поломках для Блокировки контента
+user_pref("browser.contentblocking.reportBreakage.enabled", false);
+user_pref("browser.contentblocking.reportBreakage.url", "");
+user_pref("browser.contentblocking.rejecttrackers.reportBreakage.enabled", false);
