@@ -64,6 +64,7 @@ user_pref("general.appversion.override", "5.0 (Windows)");
 user_pref("general.platform.override", "Win32");
 user_pref("general.oscpu.override", "Windows NT 6.1");
 user_pref("general.useragent.locale", "en-US");
+user_pref("general.useragent.site_specific_overrides", false);
 
 // Check if Firefox is your default browser
 // Проверять, является ли Firefox вашим браузером по умолчанию
@@ -174,7 +175,7 @@ user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 //		0 = Отключить длительное нажатие
 //		1 = Отображается меню
 //		2 = Меню отображается через "N" миллисекунд
-user_pref("privacy.userContext.longPressBehavior", 0);
+// user_pref("privacy.userContext.longPressBehavior", 0);
 
 // Font size
 // Размер шрифта
@@ -362,7 +363,9 @@ user_pref("font.language.group", "x-western");
 // user_pref("font.name-list.emoji", "Noto Color Emoji");
 
 // Preferred language for displaying web pages
+// [NOTE] English is very common, so it is very suitable not to stand out.
 // Предпочитаемый язык для отображения веб-страниц
+// [ЗАМЕТКА] Английский язык очень распространен, поэтому он очень хорош, чтобы не выделяться.
 user_pref("intl.accept_languages", "en-US, en");
 
 // Forced to use UTF-8 for text files
@@ -1257,8 +1260,8 @@ user_pref("lightweightThemes.update.enabled", false);
 // который работает по принципу "Сохранить для последующего использования".
 user_pref("extensions.pocket.enabled", false);
 
-// Screenshots
-// Скриншоты
+// Extension Screenshots
+// Расширение Скриншоты
 user_pref("extensions.screenshots.disabled", true);
 user_pref("extensions.screenshots.upload-disabled", true);
 
@@ -1841,7 +1844,7 @@ user_pref("dom.allow_cut_copy", false);
 
 // Dialog box "Confirm you want to leave" when closing page
 // Диалоговое окно "Подтвердить, что вы хотите уйти" при закрытии страницы
-user_pref("dom.disable_beforeunload", false);
+// user_pref("dom.disable_beforeunload", true);
 
 // Interaction with a mobile device vibrator
 // Взаимодействие с вибратором мобильного устройства
