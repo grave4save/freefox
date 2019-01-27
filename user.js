@@ -1,3 +1,26 @@
+// This file is part of the Free Fox project,
+// Copyright (c) 2019 Bogachenko Vyacheslav
+//
+// Free Fox is a free project: you can distribute it and/or modify
+// it in accordance with the MIT license published by the Massachusetts Institute of Technology.
+//
+// The Free Fox project is distributed in the hope that it will be useful,
+// and is provided "AS IS", WITHOUT ANY WARRANTY, EXPRESSLY EXPRESSED OR IMPLIED.
+// WE ARE NOT RESPONSIBLE FOR ANY DAMAGES DUE TO THE USE OF THIS PROJECT OR ITS PARTS.
+// For more information, see the MIT license.
+//
+// Author: Bogachenko Vyacheslav <https://github.com/bogachenko>
+// Email: bogachenkove@gmail.com
+// Github: https://github.com/bogachenko/freefox/tree/master/firefox/
+// Last modified: January 27, 2019
+// License: MIT <https://github.com/bogachenko/freefox/blob/master/LICENSE.md>
+// Problem reports: https://github.com/bogachenko/freefox/issues
+// Title: user.js
+// URL: https://github.com/bogachenko/freefox/blob/master/firefox/user.js
+// Version: 64.0.2
+//
+// Download the entire Free Fox project at https://github.com/bogachenko/freefox/archive/master.zip
+
 // Warning in "about:config"
 // Предупреждение в "about:config"
 user_pref("general.warnOnAboutConfig", false);
@@ -153,99 +176,6 @@ user_pref("privacy.usercontext.about_newtab_segregation.enabled", true);
 //		1 = Отображается меню
 //		2 = Меню отображается через "N" миллисекунд
 // user_pref("privacy.userContext.longPressBehavior", 0);
-
-// Font size
-// Размер шрифта
-// user_pref("font.size.fixed.x-cyrillic", 13);
-// user_pref("font.size.fixed.x-unicode", 13);
-// user_pref("font.size.fixed.x-western", 13);
-// user_pref("font.size.fixed.ar", 13);
-// user_pref("font.size.fixed.el", 13);
-// user_pref("font.size.fixed.he", 13);
-// user_pref("font.size.fixed.ja", 16);
-// user_pref("font.size.fixed.ko", 16);
-// user_pref("font.size.fixed.th", 13);
-// user_pref("font.size.fixed.x-armn", 13);
-// user_pref("font.size.fixed.x-beng", 13);
-// user_pref("font.size.fixed.x-cans", 13);
-// user_pref("font.size.fixed.x-devanagari", 13);
-// user_pref("font.size.fixed.x-ethi", 13);
-// user_pref("font.size.fixed.x-geor", 13);
-// user_pref("font.size.fixed.x-gujr", 13);
-// user_pref("font.size.fixed.x-guru", 13);
-// user_pref("font.size.fixed.x-khmr", 13);
-// user_pref("font.size.fixed.x-knda", 13);
-// user_pref("font.size.fixed.x-math", 13);
-// user_pref("font.size.fixed.x-mlym", 13);
-// user_pref("font.size.fixed.x-orya", 13);
-// user_pref("font.size.fixed.x-sinh", 13);
-// user_pref("font.size.fixed.x-tamil", 13);
-// user_pref("font.size.fixed.x-telu", 13);
-// user_pref("font.size.fixed.x-tibt", 13);
-// user_pref("font.size.fixed.zh-CN", 16);
-// user_pref("font.size.fixed.zh-HK", 16);
-// user_pref("font.size.fixed.zh-TW", 16);
-// user_pref("font.size.variable.ar", 16);
-// user_pref("font.size.variable.el", 16);
-// user_pref("font.size.variable.he", 16);
-// user_pref("font.size.variable.ja", 16);
-// user_pref("font.size.variable.ko", 16);
-// user_pref("font.size.variable.th", 16);
-// user_pref("font.size.variable.x-armn", 16);
-// user_pref("font.size.variable.x-beng", 16);
-// user_pref("font.size.variable.x-cans", 16);
-// user_pref("font.size.variable.x-cyrillic", 16);
-// user_pref("font.size.variable.x-devanagari", 16);
-// user_pref("font.size.variable.x-ethi", 16);
-// user_pref("font.size.variable.x-geor", 16);
-// user_pref("font.size.variable.x-gujr", 16);
-// user_pref("font.size.variable.x-guru", 16);
-// user_pref("font.size.variable.x-khmr", 16);
-// user_pref("font.size.variable.x-knda", 16);
-// user_pref("font.size.variable.x-math", 16);
-// user_pref("font.size.variable.x-mlym", 16);
-// user_pref("font.size.variable.x-orya", 16);
-// user_pref("font.size.variable.x-sinh", 16);
-// user_pref("font.size.variable.x-tamil", 16);
-// user_pref("font.size.variable.x-telu", 16);
-// user_pref("font.size.variable.x-tibt", 16);
-// user_pref("font.size.variable.x-unicode", 16);
-// user_pref("font.size.variable.x-western", 16);
-// user_pref("font.size.variable.zh-CN", 16);
-// user_pref("font.size.variable.zh-HK", 16);
-// user_pref("font.size.variable.zh-TW", 16);
-
-// Proportions (fonts)
-// Пропорции (шрифты)
-// user_pref("font.default.ar", "sans-serif");
-// user_pref("font.default.el", "serif");
-// user_pref("font.default.he", "sans-serif");
-// user_pref("font.default.ja", "sans-serif");
-// user_pref("font.default.ko", "sans-serif");
-// user_pref("font.default.th", "sans-serif");
-// user_pref("font.default.x-armn", "serif");
-// user_pref("font.default.x-beng", "serif");
-// user_pref("font.default.x-cans", "serif");
-// user_pref("font.default.x-cyrillic", "serif");
-// user_pref("font.default.x-devanagari", "serif");
-// user_pref("font.default.x-ethi", "serif");
-// user_pref("font.default.x-geor", "serif");
-// user_pref("font.default.x-gujr", "serif");
-// user_pref("font.default.x-guru", "serif");
-// user_pref("font.default.x-khmr", "serif");
-// user_pref("font.default.x-knda", "serif");
-// user_pref("font.default.x-math", "serif");
-// user_pref("font.default.x-mlym", "serif");
-// user_pref("font.default.x-orya", "serif");
-// user_pref("font.default.x-sinh", "serif");
-// user_pref("font.default.x-tamil", "serif");
-// user_pref("font.default.x-telu", "serif");
-// user_pref("font.default.x-tibt", "serif");
-// user_pref("font.default.x-unicode", "serif");
-// user_pref("font.default.x-western", "serif");
-// user_pref("font.default.zh-CN", "sans-serif");
-// user_pref("font.default.zh-HK", "sans-serif");
-// user_pref("font.default.zh-TW", "sans-serif");
 
 // Default Fonts
 // Шрифты по умолчанию
@@ -538,7 +468,6 @@ user_pref("media.peerconnection.video.enabled", false);
 
 // API for microphone and webcam interaction
 // API для взаимодействия с микрофоном и веб-камерой
-user_pref("camera.control.autofocus_moving_callback.enabled", false);
 user_pref("media.navigator.enabled", false);
 user_pref("media.navigator.video.enabled", false);
 
@@ -617,7 +546,6 @@ user_pref("toolkit.telemetry.newProfilePing.enabled", false);
 user_pref("toolkit.telemetry.server", "data:,");
 user_pref("toolkit.telemetry.shutdownPingSender.enabled", false);
 user_pref("toolkit.telemetry.unified", false);
-user_pref("toolkit.telemetry.unifiedIsOptIn", true);
 user_pref("toolkit.telemetry.updatePing.enabled", false);
 user_pref("toolkit.coverage.opt-out", true);
 user_pref("toolkit.telemetry.coverage.opt-out", true);
@@ -648,12 +576,12 @@ user_pref("breakpad.reportURL", "");
 user_pref("browser.chrome.errorReporter.enabled", false);
 user_pref("browser.chrome.errorReporter.submitUrl", "");
 user_pref("browser.crashReports.unsubmittedCheck.autoSubmit2", false);
-user_pref("browser.crashReports.unsubmittedCheck.autoSubmit", false);
 user_pref("browser.crashReports.unsubmittedCheck.enabled", false);
 user_pref("browser.tabs.crashReporting.email", "");
 user_pref("browser.tabs.crashReporting.emailMe", false);
 user_pref("browser.tabs.crashReporting.includeURL", false);
 user_pref("browser.tabs.crashReporting.sendReport", false);
+user_pref("browser.chrome.errorReporter.publicKey", "");
 
 // Promo for mobile phones
 // Акция для мобильных телефонов
@@ -741,9 +669,9 @@ user_pref("lightweightThemes.recommendedThemes", "");
 
 // Install only signed extensions
 // Установка только подписанных расширений
-user_pref("extensions.langpacks.signatures.required", true); // Require signing language pack / Требование подписи языкового пакета
-user_pref("xpinstall.signatures.required", true); // Require signing extensions / Требовать подписание расширений
-user_pref("xpinstall.signatures.devInfoURL", "");
+// user_pref("extensions.langpacks.signatures.required", true); // Require signing language pack / Требование подписи языкового пакета
+// user_pref("xpinstall.signatures.required", true); // Require signing extensions / Требовать подписание расширений
+// user_pref("xpinstall.signatures.devInfoURL", "");
 
 // Add-on installation delay
 // Задержка при установке дополнений
@@ -898,7 +826,6 @@ user_pref("services.sync.engine.creditcards", false);
 user_pref("services.sync.engine.creditcards.available", false);
 user_pref("services.sync.engine.history", false);
 user_pref("services.sync.engine.prefs", false);
-user_pref("services.sync.engine.prefs.modified", false);
 user_pref("services.sync.engine.tabs", false);
 
 // Cache API (Cache storage)
@@ -1078,7 +1005,6 @@ user_pref("devtools.aboutdebugging.showSystemAddons", true);
 // Расширение Activity stream
 user_pref("browser.library.activity-stream.enabled", false);
 user_pref("browser.newtabpage.activity-stream.asrouter.devtoolsEnabled", false);
-user_pref("browser.newtabpage.activity-stream.asrouter.messageProviders", "");
 user_pref("browser.newtabpage.activity-stream.asrouter.providers.cfr", "");
 user_pref("browser.newtabpage.activity-stream.asrouter.providers.onboarding", "");
 user_pref("browser.newtabpage.activity-stream.asrouter.providers.snippets", "");
@@ -1216,7 +1142,9 @@ user_pref("signon.autofillForms.http", false);
 user_pref("security.insecure_field_warning.contextual.enabled", true); // Message at login: "This connection is not secure" / Сообщение при вводе логина: "Это соединение не защищено"
 
 // Smooth scrolling
+// [NOTE] Recommended for brake applications, hardware failures, and problems with the video card.
 // Плавная прокрутка
+// [ЗАМЕТКА] Рекомендовано при торможениях, аппаратных сбоях и проблемах с видеокартой.
 // user_pref("general.smoothScroll", false);
 
 // Automatic update themes
@@ -1595,7 +1523,9 @@ user_pref("dom.vr.enabled", false);
 user_pref("dom.vr.service.enabled", false); 
 
 // Hardware acceleration
+// [NOTE] Recommended for brake applications, hardware failures, and problems with the video card.
 // Аппаратное ускорение
+// [ЗАМЕТКА] Рекомендовано при торможениях, аппаратных сбоях и проблемах с видеокартой.
 user_pref("layers.acceleration.force-enabled", false);
 user_pref("layers.acceleration.disabled", true);
 user_pref("gfx.direct2d.disabled", true);
@@ -1987,7 +1917,6 @@ user_pref("security.ssl.require_safe_negotiation", true);
 user_pref("devtools.remote.wifi.scan", false);
 user_pref("network.tickle-wifi.enabled", false);
 user_pref("geo.wifi.uri", "");
-user_pref("geo.wifi.logging.enabled", false);
 
 // File handle API
 // [NOTE] Responsible for accessing lower-level file operations.
@@ -2229,7 +2158,7 @@ user_pref("network.auth.subresource-http-auth-allow", 1);
 // Список черных портов
 // Запрет на установку соединений по определенным портам. Многие порты зарезервированы за разными службами, обслуживающими,
 // к примеру, FTP, POP и т.п. Для предотвращения потенциального риска необходимо запретить обращения к ним.
-user_pref("network.security.ports.banned", "9050,9051,9150,9151,8118,4444");
+user_pref("network.security.ports.banned", "9050,9051,9150,9151");
 
 // Recommended performance settings
 // Рекомендуемые настройки производительности
@@ -2244,3 +2173,12 @@ user_pref("intl.charset.detector", "");
 user_pref("browser.contentblocking.reportBreakage.enabled", false);
 user_pref("browser.contentblocking.reportBreakage.url", "");
 user_pref("browser.contentblocking.rejecttrackers.reportBreakage.enabled", false);
+
+// Memory cache
+// [NOTE] Not recommended due to performance issues.
+// Кэш памяти
+// [ЗАМЕТКА] Не рекомендуется из-за проблем с производительностью.
+// [ВНИМАНИЕ] Разрешение кэширования в оперативную память может привести к отслеживанию браузера по "цифровым отпечаткам",
+// создаваемым при помощи E-Tag!
+user_pref("browser.cache.memory.enable", false);
+user_pref("browser.cache.memory.capacity", 0);
