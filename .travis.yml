@@ -4,9 +4,7 @@ node_js:
 before_script:
   - npm install -g acorn
 script:
-  - acorn --silent user.js
-  - bash -n cas.sh
-  - make tests
+  - acorn --silent user.
 addons:
   apt:
     packages:
