@@ -89,22 +89,3 @@ stats: sourceprefs.js
 	@# count preferences number, various stats
 	@echo "$$(egrep "^user_pref" user.js | wc -l | cut -f1) preferences in user.js"
 	@echo "$$(wc -l $< | cut -d" " -f1) preferences in Firefox source"
-
-.PHONY: clean
-clean:
-	@# remove temporary files
-	@# please comment this out when not needed, to minimize load on Mozilla servers
-	@rm -f sourceprefs.js AUTHORS
-
-AUTHORS:
-	@# generate an AUTHORS file, ordered by number of commits
-	@# to add extra authors/credits, git commit --allow-empty --author="A U Thor <author@example.com>"
-	@git shortlog -sne | cut -f1 --complement >| $@
-
-.PHONY: toc
-toc:
-	@l2headers=$$(egrep "^## " README.md |cut -d" " -f1 --complement ); \
-	echo "$$l2headers" | while read line; do \
-	anchor=$$(echo "$$line" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g' | sed 's/\?//g'); \
-	echo "* [$$line](#$$anchor)"; \
-	done
