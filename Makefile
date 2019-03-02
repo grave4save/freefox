@@ -5,7 +5,7 @@ all: tests
 
 # To decrease tests verbosity, comment out unneeded targets
 .PHONY: tests
-tests: sourceprefs.js checkdeprecated stats acorn
+tests: sourceprefs.js checkdeprecated acorn
 
 .PHONY: acorn
 acorn:
