@@ -1,12 +1,7 @@
 SHELL=/bin/bash
 
 .PHONY: all
-all: whatdoesitdo tests
-
-.PHONY: whatdoesitdo
-whatdoesitdo:
-	@# generate the README "What does it do?" section
-	@./gen-readme.sh
+all: tests
 
 # To decrease tests verbosity, comment out unneeded targets
 .PHONY: tests
