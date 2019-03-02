@@ -5,6 +5,7 @@ before_script:
   - npm install -g acorn
 script:
   - acorn --silent user.js
+  - make tests
 addons:
   apt:
     packages:
