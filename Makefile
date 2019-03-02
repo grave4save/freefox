@@ -5,7 +5,7 @@ all: tests
 
 # To decrease tests verbosity, comment out unneeded targets
 .PHONY: tests
-tests: sourceprefs.js checkdeprecated stats acorn bash_syntax shellcheck
+tests: sourceprefs.js checkdeprecated stats acorn
 
 .PHONY: acorn
 acorn:
@@ -23,14 +23,6 @@ debian_locked.js: user.js
 # https://github.com/mozilla/policy-templates/blob/master/README.md
 policies.json:
 	jq -n -M "{\"policies\": {\"OfferToSaveLogins\": false, \"DisableBuiltinPDFViewer\": true, \"DisablePocket\": true, \"DisableFormHistory\": true, \"SanitizeOnShutdown\": true, \"SearchBar\": \"separate\", \"DisableTelemetry\": true, \"Cookies\": {\"AcceptThirdParty\": \"never\", \"ExpireAtSessionEnd\": true}, \"EnableTrackingProtection\": {\"Value\": true}, \"PopupBlocking\": {\"Default\": true}, \"FlashPlugin\": {\"Default\": false}, \"DisableFirefoxStudies\": true}}" >| $@
-
-.PHONY: bash_syntax
-bash_syntax:
-	$(foreach i,$(wildcard *.sh),bash -n $(i);)
-
-.PHONY: shellcheck
-shellcheck:
-	shellcheck *.sh
 
 # download and sort all known preferences files from Firefox (mozilla-central) source
 # specify wanted Firefox version/revision below (eg. "tip", "FIREFOX_AURORA_45_BASE", "9577ddeaafd85554c2a855f385a87472a089d5c0"). See https://hg.mozilla.org/mozilla-central/tags
